@@ -8,7 +8,7 @@ datasets. The code implements a single recipe, `configs/justact.yaml`.
 |---|---|
 | input | a frame pair (f_t, f_t+k), k = 1-3, encoded as one two-frame V-JEPA 2 clip |
 | embedding | mean-pooled last hidden state (1024-d) -> fixed random linear projection to 640-d -> L2 normalisation |
-| trained parameters | LoRA rank 16, alpha 32, dropout 0.05 on `query, key, value, proj, fc1, fc2` (8,468,480 parameters) |
+| trained parameters | LoRA rank 16, alpha 32, dropout 0.05 on `query, key, value, proj, fc1, fc2` (7,118,848 trained parameters; the checkpoint also holds 1,349,632 adapter parameters on the V-JEPA 2 predictor, which the encoder never runs, so they keep their initial values) |
 | projection | `nn.Linear(1024, 640)` with PyTorch's default initialisation from seed 0, **not optimised** |
 | positive | the anchor pair with its moving part (from RAFT optical flow) shifted to a random position on a still frame of another scene of the same dataset |
 | negatives | the other pairs of the batch and a hard negative from a disjoint window of the same clip |

@@ -1,12 +1,12 @@
-# JustAct: Extracting Action Representations from Self-Supervised Video Encoders for World Models
+# JustAct: Extracting Action Representations from Foundation Models for World Models
 
 Runjia Li, Minghao Chen, Junyu Xie, Philip Torr, Andrea Vedaldi, Tomas Jakab (University of Oxford)
 
-NeurIPS 2026 · Paper: `<ARXIV_URL>` · Project page: `<PROJECT_PAGE_URL>`
+NeurIPS 2026 · Project page: https://runjiali-rl.github.io/justact/
 
 JustAct turns a self-supervised video encoder into an action encoder, without action labels. A frame pair goes into
 V-JEPA 2 ViT-L as one two-frame clip. The encoder's tokens are mean-pooled, a fixed random projection maps them to 640
-dimensions, and the result is L2-normalised. Only LoRA adapters inside the encoder are trained (8.5 million parameters,
+dimensions, and the result is L2-normalised. Only LoRA adapters inside the encoder are trained (7.1 million parameters,
 1.5 hours on one RTX 4090), with a contrastive loss on 168,000 frame pairs from nine video datasets. The positive of a pair
 is the same motion pasted into another scene, and the hard negative is another moment of the same clip. The embedding can
 then replace the latent action of a world model.
@@ -111,6 +111,9 @@ Each script skips outputs that already exist, so it can be stopped and restarted
   the paper.
 - On other GPU models, bfloat16 embeddings differ slightly (cosine similarity above 0.998 to the paper's files). This moves
   probe values by up to about 0.015 R^2.
+- The random control of Table 1 is drawn by `probe/make_random.py`. The paper's MUTEX random-control file came from an
+  earlier draw that was not logged: the released script gives -0.158 there instead of the paper's -0.156 (both at chance).
+  The random control of every other dataset is reproduced exactly.
 - The leakage decoders and the fine-tuning runs are not bit-reproducible (non-deterministic backward passes): expect
   about 0.001-0.004 LPIPS (Table 4) and about 0.01 dB (Table 3).
 
@@ -118,7 +121,7 @@ Each script skips outputs that already exist, so it can be stopped and restarted
 
 ```bibtex
 @inproceedings{li2026justact,
-  title     = {JustAct: Extracting Action Representations from Self-Supervised Video Encoders for World Models},
+  title     = {JustAct: Extracting Action Representations from Foundation Models for World Models},
   author    = {Li, Runjia and Chen, Minghao and Xie, Junyu and Torr, Philip and Vedaldi, Andrea and Jakab, Tomas},
   booktitle = {Advances in Neural Information Processing Systems},
   year      = {2026}
