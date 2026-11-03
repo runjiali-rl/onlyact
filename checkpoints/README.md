@@ -3,7 +3,12 @@
 Download the files below into this folder, keeping the sub-folders. `SHA256SUMS` lists their checksums
 (`cd checkpoints && sha256sum -c SHA256SUMS`).
 
-Download: `<CHECKPOINT_URL>`
+The files are on Hugging Face at https://huggingface.co/liguang0115/justact. From the repository root:
+
+```bash
+hf download liguang0115/justact --local-dir checkpoints --exclude README.md .gitattributes   # 5.4 GB
+cd checkpoints && sha256sum -c SHA256SUMS
+```
 
 | file | size | content | used by |
 |---|---|---|---|

@@ -48,7 +48,8 @@ The versions are the ones that produced the paper's numbers.
 
 ## Checkpoints
 
-See [`checkpoints/README.md`](checkpoints/README.md). In short: the JustAct adapters and projection (37 MB), the two
+The weights are on Hugging Face at https://huggingface.co/liguang0115/justact; see
+[`checkpoints/README.md`](checkpoints/README.md) for the download command. In short: the JustAct adapters and projection (37 MB), the two
 retrained latent action models (1.9 GB and 2.8 GB), the four world models (about 230 MB each) and the small Table 3
 classifiers and interfaces. V-JEPA 2 and the AdaWorld base model are downloaded from their authors.
 
