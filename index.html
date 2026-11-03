@@ -1,0 +1,1000 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>JustAct</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap">
+<style>
+/* Layout: a product-page scroll in the style the authors picked (white page, oversized headlines, gold key phrase, frosted nav);
+   every video is a 19-frame strip and one shared clock plays them all, so source and generated clips stay frame-aligned. */
+:root {
+  --bg: #ffffff;
+  --bg-2: #f5f5f4;          /* bands, tiles, bibtex */
+  --card: #ffffff;
+  --ink: #1c1b1a;
+  --ink-2: #43413e;
+  --muted: #6e6b67;
+  --line: rgba(28, 27, 26, .1);
+  --gold-1: #d49a00;
+  --gold-2: #b98000;
+  --ours: #3e6fd8;          /* JustAct's generated clips and table rows */
+  --ours-tint: #e4ebfa;
+  --pos: #23804d;
+  --neg: #c63d31;
+  --dark: #0f0e0d;          /* the unseen-worlds section, lights down in both themes */
+  --on-dark: #f4f2ee;
+  --on-dark-2: #a9a59e;
+  --gold-dark-1: #ffd25c;
+  --gold-dark-2: #f0b429;
+  --sans: "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --nav-h: 52px;
+  --frame-w: min(calc(100vw - 32px), 1240px);
+  --ease: cubic-bezier(.22, .61, .36, 1);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121110; --bg-2: #1c1b19; --card: #232220; --ink: #f2f0ec; --ink-2: #d4d0ca; --muted: #9c978f; --line: rgba(255, 255, 255, .1);
+    --gold-1: #ffd25c; --gold-2: #f0b429; --ours: #86a8f0; --ours-tint: #1f2a40; --pos: #5cc98f; --neg: #f08a80; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #121110; --bg-2: #1c1b19; --card: #232220; --ink: #f2f0ec; --ink-2: #d4d0ca; --muted: #9c978f; --line: rgba(255, 255, 255, .1);
+  --gold-1: #ffd25c; --gold-2: #f0b429; --ours: #86a8f0; --ours-tint: #1f2a40; --pos: #5cc98f; --neg: #f08a80; color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 19px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--bg); }
+a { color: inherit; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--ours); outline-offset: 3px; border-radius: 6px; }
+h1, h2, h3, h4 { margin: 0; font-weight: 600; letter-spacing: -0.02em; text-wrap: balance; }
+p { margin: 0; }
+.wrap { width: 100%; max-width: calc(var(--frame-w) + 2 * max(16px, env(safe-area-inset-left, 0px))); margin: 0 auto;
+        padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.mk { background: linear-gradient(90deg, var(--gold-1), var(--gold-2)); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+.eyebrow { font-size: clamp(17px, 1.6vw, 24px); font-weight: 600; letter-spacing: .011em; line-height: 1.3; color: var(--ink); }
+.lede { color: var(--muted); text-wrap: pretty; }
+.lede strong { color: var(--ink); font-weight: 600; }
+.pill { display: inline-flex; align-items: center; justify-content: center; height: 44px; padding: 0 24px; border-radius: 999px; border: 1.5px solid var(--ink);
+        font: 600 17px/1 var(--sans); letter-spacing: .01em; text-decoration: none; color: var(--ink); background: transparent; cursor: pointer;
+        transition: background .25s, transform .25s var(--ease); }
+.pill-dark { background: var(--ink); color: var(--bg); }
+.pill-off { opacity: .4; pointer-events: none; }
+@media (hover: hover) { .pill:hover { transform: translateY(-1px); } }
+
+/* Nav */
+.localnav { position: fixed; z-index: 50; top: 0; left: 0; right: 0; padding-top: env(safe-area-inset-top, 0px);
+            background: color-mix(in srgb, var(--bg) 80%, transparent); -webkit-backdrop-filter: saturate(180%) blur(18px); backdrop-filter: saturate(180%) blur(18px);
+            border-bottom: 1px solid var(--line); }
+.localnav-inner { height: var(--nav-h); display: flex; align-items: center; gap: 24px; }
+.localnav-mark { font-size: 22px; font-weight: 700; letter-spacing: -0.015em; text-decoration: none; }
+.localnav-links { display: flex; gap: 26px; margin-left: auto; font-size: 14.5px; font-weight: 500; }
+.localnav-links a { text-decoration: none; color: var(--muted); white-space: nowrap; }
+.localnav-links a.active, .localnav-links a:hover { color: var(--ink); }
+.localnav .pill { height: 32px; padding: 0 16px; font-size: 14px; border: 0; }
+.localnav-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; }
+.localnav-progress span { display: block; height: 100%; transform-origin: 0 50%; transform: scaleX(0); background: var(--ink); opacity: .5; }
+@media (max-width: 860px) { .localnav-links { display: none; } .localnav .pill { margin-left: auto; } }
+
+/* Hero: the name is cut out of a wall of JustAct rollouts */
+.hero { padding-top: calc(var(--nav-h) + env(safe-area-inset-top, 0px) + clamp(36px, 7vh, 80px)); padding-bottom: clamp(48px, 9vh, 110px); text-align: center; }
+.hero-mark { position: relative; width: 100%; max-width: 100%; aspect-ratio: 10 / 3; margin: 0 auto; }
+.hero-wall { position: absolute; inset: 6px; display: grid; grid-template-columns: repeat(7, 1fr); grid-template-rows: repeat(2, 1fr); gap: 0; overflow: hidden; }
+.hero-wall .vid { aspect-ratio: auto; border-radius: 0; width: 100%; height: 100%; }
+.hero-knockout { position: absolute; inset: 0; width: 100%; height: 100%; }
+.hero-veil { fill: var(--bg); }
+.hero-word { font-family: var(--sans); font-weight: 800; }
+.hero-venue { margin-top: clamp(22px, 3.6vh, 42px); font-size: clamp(15px, 1.35vw, 20px); font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--ours); }
+.hero-venue + .hero-sub { margin-top: clamp(10px, 1.6vh, 18px); }
+.hero-sub { margin-top: clamp(24px, 4vh, 48px); font-size: clamp(24px, 3vw, 44px); font-weight: 600; line-height: 1.12; letter-spacing: -0.012em; text-wrap: balance; max-width: 26em; margin-inline: auto; }
+.hero-authors { margin-top: 22px; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 22px; font-size: clamp(16px, 1.4vw, 21px); }
+.hero-affil { margin-top: 6px; color: var(--muted); font-size: clamp(15px, 1.2vw, 18px); }
+.hero-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 26px; }
+@media (max-width: 600px) { .hero-authors { max-width: 20em; margin-inline: auto; } }
+
+/* Statements, lit word by word while they cross the screen */
+.statement { padding-block: clamp(60px, 14vh, 160px); text-align: center; }
+.statement p { max-width: 17em; margin: 0 auto; font-size: clamp(32px, 4.6vw, 68px); font-weight: 600; line-height: 1.1; letter-spacing: -0.012em; text-wrap: pretty; }
+.js-words .w { opacity: .16; transition: opacity .25s; }
+.js-words .w.on { opacity: 1; }
+
+/* Prose */
+.prose { max-width: 46rem; margin: 0 auto; padding-block: 0 clamp(60px, 10vh, 120px); }
+.prose p { margin-top: 12px; font-size: clamp(17px, 1.35vw, 21px); line-height: 1.55; color: var(--ink-2); }
+
+/* Chapters */
+.chapter { padding-block: clamp(70px, 12vh, 140px) 0; }
+.chapter-head { text-align: center; display: flex; flex-direction: column; align-items: center; }
+.chapter-head h2 { max-width: 15em; margin-top: 4px; font-size: clamp(38px, 5.6vw, 84px); line-height: 1.04; letter-spacing: -0.015em; }
+.chapter-head .lede { max-width: 31em; margin-top: clamp(18px, 3vh, 32px); font-size: clamp(17px, 1.5vw, 23px); line-height: 1.4; }
+.segmented { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 2px; padding: 4px; margin: 34px auto 0; border-radius: 22px; background: color-mix(in srgb, var(--ink) 7%, transparent); max-width: 100%; }
+.segmented button { appearance: none; border: 0; margin: 0; padding: 9px 20px; border-radius: 999px; font: 600 15.5px/1.2 var(--sans); color: var(--muted); background: transparent; cursor: pointer; transition: background .3s, color .3s; }
+.segmented button[aria-selected="true"] { background: var(--ink); color: var(--bg); }
+.seg-row { display: flex; justify-content: center; }
+.note { margin: 18px auto 0; max-width: 46rem; text-align: center; color: var(--muted); font-size: 15px; }
+
+/* Videos: a 19-frame horizontal strip, the shared clock moves background-position */
+.vid { aspect-ratio: 1; width: 100%; max-width: 100%; border-radius: 10px; background-color: var(--bg-2); background-repeat: no-repeat; background-size: 1900% 100%; }
+.vid.ours { box-shadow: 0 0 0 3px var(--ours); }
+.player { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 22px; font-size: 14px; color: var(--muted); }
+.player input { width: 160px; accent-color: var(--ink); }
+.fno { min-width: 9.5ch; font-variant-numeric: tabular-nums; }
+.player .pill { height: 32px; padding: 0 16px; font-size: 14px; }
+
+/* Gallery band: white cards on grey, scroll sideways */
+.band { margin-top: clamp(36px, 6vh, 64px); background: var(--bg-2); padding-block: clamp(28px, 5vh, 56px); }
+.gallery-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; scrollbar-width: none; }
+.gallery-track::-webkit-scrollbar { display: none; }
+.gallery-track[hidden] { display: none; }
+.card { flex: 0 0 auto; width: min(560px, 86vw); scroll-snap-align: start; background: var(--card); border-radius: 28px; padding: 16px 16px 22px; display: flex; flex-direction: column; gap: 14px; }
+.card-pair { display: grid; grid-template-columns: minmax(0, 1fr) 30px minmax(0, 1fr); gap: 8px; align-items: center; }
+.arrow { color: var(--muted); display: flex; justify-content: center; }
+.arrow svg { width: 26px; height: 14px; }
+.card h3 { margin: 4px 6px 0; font-size: 21px; line-height: 1.2; letter-spacing: .005em; }
+.card p { margin: 0 6px; font-size: 15px; line-height: 1.45; color: var(--muted); }
+.card p.credit { margin-top: auto; font-size: 12.5px; line-height: 1.4; }
+.card p.credit a { color: inherit; text-decoration: underline; text-underline-offset: 2px; overflow-wrap: anywhere; }
+.cap-row { display: grid; grid-template-columns: 1fr 30px 1fr; gap: 8px; font-size: 13.5px; color: var(--muted); line-height: 1.3; }
+.cap-row b { color: var(--ink); font-weight: 600; display: block; font-size: 14.5px; }
+.cap-row .o b { color: var(--ours); }
+.paddles { display: flex; justify-content: flex-end; gap: 12px; margin-top: 8px; }
+.paddle { width: 40px; height: 40px; border-radius: 50%; border: 0; background: color-mix(in srgb, var(--ink) 9%, transparent); color: var(--ink); font-size: 24px; line-height: 1; cursor: pointer; }
+
+/* Action x scene matrix */
+.mx-wrap { overflow-x: auto; padding-bottom: 6px; }
+.mx { display: grid; grid-template-columns: repeat(5, minmax(96px, 1fr)); gap: 8px; min-width: 540px; max-width: 980px; margin: 0 auto; }
+.mx[hidden] { display: none; }
+#mx-web { grid-template-columns: repeat(6, minmax(96px, 1fr)); min-width: 640px; max-width: 1180px; }
+.mx-corner { align-self: end; font-size: 13px; color: var(--muted); line-height: 1.4; padding-bottom: 6px; }
+.mx-head { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.mx-head img { width: 100%; aspect-ratio: 1; border-radius: 10px; display: block; }
+.mx-lab { font-size: 12.5px; color: var(--muted); line-height: 1.3; }
+.mx-lab b { display: block; font-size: 14px; color: var(--ink); font-weight: 600; }
+.mx-row { margin-right: 8px; }
+
+/* Unseen worlds: lights down */
+.cinema { margin-top: clamp(80px, 14vh, 160px); background: var(--dark); color: var(--on-dark); padding-block: clamp(80px, 14vh, 160px); color-scheme: dark; }
+.hero + .cinema { margin-top: 0; }
+.cinema .chapter-head h2 { font-size: clamp(40px, 6vw, 92px); letter-spacing: -0.03em; }
+.cinema .chapter-head h2 .dim { opacity: .55; }
+.cinema .mk { background-image: linear-gradient(90deg, var(--gold-dark-1), var(--gold-dark-2)); }
+.cinema .eyebrow { color: var(--on-dark); }
+.cinema .lede { color: var(--on-dark-2); }
+.cinema .lede strong { color: var(--on-dark); }
+.cinema .segmented { background: rgba(255, 255, 255, .1); }
+.cinema .segmented button { color: color-mix(in srgb, var(--on-dark) 72%, transparent); }
+.cinema .segmented button[aria-selected="true"] { background: var(--on-dark); color: var(--dark); }
+.cinema .vid { background-color: #1d1c1a; }
+.cinema .vid.ours { box-shadow: 0 0 0 3px var(--gold-dark-2); }
+.cinema .player, .cinema .note { color: var(--on-dark-2); }
+.cinema .player input { accent-color: var(--on-dark); }
+.cinema .player .pill { color: var(--on-dark); border-color: var(--on-dark); }
+#oodGroups { margin-top: 34px; }
+.segmented .count { opacity: .55; font-weight: 500; margin-left: 2px; }
+#oodSeg { align-self: stretch; min-width: 0; }
+.thumbs { margin-top: 22px; }
+.thumb-row { display: flex; gap: 8px; max-width: 100%; overflow-x: auto; padding: 6px 4px 10px; scrollbar-width: thin; }
+@media (min-width: 761px) { .thumb-row { flex-wrap: wrap; justify-content: center; overflow: visible; row-gap: 14px; } }
+.thumbs button { flex: 0 0 auto; width: 82px; border: 0; padding: 0; background: none; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 6px;
+                 font: 600 12.5px/1.2 var(--sans); color: var(--on-dark-2); }
+.thumbs img { width: 70px; height: 70px; border-radius: 14px; display: block; opacity: .5; outline: 2px solid transparent; outline-offset: 3px; transition: opacity .25s; }
+.thumbs button[aria-selected="true"] { color: var(--on-dark); }
+.thumbs button[aria-selected="true"] img, .thumbs button:hover img { opacity: 1; }
+.thumbs button[aria-selected="true"] img { outline-color: var(--gold-dark-2); }
+.screen { margin: 30px auto 0; max-width: 1180px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(14px, 1.8vw, 22px); align-items: start; }
+.screen[hidden] { display: none; }
+.cell { margin: 0; min-width: 0; }
+.cell .frame { position: relative; }
+.cell.start img { width: 100%; aspect-ratio: 1; border-radius: 10px; display: block; box-shadow: 0 30px 90px -30px rgba(0, 0, 0, .9); }
+.cell .pip { position: absolute; left: 8px; top: 8px; width: 36%; border-radius: 7px; box-shadow: 0 0 0 2px var(--dark), 0 8px 24px -6px rgba(0, 0, 0, .8); }
+.cell figcaption { margin-top: 11px; font-size: 13px; color: var(--on-dark-2); line-height: 1.3; }
+.cell figcaption b { display: block; color: var(--on-dark); font-weight: 600; font-size: 14.5px; margin-bottom: 1px; }
+.cell:not(.start) figcaption b { color: var(--gold-dark-1); }
+@media (max-width: 760px) { .screen { grid-template-columns: repeat(2, minmax(0, 1fr)); } .cell .pip { left: 6px; top: 6px; } }
+
+/* Method */
+.tile { margin-top: clamp(36px, 6vh, 64px); background: var(--bg-2); border-radius: 28px; padding: clamp(18px, 3vw, 36px); }
+.tile + .tile { margin-top: 20px; }
+.tile h3 { font-size: clamp(20px, 1.8vw, 26px); }
+.tile h3 small { font-size: 14px; font-weight: 500; color: var(--muted); margin-left: 10px; letter-spacing: 0; }
+.mfig img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px; }
+svg text { font-family: var(--sans); fill: var(--ink); }
+svg .small { font-size: 12.5px; fill: var(--muted); }
+svg .link { stroke: var(--muted); stroke-opacity: .5; stroke-width: 1.6; fill: none; }
+svg .enc { fill: var(--ours-tint); stroke: var(--ours); }
+svg .space { fill: var(--card); stroke: var(--line); }
+svg .lbl-pull { fill: var(--pos); } svg .lbl-push { fill: var(--neg); }
+/* Animated method figures: data-step on each .anim panel drives every state; .tk on the tile flips each clip between frame t and frame t+k */
+.anim-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px 16px; }
+.anim-ctl { appearance: none; border: 1.5px solid var(--line); background: var(--card); color: var(--ink); font: 600 14px/1 var(--sans); padding: 8px 15px; border-radius: 999px; cursor: pointer; }
+.anim-ctl:hover { border-color: var(--ink); }
+.anim-modes { display: flex; width: fit-content; margin: 18px auto 0; }
+.anim-modes button { font-size: 14.5px; padding: 8px 16px; }
+.anim .scr-box { position: relative; border-radius: 12px; box-shadow: 0 0 0 1px var(--line), 0 10px 30px -18px rgba(0, 0, 0, .45); transition: box-shadow .36s var(--ease); }
+.anim .scr-box > img { border-radius: 12px; }
+.anim .scr-box > img + img, .anim .scr-box > .l-flow { position: absolute; inset: 0; }
+.anim .scr-box.empty { aspect-ratio: 1; box-shadow: none; outline: 2px dashed color-mix(in srgb, var(--muted) 45%, transparent); outline-offset: -2px; }
+.anim .l-tk { opacity: 0; }
+.anim-tile.tk .l-tk { opacity: 1; }
+.anim figure { margin: 0; min-width: 0; }
+.anim figcaption { margin-top: 10px; font-size: 13.5px; color: var(--muted); line-height: 1.3; }
+.anim figcaption b { display: block; color: var(--ink); font-size: 15.5px; font-weight: 600; }
+.fchip { position: absolute; right: 8px; bottom: 8px; z-index: 3; padding: 3px 8px; border-radius: 999px; background: rgba(15, 14, 13, .72); color: #f4f2ee; font: 600 12px/1.2 var(--mono); }
+.fchip .c-tk, .anim-tile.tk .fchip .c-t { display: none; }
+.anim-tile.tk .fchip .c-tk { display: inline; }
+.stage3 { --g: clamp(8px, 1.8vw, 20px); --track: clamp(16px, 5vw, 64px); --fx: calc(100% + var(--track) + 2 * var(--g)); --dx: 18.36%; --dy: 7.42%;
+          display: grid; grid-template-columns: minmax(0, 1fr) var(--track) minmax(0, 1fr) 0px minmax(0, 1fr); column-gap: var(--g); align-items: start; max-width: 1000px; margin: clamp(20px, 3vw, 30px) auto 0; }
+.scr-h { grid-column: 5; }
+.l-flow { opacity: 0; mix-blend-mode: multiply; transition: opacity .42s var(--ease); }
+.anim[data-step="1"] .l-flow { opacity: .95; }
+.l-dim { position: absolute; inset: 0; border-radius: 12px; background: rgba(12, 12, 16, .66); opacity: 0; transition: opacity .42s var(--ease); }
+#mPos[data-step="2"] .l-dim { opacity: 1; }
+.fly { position: absolute; inset: 0; z-index: 2; opacity: 0; pointer-events: none; transform: translate(0, 0); transition: transform .9s var(--ease), opacity .3s, filter .42s; }
+.fly img { position: absolute; inset: 0; width: 100%; }
+#mPos .fly img { border-radius: 0 !important; }
+#mNav .fly img { border-radius: 12px; }
+.anim-tile.tk .fly .l-t { opacity: 0; }
+#mPos:is([data-step="2"], [data-step="3"], [data-step="4"], [data-step="5"]) .fly { opacity: 1; }
+#mPos:is([data-step="2"], [data-step="3"]) .fly { filter: drop-shadow(0 0 1.5px #fff) drop-shadow(0 0 12px var(--ours)); }
+#mPos[data-step="3"] .fly { transform: translate(calc(var(--fx) + var(--dx)), var(--dy)) scale(1.05); }
+#mPos:is([data-step="4"], [data-step="5"]) .fly { transform: translate(calc(var(--fx) + var(--dx)), var(--dy)); }
+#mNav:is([data-step="2"], [data-step="3"]) .fly { opacity: 1; transform: translate(var(--fx), 0); }
+#mNav .fly .jit { opacity: 0; transition: opacity .54s var(--ease) .66s; }
+#mNav:is([data-step="2"], [data-step="3"]) .fly .jit.l-t { opacity: 1; }
+#mNav:is([data-step="2"], [data-step="3"]) .fly .jit.l-tk { opacity: 0; }
+.anim-tile.tk #mNav:is([data-step="2"], [data-step="3"]) .fly .jit.l-t { opacity: 0; }
+.anim-tile.tk #mNav:is([data-step="2"], [data-step="3"]) .fly .jit.l-tk { opacity: 1; }
+.track { position: relative; align-self: center; height: 3px; margin-top: -30px; border-radius: 3px; background: var(--line); overflow: hidden; }
+.track span { position: absolute; inset: 0; background: var(--ours); transform: scaleX(0); transform-origin: left; transition: transform .9s var(--ease); }
+#mPos:is([data-step="3"], [data-step="4"], [data-step="5"]) .track span, #mNav:is([data-step="2"], [data-step="3"]) .track span { transform: scaleX(1); }
+#mPos .scr-b .scr-box > img { opacity: .4; transition: opacity .48s var(--ease); }
+#mPos:is([data-step="3"], [data-step="4"], [data-step="5"]) .scr-b .scr-box > img { opacity: 1; }
+#mPos:is([data-step="4"], [data-step="5"]) .scr-b .scr-box, #mNav:is([data-step="2"], [data-step="3"]) .scr-b .scr-box { box-shadow: 0 0 0 3px var(--ours), 0 14px 34px -16px var(--ours); outline-color: transparent; }
+.scr-b .post, #mPos:is([data-step="4"], [data-step="5"]) .scr-b .pre, #mNav:is([data-step="2"], [data-step="3"]) .scr-b .pre { display: none; }
+#mPos:is([data-step="4"], [data-step="5"]) .scr-b .post, #mNav:is([data-step="2"], [data-step="3"]) .scr-b .post { display: block; }
+.scr-b .post b { color: var(--ours); }
+.scr-h .scr-box { box-shadow: none; outline: 2px dashed color-mix(in srgb, var(--muted) 45%, transparent); outline-offset: -2px; }
+.scr-h .scr-box > img, .scr-h .fchip { opacity: 0 !important; transition: opacity .48s var(--ease); }
+.scr-h figcaption { opacity: .45; transition: opacity .36s; }
+:is(#mPos[data-step="5"], #mNav[data-step="3"]) .scr-h .scr-box { outline-color: transparent; box-shadow: 0 0 0 3px var(--neg), 0 14px 34px -16px var(--neg); }
+:is(#mPos[data-step="5"], #mNav[data-step="3"]) .scr-h .scr-box > img.l-t, :is(#mPos[data-step="5"], #mNav[data-step="3"]) .scr-h .fchip { opacity: 1 !important; }
+.anim-tile.tk :is(#mPos[data-step="5"], #mNav[data-step="3"]) .scr-h .scr-box > img.l-tk { opacity: 1 !important; }
+:is(#mPos[data-step="5"], #mNav[data-step="3"]) .scr-h figcaption { opacity: 1; }
+:is(#mPos[data-step="5"], #mNav[data-step="3"]) .scr-h figcaption b { color: var(--neg); }
+.gauge { --max: 1.5; max-width: 620px; margin: clamp(18px, 2.6vw, 26px) auto 0; opacity: .35; transition: opacity .36s; font-size: 13.5px; color: var(--muted); }
+.anim:not([data-step="0"]) .gauge { opacity: 1; }
+.g-head { text-align: center; color: var(--ink-2); }
+.g-head b { color: var(--ink); font-variant-numeric: tabular-nums; }
+.g-bar { position: relative; height: 8px; margin-top: 10px; border-radius: 8px; background: color-mix(in srgb, var(--neg) 16%, var(--line)); }
+.g-zone { position: absolute; left: 0; top: 0; bottom: 0; width: calc(0.5 / var(--max) * 100%); border-radius: 8px 0 0 8px; background: color-mix(in srgb, var(--ours) 30%, var(--line)); }
+.g-thr { position: absolute; left: calc(0.5 / var(--max) * 100%); top: -5px; bottom: -5px; width: 2px; margin-left: -1px; background: var(--ink); }
+.g-dot { position: absolute; top: 50%; left: 0; width: 16px; height: 16px; margin: -8px 0 0 -8px; border-radius: 50%; background: var(--ink); box-shadow: 0 0 0 3px var(--bg-2); transition: left .84s var(--ease) .18s; }
+.anim:not([data-step="0"]) .g-dot { left: calc(var(--v) / var(--max) * 100%); }
+.g-scale { position: relative; display: flex; justify-content: space-between; gap: 12px; margin-top: 8px; font-size: 12.5px; line-height: 1.25; }
+.g-mid { position: absolute; left: calc(0.5 / var(--max) * 100%); transform: translateX(-50%); top: 0; color: var(--ink); font-weight: 600; }
+.g-fixed, .g-moving { max-width: 40%; padding-top: 16px; transition: color .24s; }
+.g-moving { text-align: right; }
+#mPos:not([data-step="0"]) .g-fixed, #mNav:not([data-step="0"]) .g-moving { color: var(--ink); font-weight: 600; }
+.rail { list-style: none; display: grid; grid-template-columns: repeat(var(--n), minmax(0, 1fr)); gap: 8px; max-width: 900px; margin: clamp(22px, 3vw, 32px) auto 0; padding: 0; }
+.rail button { appearance: none; position: relative; width: 100%; display: flex; gap: 7px; align-items: baseline; padding: 11px 2px 0; border: 0; border-top: 3px solid var(--line); background: none; color: var(--muted); font: 600 14.5px/1.25 var(--sans); text-align: left; cursor: pointer; transition: color .18s; }
+.rail button::before { content: ""; position: absolute; left: 0; top: -3px; height: 3px; width: 0; background: var(--ink); }
+.rail button.done::before { width: 100%; }
+.rail button[aria-current="step"] { color: var(--ink); }
+.rail button[aria-current="step"]::before { animation: railfill var(--d, 1.2s) linear forwards; }
+.anim-tile.paused .rail button[aria-current="step"]::before { animation: none; width: 100%; }
+.rail i { font-style: normal; font-weight: 500; color: var(--muted); font-variant-numeric: tabular-nums; }
+@keyframes railfill { from { width: 0; } to { width: 100%; } }
+.anim-cap { min-height: 3em; max-width: 46em; margin: 14px auto 0; text-align: center; font-size: clamp(15px, 1.25vw, 17.5px); line-height: 1.45; color: var(--ink-2); text-wrap: pretty; }
+.obj-wrap { max-width: 900px; margin: clamp(20px, 3vw, 34px) auto 0; }
+.trip2 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(10px, 2vw, 24px); }
+.trip2 .clip { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.trip2 .scr-box { width: min(100%, 200px); }
+.c-p .scr-box { box-shadow: 0 0 0 3px var(--ours); } .c-p b { color: var(--ours) !important; }
+.c-h .scr-box { box-shadow: 0 0 0 3px var(--neg); } .c-h b { color: var(--neg) !important; }
+.obj { display: block; width: 100%; height: auto; margin-top: 6px; overflow: visible; }
+.obj .flow { fill: none; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset .66s var(--ease); }
+.obj .fA { stroke: var(--ink); } .obj .fP { stroke: var(--ours); transition-delay: .09s; } .obj .fH { stroke: var(--neg); transition-delay: .18s; } .obj .fE { stroke: var(--ours); }
+#mCon:not([data-step="0"]) .flow:not(.fE) { stroke-dashoffset: 0; }
+#mCon:is([data-step="2"], [data-step="3"]) .fE { stroke-dashoffset: 0; transition-duration: .3s; }
+.obj .enc { transition: fill .3s, stroke-width .3s; }
+#mCon[data-step="1"] .enc { fill: color-mix(in srgb, var(--ours) 30%, var(--ours-tint)); stroke-width: 2.5; }
+.obj .dot { opacity: 0; transform: translate(450px, 126px) scale(.4); transition: transform .9s var(--ease), opacity .24s; }
+.obj .dot text { font-size: 15px; font-weight: 700; }
+.obj .dA circle { fill: var(--ink); } .obj .dP circle { fill: var(--ours); } .obj .dH circle { fill: var(--neg); }
+.obj .dP text { fill: var(--ours); } .obj .dH text { fill: var(--neg); }
+#mCon:is([data-step="2"], [data-step="3"]) .dot { opacity: 1; }
+#mCon:is([data-step="2"], [data-step="3"]) .dA { transform: translate(380px, 240px); }
+#mCon[data-step="2"] .dP { transform: translate(600px, 206px); }
+#mCon[data-step="2"] .dH { transform: translate(432px, 268px); }
+#mCon[data-step="3"] .dP { transform: translate(412px, 226px); transition-delay: .12s; }
+#mCon[data-step="3"] .dH { transform: translate(676px, 278px); transition-delay: .12s; }
+.obj .trail { fill: none; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset .9s var(--ease) .12s; }
+.obj .tP { stroke: url(#gP); } .obj .tH { stroke: url(#gH); }
+#mCon[data-step="3"] .trail { stroke-dashoffset: 0; }
+.obj .tl { font-size: 14px; font-weight: 600; opacity: 0; transition: opacity .3s .72s; }
+#mCon[data-step="3"] .tl { opacity: 1; }
+.anim.snap, .anim.snap * { transition: none !important; }
+@media (max-width: 640px) { .obj .small { display: none; } .obj text { font-size: 30px !important; } .obj .enc + text { font-size: 27px !important; transform: translateY(8px); }
+  .obj .dot text { font-size: 30px; } .obj circle { r: 15px; } .obj .flow, .obj .trail { stroke-width: 5; } .obj .link { stroke-width: 3; } }
+@media (max-width: 640px) { .rail button { font-size: 12px; flex-direction: column; gap: 1px; } .anim figcaption { font-size: 11.5px; } .anim figcaption b { font-size: 13px; }
+  .fchip { right: 4px; bottom: 4px; font-size: 9.5px; padding: 2px 5px; } .anim-modes button { font-size: 13px; padding: 7px 11px; } .g-fixed, .g-moving { max-width: 38%; font-size: 11.5px; } }
+@media (prefers-reduced-motion: reduce) { .anim, .anim * { transition: none !important; animation: none !important; } }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 24px 32px; margin-top: clamp(32px, 5vh, 56px); }
+.steps h4 { font-size: 20px; }
+.steps p { margin-top: 6px; font-size: 16.5px; color: var(--muted); line-height: 1.5; }
+
+/* Results */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 16px; margin-top: clamp(36px, 6vh, 64px); }
+.stat { background: var(--bg-2); border-radius: 24px; padding: 22px 24px; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.stat .k { font-size: 14px; font-weight: 600; color: var(--muted); }
+.stat b { font-size: clamp(40px, 4vw, 56px); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.stat p { font-size: 15px; color: var(--muted); line-height: 1.4; }
+.result { margin-top: clamp(48px, 8vh, 90px); }
+.result h3 { font-size: clamp(26px, 2.6vw, 38px); line-height: 1.12; }
+.result .take { margin-top: 12px; max-width: 46rem; font-size: 17.5px; color: var(--muted); line-height: 1.5; }
+.result .take strong { color: var(--ink); font-weight: 600; }
+.tablebox { margin-top: 20px; overflow-x: auto; background: var(--bg-2); border-radius: 20px; padding: 8px 6px; }
+table { border-collapse: collapse; font-size: 14px; font-variant-numeric: tabular-nums; width: 100%; white-space: nowrap; }
+th, td { padding: 8px 10px; text-align: center; }
+th { font-weight: 600; font-size: 13.5px; }
+thead tr:first-child th { color: var(--muted); font-weight: 500; }
+thead tr:last-child th { border-bottom: 1px solid var(--line); }
+td:first-child, th:first-child { text-align: left; position: sticky; left: 0; background: var(--bg-2); font-weight: 600; }
+tbody tr + tr td { border-top: 1px solid var(--line); }
+tr.ours td { color: var(--ours); font-weight: 700; }
+tr.ours td:first-child { color: var(--ours); }
+tr.dim td { color: var(--muted); }
+tr.panel td { text-align: left; font-weight: 600; padding-top: 16px; color: var(--ink); }
+td.b { font-weight: 800; }
+td.s { text-decoration: underline; text-underline-offset: 3px; }
+tr.delta td { font-size: 12.5px; }
+.up { color: var(--pos); } .dn { color: var(--neg); } .lv { color: var(--muted); }
+.cap { font-size: 14px; color: var(--muted); margin-top: 10px; max-width: 60rem; line-height: 1.45; }
+
+/* BibTeX + footer */
+.bib { position: relative; margin-top: 14px; }
+.bib pre { margin: 0; padding: 26px 28px; border-radius: 22px; background: var(--bg-2); overflow-x: auto; font: 14.5px/1.65 var(--mono); color: var(--ink-2); white-space: pre-wrap; overflow-wrap: anywhere; }
+.bib .copy { position: absolute; top: 14px; right: 14px; border: 0; border-radius: 999px; padding: 6px 14px; font: 600 13px/1.2 var(--sans); background: var(--bg); color: var(--ink); cursor: pointer; }
+footer { margin-top: clamp(60px, 10vh, 120px); background: var(--bg-2); padding-block: 40px 56px; color: var(--muted); font-size: 15px; }
+footer .mark { font-size: 22px; font-weight: 700; color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { .js-words .w { opacity: 1 !important; transition: none; } .pill { transition: none; } }
+</style>
+
+<nav class="localnav" aria-label="Sections">
+  <div class="wrap localnav-inner">
+    <a class="localnav-mark" href="#top">JustAct</a>
+    <div class="localnav-links">
+      <a href="#unseen">Unseen worlds</a>
+      <a href="#examples">Examples</a>
+      <a href="#matrix">Every scene</a>
+      <a href="#method">Method</a>
+      <a href="#results">Results</a>
+    </div>
+    <a class="pill pill-dark" href="#" data-todo="arxiv">Paper</a>
+  </div>
+  <div class="localnav-progress"><span id="prog"></span></div>
+</nav>
+
+<main>
+<section class="hero wrap" id="top">
+  <div class="hero-mark">
+    <div class="hero-wall" id="heroWall" aria-hidden="true"></div>
+    <svg class="hero-knockout" viewBox="0 0 1000 300" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <mask id="heroMask" maskUnits="userSpaceOnUse" x="0" y="0" width="1000" height="300">
+          <rect x="0" y="0" width="1000" height="300" fill="#fff"></rect>
+          <text class="hero-word" x="500" y="150" dy=".35em" font-size="262" text-anchor="middle" textLength="968" lengthAdjust="spacingAndGlyphs" fill="#000">JustAct</text>
+        </mask>
+      </defs>
+      <rect class="hero-veil" x="-2" y="-2" width="1004" height="304" mask="url(#heroMask)"></rect>
+    </svg>
+    <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">JustAct: Extracting Action Representations from Self-Supervised Video Encoders for World Models</h1>
+  </div>
+  <p class="hero-venue">NeurIPS 2026</p>
+  <p class="hero-sub">Extracting <span class="mk">Action Representations</span> from Self-Supervised Video Encoders for World Models</p>
+  <div class="hero-authors"><span>Runjia Li</span><span>Minghao Chen</span><span>Junyu Xie</span><span>Philip Torr</span><span>Andrea Vedaldi</span><span>Tomas Jakab</span></div>
+  <p class="hero-affil">University of Oxford</p>
+  <div class="hero-links">
+    <a class="pill pill-dark" href="#" data-todo="arxiv">Paper</a>
+    <a class="pill" href="#" data-todo="arxiv">arXiv</a>
+    <span class="pill pill-off" aria-disabled="true">Code (coming soon)</span>
+  </div>
+</section>
+
+<section class="cinema" id="unseen">
+  <div class="wrap chapter-head">
+    <p class="eyebrow">Unseen worlds</p>
+    <h2>Real actions in <span class="mk">anime, games and paintings</span> <span class="dim">it has never seen</span></h2>
+    <p class="lede">The world model starts from <strong>a single still image</strong> and plays out actions read from real videos. Nothing in training looked like these images.</p>
+    <div class="segmented" role="tablist" aria-label="Style" id="oodGroups"></div>
+    <div id="oodSeg"></div>
+  </div>
+  <div class="wrap" id="oodScreens"></div>
+  <div class="wrap">
+    <div class="player"><button class="pill" type="button" data-play aria-pressed="true">Pause</button><input type="range" min="0" max="18" value="0" step="1" aria-label="Frame" data-scrub id="scrub2"><span class="fno" data-fno>frame 1 / 19</span></div>
+    <p class="note" id="oodNote">Small inset: the real source clip. Large: the video JustAct generates from the start image, which the world model sees as its 6 context frames. Every navigation scene gets the same list of actions.</p>
+  </div>
+</section>
+
+<section class="statement wrap" id="tldr">
+  <p data-words>JustAct reads the action from one video and plays it out in <span class="mk">any other scene</span>, without a single action label.</p>
+</section>
+
+<section class="prose wrap" id="overview">
+  <p class="eyebrow">Overview</p>
+  <p>A world model that is driven by actions needs an action signal that says what moved, not where it happened. Latent action models learned from raw video tend to absorb the scene along with the motion.</p>
+  <p>JustAct adapts a V-JEPA 2 video encoder into an action encoder using only unlabelled video. A frame pair goes in and a 640-dimensional action embedding comes out. Training is contrastive: the same motion pasted into a different scene must map close to the original, and a different motion from the same scene must map far away. No action labels are used at any point.</p>
+</section>
+
+<section class="chapter" id="examples">
+  <div class="wrap chapter-head">
+    <p class="eyebrow">Action transfer</p>
+    <h2>One action, <span class="mk">any scene</span></h2>
+    <p class="lede">JustAct reads the action from a <strong>source clip</strong>: a real video, or footage from a game. The world model plays that action out from the first frames of <strong>a different scene</strong>, and the new video moves the way the source moved.</p>
+    <div class="segmented" role="tablist" aria-label="Example set" data-seg="ex">
+      <button role="tab" aria-selected="true" aria-controls="ex-web" id="seg-web">From the internet</button>
+      <button role="tab" aria-selected="false" aria-controls="ex-within" id="seg-within" tabindex="-1">Same dataset</button>
+      <button role="tab" aria-selected="false" aria-controls="ex-cross" id="seg-cross" tabindex="-1">Across datasets</button>
+    </div>
+  </div>
+  <div class="band">
+    <div class="wrap">
+      <div class="gallery-track" id="ex-web" role="tabpanel" aria-labelledby="seg-web"></div>
+      <div class="gallery-track" id="ex-within" role="tabpanel" aria-labelledby="seg-within" hidden></div>
+      <div class="gallery-track" id="ex-cross" role="tabpanel" aria-labelledby="seg-cross" hidden></div>
+      <div class="paddles"><button class="paddle" type="button" data-dir="-1" aria-label="Previous examples">&#8249;</button><button class="paddle" type="button" data-dir="1" aria-label="Next examples">&#8250;</button></div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="player"><button class="pill" type="button" data-play aria-pressed="true">Pause</button><input type="range" min="0" max="18" value="0" step="1" aria-label="Frame" data-scrub id="scrub1"><span class="fno" data-fno>frame 1 / 19</span></div>
+    <p class="note">19 generated frames after 6 context frames of the new scene. <b>Unseen</b>: never used to train the action encoder or the world model.</p>
+  </div>
+</section>
+
+<section class="chapter" id="matrix">
+  <div class="wrap chapter-head">
+    <p class="eyebrow">Action × scene</p>
+    <h2>Every action in <span class="mk">every scene</span></h2>
+    <p class="lede">Each row takes the action from one clip. Each column starts from one scene.</p>
+    <div class="segmented" role="tablist" aria-label="Matrix set" data-seg="mx">
+      <button role="tab" aria-selected="true" aria-controls="mx-moves" id="seg-mxmoves">Turns and tilts</button>
+      <button role="tab" aria-selected="false" aria-controls="mx-web" id="seg-mxweb" tabindex="-1">Games and the web</button>
+      <button role="tab" aria-selected="false" aria-controls="mx-nav" id="seg-nav" tabindex="-1">Moving cameras</button>
+      <button role="tab" aria-selected="false" aria-controls="mx-robot" id="seg-robot" tabindex="-1">Robot arms</button>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="tile mx-wrap">
+      <div class="mx" id="mx-moves" role="tabpanel" aria-labelledby="seg-mxmoves"></div>
+      <div class="mx" id="mx-web" role="tabpanel" aria-labelledby="seg-mxweb" hidden></div>
+      <div class="mx" id="mx-nav" role="tabpanel" aria-labelledby="seg-nav" hidden></div>
+      <div class="mx" id="mx-robot" role="tabpanel" aria-labelledby="seg-robot" hidden></div>
+    </div>
+    <p class="note" id="mxMovesNote">Turns and tilts: the same start image, six different actions. Row 1 (driving forward) and row 4 are from <a href="https://huggingface.co/xiaoluo11" target="_blank" rel="noopener">public gameplay recordings on Hugging Face</a> (Forza Horizon 5, Assassin’s Creed Origins; the footage belongs to each game’s publisher). Rows 2 and 3 are two moments of <a href="https://commons.wikimedia.org/wiki/File:Ride_to_Leh,_July_2017_-_Sarchu_to_Leh,_Ladakh.webm" target="_blank" rel="noopener">“Ride to Leh, July 2017 - Sarchu to Leh, Ladakh”</a> by Torque Biker (CC BY 3.0), row 5 is <a href="https://commons.wikimedia.org/wiki/File:DJI_FPV_drone_meets_fox_in_rape_field.webm" target="_blank" rel="noopener">“DJI FPV drone meets fox in rape field”</a> by anotherview (CC BY 3.0), and row 6 is <a href="https://commons.wikimedia.org/wiki/File:Earth_Views_from_the_International_Space_Station.webm" target="_blank" rel="noopener">“Earth Views from the International Space Station”</a> by NASA (public domain). The start images were made by a text-to-image model.</p>
+    <p class="note" id="mxWebNote">Games and the web: rows 1 to 5 are short segments of <a href="https://huggingface.co/xiaoluo11" target="_blank" rel="noopener">public gameplay recordings on Hugging Face</a>; the game footage belongs to each game’s publisher. Rows 6 to 8 are from Wikimedia Commons: <a href="https://commons.wikimedia.org/wiki/File:FPV_drone_flying_in_alpine_conditions_with_snow,_sleet_and_rain.webm" target="_blank" rel="noopener">“FPV drone flying in alpine conditions with snow, sleet and rain”</a> by anotherview (CC BY 3.0), <a href="https://commons.wikimedia.org/wiki/File:Max_and_Moritz_Efteling_Mack_Dueling_Powered_Coaster_POV_no_audio.webm" target="_blank" rel="noopener">“Max and Moritz Efteling Mack Dueling Powered Coaster POV no audio”</a> by Canobie Coaster (CC BY 3.0), <a href="https://commons.wikimedia.org/wiki/File:Ride_to_Leh,_July_2017_-_Sarchu_to_Leh,_Ladakh.webm" target="_blank" rel="noopener">“Ride to Leh, July 2017 - Sarchu to Leh, Ladakh”</a> by Torque Biker (CC BY 3.0). The start images were made by a text-to-image model. None of these sources or scenes was used in training.</p>
+  </div>
+</section>
+
+
+<section class="chapter" id="method">
+  <div class="wrap chapter-head">
+    <p class="eyebrow">Method</p>
+    <h2>Same motion, new scene. <span class="mk">No action labels.</span></h2>
+    <p class="lede">JustAct turns a self-supervised V-JEPA 2 video encoder into an action encoder. A frame pair goes in as a two-frame clip, the tokens are mean-pooled, and a projection gives a 640-dimensional action embedding. <strong>Only LoRA adapters are trained.</strong></p>
+  </div>
+  <div class="wrap mfig">
+    <div class="tile anim-tile" id="mPosTile">
+      <div class="anim-head"><h3>Positive and hard negative, decided by optical flow<small>real frames, built by our training code</small></h3><button class="anim-ctl" type="button" data-anim-play aria-pressed="true">Pause</button></div>
+      <div class="segmented anim-modes" role="tablist" aria-label="Kind of clip">
+        <button role="tab" type="button" aria-selected="true" aria-controls="mPos" data-mode="0">Robot arm · fixed camera</button>
+        <button role="tab" type="button" aria-selected="false" aria-controls="mNav" data-mode="1" tabindex="-1">Navigation · moving camera</button>
+      </div>
+      <div class="anim" id="mPos" role="tabpanel" data-step="0" data-durs="1300,1900,1300,1200,1400,2200">
+        <div class="stage3" role="img" aria-label="Animation, robot arm: a LIBERO anchor clip; its optical flow shows a still background (0.03 pixels, under the 0.5-pixel threshold), so the moving region is cut out, moved 47 pixels right and 19 down and pasted onto another scene to make the positive; the hard negative is another moment of the same video.">
+          <figure class="scr scr-a">
+            <div class="scr-box">
+              <img src="assets/method/anchor_t.jpg" class="l-t" alt=""><img src="assets/method/anchor_tk.jpg" class="l-tk" alt="">
+              <img src="assets/method/flow.jpg" class="l-flow" alt="">
+              <div class="l-dim"></div>
+              <div class="fly"><img src="assets/method/cut_t.png" class="l-t" alt=""><img src="assets/method/cut_tk.png" class="l-tk" alt=""></div>
+              <span class="fchip"><b class="c-t">t</b><b class="c-tk">t+k</b></span>
+            </div>
+            <figcaption><b>Anchor</b>LIBERO, scene A</figcaption>
+          </figure>
+          <div class="track" aria-hidden="true"><span></span></div>
+          <figure class="scr scr-b">
+            <div class="scr-box"><img src="assets/method/other_scene.jpg" alt=""></div>
+            <figcaption><span class="pre"><b>Another scene</b>scene B, same dataset</span><span class="post"><b>Positive</b>same motion, scene B</span></figcaption>
+          </figure>
+          <figure class="scr scr-h">
+            <div class="scr-box"><img src="assets/method/hard_t.jpg" class="l-t" alt=""><img src="assets/method/hard_tk.jpg" class="l-tk" alt=""><span class="fchip"><b class="c-t">t′</b><b class="c-tk">t′+k</b></span></div>
+            <figcaption><b>Hard negative</b>same video, another moment</figcaption>
+          </figure>
+        </div>
+        <div class="gauge" style="--v: 0.03">
+          <div class="g-head">Mean optical flow outside the moving region: <b>0.03 pixels</b></div>
+          <div class="g-bar"><span class="g-zone"></span><span class="g-thr"></span><span class="g-dot"></span></div>
+          <div class="g-scale"><span class="g-fixed">fixed camera: cut and paste</span><span class="g-mid">0.5 px</span><span class="g-moving">moving camera: colour-jittered copy</span></div>
+        </div>
+        <ol class="rail" style="--n: 6">
+          <li><button type="button" data-go="0" data-cap="A real two-frame clip from LIBERO, frames t and t+k: the anchor."><i>1</i>Anchor</button></li>
+          <li><button type="button" data-go="1" data-cap="RAFT optical flow between t and t+k. Outside the moving region the frame moves 0.03 pixels, under the 0.5-pixel threshold: the camera is fixed, so the motion can be cut out."><i>2</i>Camera test</button></li>
+          <li><button type="button" data-go="2" data-cap="Where the flow is above a threshold is the moving region, here the robot arm."><i>3</i>Moving region</button></li>
+          <li><button type="button" data-go="3" data-cap="The region is moved by a random offset of at least 16 pixels (here 47 right and 19 down) and pasted onto a frame of another scene of the same dataset."><i>4</i>Move and paste</button></li>
+          <li><button type="button" data-go="4" data-cap="The positive: a new scene, with the same pixels moving the same way."><i>5</i>Positive</button></li>
+          <li><button type="button" data-go="5" data-cap="The hard negative is another moment of the same video: the same scene, a different motion. Each of the three clips then gets its own light colour jitter."><i>6</i>Hard negative</button></li>
+        </ol>
+        <p class="anim-cap" aria-live="polite"></p>
+      </div>
+      <div class="anim" id="mNav" role="tabpanel" data-step="0" data-durs="1300,2000,2000,2200" hidden>
+        <div class="stage3" role="img" aria-label="Animation, navigation: a SpatialVID anchor clip; its optical flow covers the whole frame (1.1 pixels outside the moving region, above the 0.5-pixel threshold), so nothing is cut out and the positive is the same clip with its own colour jitter; the hard negative is another moment of the same video.">
+          <figure class="scr scr-a">
+            <div class="scr-box">
+              <img src="assets/method/nav_t.jpg" class="l-t" alt=""><img src="assets/method/nav_tk.jpg" class="l-tk" alt="">
+              <img src="assets/method/nav_flow.jpg" class="l-flow" alt="">
+              <div class="fly"><img src="assets/method/nav_t.jpg" class="l-t" alt=""><img src="assets/method/nav_tk.jpg" class="l-tk" alt=""><img src="assets/method/nav_pos_t.jpg" class="l-t jit" alt=""><img src="assets/method/nav_pos_tk.jpg" class="l-tk jit" alt=""></div>
+              <span class="fchip"><b class="c-t">t</b><b class="c-tk">t+k</b></span>
+            </div>
+            <figcaption><b>Anchor</b>SpatialVID, walking camera</figcaption>
+          </figure>
+          <div class="track" aria-hidden="true"><span></span></div>
+          <figure class="scr scr-b">
+            <div class="scr-box empty"></div>
+            <figcaption><span class="pre"><b>Positive</b>nothing to cut out</span><span class="post"><b>Positive</b>same clip, new colours</span></figcaption>
+          </figure>
+          <figure class="scr scr-h">
+            <div class="scr-box"><img src="assets/method/nav_hard_t.jpg" class="l-t" alt=""><img src="assets/method/nav_hard_tk.jpg" class="l-tk" alt=""><span class="fchip"><b class="c-t">t′</b><b class="c-tk">t′+k</b></span></div>
+            <figcaption><b>Hard negative</b>same video, another moment</figcaption>
+          </figure>
+        </div>
+        <div class="gauge" style="--v: 1.10">
+          <div class="g-head">Mean optical flow outside the moving region: <b>1.10 pixels</b></div>
+          <div class="g-bar"><span class="g-zone"></span><span class="g-thr"></span><span class="g-dot"></span></div>
+          <div class="g-scale"><span class="g-fixed">fixed camera: cut and paste</span><span class="g-mid">0.5 px</span><span class="g-moving">moving camera: colour-jittered copy</span></div>
+        </div>
+        <ol class="rail" style="--n: 4">
+          <li><button type="button" data-go="0" data-cap="A real two-frame clip from SpatialVID, a walking camera, frames t and t+k: the anchor."><i>1</i>Anchor</button></li>
+          <li><button type="button" data-go="1" data-cap="RAFT optical flow between t and t+k covers the whole frame. Outside the moving region the frame moves 1.10 pixels, above the 0.5-pixel threshold: the camera itself moves."><i>2</i>Camera test</button></li>
+          <li><button type="button" data-go="2" data-cap="When the camera moves, the background is the motion, so nothing can be cut out. The positive is the same clip with its own colour jitter (brightness, contrast, saturation and hue)."><i>3</i>Positive</button></li>
+          <li><button type="button" data-go="3" data-cap="The hard negative is chosen as for robot arms: another moment of the same video, the same place with a different camera motion."><i>4</i>Hard negative</button></li>
+        </ol>
+        <p class="anim-cap" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="tile anim-tile">
+      <div class="anim-head"><h3>Contrast: pull the same motion together, push the same scene apart<small>schematic; point positions are illustrative</small></h3><button class="anim-ctl" type="button" data-anim-play aria-pressed="true">Pause</button></div>
+      <div class="anim" id="mCon" data-step="0" data-durs="1600,1400,1100,2600">
+      <div class="obj-wrap">
+        <div class="trip2">
+          <figure class="clip c-a"><div class="scr-box"><img src="assets/method/anchor_t.jpg" class="l-t" alt=""><img src="assets/method/anchor_tk.jpg" class="l-tk" alt=""></div><figcaption><b>Anchor A</b>scene A</figcaption></figure>
+          <figure class="clip c-p"><div class="scr-box"><img src="assets/method/pos_t.jpg" class="l-t" alt=""><img src="assets/method/pos_tk.jpg" class="l-tk" alt=""></div><figcaption><b>Positive P</b>same motion, scene B</figcaption></figure>
+          <figure class="clip c-h"><div class="scr-box"><img src="assets/method/hard_t.jpg" class="l-t" alt=""><img src="assets/method/hard_tk.jpg" class="l-tk" alt=""></div><figcaption><b>Hard negative H</b>scene A, another moment</figcaption></figure>
+        </div>
+        <svg class="obj" viewBox="0 0 900 330" role="img" aria-label="Animation: the three clips pass through the V-JEPA 2 encoder with LoRA; in the embedding space the anchor is pulled toward the positive and pushed away from the hard negative.">
+          <defs>
+            <linearGradient id="gP" gradientUnits="userSpaceOnUse" x1="600" y1="206" x2="412" y2="226"><stop offset="0" style="stop-color: var(--pos); stop-opacity: 0"/><stop offset="1" style="stop-color: var(--pos)"/></linearGradient>
+            <linearGradient id="gH" gradientUnits="userSpaceOnUse" x1="432" y1="268" x2="676" y2="278"><stop offset="0" style="stop-color: var(--neg); stop-opacity: 0"/><stop offset="1" style="stop-color: var(--neg)"/></linearGradient>
+          </defs>
+          <path d="M150 0 C150 34, 450 24, 450 60" class="link"/>
+          <path d="M450 0 V60" class="link"/>
+          <path d="M750 0 C750 34, 450 24, 450 60" class="link"/>
+          <path d="M150 0 C150 34, 450 24, 450 60" class="flow fA" pathLength="1"/>
+          <path d="M450 0 V60" class="flow fP" pathLength="1"/>
+          <path d="M750 0 C750 34, 450 24, 450 60" class="flow fH" pathLength="1"/>
+          <rect x="290" y="60" width="320" height="52" rx="12" class="enc"/>
+          <text x="450" y="83" font-size="16" font-weight="700" text-anchor="middle">V-JEPA 2 (ViT-L) + LoRA</text>
+          <text x="450" y="101" class="small" text-anchor="middle">two-frame clip → mean pool → 640 dimensions</text>
+          <path d="M450 112 V140" class="link"/>
+          <path d="M450 112 V140" class="flow fE" pathLength="1"/>
+          <rect x="170" y="140" width="560" height="182" rx="14" class="space"/>
+          <text x="188" y="163" class="small">action embedding space · symmetric InfoNCE</text>
+          <path d="M600 206 C540 190, 450 210, 412 226" class="trail tP" pathLength="1"/>
+          <path d="M432 268 C520 292, 600 290, 676 278" class="trail tH" pathLength="1"/>
+          <text x="512" y="196" class="lbl-pull tl">pull</text>
+          <text x="560" y="305" class="lbl-push tl">push</text>
+          <g class="dot dH"><circle r="9"/><text y="-15" text-anchor="middle">H</text></g>
+          <g class="dot dP"><circle r="9"/><text y="-15" text-anchor="middle">P</text></g>
+          <g class="dot dA"><circle r="9"/><text y="26" text-anchor="middle">A</text></g>
+        </svg>
+      </div>
+      <ol class="rail" style="--n: 4">
+        <li><button type="button" data-go="0" data-cap="Three two-frame clips: the anchor A, its positive P (same motion, scene B) and a hard negative H (the same video as A, another moment)."><i>1</i>Three clips</button></li>
+        <li><button type="button" data-go="1" data-cap="All three go through the same V-JEPA 2 encoder with LoRA adapters: tokens are mean-pooled and projected to 640 dimensions."><i>2</i>Encode</button></li>
+        <li><button type="button" data-go="2" data-cap="Each clip becomes one point in the action embedding space."><i>3</i>Embed</button></li>
+        <li><button type="button" data-go="3" data-cap="The symmetric InfoNCE loss pulls A toward P and pushes it away from H. Sharing a scene is no shortcut, so the embedding has to describe the motion."><i>4</i>Pull and push</button></li>
+      </ol>
+      <p class="anim-cap" aria-live="polite"></p>
+      </div>
+    </div>
+    <div class="steps">
+      <div><h4>Same motion, new scene</h4><p>For fixed-camera clips, the moving region is found with RAFT optical flow, moved to a random position and pasted onto a frame of another scene. Clips with a moving camera use a colour-jittered copy instead.</p></div>
+      <div><h4>Same scene, other motion</h4><p>The hard negative is another time window of the same clip. It shares the scene with the anchor, so the encoder cannot tell them apart by recognising the scene.</p></div>
+      <div><h4>Label-free and lightweight</h4><p>168K frame pairs from 9 video datasets, with no action labels. Only LoRA adapters are trained (rank 16, about 7M parameters), in about 1.5 hours on one RTX 4090.</p></div>
+      <div><h4>Plug into a world model</h4><p>The frozen 640-dimensional embedding replaces the latent action of an AdaWorld world model. Every action representation is trained with the same recipe and the same 19,946 clips.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter" id="results">
+  <div class="wrap chapter-head">
+    <p class="eyebrow">Results</p>
+    <h2>More action, <span class="mk">less scene</span></h2>
+    <p class="lede">AdaWorld and DreamDojo latent action models are retrained on the same 168K pairs as our encoder (marked †). Datasets marked ° contributed unlabelled videos to our encoder's training; all others are unseen. <strong>Bold</strong>: best; <u>underline</u>: second best.</p>
+  </div>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><span class="k">Linear probe, mean R²</span><b>0.490</b><p>Over 12 datasets. V-JEPA 2: 0.347, DreamDojo: 0.211. Random features score below 0.</p></div>
+      <div class="stat"><span class="k">Action transfer</span><b>5 / 5</b><p>Best transfer direction in every column. LIBERO: 0.917 against 0.803 for DreamDojo.</p></div>
+      <div class="stat"><span class="k">Controllability after fine-tuning</span><b>8 / 8</b><p>Best in every cell. Ahead of DreamDojo outside the 95% interval in 7 of the 8.</p></div>
+      <div class="stat"><span class="k">Scene leakage, mean LPIPS↑</span><b>0.304</b><p>Least scene information recoverable on average. V-JEPA 2: 0.275.</p></div>
+    </div>
+
+    <div class="result" id="probing">
+      <h3>Does the representation carry the action?</h3>
+      <p class="take">A linear layer predicts the ground-truth action from each frozen representation. <strong>JustAct has the highest mean R² (0.490) and is best on 11 of 13 datasets.</strong> Raw V-JEPA 2 features turn negative on RoboCasa and DROID (−0.368, −0.131), where JustAct stays positive.</p>
+      <div class="tablebox"><table>
+        <thead>
+          <tr><th></th><th colspan="9">Robot manipulation</th><th colspan="3">Camera navigation</th><th>Game (F1)</th><th></th></tr>
+          <tr><th>Representation</th><th>LIBERO°</th><th>DROID°</th><th>RLBench</th><th>RoboCasa</th><th>DROID-IPRL</th><th>MetaWorld</th><th>MUTEX</th><th>Robosuite</th><th>RoboDesk</th><th>SpatialVID°</th><th>ARKitScenes</th><th>RE10K</th><th>Procgen</th><th>Avg.</th></tr>
+        </thead>
+        <tbody>
+          <tr class="dim"><td>Random</td><td>−0.032</td><td>−0.112</td><td>−0.021</td><td>−0.100</td><td>−0.094</td><td>−0.062</td><td>−0.156</td><td>−0.093</td><td>−0.072</td><td>−0.092</td><td>−0.090</td><td>−0.074</td><td>0.073</td><td>−0.083</td></tr>
+          <tr><td>AdaWorld†</td><td>0.199</td><td>0.011</td><td>0.136</td><td>−0.154</td><td>0.009</td><td>−0.045</td><td>0.191</td><td>0.121</td><td>0.170</td><td>0.108</td><td>0.006</td><td>0.046</td><td>0.063</td><td>0.067</td></tr>
+          <tr><td>DreamDojo†</td><td>0.324</td><td class="s">0.071</td><td>0.246</td><td class="s">0.034</td><td>0.162</td><td class="s">0.156</td><td>0.425</td><td>0.319</td><td>0.268</td><td>0.266</td><td>0.087</td><td>0.173</td><td>0.092</td><td>0.211</td></tr>
+          <tr><td>V-JEPA 2</td><td class="b">0.718</td><td>−0.131</td><td class="s">0.556</td><td>−0.368</td><td class="s">0.186</td><td>0.144</td><td class="s">0.527</td><td class="s">0.448</td><td class="s">0.520</td><td class="s">0.301</td><td class="b">0.665</td><td class="s">0.598</td><td class="s">0.145</td><td class="s">0.347</td></tr>
+          <tr class="ours"><td>JustAct (ours)</td><td class="s">0.634</td><td class="b">0.203</td><td class="b">0.566</td><td class="b">0.322</td><td class="b">0.279</td><td class="b">0.277</td><td class="b">0.566</td><td class="b">0.695</td><td class="b">0.581</td><td class="b">0.560</td><td class="s">0.588</td><td class="b">0.609</td><td class="b">0.200</td><td class="b">0.490</td></tr>
+        </tbody>
+      </table></div>
+      <p class="cap">Test R² (Procgen: macro-F1 over 15 actions), mean over 3 probe seeds. Held-out scenes; for LIBERO and RLBench, held-out demonstrations. Avg.: mean over the 12 continuous-action datasets.</p>
+    </div>
+
+    <div class="result" id="leakage">
+      <h3>Does it leak the scene?</h3>
+      <p class="take">A decoder tries to reconstruct the post-action frame from the representation, on scenes it never saw. Higher LPIPS means less of the scene can be recovered. <strong>JustAct leaks the least on average (0.304)</strong> while carrying the most action information. Raw V-JEPA 2 leaks the most (0.275).</p>
+      <div class="tablebox"><table>
+        <thead>
+          <tr><th></th><th colspan="9">Robot manipulation</th><th colspan="3">Camera navigation</th><th>Game</th><th colspan="3">Average</th></tr>
+          <tr><th>Representation</th><th>LIBERO°</th><th>DROID°</th><th>RLBench</th><th>RoboCasa</th><th>DROID-IPRL</th><th>MetaWorld</th><th>MUTEX</th><th>Robosuite</th><th>RoboDesk</th><th>SpatialVID°</th><th>ARKitScenes</th><th>RE10K</th><th>Procgen</th><th>LPIPS↑</th><th>SSIM↓</th><th>L1↑</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>AdaWorld†</td><td>0.288</td><td>0.314</td><td class="s">0.273</td><td>0.363</td><td class="s">0.320</td><td class="s">0.136</td><td class="s">0.211</td><td>0.307</td><td class="b">0.127</td><td>0.366</td><td class="s">0.405</td><td>0.369</td><td>0.325</td><td>0.293</td><td class="s">0.374</td><td class="s">0.256</td></tr>
+          <tr><td>DreamDojo†</td><td class="s">0.306</td><td class="s">0.315</td><td class="b">0.283</td><td>0.375</td><td>0.317</td><td class="b">0.137</td><td class="b">0.212</td><td class="s">0.308</td><td class="s">0.119</td><td>0.379</td><td>0.405</td><td>0.385</td><td class="s">0.347</td><td class="s">0.299</td><td class="b">0.369</td><td class="b">0.260</td></tr>
+          <tr><td>V-JEPA 2</td><td>0.257</td><td>0.289</td><td>0.216</td><td class="b">0.480</td><td>0.247</td><td>0.066</td><td>0.130</td><td>0.282</td><td>0.069</td><td class="s">0.402</td><td>0.384</td><td class="b">0.442</td><td>0.311</td><td>0.275</td><td>0.478</td><td>0.200</td></tr>
+          <tr class="ours"><td>JustAct (ours)</td><td class="b">0.314</td><td class="b">0.328</td><td>0.269</td><td class="s">0.411</td><td class="b">0.322</td><td>0.105</td><td>0.177</td><td class="b">0.317</td><td>0.100</td><td class="b">0.407</td><td class="b">0.411</td><td class="s">0.436</td><td class="b">0.352</td><td class="b">0.304</td><td>0.391</td><td>0.255</td></tr>
+        </tbody>
+      </table></div>
+      <p class="cap">Held-out LPIPS↑ per dataset; same decoder for every representation, 10 epochs at 128×128, mean over 4 seeds. A representation with no information at all also leaks nothing, so read this together with the probing table.</p>
+    </div>
+
+    <div class="result" id="transfer">
+      <h3>Does a world model follow it?</h3>
+      <p class="take">The same AdaWorld world model is trained with each action representation. In <i>Transfer</i>, one clip's actions drive a different scene, and Dir measures whether the generated motion goes the way the source moved. <strong>JustAct is best on Dir in all five columns.</strong> Self PSNR is close to DreamDojo throughout.</p>
+      <div class="tablebox"><table>
+        <thead>
+          <tr><th></th><th colspan="2">LIBERO°</th><th colspan="2">RLBench</th><th colspan="2">SpatialVID°</th><th colspan="2">nuScenes dev.</th><th colspan="2">nuScenes conf.</th></tr>
+          <tr><th>Action representation</th><th>Self PSNR↑</th><th>Transfer Dir↑</th><th>Self PSNR↑</th><th>Transfer Dir↑</th><th>Self PSNR↑</th><th>Transfer Dir↑</th><th>Self PSNR↑</th><th>Transfer Dir↑</th><th>Self PSNR↑</th><th>Transfer Dir↑</th></tr>
+        </thead>
+        <tbody>
+          <tr class="dim"><td>No action</td><td>18.41</td><td>0.186</td><td>18.51</td><td>−0.054</td><td>15.42</td><td>−0.188</td><td>18.60</td><td>−0.092</td><td>19.10</td><td>0.398</td></tr>
+          <tr><td>AdaWorld†</td><td>18.90</td><td>0.162</td><td class="s">18.32</td><td>−0.109</td><td>15.52</td><td>−0.274</td><td>18.44</td><td>−0.142</td><td class="s">19.46</td><td>0.432</td></tr>
+          <tr><td>DreamDojo†</td><td class="s">19.95</td><td class="s">0.803</td><td>18.08</td><td class="s">0.572</td><td class="b">16.40</td><td class="s">0.480</td><td class="b">18.57</td><td class="s">0.574</td><td class="b">19.67</td><td class="s">0.571</td></tr>
+          <tr class="ours"><td>JustAct (ours)</td><td class="b">20.32</td><td class="b">0.917</td><td class="b">18.63</td><td class="b">0.686</td><td class="s">16.10</td><td class="b">0.608</td><td class="s">18.56</td><td class="b">0.659</td><td>19.38</td><td class="b">0.603</td></tr>
+        </tbody>
+      </table></div>
+      <p class="cap">Self: PSNR (dB) when driven by the clip's own actions. Transfer Dir: cosine between the optical-flow direction of the generated video and of the source clip (0: unrelated, 1: same). The no-action row is a reference and is not ranked.</p>
+    </div>
+
+    <div class="result" id="finetune">
+      <h3>Does it help after fine-tuning on a new domain?</h3>
+      <p class="take">Each pretrained world model is fine-tuned on a small labelled set from a new domain. <strong>After 800 updates JustAct follows the commanded action best in all four domains.</strong> On nuScenes the gap is largest: 0.928 against 0.722. Image fidelity converges to the same level for every method.</p>
+      <div class="tablebox"><table>
+        <thead>
+          <tr><th></th><th colspan="3">DMLab</th><th colspan="3">Minecraft</th><th colspan="3">Habitat</th><th colspan="3">nuScenes</th></tr>
+        </thead>
+        <tbody>
+          <tr class="panel"><td colspan="13">(a) Controllability after 800 updates: Follow↑ / Control↑ (dB)</td></tr>
+          <tr class="dim"><td>Real frames</td><td colspan="2">0.997</td><td>–</td><td colspan="2">0.900</td><td>–</td><td colspan="2">0.787</td><td>–</td><td colspan="2">–</td><td>–</td></tr>
+          <tr><td>AdaWorld†</td><td colspan="2">0.508</td><td>4.04</td><td colspan="2">0.647</td><td>6.88</td><td colspan="2">0.527</td><td>3.04</td><td colspan="2">0.628</td><td>0.04</td></tr>
+          <tr><td>DreamDojo†</td><td colspan="2" class="s">0.863</td><td class="s">7.99</td><td colspan="2" class="s">0.787</td><td class="s">7.59</td><td colspan="2" class="s">0.749</td><td class="s">7.33</td><td colspan="2" class="s">0.722</td><td class="s">0.15</td></tr>
+          <tr class="ours"><td>JustAct (ours)</td><td colspan="2" class="b">0.901</td><td class="b">8.95</td><td colspan="2" class="b">0.821</td><td class="b">7.81</td><td colspan="2" class="b">0.767</td><td class="b">7.35</td><td colspan="2" class="b">0.928</td><td class="b">0.64</td></tr>
+          <tr class="delta"><td>Δ vs best baseline</td><td colspan="2" class="up">+0.038</td><td class="up">+0.96</td><td colspan="2" class="up">+0.034</td><td class="up">+0.22</td><td colspan="2" class="up">+0.018</td><td class="lv">+0.02</td><td colspan="2" class="up">+0.207</td><td class="up">+0.49</td></tr>
+          <tr class="panel"><td colspan="13">(b) Fidelity: PSNR↑ (dB) after 0 / 200 / 800 updates</td></tr>
+          <tr><td>AdaWorld†</td><td>18.77</td><td>21.35</td><td>22.34</td><td class="b">23.07</td><td>23.36</td><td>23.46</td><td>18.44</td><td>18.95</td><td>20.99</td><td class="b">24.59</td><td class="b">24.85</td><td class="b">24.77</td></tr>
+          <tr><td>DreamDojo†</td><td class="s">19.14</td><td class="s">22.56</td><td class="s">23.08</td><td class="s">22.80</td><td class="s">23.48</td><td class="s">23.49</td><td class="s">19.24</td><td class="s">23.00</td><td class="b">23.78</td><td class="s">24.53</td><td class="s">24.83</td><td class="b">24.77</td></tr>
+          <tr class="ours"><td>JustAct (ours)</td><td class="b">19.28</td><td class="b">22.82</td><td class="b">23.11</td><td>22.57</td><td class="b">23.59</td><td class="b">23.54</td><td class="b">20.56</td><td class="b">23.27</td><td class="s">23.74</td><td class="b">24.59</td><td class="s">24.83</td><td class="s">24.76</td></tr>
+          <tr class="delta"><td>Δ vs best baseline</td><td class="up">+0.14</td><td class="up">+0.26</td><td class="lv">+0.03</td><td class="dn">−0.50</td><td class="up">+0.11</td><td class="lv">+0.05</td><td class="up">+1.31</td><td class="up">+0.27</td><td class="lv">−0.04</td><td class="lv">0.00</td><td class="lv">−0.02</td><td class="lv">0.00</td></tr>
+        </tbody>
+      </table></div>
+      <p class="cap">Follow↑: accuracy of an inverse-dynamics classifier at recognising the commanded action in the generated frame (chance 0.333; Real frames: the same classifier on real frames). On nuScenes, Spearman correlation between commanded and generated forward motion (chance 0). Control↑: PSNR under the commanded action minus under other actions (0 means the action is ignored). Δ is grey when the 95% paired bootstrap interval contains 0.</p>
+    </div>
+  </div>
+</section>
+
+<section class="statement wrap" id="closing">
+  <p data-words>A self-supervised video encoder already knows how things move. JustAct <span class="mk">turns that knowledge into actions</span> a world model can follow.</p>
+</section>
+
+<section class="wrap prose" id="bibtex">
+  <p class="eyebrow">BibTeX</p>
+  <div class="bib"><button class="copy" id="copyBib" type="button">Copy</button><pre id="bib">@article{li2026justact,
+  title   = {JustAct: Extracting Action Representations from Self-Supervised Video Encoders for World Models},
+  author  = {Li, Runjia and Chen, Minghao and Xie, Junyu and Torr, Philip and Vedaldi, Andrea and Jakab, Tomas},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  year    = {2026}
+}</pre></div>
+</section>
+</main>
+
+<footer><div class="wrap"><p class="mark">JustAct</p><p>Runjia Li, Minghao Chen, Junyu Xie, Philip Torr, Andrea Vedaldi, Tomas Jakab · University of Oxford</p><p><a href="#top">Back to top</a></p></div></footer>
+
+<script>
+// Teaser examples (key = assets/teaser/<key>_{source,ours}.jpg, built by build_teaser_v4.py)
+window.TEASER_EXAMPLES = [
+  {"key": "mv_drone_left", "group": "web", "tgtName": "an imagined crayon road", "src": "Drone over a rape field", "tgt": "imagined world", "kind": "real drone video, turning left", "credit": {"text": "“DJI FPV drone meets fox in rape field” by anotherview", "url": "https://commons.wikimedia.org/wiki/File:DJI_FPV_drone_meets_fox_in_rape_field.webm", "note": "CC BY 3.0, Wikimedia Commons"}},
+  {"key": "mv_forza_left_kart", "group": "web", "tgtName": "an imagined kart track", "src": "Forza Horizon 5", "tgt": "imagined world", "kind": "racing game, turning left", "game": true, "credit": {"text": "public gameplay recording on Hugging Face", "url": "https://huggingface.co/datasets/xiaoluo11/forza-horizon-5-gameplay-data", "note": "game footage belongs to its publisher"}},
+  {"key": "mv_forza_left_city", "group": "web", "tgtName": "an imagined cartoon city", "src": "Forza Horizon 5", "tgt": "imagined world", "kind": "racing game, turning left", "game": true, "credit": {"text": "public gameplay recording on Hugging Face", "url": "https://huggingface.co/datasets/xiaoluo11/forza-horizon-5-gameplay-data", "note": "game footage belongs to its publisher"}},
+  {"key": "mv_sea_left", "group": "web", "tgtName": "an imagined low-poly beach", "src": "Drone over the sea", "tgt": "imagined world", "kind": "real drone video, turning left", "credit": {"text": "“Gold Beach Oregon FPV Drone 2022” by Chauncy Earl", "url": "https://commons.wikimedia.org/wiki/File:Gold_Beach_Oregon_FPV_Drone_2022.webm", "note": "CC BY 3.0, Wikimedia Commons"}},
+  {"key": "mv_moto_left", "group": "web", "tgtName": "an imagined anime riverbank", "src": "Motorcycle in Ladakh", "tgt": "imagined world", "kind": "real motorcycle video, looking left", "credit": {"text": "“Ride to Leh, July 2017 - Sarchu to Leh, Ladakh” by Torque Biker", "url": "https://commons.wikimedia.org/wiki/File:Ride_to_Leh,_July_2017_-_Sarchu_to_Leh,_Ladakh.webm", "note": "CC BY 3.0, Wikimedia Commons"}},
+  {"key": "mv_valorant_left", "group": "web", "tgtName": "an imagined pixel-art town", "src": "Valorant", "tgt": "imagined world", "kind": "first-person shooter, turning left", "game": true, "credit": {"text": "public gameplay recording on Hugging Face", "url": "https://huggingface.co/datasets/xiaoluo11/valorant-gameplay-data", "note": "game footage belongs to its publisher"}},
+  {"key": "mv_owl_right", "group": "web", "tgtName": "an imagined fantasy forest", "src": "Far Cry Primal", "tgt": "imagined world", "kind": "game, an owl turning right", "game": true, "credit": {"text": "public gameplay recording on Hugging Face", "url": "https://huggingface.co/datasets/xiaoluo11/far-cry-primal-gameplay-data", "note": "game footage belongs to its publisher"}},
+  {"key": "mv_valorant_right", "group": "web", "tgtName": "an imagined lantern-lit alley", "src": "Valorant", "tgt": "imagined world", "kind": "first-person shooter, turning right", "game": true, "credit": {"text": "public gameplay recording on Hugging Face", "url": "https://huggingface.co/datasets/xiaoluo11/valorant-gameplay-data", "note": "game footage belongs to its publisher"}},
+  {"key": "mv_coast_right", "group": "web", "tgtName": "an imagined anime riverbank", "src": "Drone at the coast", "tgt": "imagined world", "kind": "real drone video, turning right", "credit": {"text": "“Gold Beach Oregon FPV Drone 2022” by Chauncy Earl", "url": "https://commons.wikimedia.org/wiki/File:Gold_Beach_Oregon_FPV_Drone_2022.webm", "note": "CC BY 3.0, Wikimedia Commons"}},
+  {"key": "mv_moto_right", "group": "web", "tgtName": "an imagined snowy road", "src": "Motorcycle in Ladakh", "tgt": "imagined world", "kind": "real motorcycle video, turning right", "credit": {"text": "“Ride to Leh, July 2017 - Sarchu to Leh, Ladakh” by Torque Biker", "url": "https://commons.wikimedia.org/wiki/File:Ride_to_Leh,_July_2017_-_Sarchu_to_Leh,_Ladakh.webm", "note": "CC BY 3.0, Wikimedia Commons"}},
+  {"key": "mv_snorkel_right", "group": "web", "tgtName": "an imagined coral reef", "src": "Snorkelling", "tgt": "imagined world", "kind": "real snorkelling video, turning right", "credit": {"text": "“Strunjan snorkeling 2” by Car N Radio", "url": "https://commons.wikimedia.org/wiki/File:Strunjan_snorkeling_2.webm", "note": "CC BY 3.0, Wikimedia Commons"}},
+  {"key": "mv_drone_up", "group": "web", "tgtName": "an imagined sunflower road", "src": "Drone over a rape field", "tgt": "imagined world", "kind": "real drone video, tilting up", "credit": {"text": "“DJI FPV drone meets fox in rape field” by anotherview", "url": "https://commons.wikimedia.org/wiki/File:DJI_FPV_drone_meets_fox_in_rape_field.webm", "note": "CC BY 3.0, Wikimedia Commons"}},
+  {"key": "mv_owl_up", "group": "web", "tgtName": "an imagined voxel world", "src": "Far Cry Primal", "tgt": "imagined world", "kind": "game, an owl pulling up", "game": true, "credit": {"text": "public gameplay recording on Hugging Face", "url": "https://huggingface.co/datasets/xiaoluo11/far-cry-primal-gameplay-data", "note": "game footage belongs to its publisher"}},
+  {"key": "mv_garage_back", "group": "web", "tgtName": "an imagined castle hall", "src": "Car in a garage", "tgt": "imagined world", "kind": "real dashcam video, reversing", "credit": {"text": "“Dashcam Recording (urban)” by Fernost", "url": "https://commons.wikimedia.org/wiki/File:Dashcam_Recording_(urban).ogv", "note": "CC0, Wikimedia Commons"}},
+  {"key": "web_forza", "group": "web", "tgtName": "a real country road", "src": "Forza Horizon 5", "tgt": "SpatialVID", "kind": "racing game", "game": true, "credit": {"text": "public gameplay recording on Hugging Face", "url": "https://huggingface.co/datasets/xiaoluo11/forza-horizon-5-gameplay-data", "note": "game footage belongs to its publisher"}},
+  {"key": "web_owl", "group": "web", "tgtName": "a real country road", "src": "Far Cry Primal", "tgt": "SpatialVID", "kind": "game, flying as an owl", "game": true, "credit": {"text": "public gameplay recording on Hugging Face", "url": "https://huggingface.co/datasets/xiaoluo11/far-cry-primal-gameplay-data", "note": "game footage belongs to its publisher"}},
+  {"key": "web_nms", "group": "web", "tgtName": "a real country road", "src": "No Man's Sky", "tgt": "SpatialVID", "kind": "space exploration game", "game": true, "credit": {"text": "public gameplay recording on Hugging Face", "url": "https://huggingface.co/datasets/xiaoluo11/no-mans-sky-gameplay-data", "note": "game footage belongs to its publisher"}},
+  {"key": "web_horizon", "group": "web", "tgtName": "a real country road", "src": "Horizon Zero Dawn", "tgt": "SpatialVID", "kind": "open-world game", "game": true, "credit": {"text": "public gameplay recording on Hugging Face", "url": "https://huggingface.co/datasets/xiaoluo11/horizon-zero-dawn-gameplay-data", "note": "game footage belongs to its publisher"}},
+  {"key": "web_tombraider", "group": "web", "tgtName": "a real country road", "src": "Rise of the Tomb Raider", "tgt": "SpatialVID", "kind": "adventure game", "game": true, "credit": {"text": "public gameplay recording on Hugging Face", "url": "https://huggingface.co/datasets/xiaoluo11/rise-of-the-tomb-raider-gameplay-data", "note": "game footage belongs to its publisher"}},
+  {"key": "web_valorant", "group": "web", "tgtName": "a real city street", "src": "Valorant", "tgt": "SpatialVID", "kind": "first-person shooter", "game": true, "credit": {"text": "public gameplay recording on Hugging Face", "url": "https://huggingface.co/datasets/xiaoluo11/valorant-gameplay-data", "note": "game footage belongs to its publisher"}},
+  {"key": "web_watchdogs", "group": "web", "tgtName": "a real city street", "src": "Watch Dogs 2", "tgt": "SpatialVID", "kind": "game, driving at night", "game": true, "credit": {"text": "public gameplay recording on Hugging Face", "url": "https://huggingface.co/datasets/xiaoluo11/watch-dogs-2-gameplay-data", "note": "game footage belongs to its publisher"}},
+  {"key": "web_horse", "group": "web", "tgtName": "a real city street", "src": "Assassin's Creed Origins", "tgt": "SpatialVID", "kind": "game, riding a horse", "game": true, "credit": {"text": "public gameplay recording on Hugging Face", "url": "https://huggingface.co/datasets/xiaoluo11/assassins-creed-origins-gameplay-data", "note": "game footage belongs to its publisher"}},
+  {"key": "web_rdr2", "group": "web", "tgtName": "a real country road", "src": "Red Dead Redemption 2", "tgt": "SpatialVID", "kind": "game, riding through snow", "game": true, "credit": {"text": "public gameplay recording on Hugging Face", "url": "https://huggingface.co/datasets/xiaoluo11/red-dead-redemption-2-gameplay-data", "note": "game footage belongs to its publisher"}},
+  {"key": "web_coaster", "group": "web", "tgtName": "a real country road", "src": "Roller coaster", "tgt": "SpatialVID", "kind": "roller coaster ride", "credit": {"text": "“Racer Kings Island Racing Roller Coaster POV” by The Coaster Scoop", "url": "https://commons.wikimedia.org/wiki/File:Racer_Kings_Island_Racing_Roller_Coaster_POV.webm", "note": "CC BY 3.0, Wikimedia Commons"}},
+  {"key": "web_drone_alpine", "group": "web", "tgtName": "a real country road", "src": "Drone in the Alps", "tgt": "SpatialVID", "kind": "drone flight", "credit": {"text": "“FPV drone flying in alpine conditions with snow, sleet and rain” by anotherview", "url": "https://commons.wikimedia.org/wiki/File:FPV_drone_flying_in_alpine_conditions_with_snow,_sleet_and_rain.webm", "note": "CC BY 3.0, Wikimedia Commons"}},
+  {"key": "web_iss", "group": "web", "tgtName": "a real country road", "src": "Space station", "tgt": "SpatialVID", "kind": "view from the space station", "credit": {"text": "“Earth Views from the International Space Station” by NASA", "url": "https://commons.wikimedia.org/wiki/File:Earth_Views_from_the_International_Space_Station.webm", "note": "Public domain, Wikimedia Commons"}},
+  {"key": "web_snorkel", "group": "web", "tgtName": "a real country road", "src": "Snorkelling", "tgt": "SpatialVID", "kind": "underwater swim", "credit": {"text": "“Strunjan snorkeling 2” by Car N Radio", "url": "https://commons.wikimedia.org/wiki/File:Strunjan_snorkeling_2.webm", "note": "CC BY 3.0, Wikimedia Commons"}},
+  {"key": "web_moto", "group": "web", "tgtName": "a real country road", "src": "Motorcycle in Ladakh", "tgt": "SpatialVID", "kind": "motorcycle ride", "credit": {"text": "“Ride to Leh, July 2017 - Sarchu to Leh, Ladakh” by Torque Biker", "url": "https://commons.wikimedia.org/wiki/File:Ride_to_Leh,_July_2017_-_Sarchu_to_Leh,_Ladakh.webm", "note": "CC BY 3.0, Wikimedia Commons"}},
+  {"key": "web_drone_fox", "group": "web", "tgtName": "a real country road", "src": "Drone over a field", "tgt": "SpatialVID", "kind": "drone flight", "credit": {"text": "“DJI FPV drone meets fox in rape field” by anotherview", "url": "https://commons.wikimedia.org/wiki/File:DJI_FPV_drone_meets_fox_in_rape_field.webm", "note": "CC BY 3.0, Wikimedia Commons"}},
+  {"key": "w_rlbench_a", "group": "within", "src": "RLBench", "tgt": "RLBench"},
+  {"key": "w_libero_a", "group": "within", "src": "LIBERO", "tgt": "LIBERO"},
+  {"key": "w_spatialvid_a", "group": "within", "src": "SpatialVID", "tgt": "SpatialVID"},
+  {"key": "w_nuscenes_a", "group": "within", "src": "nuScenes", "tgt": "nuScenes"},
+  {"key": "w_libero_b", "group": "within", "src": "LIBERO", "tgt": "LIBERO"},
+  {"key": "w_spatialvid_b", "group": "within", "src": "SpatialVID", "tgt": "SpatialVID"},
+  {"key": "x_libero_rlbench", "group": "cross", "src": "LIBERO", "tgt": "RLBench"},
+  {"key": "x_rlbench_libero", "group": "cross", "src": "RLBench", "tgt": "LIBERO"},
+  {"key": "x_spatialvid_nuscenes", "group": "cross", "src": "SpatialVID", "tgt": "nuScenes"},
+  {"key": "x_nuscenes_spatialvid", "group": "cross", "src": "nuScenes", "tgt": "SpatialVID"},
+  {"key": "x_nuscenes_spatialvid_b", "group": "cross", "src": "nuScenes", "tgt": "SpatialVID"},
+  {"key": "x_spatialvid_arkit", "group": "cross", "src": "SpatialVID", "tgt": "ARKitScenes"},
+  {"key": "x_mutex_libero", "group": "cross", "src": "UT Austin MUTEX", "tgt": "LIBERO"},
+  {"key": "x_cmu_libero", "group": "cross", "src": "CMU IAM Lab", "tgt": "LIBERO"},
+  {"key": "x_ur5_libero", "group": "cross", "src": "Berkeley UR5", "tgt": "LIBERO"},
+  {"key": "x_re10k_spatialvid", "group": "cross", "src": "RealEstate10K", "tgt": "SpatialVID"}
+];
+// Unseen worlds (assets/ood/<key>_image.jpg and <key>_a<k>_{source,ours}.jpg)
+window.TEASER_OOD = [
+  {"key": "anime_street", "name": "Sunset street", "kind": "anime background art, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Anime"},
+  {"key": "tunnel", "name": "Tunnel exit", "kind": "anime background art, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Anime"},
+  {"key": "sakura", "name": "Cherry blossoms", "kind": "anime background art, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Anime"},
+  {"key": "riverbank", "name": "Riverbank at sunset", "kind": "anime background art, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Anime"},
+  {"key": "seaside", "name": "Seaside road", "kind": "anime background art, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Anime"},
+  {"key": "railway", "name": "Railway in summer", "kind": "anime background art, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Anime"},
+  {"key": "school", "name": "School corridor", "kind": "anime background art, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Anime"},
+  {"key": "arcade", "name": "Shopping arcade", "kind": "anime background art, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Anime"},
+  {"key": "shrine", "name": "Shrine gates", "kind": "anime background art, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Anime"},
+  {"key": "snow_forest", "name": "Snowy forest", "kind": "anime background art, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Anime"},
+  {"key": "night_city", "name": "Anime night city", "kind": "anime background art, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Anime"},
+  {"key": "sunflowers", "name": "Sunflower road", "kind": "anime background art, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Anime"},
+  {"key": "rain_alley", "name": "Lantern alley", "kind": "anime background art, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Anime"},
+  {"key": "cloud_road", "name": "Road in the clouds", "kind": "anime fantasy background art, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Anime"},
+  {"key": "anime_fields", "name": "Rice fields", "kind": "anime background art, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Anime"},
+  {"key": "bamboo", "name": "Bamboo path", "kind": "anime background art, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Anime"},
+  {"key": "racer", "name": "Retro racer", "kind": "retro racing game look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "kart", "name": "Kart track", "kind": "cartoon kart-racing game look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "voxel", "name": "Block world", "kind": "voxel game look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "candy", "name": "Candy land", "kind": "cartoon game look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "synthwave", "name": "Neon highway", "kind": "retro synthwave game look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "forest", "name": "Glowing forest", "kind": "fantasy game look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "canyon", "name": "Canyon drive", "kind": "cartoon racing game look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "snow", "name": "Snow road", "kind": "cel-shaded game look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "island", "name": "Low-poly island", "kind": "low-poly game look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "castle", "name": "Castle hall", "kind": "fantasy game look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "jungle", "name": "Jungle path", "kind": "adventure game look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "pixel_town", "name": "Pixel town", "kind": "pixel-art game look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "underwater", "name": "Coral reef", "kind": "stylized game look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "lava", "name": "Lava cave", "kind": "fantasy game look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "dungeon", "name": "Torch dungeon", "kind": "retro 3D game look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "hallway", "name": "Haunted hallway", "kind": "horror game look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "spaceship", "name": "Spaceship corridor", "kind": "science-fiction game look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "toon_city", "name": "Cartoon city", "kind": "3D animated film look, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "doom", "name": "Doom", "kind": "a real frame from the game Doom", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Games"},
+  {"key": "starry", "name": "Starry night", "kind": "oil painting, swirling strokes, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Paintings"},
+  {"key": "ink", "name": "Ink mountains", "kind": "ink-wash painting, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Paintings"},
+  {"key": "woodblock", "name": "Woodblock road", "kind": "woodblock print, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Paintings"},
+  {"key": "crayon", "name": "Crayon road", "kind": "children's crayon drawing, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Paintings"},
+  {"key": "watercolor", "name": "Watercolor village", "kind": "watercolor painting, made by a text-to-image model", "actions": [{"src": "SpatialVID", "note": "walking along a dirt road", "s": "src_8c48ddf5"}, {"src": "nuScenes", "note": "car turning left", "s": "src_ef0448c7"}, {"src": "nuScenes", "note": "car turning right", "s": "src_d62ad9f1"}, {"src": "SpatialVID", "note": "camera sliding left", "s": "src_bc409ce8"}, {"src": "SpatialVID", "note": "camera sliding right", "s": "src_994999c1"}, {"src": "nuScenes", "note": "driving at night", "s": "src_b687325e"}, {"src": "nuScenes", "note": "car standing still", "s": "src_a5a37664"}], "group": "Paintings"},
+  {"key": "robot_anime", "name": "Anime robot", "kind": "anime illustration, made by a text-to-image model", "actions": [{"src": "LIBERO", "note": "putting a mug on a plate", "s": "src_1d5146a2"}, {"src": "LIBERO", "note": "putting a book on a shelf", "s": "src_0fcbd9a5"}, {"src": "RLBench", "note": "sweeping into a dustpan", "s": "src_091b7153"}], "group": "Robot arms"},
+  {"key": "robot_pixel", "name": "Pixel robot", "kind": "pixel-art game look, made by a text-to-image model", "actions": [{"src": "LIBERO", "note": "putting a mug on a plate", "s": "src_1d5146a2"}, {"src": "LIBERO", "note": "putting a book on a shelf", "s": "src_0fcbd9a5"}, {"src": "RLBench", "note": "sweeping into a dustpan", "s": "src_091b7153"}], "group": "Robot arms"},
+  {"key": "robot_oil", "name": "Painted robot", "kind": "oil painting, made by a text-to-image model", "actions": [{"src": "LIBERO", "note": "putting a mug on a plate", "s": "src_1d5146a2"}, {"src": "LIBERO", "note": "putting a book on a shelf", "s": "src_0fcbd9a5"}, {"src": "RLBench", "note": "sweeping into a dustpan", "s": "src_091b7153"}], "group": "Robot arms"},
+  {"key": "robot_neon", "name": "Neon lab", "kind": "science-fiction game look, made by a text-to-image model", "actions": [{"src": "LIBERO", "note": "putting a mug on a plate", "s": "src_1d5146a2"}, {"src": "LIBERO", "note": "putting a book on a shelf", "s": "src_0fcbd9a5"}, {"src": "RLBench", "note": "sweeping into a dustpan", "s": "src_091b7153"}], "group": "Robot arms"},
+  {"key": "robot_pixel2", "name": "Pixel workbench", "kind": "pixel-art game look, made by a text-to-image model", "actions": [{"src": "LIBERO", "note": "putting a mug on a plate", "s": "src_1d5146a2"}, {"src": "LIBERO", "note": "putting a book on a shelf", "s": "src_0fcbd9a5"}, {"src": "RLBench", "note": "sweeping into a dustpan", "s": "src_091b7153"}], "group": "Robot arms"},
+  {"key": "metaworld", "name": "MetaWorld", "kind": "a real frame from MetaWorld, a robot arm never seen in training", "actions": [{"src": "LIBERO", "note": "putting a mug on a plate", "s": "src_1d5146a2"}], "group": "Robot arms"}
+];
+window.HERO_WALL = ["assets/ood/anime_street_all.jpg#0/7", "assets/teaser/mv_forza_left_kart_ours.jpg", "assets/ood/tunnel_all.jpg#0/7", "assets/teaser/mv_moto_left_ours.jpg", "assets/ood/shrine_all.jpg#0/7", "assets/teaser/mv_snorkel_right_ours.jpg", "assets/ood/starry_all.jpg#0/7", "assets/teaser/mv_valorant_left_ours.jpg", "assets/ood/seaside_all.jpg#0/7", "assets/teaser/mv_moto_right_ours.jpg", "assets/ood/candy_all.jpg#0/7", "assets/teaser/mv_valorant_right_ours.jpg", "assets/ood/synthwave_all.jpg#0/7", "assets/teaser/mv_drone_up_ours.jpg"];
+
+// Action x scene sets (assets/matrix/; robot built by build_matrix_v4.py, nav by build_matrix_v5.py from round 12); rows and columns name each clip's dataset
+window.TEASER_MATRIX = {
+  "moves": {"sprite": true, "rows": ["Forza Horizon 5", "Motorcycle in Ladakh", "Motorcycle in Ladakh", "Assassin's Creed Origins", "Drone over a rape field", "International Space Station"], "notes": ["driving forward", "turning left", "turning right", "panning right", "tilting up", "tilting down"], "kinds": ["racing game", "real motorcycle video", "real motorcycle video, a later moment", "game, looking over a town", "real drone video", "real video from orbit"], "cols": ["ukiyo-e road", "anime riverbank", "Starry Night road", "pixel-art town"]},
+  "web": {"sprite": true, "rows": ["Forza Horizon 5", "Far Cry Primal", "Assassin's Creed Origins", "Valorant", "Watch Dogs 2", "Drone in the Alps", "Roller coaster", "Motorcycle in Ladakh"], "notes": ["Forza Horizon 5", "Far Cry Primal", "Assassin's Creed Origins", "Valorant", "Watch Dogs 2", "Drone in the Alps", "Roller coaster", "Motorcycle in Ladakh"], "kinds": ["racing game", "game, flying as an owl", "game, riding a horse", "first-person shooter", "game, driving at night", "real drone video", "real roller coaster video", "real motorcycle video"], "cols": ["anime cherry blossoms", "synthwave highway", "kart track", "anime tunnel", "voxel world"]},
+  "nav": {"rows": ["nuScenes", "nuScenes", "SpatialVID", "SpatialVID"], "notes": ["car turning left", "car turning right", "camera sliding left", "camera sliding right"], "cols": ["SpatialVID", "SpatialVID", "nuScenes", "nuScenes"]},
+  "robot": {"rows": ["LIBERO", "RLBench", "RLBench", "LIBERO"], "cols": ["LIBERO", "LIBERO", "RLBench", "RLBench"]}
+};
+</script>
+<script>
+(() => {
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const cap = t => t.charAt(0).toUpperCase() + t.slice(1);
+  const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const UNSEEN = new Set(['RLBench', 'nuScenes', 'ARKitScenes', 'UT Austin MUTEX', 'CMU IAM Lab', 'Berkeley UR5', 'RealEstate10K']);
+  const KIND = { LIBERO: 'robot manipulation', RLBench: 'robot manipulation', SpatialVID: 'walking camera', nuScenes: 'driving', ARKitScenes: 'indoor handheld', 'UT Austin MUTEX': 'real robot arm', 'CMU IAM Lab': 'real robot arm', 'Berkeley UR5': 'real robot arm', RealEstate10K: 'house walk-through' };
+  const tag = n => UNSEEN.has(n) ? ', unseen' : '';
+  const arrow = '<div class="arrow" aria-hidden="true"><svg viewBox="0 0 26 14"><path d="M1 7 H21" stroke="currentColor" stroke-width="2"/><path d="M16 2 L23 7 L16 12" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>';
+
+  // BibTeX copy
+  const btn = $('#copyBib');
+  btn.addEventListener('click', () => {
+    const done = () => { btn.textContent = 'Copied'; setTimeout(() => btn.textContent = 'Copy', 1600); };
+    const fallback = () => { const r = document.createRange(); r.selectNodeContents($('#bib')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Selected, press Ctrl+C'; };
+    try { navigator.clipboard.writeText($('#bib').textContent).then(done, fallback); } catch (e) { fallback(); }
+  });
+
+  // Example cards
+  const card = e => {
+    const title = e.src === e.tgt ? esc(e.src) : `${esc(e.src)} → ${esc(e.tgtName || e.tgt)}`;
+    const sub = e.kind ? `${esc(e.kind)}, never seen in training` : e.src === e.tgt ? KIND[e.src] + tag(e.src) : `${KIND[e.src]}${UNSEEN.has(e.src) ? ' (unseen)' : ''} to ${KIND[e.tgt]}${UNSEEN.has(e.tgt) ? ', unseen scene' : ''}`;
+    const credit = e.credit ? `<p class="credit">Source clip: <a href="${esc(e.credit.url)}" target="_blank" rel="noopener">${esc(e.credit.text)}</a>${e.credit.note ? ', ' + esc(e.credit.note) : ''}</p>` : '';
+    return `<article class="card"><div class="card-pair">
+      <div class="vid" data-src="assets/teaser/${e.key}_source.jpg" role="img" aria-label="${esc(e.src)} source clip, real video"></div>${arrow}
+      <div class="vid ours" data-src="assets/teaser/${e.key}_ours.jpg" role="img" aria-label="JustAct rollout in a ${esc(e.tgt)} scene"></div></div>
+      <div class="cap-row"><span><b>Source clip</b>${e.game ? 'game footage' : 'real'}, gives the action</span><span></span><span class="o"><b>JustAct</b>generated in a new scene</span></div>
+      <h3>${title}</h3><p>${sub}</p>${credit}</article>`;
+  };
+  ['web', 'within', 'cross'].forEach(g => { $('#ex-' + g).innerHTML = window.TEASER_EXAMPLES.filter(e => e.group === g).map(card).join(''); });
+  $$('.paddle').forEach(p => p.addEventListener('click', () => {
+    const t = $$('.gallery-track').find(x => !x.hidden); t.scrollBy({ left: +p.dataset.dir * (t.querySelector('.card').offsetWidth + 20), behavior: 'smooth' });
+  }));
+
+  // Action x scene matrices
+  Object.entries(window.TEASER_MATRIX).forEach(([name, m]) => {
+    let h = '<div class="mx-corner">action ↓<br>scene →</div>';
+    m.cols.forEach((d, j) => { h += `<div class="mx-head"><img src="assets/matrix/${name}_scene${j}.jpg" loading="lazy" alt="Scene ${j + 1}, ${esc(d)}: the frame the rollouts start from"><span class="mx-lab"><b>Scene ${j + 1}</b>${esc(d)}${tag(d)}</span></div>`; });
+    m.rows.forEach((d, i) => {
+      h += `<div class="mx-head mx-row"><div class="vid" data-src="assets/matrix/${name}_src${i}.jpg" role="img" aria-label="Action ${i + 1}: ${m.notes ? esc(m.notes[i]) + ', ' : ''}${esc(d)} source clip, real video"></div><span class="mx-lab"><b>${m.notes ? esc(cap(m.notes[i])) : 'Action ' + (i + 1)}</b>${m.kinds ? esc(m.kinds[i]) : `${esc(d)}, real${tag(d)}`}</span></div>`;
+      m.cols.forEach((c, j) => { h += `<div class="vid ours" data-src="assets/matrix/${m.sprite ? `${name}_row${i}.jpg#${j}/${m.cols.length}` : `${name}_r${i}c${j}.jpg`}" role="img" aria-label="Action ${i + 1} played out in scene ${j + 1}, generated by JustAct"></div>`; });
+    });
+    $('#mx-' + name).innerHTML = h;
+  });
+
+  // Unseen worlds: one still image, several real actions
+  const OOD = window.TEASER_OOD;
+  const GROUPS = [...new Set(OOD.map(o => o.group))], gid = g => g.toLowerCase().replace(/\W+/g, '-');
+  $('#oodGroups').innerHTML = GROUPS.map((g, i) => `<button role="tab" id="seg-g-${gid(g)}" aria-controls="thumbs-${gid(g)}" aria-selected="${i === 0}"${i ? ' tabindex="-1"' : ''}>${esc(g)} <span class="count">${OOD.filter(o => o.group === g).length}</span></button>`).join('');
+  $('#oodSeg').innerHTML = GROUPS.map((g, gi) => `<div class="thumbs" role="tabpanel" id="thumbs-${gid(g)}" aria-labelledby="seg-g-${gid(g)}"${gi ? ' hidden' : ''}><div class="thumb-row" role="tablist" aria-label="${esc(g)} start images">${OOD.filter(o => o.group === g).map((o, i) => `<button role="tab" id="seg-ood-${o.key}" aria-controls="ood-${o.key}" aria-selected="${i === 0}"${i ? ' tabindex="-1"' : ''}><img src="assets/ood/${o.key}_thumb.jpg" alt="">${esc(o.name)}</button>`).join('')}</div></div>`).join('');
+  $('#oodScreens').innerHTML = OOD.map((o, i) => `<div class="screen" id="ood-${o.key}" role="tabpanel" aria-labelledby="seg-ood-${o.key}"${i ? ' hidden' : ''}>
+    <figure class="cell start"><img src="assets/ood/${o.key}_image.jpg" loading="lazy" alt="${esc(o.name)} start image"><figcaption><b>Start image</b>${esc(o.kind)}</figcaption></figure>
+    ${o.actions.map((a, k) => `<figure class="cell"><div class="frame"><div class="vid ours" data-src="assets/ood/${o.key}_all.jpg#${k}/${o.actions.length}" role="img" aria-label="JustAct video from the ${esc(o.name)} image, driven by: ${esc(a.note)}"></div><div class="vid pip" data-src="assets/ood/${a.s}.jpg" role="img" aria-label="${esc(a.src)} source clip, real video: ${esc(a.note)}"></div></div><figcaption><b>${esc(cap(a.note))}</b>action read from a real ${esc(a.src)} clip</figcaption></figure>`).join('')}</div>`).join('');
+
+  // Hero wall: generated clips behind the cut-out name
+  const wall = window.HERO_WALL || [...window.TEASER_EXAMPLES.map(e => `assets/teaser/${e.key}_ours.jpg`), ...OOD.flatMap(o => o.actions.map((a, k) => `assets/ood/${o.key}_all.jpg#${k}/${o.actions.length}`))];
+  $('#heroWall').innerHTML = wall.slice(0, 14).map(s => `<div class="vid" data-src="${s}"></div>`).join('');
+
+  // Lazy strip loading per panel
+  // a strip is either its own file or row k of n stacked strips ("file.jpg#k/n"), so the page stays under the host's file limit
+  const load = root => root.querySelectorAll('.vid').forEach(v => {
+    if (v.style.backgroundImage) return;
+    const [src, row] = v.dataset.src.split('#'); v.style.backgroundImage = `url("${src}")`;
+    if (row) { const [k, n] = row.split('/').map(Number); v.dataset.y = n > 1 ? k / (n - 1) * 100 : 0; v.style.backgroundSize = `1900% ${n * 100}%`; }
+  });
+  const panels = $$('[role="tabpanel"]');
+  const vis = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { load(e.target); vis.unobserve(e.target); } }), { rootMargin: '600px 0px' });
+  load($('#heroWall'));
+  panels.forEach(p => { if (!p.hidden) vis.observe(p); });
+
+  // Segmented controls
+  $$('[role="tablist"]').forEach(list => {
+    const tabs = [...list.querySelectorAll('[role="tab"]')];
+    const select = t => { tabs.forEach(o => { const on = o === t; o.setAttribute('aria-selected', String(on)); o.tabIndex = on ? 0 : -1; $('#' + o.getAttribute('aria-controls')).hidden = !on; }); load($('#' + t.getAttribute('aria-controls'))); show(f); };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => select(t));
+      t.addEventListener('keydown', ev => { if (ev.key === 'ArrowRight' || ev.key === 'ArrowLeft') { const n = tabs[(i + (ev.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length]; n.focus(); select(n); } });
+    });
+  });
+
+  // Unseen worlds: the style tabs switch thumbnail rows, and only one start image is shown at a time
+  const oodShow = id => $$('#oodScreens .screen').forEach(sc => { sc.hidden = sc.id !== id; if (sc.id === id) load(sc); });
+  $$('#oodSeg [role="tab"]').forEach(t => t.addEventListener('click', () => oodShow(t.getAttribute('aria-controls'))));
+  const oodGroup = t => $('#' + t.getAttribute('aria-controls')).querySelector('[aria-selected="true"]').click();
+  $$('#oodGroups [role="tab"]').forEach(t => t.addEventListener('click', () => oodGroup(t)));
+  const arrows = ev => ev.key === 'ArrowRight' || ev.key === 'ArrowLeft';
+  $('#oodGroups').addEventListener('keyup', ev => { if (arrows(ev)) oodGroup($('#oodGroups [aria-selected="true"]')); });
+  $$('#oodSeg .thumb-row').forEach(r => r.addEventListener('keyup', ev => { if (arrows(ev)) oodShow(r.querySelector('[aria-selected="true"]').getAttribute('aria-controls')); }));
+
+  // One clock for every strip
+  const N = 19, FPS = 6;
+  const vids = $$('.vid'), scrubs = $$('[data-scrub]'), fnos = $$('[data-fno]'), plays = $$('[data-play]');
+  let f = 0, playing = !matchMedia('(prefers-reduced-motion: reduce)').matches, timer = null;
+  function show(i) {
+    f = (i + N) % N; const x = (f / (N - 1)) * 100;
+    vids.forEach(v => { v.style.backgroundPosition = `${x}% ${v.dataset.y || 0}%`; });
+    scrubs.forEach(s => s.value = f); fnos.forEach(n => n.textContent = `frame ${f + 1} / ${N}`);
+  }
+  const setPlaying = on => {
+    playing = on; plays.forEach(p => { p.textContent = on ? 'Pause' : 'Play'; p.setAttribute('aria-pressed', String(on)); });
+    clearInterval(timer); if (on) timer = setInterval(() => show(f + 1), 1000 / FPS);
+  };
+  plays.forEach(p => p.addEventListener('click', () => setPlaying(!playing)));
+  scrubs.forEach(s => s.addEventListener('input', () => { setPlaying(false); show(+s.value); }));
+  show(playing ? 0 : 9); setPlaying(playing);
+
+  // Statements light up word by word as they cross the screen; nav progress and active link follow the scroll
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const stmts = $$('[data-words]').map(p => {
+    const walk = n => [...n.childNodes].forEach(c => {
+      if (c.nodeType === 3) { const frag = document.createDocumentFragment(); c.textContent.split(/(\s+)/).forEach(w => { if (!w) return; if (/^\s+$/.test(w)) frag.append(w); else { const s = document.createElement('span'); s.className = 'w'; s.textContent = w; frag.append(s); } }); c.replaceWith(frag); }
+      else if (c.nodeType === 1 && c.classList.contains('mk')) { c.classList.add('w'); }
+      else if (c.nodeType === 1) walk(c);
+    });
+    walk(p); if (!reduce) p.classList.add('js-words'); return { p, ws: [...p.querySelectorAll('.w')] };
+  });
+  const links = $$('.localnav-links a'), secs = links.map(a => $(a.getAttribute('href')));
+  const onScroll = () => {
+    const vh = innerHeight, d = document.documentElement;
+    $('#prog').style.transform = `scaleX(${Math.min(1, scrollY / Math.max(1, d.scrollHeight - vh))})`;
+    stmts.forEach(({ p, ws }) => { const r = p.getBoundingClientRect(); const t = Math.max(0, Math.min(1, (vh * 0.9 - r.top) / (vh * 0.5))); const n = Math.round(t * ws.length); ws.forEach((w, i) => w.classList.toggle('on', i < n)); });
+    let cur = -1; secs.forEach((s, i) => { if (s && s.getBoundingClientRect().top < vh * 0.4) cur = i; }); links.forEach((a, i) => a.classList.toggle('active', i === cur));
+  };
+  addEventListener('scroll', onScroll, { passive: true }); addEventListener('resize', onScroll); onScroll();
+
+  // Method figures: each tile steps through its panel's recipe (data-step drives the CSS); the robot / navigation tile plays one panel after
+  // the other until a tab is clicked; one flicker clock flips every clip between frame t and frame t+k
+  const tiles = $$('.anim-tile').map(tile => {
+    const P = $$('.anim').filter(el => tile.contains(el)).map(el => ({ el, btns: [...el.querySelectorAll('[data-go]')], cap: el.querySelector('.anim-cap'), durs: el.dataset.durs.split(',').map(Number) }));
+    const tabs = [...tile.querySelectorAll('[data-mode]')], ctl = tile.querySelector('[data-anim-play]');
+    const T = { tile, on: !reduce, seen: false, auto: true, cur: 0, step: 0, t: null };
+    T.go = (i, snap) => {
+      const p = P[T.cur]; clearTimeout(T.t);
+      if (snap) p.el.classList.add('snap');
+      T.step = i; p.el.dataset.step = i; p.cap.textContent = p.btns[i].dataset.cap;
+      p.btns.forEach((b, k) => { b.classList.toggle('done', k < i); if (k === i) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current'); b.style.setProperty('--d', p.durs[k] + 'ms'); });
+      if (snap) { void p.el.offsetWidth; requestAnimationFrame(() => p.el.classList.remove('snap')); }
+      if (T.on && T.seen) T.t = setTimeout(() => {
+        const last = i + 1 === p.btns.length;
+        if (last && T.auto && P.length > 1) T.mode((T.cur + 1) % P.length); else T.go(last ? 0 : i + 1, last);
+      }, p.durs[i]);
+    };
+    T.mode = k => {
+      clearTimeout(T.t); T.cur = k;
+      P.forEach((p, j) => { p.el.hidden = j !== k; });
+      tabs.forEach((b, j) => { b.setAttribute('aria-selected', String(j === k)); b.tabIndex = j === k ? 0 : -1; });
+      T.go(reduce ? P[k].btns.length - 1 : 0, true);
+    };
+    T.set = on => { T.on = on; tile.classList.toggle('paused', !on); ctl.textContent = on ? 'Pause' : 'Play'; ctl.setAttribute('aria-pressed', String(on)); T.go(T.step); };
+    P.forEach((p, j) => p.btns.forEach((b, k) => b.addEventListener('click', () => { if (j === T.cur) T.go(k); })));
+    tabs.forEach((b, j) => b.addEventListener('click', () => { T.auto = false; T.mode(j); }));
+    ctl.addEventListener('click', () => T.set(!T.on));
+    if (reduce) T.set(false);
+    T.mode(0);
+    return T;
+  });
+  const seen = new IntersectionObserver(es => es.forEach(e => { const T = tiles.find(x => x.tile === e.target); const was = T.seen; T.seen = e.isIntersecting; if (T.seen && !was) T.go(T.step); if (!T.seen) clearTimeout(T.t); }), { threshold: 0.3 });
+  tiles.forEach(T => seen.observe(T.tile));
+  if (!reduce) setInterval(() => tiles.forEach(T => { if (T.on) T.tile.classList.toggle('tk'); }), 300);
+})();
+</script>
+
+</body></html>
