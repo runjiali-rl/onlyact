@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.egg-info/
+runs/
+checkpoints/*
+!checkpoints/README.md
+!checkpoints/SHA256SUMS

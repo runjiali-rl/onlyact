@@ -1,0 +1,106 @@
+{
+ "libero": {
+  "target": "actions",
+  "task": "continuous",
+  "action_space": "libero",
+  "scene_field": "scene_id",
+  "split_mode": "demo_within_scene",
+  "y_std_floor": 0.01
+ },
+ "rlbench": {
+  "target": "actions_delta",
+  "task": "continuous",
+  "action_space": "rlbench",
+  "scene_field": "scene_id",
+  "split_mode": "demo_within_scene",
+  "y_std_floor": 0.01
+ },
+ "droid": {
+  "target": "actions_agg",
+  "task": "continuous",
+  "action_space": "droid",
+  "scene_field": "scene_key",
+  "split_mode": "scene",
+  "y_std_floor": 0.01
+ },
+ "robocasa": {
+  "target": "actions",
+  "task": "continuous",
+  "action_space": "robocasa",
+  "scene_field": "scene_key",
+  "split_mode": "scene",
+  "y_std_floor": 0.0005
+ },
+ "droid_iprl": {
+  "target": "actions_agg",
+  "task": "continuous",
+  "action_space": "droid",
+  "scene_field": "scene_key",
+  "split_mode": "scene",
+  "y_std_floor": 0.01
+ },
+ "metaworld": {
+  "target": "actions_clip",
+  "task": "continuous",
+  "action_space": "metaworld",
+  "scene_field": "scene_key",
+  "split_mode": "scene",
+  "y_std_floor": 0.0005
+ },
+ "utaustin_mutex": {
+  "target": "actions",
+  "task": "continuous",
+  "action_space": "utaustin_mutex",
+  "scene_field": "scene_key",
+  "split_mode": "scene",
+  "y_std_floor": 0.0005
+ },
+ "vp2_robosuite": {
+  "target": "actions",
+  "task": "continuous",
+  "action_space": "vp2_robosuite",
+  "scene_field": "scene_key",
+  "split_mode": "scene",
+  "y_std_floor": 0.0005
+ },
+ "vp2_robodesk": {
+  "target": "actions",
+  "task": "continuous",
+  "action_space": "vp2_robodesk",
+  "scene_field": "scene_key",
+  "split_mode": "scene",
+  "y_std_floor": 0.0005
+ },
+ "spatialvid_nav": {
+  "target": "actions_padded",
+  "task": "continuous",
+  "action_space": "spatialvid_nav",
+  "scene_field": "scene_key",
+  "split_mode": "scene",
+  "y_std_floor": 0.0005
+ },
+ "arkitscenes": {
+  "target": "actions",
+  "task": "continuous",
+  "action_space": "arkitscenes",
+  "scene_field": "scene_key",
+  "split_mode": "scene",
+  "y_std_floor": 0.0005
+ },
+ "realestate10k": {
+  "target": "actions_padded",
+  "task": "continuous",
+  "action_space": "realestate10k",
+  "scene_field": "scene_key",
+  "split_mode": "scene",
+  "y_std_floor": 0.0005
+ },
+ "procgen_plan": {
+  "target": "actions",
+  "task": "discrete",
+  "action_space": "procgen",
+  "scene_field": "scene_key",
+  "split_mode": "scene",
+  "y_std_floor": 0.0005
+ }
+}

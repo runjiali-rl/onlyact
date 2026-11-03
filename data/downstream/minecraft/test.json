@@ -1,0 +1,11118 @@
+{
+ "domain": "minecraft",
+ "partition": "test",
+ "actions": [
+  1,
+  2,
+  3
+ ],
+ "action_meanings": {
+  "1": "forward+jump",
+  "2": "camera_left_20deg+jump",
+  "3": "camera_right_20deg+jump"
+ },
+ "data_root": "prepared seven-frame clips (<task_id>.npz, key 'video' (7, H, W, 3) uint8, key 'actions_transition' (6,)) cut from the TECO minecraft episodes at 'frame_indices'; 'source' is relative to the TECO minecraft episode folder",
+ "count": 300,
+ "tasks": [
+  {
+   "task_id": "paper_minecraft_d40afd5fb8ac1e5cd869b299",
+   "episode_id": "minecraft/test/0/000404",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230
+   ],
+   "source": {
+    "video": "test/0/000404.mp4",
+    "actions": "test/0/000404.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_d40afd5fb8ac1e5cd869b299.npz",
+    "video_sha256": "459dfb6377dce271a4cc46e8e521db382fe0d564a63570ba52894350bbcbbed3",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_c4c7648d443b500eb8e0b639",
+   "episode_id": "minecraft/test/0/000920",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "frame_indices": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83
+   ],
+   "source": {
+    "video": "test/0/000920.mp4",
+    "actions": "test/0/000920.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_c4c7648d443b500eb8e0b639.npz",
+    "video_sha256": "c771ccf10bee29cf2e2481b81eabc05b80ec7a492d4fc0309838df93bfd6d6d2",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_2f5bc18dd69bac11ca1d1ee4",
+   "episode_id": "minecraft/test/0/000256",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230
+   ],
+   "source": {
+    "video": "test/0/000256.mp4",
+    "actions": "test/0/000256.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_2f5bc18dd69bac11ca1d1ee4.npz",
+    "video_sha256": "d6d1af88957466e793fc8beb5c39794dd2665703862d11b693afdc7be34517e4",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_a6f734cea0613669e699c099",
+   "episode_id": "minecraft/test/0/000134",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    3,
+    3,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293
+   ],
+   "source": {
+    "video": "test/0/000134.mp4",
+    "actions": "test/0/000134.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_a6f734cea0613669e699c099.npz",
+    "video_sha256": "85543abb94054bac99ef6d221ebef931da307643aa80271fda877232232e1312",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_218d5f00dd58018f3205e62f",
+   "episode_id": "minecraft/test/0/000008",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "frame_indices": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "source": {
+    "video": "test/0/000008.mp4",
+    "actions": "test/0/000008.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_218d5f00dd58018f3205e62f.npz",
+    "video_sha256": "d0851600327269c17b46b24dab8497f3143dc044a5a07d6b8f32fb33a583b0ea",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_4a22fff38b14636d9cfce2ec",
+   "episode_id": "minecraft/test/0/000300",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "frame_indices": [
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209
+   ],
+   "source": {
+    "video": "test/0/000300.mp4",
+    "actions": "test/0/000300.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_4a22fff38b14636d9cfce2ec.npz",
+    "video_sha256": "ad4320cdfdb7e8a7b4cc58e1876d653dd067d4992fc2b3a4be47644dde2dba18",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_bd323f7637e058fab8fef54f",
+   "episode_id": "minecraft/test/0/000615",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55
+   ],
+   "source": {
+    "video": "test/0/000615.mp4",
+    "actions": "test/0/000615.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_bd323f7637e058fab8fef54f.npz",
+    "video_sha256": "296d461582aec3a44012e8f68272de059f947c63ff32ec172d37153caf4ae273",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_9d84cc829c67cc3f4096d5d1",
+   "episode_id": "minecraft/test/0/001004",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300
+   ],
+   "source": {
+    "video": "test/0/001004.mp4",
+    "actions": "test/0/001004.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_9d84cc829c67cc3f4096d5d1.npz",
+    "video_sha256": "673efab0e88e3d45b9121193e8637647718532a024ee29c86860a4e7b02878ff",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_8324fca46c752001907b8cdc",
+   "episode_id": "minecraft/test/0/000460",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "source": {
+    "video": "test/0/000460.mp4",
+    "actions": "test/0/000460.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_8324fca46c752001907b8cdc.npz",
+    "video_sha256": "5338e5bd1446bcc71c38cd28c614d4b2f66a1e41b69be3ace061d942948998e1",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_638d9855794f1a0579825490",
+   "episode_id": "minecraft/test/0/000106",
+   "split": "test",
+   "raw_action": 3,
+   "actions_transition": [
+    1,
+    1,
+    3,
+    3,
+    3,
+    3
+   ],
+   "frame_indices": [
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279
+   ],
+   "source": {
+    "video": "test/0/000106.mp4",
+    "actions": "test/0/000106.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_638d9855794f1a0579825490.npz",
+    "video_sha256": "b296483ac0f294baf5c7cdc5be6355a0e090604abd8c4ea4fb748d136f910c46",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_d1b43734cba90979d7592daf",
+   "episode_id": "minecraft/test/0/000118",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+   ],
+   "source": {
+    "video": "test/0/000118.mp4",
+    "actions": "test/0/000118.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_d1b43734cba90979d7592daf.npz",
+    "video_sha256": "5e28d9c7f14045080e4a6805022de46e2019981d7d495121756ace0b78a02daf",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_27eb78541905846844f71e9a",
+   "episode_id": "minecraft/test/0/000987",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "frame_indices": [
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97
+   ],
+   "source": {
+    "video": "test/0/000987.mp4",
+    "actions": "test/0/000987.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_27eb78541905846844f71e9a.npz",
+    "video_sha256": "98fb39bd4786ab27a6c8b7c5989b3a9285ad91354b49bfa7cde3d5af18532b14",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_f80272be7a904bf10b92e492",
+   "episode_id": "minecraft/test/0/000690",
+   "split": "test",
+   "raw_action": 3,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    3,
+    3
+   ],
+   "frame_indices": [
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62
+   ],
+   "source": {
+    "video": "test/0/000690.mp4",
+    "actions": "test/0/000690.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_f80272be7a904bf10b92e492.npz",
+    "video_sha256": "727929e53c19fc24c86e86b718a1063a66a97d1cc1a4aee87a188d2fea94a6e1",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_24a88780234b858718246a6e",
+   "episode_id": "minecraft/test/0/000280",
+   "split": "test",
+   "raw_action": 3,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    3,
+    3
+   ],
+   "frame_indices": [
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132
+   ],
+   "source": {
+    "video": "test/0/000280.mp4",
+    "actions": "test/0/000280.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_24a88780234b858718246a6e.npz",
+    "video_sha256": "bfda74cef083a63d899b5b17b3e0a21a9d3121c414ce17e58ad54f5ba34485a3",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_199d498253edb02639fb999c",
+   "episode_id": "minecraft/test/0/000559",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    3,
+    3,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118
+   ],
+   "source": {
+    "video": "test/0/000559.mp4",
+    "actions": "test/0/000559.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_199d498253edb02639fb999c.npz",
+    "video_sha256": "fe8456e133d7c2f9a3b77fa5f807a4130689da880d7177e6f93b8a4b8952208b",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_71482194f00cbd9f57cd0f70",
+   "episode_id": "minecraft/test/0/000007",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174
+   ],
+   "source": {
+    "video": "test/0/000007.mp4",
+    "actions": "test/0/000007.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_71482194f00cbd9f57cd0f70.npz",
+    "video_sha256": "46b4e36fa219bf5c01067c3e2844f28d093da6f505b8d30971f0aeadc8d8520a",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_f5522e75ce7c24fa9fd66d9f",
+   "episode_id": "minecraft/test/0/000493",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "source": {
+    "video": "test/0/000493.mp4",
+    "actions": "test/0/000493.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_f5522e75ce7c24fa9fd66d9f.npz",
+    "video_sha256": "20fd5adb9ff3aad05acd1c6fd7cf5383e11750e059ed604328a427abbd258f9e",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_ccc54125140955f5c78632ca",
+   "episode_id": "minecraft/test/0/000528",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    3,
+    3,
+    3,
+    1,
+    1
+   ],
+   "frame_indices": [
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272
+   ],
+   "source": {
+    "video": "test/0/000528.mp4",
+    "actions": "test/0/000528.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_ccc54125140955f5c78632ca.npz",
+    "video_sha256": "180b4a253753c4dbd0fee538430219c31931955b49f7b71ff2d5f61f4c63aa90",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_2da2095668f66e264938cd62",
+   "episode_id": "minecraft/test/0/000683",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "source": {
+    "video": "test/0/000683.mp4",
+    "actions": "test/0/000683.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_2da2095668f66e264938cd62.npz",
+    "video_sha256": "376a1267f23d319b57bf6df59819e755ca4c5a7994d67399c5f2c8daa26c939f",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_af538034582cb4a3735e2a49",
+   "episode_id": "minecraft/test/0/000976",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230
+   ],
+   "source": {
+    "video": "test/0/000976.mp4",
+    "actions": "test/0/000976.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_af538034582cb4a3735e2a49.npz",
+    "video_sha256": "71f934968bf52392607b79cc5956660064313df9933e609a8ca9a84f7b0d20fc",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_f1c65ada93d246ea44af3d61",
+   "episode_id": "minecraft/test/0/000802",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258
+   ],
+   "source": {
+    "video": "test/0/000802.mp4",
+    "actions": "test/0/000802.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_f1c65ada93d246ea44af3d61.npz",
+    "video_sha256": "31ec16da4ae2a855f73f71b0fe4aba64c6c8390f4708e603f1316ffae3ddbf83",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_10f84c919548aeeb5a501ea1",
+   "episode_id": "minecraft/test/0/000794",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237
+   ],
+   "source": {
+    "video": "test/0/000794.mp4",
+    "actions": "test/0/000794.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_10f84c919548aeeb5a501ea1.npz",
+    "video_sha256": "69357c3e17c94a0f044b9d953be2ad43208f80ed26466a881d82041acce3dbe4",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_64b4a293d885b6707d61956e",
+   "episode_id": "minecraft/test/0/000692",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118
+   ],
+   "source": {
+    "video": "test/0/000692.mp4",
+    "actions": "test/0/000692.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_64b4a293d885b6707d61956e.npz",
+    "video_sha256": "d05168d6704461b59309c6ed95d519e3ff23c92e9b3b34b5bf21cb4e672553ac",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_9932e7f621a9ee6799eb47fb",
+   "episode_id": "minecraft/test/0/000844",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293
+   ],
+   "source": {
+    "video": "test/0/000844.mp4",
+    "actions": "test/0/000844.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_9932e7f621a9ee6799eb47fb.npz",
+    "video_sha256": "97891b9593271ebc7ccb0488b4bc136fde527dc5b675b08b8d4a90b05fe3213f",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_436a9fb7f4b03e61410be2d8",
+   "episode_id": "minecraft/test/0/000760",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293
+   ],
+   "source": {
+    "video": "test/0/000760.mp4",
+    "actions": "test/0/000760.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_436a9fb7f4b03e61410be2d8.npz",
+    "video_sha256": "6c85a51415a15255668cf2152cf88938de72255e03cce0678a28033f405b11ae",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_c655d06b08d9b0b3159d5385",
+   "episode_id": "minecraft/test/0/000234",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    3,
+    3,
+    3,
+    1,
+    1
+   ],
+   "frame_indices": [
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167
+   ],
+   "source": {
+    "video": "test/0/000234.mp4",
+    "actions": "test/0/000234.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_c655d06b08d9b0b3159d5385.npz",
+    "video_sha256": "bf2c846c648c03e9920c4d28214a5395d1e0239c7f03090d7cfd9d263c854982",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_7787a703189801f91707f03e",
+   "episode_id": "minecraft/test/0/000653",
+   "split": "test",
+   "raw_action": 3,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    3,
+    3,
+    3
+   ],
+   "frame_indices": [
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153
+   ],
+   "source": {
+    "video": "test/0/000653.mp4",
+    "actions": "test/0/000653.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_7787a703189801f91707f03e.npz",
+    "video_sha256": "cf56356e084b433dbe5a45afb1aee1253baca4e70f06cc5cba59e63ebd2a4f5d",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_d662808ad9652cb7e93a8ff2",
+   "episode_id": "minecraft/test/0/000902",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300
+   ],
+   "source": {
+    "video": "test/0/000902.mp4",
+    "actions": "test/0/000902.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_d662808ad9652cb7e93a8ff2.npz",
+    "video_sha256": "3adea4542fe1fbe8f612f523547a98ca4232981a91ed21c0b677900140b37c29",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_0911683d3c0dc3790c7d0933",
+   "episode_id": "minecraft/test/0/000584",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    2,
+    2,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118
+   ],
+   "source": {
+    "video": "test/0/000584.mp4",
+    "actions": "test/0/000584.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_0911683d3c0dc3790c7d0933.npz",
+    "video_sha256": "3e9dcd61f5b0bb1ccdc87324363864377be89af350b5a689559793735a2ff174",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_09b891164bc2f98d4f4d41d5",
+   "episode_id": "minecraft/test/0/000033",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167
+   ],
+   "source": {
+    "video": "test/0/000033.mp4",
+    "actions": "test/0/000033.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_09b891164bc2f98d4f4d41d5.npz",
+    "video_sha256": "6be1c9fdbdc04abab4f95e28ea21a205d450f7f87946889edab35e85f1664635",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_a0d97f85972e3f3a71b671e3",
+   "episode_id": "minecraft/test/0/000579",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    2
+   ],
+   "frame_indices": [
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111
+   ],
+   "source": {
+    "video": "test/0/000579.mp4",
+    "actions": "test/0/000579.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_a0d97f85972e3f3a71b671e3.npz",
+    "video_sha256": "0fe07738bbb991bc37fe5c6dd02267fa738df2a867b81e69b9776e753fbcb0ac",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_84606990a3ba32c19049f2f3",
+   "episode_id": "minecraft/test/0/000110",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104
+   ],
+   "source": {
+    "video": "test/0/000110.mp4",
+    "actions": "test/0/000110.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_84606990a3ba32c19049f2f3.npz",
+    "video_sha256": "cc1f3ce4d7e3baec02ad714e9277722068a2c19d48244033016d79c1c85fe94e",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_2b79c1a87064dc12df388f7d",
+   "episode_id": "minecraft/test/0/000461",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223
+   ],
+   "source": {
+    "video": "test/0/000461.mp4",
+    "actions": "test/0/000461.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_2b79c1a87064dc12df388f7d.npz",
+    "video_sha256": "ae4ae3fb9addb67288e9ab1c31d36da52401b315a321f69d8444e66a1bacd6ae",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_3cf03adafe4074a39647370b",
+   "episode_id": "minecraft/test/0/000903",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    280,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286
+   ],
+   "source": {
+    "video": "test/0/000903.mp4",
+    "actions": "test/0/000903.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_3cf03adafe4074a39647370b.npz",
+    "video_sha256": "a19bd423a265b38aca0f70098d0ddbfd93e4fb9ecddf8dda6101fac62f368406",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_cad9048cb31714623d21d1b7",
+   "episode_id": "minecraft/test/0/000874",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "source": {
+    "video": "test/0/000874.mp4",
+    "actions": "test/0/000874.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_cad9048cb31714623d21d1b7.npz",
+    "video_sha256": "c119ebf92ea97c29c6556feb736097b6aebae45e835758c1085f2a7045eb7a9b",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_40efae55e752bd6d0c5cc029",
+   "episode_id": "minecraft/test/0/000711",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153
+   ],
+   "source": {
+    "video": "test/0/000711.mp4",
+    "actions": "test/0/000711.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_40efae55e752bd6d0c5cc029.npz",
+    "video_sha256": "da4c93ac01a59bf3707d961dfb04606e11079068f85b25bb72772667d55d67a6",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_cb0248488a299bbcdcd76317",
+   "episode_id": "minecraft/test/0/000978",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293
+   ],
+   "source": {
+    "video": "test/0/000978.mp4",
+    "actions": "test/0/000978.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_cb0248488a299bbcdcd76317.npz",
+    "video_sha256": "a7b6f9823461610b749b750bdf57e737095766839fbb7bd303543b9fa77abe4e",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_e8883a211186eb5d3fc48e57",
+   "episode_id": "minecraft/test/0/000614",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153
+   ],
+   "source": {
+    "video": "test/0/000614.mp4",
+    "actions": "test/0/000614.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_e8883a211186eb5d3fc48e57.npz",
+    "video_sha256": "88b8125e83fcb93ce630c5f4f56173fa5c60d22f56834ee37645fbb64e89d6a9",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_3b0d5ac7f94efebb19c670ad",
+   "episode_id": "minecraft/test/0/000712",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "frame_indices": [
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104
+   ],
+   "source": {
+    "video": "test/0/000712.mp4",
+    "actions": "test/0/000712.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_3b0d5ac7f94efebb19c670ad.npz",
+    "video_sha256": "0d6d2f1b9d3ca22cbac72ff7e178fb6dcad3bb823cca3af137b83d169fb6c2d2",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_87174e047636c7c8c2d2d7e4",
+   "episode_id": "minecraft/test/0/000594",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    1
+   ],
+   "frame_indices": [
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251
+   ],
+   "source": {
+    "video": "test/0/000594.mp4",
+    "actions": "test/0/000594.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_87174e047636c7c8c2d2d7e4.npz",
+    "video_sha256": "99a9eebf464c66172a60c7a64299e635240b87f2e8049e8ac9698ae76edf4244",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_043440cd74c6dca5e320c3e7",
+   "episode_id": "minecraft/test/0/000639",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209
+   ],
+   "source": {
+    "video": "test/0/000639.mp4",
+    "actions": "test/0/000639.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_043440cd74c6dca5e320c3e7.npz",
+    "video_sha256": "b07532c14e88e0321adfd33d7b24dfba248cb96be5bd75b263a19de2d08ca0ea",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_6768408c14ebd33023373d33",
+   "episode_id": "minecraft/test/0/000412",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139
+   ],
+   "source": {
+    "video": "test/0/000412.mp4",
+    "actions": "test/0/000412.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_6768408c14ebd33023373d33.npz",
+    "video_sha256": "f2202f46310731060d44087b7b39a9fdaa388b38898a55150b4b7425c4adbd40",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_a3149fc29e4aafb66a8abaa5",
+   "episode_id": "minecraft/test/0/000771",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "source": {
+    "video": "test/0/000771.mp4",
+    "actions": "test/0/000771.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_a3149fc29e4aafb66a8abaa5.npz",
+    "video_sha256": "287e5e1d1425484702489eab45695fcd97abffbdb39e86ef5ffa201c0ff498e1",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_fd32f189ce8ae022366d1c93",
+   "episode_id": "minecraft/test/0/000216",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230
+   ],
+   "source": {
+    "video": "test/0/000216.mp4",
+    "actions": "test/0/000216.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_fd32f189ce8ae022366d1c93.npz",
+    "video_sha256": "6125fcb8e6282d26f67b662e76d014c6c6e843e8b61a0bcf99a484b1909f8dc6",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_5a830022ff2842c4e1607ee1",
+   "episode_id": "minecraft/test/0/000324",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    1
+   ],
+   "frame_indices": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+   ],
+   "source": {
+    "video": "test/0/000324.mp4",
+    "actions": "test/0/000324.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_5a830022ff2842c4e1607ee1.npz",
+    "video_sha256": "1cd4e0733c9b9e6a8db079adc2672844ab9964135463abf2e2d900388f08d8c1",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_7055e336c29c6c4d9df4dd57",
+   "episode_id": "minecraft/test/0/000555",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174
+   ],
+   "source": {
+    "video": "test/0/000555.mp4",
+    "actions": "test/0/000555.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_7055e336c29c6c4d9df4dd57.npz",
+    "video_sha256": "7ebfa9fcc6304c52b6fe7d6b71846bf7d87c7ff11762775388d8a9c3c7a38f39",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_f4e4e2d57c8734685cea812e",
+   "episode_id": "minecraft/test/0/000403",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "frame_indices": [
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55
+   ],
+   "source": {
+    "video": "test/0/000403.mp4",
+    "actions": "test/0/000403.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_f4e4e2d57c8734685cea812e.npz",
+    "video_sha256": "34150a41d0610a6c51ec1ac83aae8b18459aa097dedddad17eb2f0acd8744100",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_5c0569d93c3398fb85f80574",
+   "episode_id": "minecraft/test/0/000699",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    2
+   ],
+   "frame_indices": [
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258
+   ],
+   "source": {
+    "video": "test/0/000699.mp4",
+    "actions": "test/0/000699.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_5c0569d93c3398fb85f80574.npz",
+    "video_sha256": "c3ccb2c07c3c87ca179fb972c7c2f0732ba5f8c4fcbd0685e9568b5cbfb858d7",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_f7108686b95c417b644bc36f",
+   "episode_id": "minecraft/test/0/000930",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+   ],
+   "source": {
+    "video": "test/0/000930.mp4",
+    "actions": "test/0/000930.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_f7108686b95c417b644bc36f.npz",
+    "video_sha256": "0ebcb381ad131c8c6e067980704f3f198401e72d921b3385ac1081a22bbc7cf2",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_19422da64b80682a3db873d9",
+   "episode_id": "minecraft/test/0/000198",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    280,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286
+   ],
+   "source": {
+    "video": "test/0/000198.mp4",
+    "actions": "test/0/000198.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_19422da64b80682a3db873d9.npz",
+    "video_sha256": "9244efb2faf6ce72ee20066b74b240e9a49d8c03ca477c1050ff5bba98723cb2",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_81f0d666317f5bef8fc6c071",
+   "episode_id": "minecraft/test/0/000660",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195
+   ],
+   "source": {
+    "video": "test/0/000660.mp4",
+    "actions": "test/0/000660.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_81f0d666317f5bef8fc6c071.npz",
+    "video_sha256": "b0c26bc0cd303a2ef74f93efae5a16b5cddaa07cae2b69bdc91e63d685a45830",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_c0e6be2b8a20f9fe70af8e70",
+   "episode_id": "minecraft/test/0/000263",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "source": {
+    "video": "test/0/000263.mp4",
+    "actions": "test/0/000263.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_c0e6be2b8a20f9fe70af8e70.npz",
+    "video_sha256": "2e63f67de05578de0f0be4e4204686c315957f0a9f4945087f909d8b63ac480e",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_c173dbbfb6eb9646e54c4395",
+   "episode_id": "minecraft/test/0/000613",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300
+   ],
+   "source": {
+    "video": "test/0/000613.mp4",
+    "actions": "test/0/000613.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_c173dbbfb6eb9646e54c4395.npz",
+    "video_sha256": "e98356f88d3ec4421f4afa875c337bc9d263070a1955a41fc496d71076ccb6ab",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_8cf033e76d6900a857ddea0d",
+   "episode_id": "minecraft/test/0/000181",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167
+   ],
+   "source": {
+    "video": "test/0/000181.mp4",
+    "actions": "test/0/000181.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_8cf033e76d6900a857ddea0d.npz",
+    "video_sha256": "103ee073e698430ee998bf6463a94b49c4beb3dc5c2b10f089828bf2b0163a50",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_7e027ef6e1d1e12c34a4303c",
+   "episode_id": "minecraft/test/0/000217",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293
+   ],
+   "source": {
+    "video": "test/0/000217.mp4",
+    "actions": "test/0/000217.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_7e027ef6e1d1e12c34a4303c.npz",
+    "video_sha256": "42366de02f272ee411558b9169fc67a59eab37a9d55a119ae42654f6ffde5f78",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_767f6071913f69a637634cfa",
+   "episode_id": "minecraft/test/0/000372",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230
+   ],
+   "source": {
+    "video": "test/0/000372.mp4",
+    "actions": "test/0/000372.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_767f6071913f69a637634cfa.npz",
+    "video_sha256": "4c1b73e32c62c65b689c5451711fa0e33fe297cad4a7b8ce75de688b954d8e8e",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_7a7ea20b20c2b90f29c9f507",
+   "episode_id": "minecraft/test/0/000364",
+   "split": "test",
+   "raw_action": 3,
+   "actions_transition": [
+    2,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "frame_indices": [
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160
+   ],
+   "source": {
+    "video": "test/0/000364.mp4",
+    "actions": "test/0/000364.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_7a7ea20b20c2b90f29c9f507.npz",
+    "video_sha256": "1fd8e20679be0ece7899188af05968739b1de25dc6a5f849932757ccd8263af5",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_756a4fe2c8cd40c7ea16c298",
+   "episode_id": "minecraft/test/0/000221",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "source": {
+    "video": "test/0/000221.mp4",
+    "actions": "test/0/000221.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_756a4fe2c8cd40c7ea16c298.npz",
+    "video_sha256": "50c54abde02fdd3282dc7da727542cc020cfdc845a6da9d571837cc0b687e0d6",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_3e073fea1b8cc9cdedc987b9",
+   "episode_id": "minecraft/test/0/000087",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265
+   ],
+   "source": {
+    "video": "test/0/000087.mp4",
+    "actions": "test/0/000087.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_3e073fea1b8cc9cdedc987b9.npz",
+    "video_sha256": "1746df81623d9803bf43e08e86e4494bd6f4a719f6f2f752e52b406bd97c7a0a",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_cb4d534889c487e1e21bb653",
+   "episode_id": "minecraft/test/0/000938",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+   ],
+   "source": {
+    "video": "test/0/000938.mp4",
+    "actions": "test/0/000938.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_cb4d534889c487e1e21bb653.npz",
+    "video_sha256": "5a7d2dcb786df61211c5d9b89e9f724082a6ccf2fc18ec4ac7d07b63761a2359",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_8482ff940023f48d17a6da7f",
+   "episode_id": "minecraft/test/0/000188",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279
+   ],
+   "source": {
+    "video": "test/0/000188.mp4",
+    "actions": "test/0/000188.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_8482ff940023f48d17a6da7f.npz",
+    "video_sha256": "98b3c3c909509d196111cb0f61c1c1457bcfed4194c74c3dc7da05e29374987c",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_d0b9d47a200b3fb0af4d346e",
+   "episode_id": "minecraft/test/0/001000",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    3,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174
+   ],
+   "source": {
+    "video": "test/0/001000.mp4",
+    "actions": "test/0/001000.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_d0b9d47a200b3fb0af4d346e.npz",
+    "video_sha256": "96bfe7f4e11bd55186c6fd097887e7369fdda3985d31ea91c8e88ee108571113",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_dcabdd8d4e6e0be49691ebb5",
+   "episode_id": "minecraft/test/0/000569",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125
+   ],
+   "source": {
+    "video": "test/0/000569.mp4",
+    "actions": "test/0/000569.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_dcabdd8d4e6e0be49691ebb5.npz",
+    "video_sha256": "919dc9342ff83e4170a2d57650a2efc657a2b914b7c9b658e785eef15b8cab63",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_44e04ad77780da1ac5a7fd01",
+   "episode_id": "minecraft/test/0/000379",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62
+   ],
+   "source": {
+    "video": "test/0/000379.mp4",
+    "actions": "test/0/000379.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_44e04ad77780da1ac5a7fd01.npz",
+    "video_sha256": "cb0fe967ef5e4ceb6281fa6cc8cf3c9beac46c425aa23efb687f4721735a63d1",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_2e93c611f016026f2d25fcdb",
+   "episode_id": "minecraft/test/0/000845",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    2
+   ],
+   "frame_indices": [
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181
+   ],
+   "source": {
+    "video": "test/0/000845.mp4",
+    "actions": "test/0/000845.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_2e93c611f016026f2d25fcdb.npz",
+    "video_sha256": "863822ed7d80b397c75c3e3b28ac7a45fae0cad7d3c585a75febfeba5c26aaeb",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_94dfb439cfe724ec66705589",
+   "episode_id": "minecraft/test/0/000842",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202
+   ],
+   "source": {
+    "video": "test/0/000842.mp4",
+    "actions": "test/0/000842.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_94dfb439cfe724ec66705589.npz",
+    "video_sha256": "a55d61519790d5fd29ab036bf15144487365d2454021e336525d4f51dbd9561f",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_60940fb36ebb039f354445f5",
+   "episode_id": "minecraft/test/0/000371",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118
+   ],
+   "source": {
+    "video": "test/0/000371.mp4",
+    "actions": "test/0/000371.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_60940fb36ebb039f354445f5.npz",
+    "video_sha256": "02c2e497e44dedce884cdabae3df2f05eea1bd9e4edfc8f28b6a7ca58768045b",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_a6c003889024a69a1b1d5c52",
+   "episode_id": "minecraft/test/0/000210",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258
+   ],
+   "source": {
+    "video": "test/0/000210.mp4",
+    "actions": "test/0/000210.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_a6c003889024a69a1b1d5c52.npz",
+    "video_sha256": "341408836b9fe9c7a6c8b64ded1b0426f4547994be3ef25d5acd251e9f639d2c",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_101fc3d9c0cfa16326749b95",
+   "episode_id": "minecraft/test/0/000358",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300
+   ],
+   "source": {
+    "video": "test/0/000358.mp4",
+    "actions": "test/0/000358.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_101fc3d9c0cfa16326749b95.npz",
+    "video_sha256": "0803a03cc91b5f3ad9be6f4684cf3458c0dc0ac814b60abf359844f799277dab",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_5c9520cca9eb7d0de7f3e941",
+   "episode_id": "minecraft/test/0/000305",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258
+   ],
+   "source": {
+    "video": "test/0/000305.mp4",
+    "actions": "test/0/000305.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_5c9520cca9eb7d0de7f3e941.npz",
+    "video_sha256": "0fa9b0c0c36ccf7c385009ecfd3f2c057c029fc1afec0250e809d76caf3639eb",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_6aa2b729a8ac7481908cb950",
+   "episode_id": "minecraft/test/0/000503",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+   ],
+   "source": {
+    "video": "test/0/000503.mp4",
+    "actions": "test/0/000503.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_6aa2b729a8ac7481908cb950.npz",
+    "video_sha256": "973c1aca406be61461bfbe2f9fa9f4cc72c7fe0b6a52eb3ed326687e4737b006",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_a9005af6448dacf68ebc38cb",
+   "episode_id": "minecraft/test/0/000374",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+   ],
+   "source": {
+    "video": "test/0/000374.mp4",
+    "actions": "test/0/000374.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_a9005af6448dacf68ebc38cb.npz",
+    "video_sha256": "c85dacd2a8a40c64f8314673d10b6c751d38e9e7ccabe89e33fd6aaec1a9512a",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_839b8aed7b88ddce213f772f",
+   "episode_id": "minecraft/test/0/000065",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272
+   ],
+   "source": {
+    "video": "test/0/000065.mp4",
+    "actions": "test/0/000065.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_839b8aed7b88ddce213f772f.npz",
+    "video_sha256": "c72180dd8874f5fa2d7333fa8bc9eca7fbe70ecb9b3bf7b3dbd676e3918e87a5",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_22054e732294f7c586fd80a6",
+   "episode_id": "minecraft/test/0/001036",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153
+   ],
+   "source": {
+    "video": "test/0/001036.mp4",
+    "actions": "test/0/001036.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_22054e732294f7c586fd80a6.npz",
+    "video_sha256": "f1db774b74256ce26e0be9315874d039ea9cf0997349bd3a09e41067b2955e90",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_1399a7d75891f6de7242feeb",
+   "episode_id": "minecraft/test/0/000951",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279
+   ],
+   "source": {
+    "video": "test/0/000951.mp4",
+    "actions": "test/0/000951.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_1399a7d75891f6de7242feeb.npz",
+    "video_sha256": "6180e1ebead4d0d17c0c3f7e5dd743be5089445e1fcb997c91118d6b04e1ab3b",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_94400c4de3218307a813a476",
+   "episode_id": "minecraft/test/0/000375",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+   ],
+   "source": {
+    "video": "test/0/000375.mp4",
+    "actions": "test/0/000375.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_94400c4de3218307a813a476.npz",
+    "video_sha256": "efdd009fb56466f3e29bc343d58f3f6aca5b4f97a12d9a27dbd52889d96a4323",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_7dcc3c95a5048af779263af6",
+   "episode_id": "minecraft/test/0/001008",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181
+   ],
+   "source": {
+    "video": "test/0/001008.mp4",
+    "actions": "test/0/001008.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_7dcc3c95a5048af779263af6.npz",
+    "video_sha256": "4d6ccbb818a9965de3ef6a69e194dd3a8579ec0f71f17840b68fac368b4fb8fc",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_90be751916104ab96d25c2b1",
+   "episode_id": "minecraft/test/0/000376",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272
+   ],
+   "source": {
+    "video": "test/0/000376.mp4",
+    "actions": "test/0/000376.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_90be751916104ab96d25c2b1.npz",
+    "video_sha256": "677c9d5704117b0c3bc87d15d3c4c1983b5568611a3783d1ccd2f8e66d2d020c",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_993255fea24c12519038283e",
+   "episode_id": "minecraft/test/0/000860",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    3,
+    3,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118
+   ],
+   "source": {
+    "video": "test/0/000860.mp4",
+    "actions": "test/0/000860.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_993255fea24c12519038283e.npz",
+    "video_sha256": "12aa4911fd7a658dde27c5ec6c113d08ea2ed05d9f2f2be9b72474f53ae77dbd",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_322b4087014efbaeef0596ae",
+   "episode_id": "minecraft/test/0/000586",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "source": {
+    "video": "test/0/000586.mp4",
+    "actions": "test/0/000586.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_322b4087014efbaeef0596ae.npz",
+    "video_sha256": "4352ea651476031a5f3be37f4eb171b88948b8480b42e0481ac721a3be76adbf",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_7b5b5d7f4618a7dfc0844f28",
+   "episode_id": "minecraft/test/0/000032",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167
+   ],
+   "source": {
+    "video": "test/0/000032.mp4",
+    "actions": "test/0/000032.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_7b5b5d7f4618a7dfc0844f28.npz",
+    "video_sha256": "362794e07fe97b7a33ac16a8765ba30a3b957e6b0ff85d09ea4c9a76403b4941",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_bc2e88894fb65519b49e1d52",
+   "episode_id": "minecraft/test/0/000306",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167
+   ],
+   "source": {
+    "video": "test/0/000306.mp4",
+    "actions": "test/0/000306.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_bc2e88894fb65519b49e1d52.npz",
+    "video_sha256": "801e0f6b818bcf8e5c253279ec619474b21015ce7e7ba20d6230cdfb25bca152",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_5acfc86a9770761d3ec9b37e",
+   "episode_id": "minecraft/test/0/000679",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202
+   ],
+   "source": {
+    "video": "test/0/000679.mp4",
+    "actions": "test/0/000679.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_5acfc86a9770761d3ec9b37e.npz",
+    "video_sha256": "6d93d5746c4674a1bff6d09b0178762ea74e478a799a9719e16dd02127472a45",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_48bc944918a28d99c60e2d69",
+   "episode_id": "minecraft/test/0/000259",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181
+   ],
+   "source": {
+    "video": "test/0/000259.mp4",
+    "actions": "test/0/000259.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_48bc944918a28d99c60e2d69.npz",
+    "video_sha256": "80937c4df5c5d0551cb3c4129669800db358496ca98d60057384578f802cc3ea",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_e0b8dca6ceadedf5326a52e2",
+   "episode_id": "minecraft/test/0/001001",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118
+   ],
+   "source": {
+    "video": "test/0/001001.mp4",
+    "actions": "test/0/001001.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_e0b8dca6ceadedf5326a52e2.npz",
+    "video_sha256": "3373ed55ee712606fb1c58c49be5a1577e31f00bc54c06f3ca6bf39e18a6410b",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_b8b0697156e1f9d3ab03dea6",
+   "episode_id": "minecraft/test/0/000397",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55
+   ],
+   "source": {
+    "video": "test/0/000397.mp4",
+    "actions": "test/0/000397.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_b8b0697156e1f9d3ab03dea6.npz",
+    "video_sha256": "ad7e5e8470e322dd2980f4c8326e36cb024ac2554c5f29c0ab1f424d9d3d928b",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_158e3a978caf761b75d24c28",
+   "episode_id": "minecraft/test/0/000347",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118
+   ],
+   "source": {
+    "video": "test/0/000347.mp4",
+    "actions": "test/0/000347.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_158e3a978caf761b75d24c28.npz",
+    "video_sha256": "ff71d285e81e25a845acc749f419ccba88ea2f54e971e3c45b536b988928feae",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_44b0d3f551caf56627c31724",
+   "episode_id": "minecraft/test/0/000983",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+   ],
+   "source": {
+    "video": "test/0/000983.mp4",
+    "actions": "test/0/000983.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_44b0d3f551caf56627c31724.npz",
+    "video_sha256": "456ca00c81de603192e2fdd7d355238de288edc478a7fc9caa085757018a5847",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_f31151d6912a7dda23659a4f",
+   "episode_id": "minecraft/test/0/000779",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    2,
+    2,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118
+   ],
+   "source": {
+    "video": "test/0/000779.mp4",
+    "actions": "test/0/000779.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_f31151d6912a7dda23659a4f.npz",
+    "video_sha256": "09a2f75180524866ca00e858ad70e0d0b138afc83933488ed1c1fe79a89480d3",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_f7247da0c467f7edfe8e54ec",
+   "episode_id": "minecraft/test/0/000255",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300
+   ],
+   "source": {
+    "video": "test/0/000255.mp4",
+    "actions": "test/0/000255.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_f7247da0c467f7edfe8e54ec.npz",
+    "video_sha256": "afe36e5d194adb71a2a0cb67b2976a417008472b6230d2042ec20159aa7bddc8",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_5cad611aca5ba377dbc92f4d",
+   "episode_id": "minecraft/test/0/000140",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111
+   ],
+   "source": {
+    "video": "test/0/000140.mp4",
+    "actions": "test/0/000140.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_5cad611aca5ba377dbc92f4d.npz",
+    "video_sha256": "b726255b5168a2a6d6f0ab79bd93cdd806c63be40316d6cba906a3a54cdb9bec",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_d49c06b2ec4c2303f904439a",
+   "episode_id": "minecraft/test/0/000950",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "frame_indices": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+   ],
+   "source": {
+    "video": "test/0/000950.mp4",
+    "actions": "test/0/000950.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_d49c06b2ec4c2303f904439a.npz",
+    "video_sha256": "5233a03dd8a6ecec828c91761cfc698e586fcb1eeba94d16f4cfcc4fa1804e77",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_1833d1cfb79b0169b25db9d9",
+   "episode_id": "minecraft/test/0/000871",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+   ],
+   "source": {
+    "video": "test/0/000871.mp4",
+    "actions": "test/0/000871.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_1833d1cfb79b0169b25db9d9.npz",
+    "video_sha256": "11de426e0bb5059377b5b90853bef9dfca42eaf7de47e46e20ad4e0170464aad",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_00debcdc798f17eab0838fec",
+   "episode_id": "minecraft/test/0/000854",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300
+   ],
+   "source": {
+    "video": "test/0/000854.mp4",
+    "actions": "test/0/000854.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_00debcdc798f17eab0838fec.npz",
+    "video_sha256": "cd14b5c904a679d5b702d2d3f7097c5b579e271919f6d29bff623dccd16218ca",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_6dfa4a53d22054fc83d35605",
+   "episode_id": "minecraft/test/0/000523",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    3,
+    3,
+    3,
+    1,
+    1
+   ],
+   "frame_indices": [
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202
+   ],
+   "source": {
+    "video": "test/0/000523.mp4",
+    "actions": "test/0/000523.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_6dfa4a53d22054fc83d35605.npz",
+    "video_sha256": "afc42da03cc12b8bb40bd870c94654805b1ce090d36f5c50633a4fad086ef83f",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_7582433a0800f25d5f065af0",
+   "episode_id": "minecraft/test/0/000325",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139
+   ],
+   "source": {
+    "video": "test/0/000325.mp4",
+    "actions": "test/0/000325.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_7582433a0800f25d5f065af0.npz",
+    "video_sha256": "e0a6cce0053509f9be0e6d6a7d71b39a3b75ee29410a395688d29a412098c903",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_021d603a565eb245222072bc",
+   "episode_id": "minecraft/test/0/000439",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83
+   ],
+   "source": {
+    "video": "test/0/000439.mp4",
+    "actions": "test/0/000439.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_021d603a565eb245222072bc.npz",
+    "video_sha256": "4f6257feb7e6bede91b2c2f2c825e603eeb70c8feb7322a2efed54d09c122a3c",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_a63935066f6df8567e52a92d",
+   "episode_id": "minecraft/test/0/000682",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+   ],
+   "source": {
+    "video": "test/0/000682.mp4",
+    "actions": "test/0/000682.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_a63935066f6df8567e52a92d.npz",
+    "video_sha256": "ab7c2ce6519f8f8ec8852c829fb7bc32209019d6bad0018e86fcbfa91f15781c",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_69dbb481ed4657c1d3b3f632",
+   "episode_id": "minecraft/test/0/000678",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+   ],
+   "source": {
+    "video": "test/0/000678.mp4",
+    "actions": "test/0/000678.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_69dbb481ed4657c1d3b3f632.npz",
+    "video_sha256": "3bae7c40ae1b7c08c6bc0eb6d0dc4ed693f6732243e0f61f00be75050cea18de",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_382aae45a925af9938b42843",
+   "episode_id": "minecraft/test/0/000365",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300
+   ],
+   "source": {
+    "video": "test/0/000365.mp4",
+    "actions": "test/0/000365.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_382aae45a925af9938b42843.npz",
+    "video_sha256": "a6c1d5e2bd20223c520a262b06c9efdc3e8f1289d2896e8379765aec56c3a2c1",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_d9de03bd6726e9cc372ec8e3",
+   "episode_id": "minecraft/test/0/000437",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69
+   ],
+   "source": {
+    "video": "test/0/000437.mp4",
+    "actions": "test/0/000437.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_d9de03bd6726e9cc372ec8e3.npz",
+    "video_sha256": "8f9573a26e1e6e0d10ee3c703736a96f67e461567ed175a5f78207a3f099a7e6",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_e8cc84752a2a0e2efb1df73d",
+   "episode_id": "minecraft/test/0/000477",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "frame_indices": [
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244
+   ],
+   "source": {
+    "video": "test/0/000477.mp4",
+    "actions": "test/0/000477.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_e8cc84752a2a0e2efb1df73d.npz",
+    "video_sha256": "227d755e3d8f53bb993ada7a8d18b17f311100654688af55b7a2c81a702a9d71",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_c4da93e1749fb5f07352fb4e",
+   "episode_id": "minecraft/test/0/000436",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62
+   ],
+   "source": {
+    "video": "test/0/000436.mp4",
+    "actions": "test/0/000436.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_c4da93e1749fb5f07352fb4e.npz",
+    "video_sha256": "44d76ef55d7bec55de1042871a4c6b3bb208996688cad0b76d80dd560956e2a4",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_3f538aaa885c3f43311b130f",
+   "episode_id": "minecraft/test/0/000141",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+   ],
+   "source": {
+    "video": "test/0/000141.mp4",
+    "actions": "test/0/000141.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_3f538aaa885c3f43311b130f.npz",
+    "video_sha256": "9fea74e5f05efd1536aaf2198c108f8743ba659068cbab5eb009509e30c9c64b",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_374ee044e4d6cd203da567fe",
+   "episode_id": "minecraft/test/0/000784",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    3,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209
+   ],
+   "source": {
+    "video": "test/0/000784.mp4",
+    "actions": "test/0/000784.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_374ee044e4d6cd203da567fe.npz",
+    "video_sha256": "d73b4233568242f68be608d60ea604a3a86b667e1f9df0840b0b1e3d24a81ae0",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_ee2600de8b3268e41822ceea",
+   "episode_id": "minecraft/test/0/000953",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ],
+   "frame_indices": [
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111
+   ],
+   "source": {
+    "video": "test/0/000953.mp4",
+    "actions": "test/0/000953.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_ee2600de8b3268e41822ceea.npz",
+    "video_sha256": "a73786738917124e56765468419eee6129ffd12b4eaea25897f4c1f10bdede92",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_51a448e84b661a2419115b7a",
+   "episode_id": "minecraft/test/0/000061",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118
+   ],
+   "source": {
+    "video": "test/0/000061.mp4",
+    "actions": "test/0/000061.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_51a448e84b661a2419115b7a.npz",
+    "video_sha256": "0b166949f26480abe65bcbc555f8a82d543194bfe1aedcbc0735c587ce2cc715",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_85c460a1a2aa5f0a0ff89b23",
+   "episode_id": "minecraft/test/0/000265",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237
+   ],
+   "source": {
+    "video": "test/0/000265.mp4",
+    "actions": "test/0/000265.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_85c460a1a2aa5f0a0ff89b23.npz",
+    "video_sha256": "25714e173f27392e9a6386a0c67495fadd4464de6635e82b369670e9ce457597",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_774d74c3df735c48eb500920",
+   "episode_id": "minecraft/test/0/000057",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300
+   ],
+   "source": {
+    "video": "test/0/000057.mp4",
+    "actions": "test/0/000057.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_774d74c3df735c48eb500920.npz",
+    "video_sha256": "fe0ec36edbe0c62f65bab639694bf1b5e0ad4c91aaaa43963b87351595aa2dc5",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_c0319230838c29a9c411187e",
+   "episode_id": "minecraft/test/0/000088",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195
+   ],
+   "source": {
+    "video": "test/0/000088.mp4",
+    "actions": "test/0/000088.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_c0319230838c29a9c411187e.npz",
+    "video_sha256": "d93544bb5dfe5c698eca8ec240dd44a3d01ebb492957c909bf36855ff7347b39",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_103a35d9e170c1efdcf61eb5",
+   "episode_id": "minecraft/test/0/000512",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244
+   ],
+   "source": {
+    "video": "test/0/000512.mp4",
+    "actions": "test/0/000512.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_103a35d9e170c1efdcf61eb5.npz",
+    "video_sha256": "87030dda6bcc518da2970430302c4336d28800a852ab7a60f0e9413c714a214e",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_bb1219fc8577d32fcf1f1b4f",
+   "episode_id": "minecraft/test/0/000272",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132
+   ],
+   "source": {
+    "video": "test/0/000272.mp4",
+    "actions": "test/0/000272.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_bb1219fc8577d32fcf1f1b4f.npz",
+    "video_sha256": "60c0b53e0023eee6e348b91d775f36300c58ababaaaf02ebd19b72fdd525ca03",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_8922217e7de708bd497317f6",
+   "episode_id": "minecraft/test/0/000022",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279
+   ],
+   "source": {
+    "video": "test/0/000022.mp4",
+    "actions": "test/0/000022.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_8922217e7de708bd497317f6.npz",
+    "video_sha256": "b29ebf88379e9b782f88387993fbf9ac7201aa8e7de24f4b557de1a14a07443a",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_67730690ee207e267f5fa714",
+   "episode_id": "minecraft/test/0/000769",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83
+   ],
+   "source": {
+    "video": "test/0/000769.mp4",
+    "actions": "test/0/000769.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_67730690ee207e267f5fa714.npz",
+    "video_sha256": "d7c068bfaef7f0d040504cdf6c30396c7fe786210024b53593371370bea1db0e",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_a035304e2256e480dd21fd46",
+   "episode_id": "minecraft/test/0/000136",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+   ],
+   "source": {
+    "video": "test/0/000136.mp4",
+    "actions": "test/0/000136.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_a035304e2256e480dd21fd46.npz",
+    "video_sha256": "4d22f6549bd0ca3f2c4a6b5fddfd146a251234ed8c9f6898379cade0486add3d",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_21146e2d99dda74211798c8b",
+   "episode_id": "minecraft/test/0/000299",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+   ],
+   "source": {
+    "video": "test/0/000299.mp4",
+    "actions": "test/0/000299.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_21146e2d99dda74211798c8b.npz",
+    "video_sha256": "0e7a39daca2d9d0d2fb73caac23b9eb71fadb5c644ac6d2dec2ec2abb2628e73",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_d8b92cdd27639e270f6bd0c7",
+   "episode_id": "minecraft/test/0/000621",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188
+   ],
+   "source": {
+    "video": "test/0/000621.mp4",
+    "actions": "test/0/000621.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_d8b92cdd27639e270f6bd0c7.npz",
+    "video_sha256": "63e0ab2f194298aa3c6c9f1deed7b34b462a4b9315414a5a52dea67d90edca31",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_a05ddc6e3fe8925607f03cb5",
+   "episode_id": "minecraft/test/0/000514",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293
+   ],
+   "source": {
+    "video": "test/0/000514.mp4",
+    "actions": "test/0/000514.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_a05ddc6e3fe8925607f03cb5.npz",
+    "video_sha256": "a9891d5fa09e91ca7227ad76c67bbd5420ab26ff93aade82e3f4b42c56d2ff6f",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_ff268387936974b995945172",
+   "episode_id": "minecraft/test/0/000637",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272
+   ],
+   "source": {
+    "video": "test/0/000637.mp4",
+    "actions": "test/0/000637.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_ff268387936974b995945172.npz",
+    "video_sha256": "18313697c5e76d6e356991044772745ea3d6fdf584b65bdeab09242edc699781",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_af5ceb4b4a2ddc9f88257ff4",
+   "episode_id": "minecraft/test/0/000805",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "frame_indices": [
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167
+   ],
+   "source": {
+    "video": "test/0/000805.mp4",
+    "actions": "test/0/000805.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_af5ceb4b4a2ddc9f88257ff4.npz",
+    "video_sha256": "d24c042bf79f600b9223b860373d9e19092b17467b0e9b8d063d5a304e420949",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_882e3e15282ae67c28d26c00",
+   "episode_id": "minecraft/test/0/000381",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+   ],
+   "source": {
+    "video": "test/0/000381.mp4",
+    "actions": "test/0/000381.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_882e3e15282ae67c28d26c00.npz",
+    "video_sha256": "478eec8da7efc193fa191fe996bc4acf0cd6a73747a49603ee5c51880f029380",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_847c1267dedc34c188cafb35",
+   "episode_id": "minecraft/test/0/000977",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132
+   ],
+   "source": {
+    "video": "test/0/000977.mp4",
+    "actions": "test/0/000977.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_847c1267dedc34c188cafb35.npz",
+    "video_sha256": "e71860e5c999ae45b62669d3a0e7fe833dcff8235ffa4d9830689e047ac98836",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_a75bbcd21b0b737db1b88800",
+   "episode_id": "minecraft/test/0/000994",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+   ],
+   "source": {
+    "video": "test/0/000994.mp4",
+    "actions": "test/0/000994.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_a75bbcd21b0b737db1b88800.npz",
+    "video_sha256": "2c2f2f60c5f2597eab43ee0edec021bb7e673eff9f743ce44598873c7044e2e2",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_6b161c6210527fc879958c87",
+   "episode_id": "minecraft/test/0/000146",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160
+   ],
+   "source": {
+    "video": "test/0/000146.mp4",
+    "actions": "test/0/000146.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_6b161c6210527fc879958c87.npz",
+    "video_sha256": "033da6d02b05f09d16e88a568683b9e95283ac5ff93f929da10444c24217090a",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_918481e49f9d71f69e8833a0",
+   "episode_id": "minecraft/test/0/000705",
+   "split": "test",
+   "raw_action": 3,
+   "actions_transition": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "frame_indices": [
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139
+   ],
+   "source": {
+    "video": "test/0/000705.mp4",
+    "actions": "test/0/000705.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_918481e49f9d71f69e8833a0.npz",
+    "video_sha256": "bfd5ff463815a228f83876778b71df5bf26bb823a0be2aa87c5826494b3d5af0",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_9ee0ed2ede34f7493d61f775",
+   "episode_id": "minecraft/test/0/000139",
+   "split": "test",
+   "raw_action": 3,
+   "actions_transition": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "frame_indices": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+   ],
+   "source": {
+    "video": "test/0/000139.mp4",
+    "actions": "test/0/000139.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_9ee0ed2ede34f7493d61f775.npz",
+    "video_sha256": "a388be7222e80c6f870a15c7b29ab8c10a22d625b45e701f4bc993e5562938e4",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_676826881fb736cd2da7d400",
+   "episode_id": "minecraft/test/0/000872",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265
+   ],
+   "source": {
+    "video": "test/0/000872.mp4",
+    "actions": "test/0/000872.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_676826881fb736cd2da7d400.npz",
+    "video_sha256": "debaff23356fc649da31b14391bb7513406833e77bb76948dbb39c6593b0622f",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_8fba0c4ed1f8af62a2e7d0fc",
+   "episode_id": "minecraft/test/0/000428",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55
+   ],
+   "source": {
+    "video": "test/0/000428.mp4",
+    "actions": "test/0/000428.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_8fba0c4ed1f8af62a2e7d0fc.npz",
+    "video_sha256": "131bf3ce3fb552d778b542d10509bc913535f9b4597ddf0acc080dbda0ae9817",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_c86f46a26b5f9a3d5945f24a",
+   "episode_id": "minecraft/test/0/000195",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272
+   ],
+   "source": {
+    "video": "test/0/000195.mp4",
+    "actions": "test/0/000195.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_c86f46a26b5f9a3d5945f24a.npz",
+    "video_sha256": "e00b536c5468fe9b1711b9d8944c400b5bfdafdab268d56cde8c0c7fe330c352",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_9dce3add2f196ae2bee94960",
+   "episode_id": "minecraft/test/0/000101",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+   ],
+   "source": {
+    "video": "test/0/000101.mp4",
+    "actions": "test/0/000101.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_9dce3add2f196ae2bee94960.npz",
+    "video_sha256": "ca6329dfd5e5e8b6a0b152554040c806a978449848ee358f841690021b7f8402",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_f9f79bed4d769aff8d52ed6e",
+   "episode_id": "minecraft/test/0/000455",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83
+   ],
+   "source": {
+    "video": "test/0/000455.mp4",
+    "actions": "test/0/000455.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_f9f79bed4d769aff8d52ed6e.npz",
+    "video_sha256": "2f1ec2fcbbc3fb0d6f2c85a65fe64270b3e6f0fce0d341c67f063b4029377708",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_305a022a673f0b058dd04fcc",
+   "episode_id": "minecraft/test/0/000504",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    2
+   ],
+   "frame_indices": [
+    280,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286
+   ],
+   "source": {
+    "video": "test/0/000504.mp4",
+    "actions": "test/0/000504.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_305a022a673f0b058dd04fcc.npz",
+    "video_sha256": "95da30f8988c292a781633f09eb5a3a332d7e50fa059190cdf5e74febf6a4cfd",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_c1535e9ec0904f51612b0f3f",
+   "episode_id": "minecraft/test/0/000191",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160
+   ],
+   "source": {
+    "video": "test/0/000191.mp4",
+    "actions": "test/0/000191.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_c1535e9ec0904f51612b0f3f.npz",
+    "video_sha256": "24ca83ea546cf49fb0ee1c2a11d64b82706823fe8372c56b93cbbd66f8351b8d",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_33c00cca907faef1e0412dcf",
+   "episode_id": "minecraft/test/0/000764",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+   ],
+   "source": {
+    "video": "test/0/000764.mp4",
+    "actions": "test/0/000764.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_33c00cca907faef1e0412dcf.npz",
+    "video_sha256": "9a567237885f7f70edaebea6b3568970fea9d569353af0461117fdee2c5e0dbf",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_f94f3891cf5e97b038a85ac7",
+   "episode_id": "minecraft/test/0/000429",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188
+   ],
+   "source": {
+    "video": "test/0/000429.mp4",
+    "actions": "test/0/000429.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_f94f3891cf5e97b038a85ac7.npz",
+    "video_sha256": "80d63c48b126f3c5b2800ee5038b0e0eff92bf1f11173b97b051a9b30de04652",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_052a2729409b5531e8179803",
+   "episode_id": "minecraft/test/0/000124",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "source": {
+    "video": "test/0/000124.mp4",
+    "actions": "test/0/000124.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_052a2729409b5531e8179803.npz",
+    "video_sha256": "b2759cd40a994392cca3448e0d92826b3c9856860c56695e18cdadabfb2c46c6",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_05392ccf101818505918ac34",
+   "episode_id": "minecraft/test/0/000761",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223
+   ],
+   "source": {
+    "video": "test/0/000761.mp4",
+    "actions": "test/0/000761.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_05392ccf101818505918ac34.npz",
+    "video_sha256": "6f38a45373d8dee1247cc1fdc7c255e802d345609b3382cde4349c0e3fe52de1",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_46b007d83456cf735ed93c99",
+   "episode_id": "minecraft/test/0/000479",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139
+   ],
+   "source": {
+    "video": "test/0/000479.mp4",
+    "actions": "test/0/000479.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_46b007d83456cf735ed93c99.npz",
+    "video_sha256": "ddd4c70cbb9c4048a96cb179b835c31d7d0bb3cf14efc2cbe17b09e52219f885",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_26ab9610e887852549db607b",
+   "episode_id": "minecraft/test/0/000955",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160
+   ],
+   "source": {
+    "video": "test/0/000955.mp4",
+    "actions": "test/0/000955.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_26ab9610e887852549db607b.npz",
+    "video_sha256": "ae549ed8a09129ab5328d0777a59fac60a44dcbaee039e3706260e1586aa8d2c",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_954d3adcfa35936bab011a52",
+   "episode_id": "minecraft/test/0/000108",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293
+   ],
+   "source": {
+    "video": "test/0/000108.mp4",
+    "actions": "test/0/000108.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_954d3adcfa35936bab011a52.npz",
+    "video_sha256": "b5d215d67021a0c52d49d4a019d4913dd682339310eea021235680f858cb150b",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_40346ba2c59346e8943cd90d",
+   "episode_id": "minecraft/test/0/000571",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62
+   ],
+   "source": {
+    "video": "test/0/000571.mp4",
+    "actions": "test/0/000571.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_40346ba2c59346e8943cd90d.npz",
+    "video_sha256": "581fa672802ba1612816911e73c63bf2df2abb8b51ee4589cded0166e91af67a",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_cdeaf89f227685d8063bea37",
+   "episode_id": "minecraft/test/0/000165",
+   "split": "test",
+   "raw_action": 3,
+   "actions_transition": [
+    1,
+    1,
+    3,
+    3,
+    3,
+    3
+   ],
+   "frame_indices": [
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174
+   ],
+   "source": {
+    "video": "test/0/000165.mp4",
+    "actions": "test/0/000165.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_cdeaf89f227685d8063bea37.npz",
+    "video_sha256": "e4a1a3f8075abf44cbb5c10e5853047092aaf152e3c42221cd889313ae8a70c0",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_a3422cc0a2ec3e7c6e35f25b",
+   "episode_id": "minecraft/test/0/000484",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160
+   ],
+   "source": {
+    "video": "test/0/000484.mp4",
+    "actions": "test/0/000484.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_a3422cc0a2ec3e7c6e35f25b.npz",
+    "video_sha256": "25d01e13c4f9ac31a65dd4a3f334ecc1b82c1fe932540f7129ed856a084ee0be",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_7e775b59998a3cbce18ebc6b",
+   "episode_id": "minecraft/test/0/001002",
+   "split": "test",
+   "raw_action": 3,
+   "actions_transition": [
+    1,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "frame_indices": [
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160
+   ],
+   "source": {
+    "video": "test/0/001002.mp4",
+    "actions": "test/0/001002.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_7e775b59998a3cbce18ebc6b.npz",
+    "video_sha256": "aabd45412a9b79c5e84ff5f3a9bdd9d9d5a7b99299147ca166b11acc65ead592",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_f56eefcf1976cf6d2b50e21c",
+   "episode_id": "minecraft/test/0/000642",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202
+   ],
+   "source": {
+    "video": "test/0/000642.mp4",
+    "actions": "test/0/000642.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_f56eefcf1976cf6d2b50e21c.npz",
+    "video_sha256": "80f458ec866a40aad4f286e95cc1a905708c819e8615df2aff08371bb94ef213",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_4159d04df0a9452d84758054",
+   "episode_id": "minecraft/test/0/000826",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "source": {
+    "video": "test/0/000826.mp4",
+    "actions": "test/0/000826.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_4159d04df0a9452d84758054.npz",
+    "video_sha256": "8c23b7880fd891735367b52d68b2a65a5ae42f28d73c654665032b222daff1d9",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_c1c9e719af538558201e38f4",
+   "episode_id": "minecraft/test/0/000378",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146
+   ],
+   "source": {
+    "video": "test/0/000378.mp4",
+    "actions": "test/0/000378.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_c1c9e719af538558201e38f4.npz",
+    "video_sha256": "25cb9d8e7886fecf7ea37a770f8a01fea88126ab15c91fc4fb5dd110957db6e3",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_09f71571ad13bc68eaa7743c",
+   "episode_id": "minecraft/test/0/000638",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265
+   ],
+   "source": {
+    "video": "test/0/000638.mp4",
+    "actions": "test/0/000638.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_09f71571ad13bc68eaa7743c.npz",
+    "video_sha256": "573b736bece834bcd02fff8bb5ecceeb5c997f369973606565f6554e23f63b15",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_04d02a0b57e05cc89e60510b",
+   "episode_id": "minecraft/test/0/000225",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244
+   ],
+   "source": {
+    "video": "test/0/000225.mp4",
+    "actions": "test/0/000225.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_04d02a0b57e05cc89e60510b.npz",
+    "video_sha256": "d977b7b97552ef7a0929c472b79a166ec6eb19b7af34da6aa847e6e1e88fb40b",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_b6771d0e529ddc3e188f734e",
+   "episode_id": "minecraft/test/0/000945",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104
+   ],
+   "source": {
+    "video": "test/0/000945.mp4",
+    "actions": "test/0/000945.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_b6771d0e529ddc3e188f734e.npz",
+    "video_sha256": "c359bbe5ecf3c4249982433d73d72c8c6779653f9ca84a377ac69e12d8b6be5d",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_322ff0e8453c8933fb986f13",
+   "episode_id": "minecraft/test/0/000444",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153
+   ],
+   "source": {
+    "video": "test/0/000444.mp4",
+    "actions": "test/0/000444.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_322ff0e8453c8933fb986f13.npz",
+    "video_sha256": "3435eea8845c3a2b0c3435f7bae5ac4c7a0cd869e9d23694b4fb0c54e2232c52",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_4f7b7e5bb3f9b2eb3a91258d",
+   "episode_id": "minecraft/test/0/000921",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "frame_indices": [
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125
+   ],
+   "source": {
+    "video": "test/0/000921.mp4",
+    "actions": "test/0/000921.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_4f7b7e5bb3f9b2eb3a91258d.npz",
+    "video_sha256": "b7042c2fbf9b6536b597779b881fb17021ad1edf76168ea38290c99744247f78",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_929c6b7267e7e6154fd6526d",
+   "episode_id": "minecraft/test/0/000717",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202
+   ],
+   "source": {
+    "video": "test/0/000717.mp4",
+    "actions": "test/0/000717.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_929c6b7267e7e6154fd6526d.npz",
+    "video_sha256": "7a5d7256d3ce04d6f72245ec1eacb5b144c39239f618e72416e2bd5e86153b44",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_37d7c3a68aeffba7544e1a08",
+   "episode_id": "minecraft/test/0/000837",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    280,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286
+   ],
+   "source": {
+    "video": "test/0/000837.mp4",
+    "actions": "test/0/000837.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_37d7c3a68aeffba7544e1a08.npz",
+    "video_sha256": "5ae4bf82695b33b3d46c8e3ba076b18e04981b29b033da5b5360ea4e2e4b24ad",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_3cbb1525b5e7c5519ac74540",
+   "episode_id": "minecraft/test/0/000522",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272
+   ],
+   "source": {
+    "video": "test/0/000522.mp4",
+    "actions": "test/0/000522.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_3cbb1525b5e7c5519ac74540.npz",
+    "video_sha256": "951aee2aaa449101d07729e93cdfaf7b9ff7937aaf75aa3f9222fcedf2cba71c",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_93d6542892010ed2be7fdec7",
+   "episode_id": "minecraft/test/0/000982",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    2,
+    2,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258
+   ],
+   "source": {
+    "video": "test/0/000982.mp4",
+    "actions": "test/0/000982.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_93d6542892010ed2be7fdec7.npz",
+    "video_sha256": "d41d33733e997259939e28a396a23826d9ff6a06ff34b00e729b8c814b56bbae",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_fd3c849285101c4c53c05ec8",
+   "episode_id": "minecraft/test/0/000398",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139
+   ],
+   "source": {
+    "video": "test/0/000398.mp4",
+    "actions": "test/0/000398.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_fd3c849285101c4c53c05ec8.npz",
+    "video_sha256": "0842886049b0d28c17f040d8c3297773b220731307ccd974fd08b60b2754884e",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_5130c15fbe0c4bc62e115c3c",
+   "episode_id": "minecraft/test/0/000316",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153
+   ],
+   "source": {
+    "video": "test/0/000316.mp4",
+    "actions": "test/0/000316.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_5130c15fbe0c4bc62e115c3c.npz",
+    "video_sha256": "72c21d35c6fce28acdb3fb00e8fbd31b36dc976201329faa7a365fecca47709f",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_c3026ab84af28fd9fa19b13f",
+   "episode_id": "minecraft/test/0/000307",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+   ],
+   "source": {
+    "video": "test/0/000307.mp4",
+    "actions": "test/0/000307.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_c3026ab84af28fd9fa19b13f.npz",
+    "video_sha256": "f389d3bde28b44d02334462e470265065e67c969a3acbd3a471113b1cfad4eec",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_63a1429f7b45027642793076",
+   "episode_id": "minecraft/test/0/000542",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202
+   ],
+   "source": {
+    "video": "test/0/000542.mp4",
+    "actions": "test/0/000542.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_63a1429f7b45027642793076.npz",
+    "video_sha256": "09a039027f0cd1c173eee5bdbd5a233c83cea8ebffd96f60c0ad406353281551",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_7d1d6a61c68852002cde7ea8",
+   "episode_id": "minecraft/test/0/000096",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216
+   ],
+   "source": {
+    "video": "test/0/000096.mp4",
+    "actions": "test/0/000096.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_7d1d6a61c68852002cde7ea8.npz",
+    "video_sha256": "9b0742a444fed13da99d26edf7b014f650b6b8859b215fa29f10b34043ea152e",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_a05adbf4ad477e10afee08b5",
+   "episode_id": "minecraft/test/0/000558",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223
+   ],
+   "source": {
+    "video": "test/0/000558.mp4",
+    "actions": "test/0/000558.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_a05adbf4ad477e10afee08b5.npz",
+    "video_sha256": "a429c70572e9702644d209cdefdb0bec105a9da8d28f70c205910a9ea3c4d1eb",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_42569e3853d8ad834f00ddff",
+   "episode_id": "minecraft/test/0/000768",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "source": {
+    "video": "test/0/000768.mp4",
+    "actions": "test/0/000768.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_42569e3853d8ad834f00ddff.npz",
+    "video_sha256": "9d87ac0026962a788a192aedfd7fb9734c8a3fb8b6c6233299d3c136deaf1a8f",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_3f9b222494d4e8fd62feae00",
+   "episode_id": "minecraft/test/0/000286",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251
+   ],
+   "source": {
+    "video": "test/0/000286.mp4",
+    "actions": "test/0/000286.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_3f9b222494d4e8fd62feae00.npz",
+    "video_sha256": "97f9c2628f7983d54db16c0602c08768dbdbb423dfbc422a2ace436e31857d29",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_2d61fc0188b515f79d350691",
+   "episode_id": "minecraft/test/0/000258",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209
+   ],
+   "source": {
+    "video": "test/0/000258.mp4",
+    "actions": "test/0/000258.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_2d61fc0188b515f79d350691.npz",
+    "video_sha256": "b2b409900597b33cbc7dd135bd1a127adcd437c35245a74eee07bea51d8a6b29",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_fff770375cbab5951e3a6a21",
+   "episode_id": "minecraft/test/0/000729",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97
+   ],
+   "source": {
+    "video": "test/0/000729.mp4",
+    "actions": "test/0/000729.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_fff770375cbab5951e3a6a21.npz",
+    "video_sha256": "09fbb15c9272035d78940ac3ebd33b77d8d705ee22405e4d5b77cc5d8f1fd2b2",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_a72e68cc27d973c32eac809d",
+   "episode_id": "minecraft/test/0/000370",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55
+   ],
+   "source": {
+    "video": "test/0/000370.mp4",
+    "actions": "test/0/000370.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_a72e68cc27d973c32eac809d.npz",
+    "video_sha256": "679ed2d9a8c816ecd69fb027c1361ee7a7384ea9adacee806e00ef014dfc17b2",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_8227af655e4c351a565b2c8e",
+   "episode_id": "minecraft/test/0/000116",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+   ],
+   "source": {
+    "video": "test/0/000116.mp4",
+    "actions": "test/0/000116.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_8227af655e4c351a565b2c8e.npz",
+    "video_sha256": "4b12e9bf77693a6c96653f0b7e16ed21a7d79bc08a504cf43d5843076029570d",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_ae34fd84650f4a27ca54e7c9",
+   "episode_id": "minecraft/test/0/000956",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258
+   ],
+   "source": {
+    "video": "test/0/000956.mp4",
+    "actions": "test/0/000956.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_ae34fd84650f4a27ca54e7c9.npz",
+    "video_sha256": "eaa26664499792869699af6089486da252290c47684141c300130e19a29bae59",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_11eeb944b9f0048ee8570b87",
+   "episode_id": "minecraft/test/0/000544",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153
+   ],
+   "source": {
+    "video": "test/0/000544.mp4",
+    "actions": "test/0/000544.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_11eeb944b9f0048ee8570b87.npz",
+    "video_sha256": "a707224bab39e482885d6985eb9f3c23e4e182c0306b5f593291436de083211a",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_6e9a6c1100e6ab8cd25194ed",
+   "episode_id": "minecraft/test/0/000585",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    2
+   ],
+   "frame_indices": [
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153
+   ],
+   "source": {
+    "video": "test/0/000585.mp4",
+    "actions": "test/0/000585.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_6e9a6c1100e6ab8cd25194ed.npz",
+    "video_sha256": "d3c5e0303300be87c9c49af850635c8e1b24572729a46cf4d90af03e51c12a2a",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_32b2b2b28eae1a55c477b0fe",
+   "episode_id": "minecraft/test/0/000164",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146
+   ],
+   "source": {
+    "video": "test/0/000164.mp4",
+    "actions": "test/0/000164.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_32b2b2b28eae1a55c477b0fe.npz",
+    "video_sha256": "709bf5f3df5a354e54542f1c4cec71c2748456e91778e4e2ab40f432482735ed",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_829d788f9863637fb59459d9",
+   "episode_id": "minecraft/test/0/000194",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153
+   ],
+   "source": {
+    "video": "test/0/000194.mp4",
+    "actions": "test/0/000194.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_829d788f9863637fb59459d9.npz",
+    "video_sha256": "88ddf7c70fe751db39723c1143ba04d392ab6865859829fe1cb4aaf874312919",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_2a7db02be03ab07f2c24fb38",
+   "episode_id": "minecraft/test/0/000391",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272
+   ],
+   "source": {
+    "video": "test/0/000391.mp4",
+    "actions": "test/0/000391.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_2a7db02be03ab07f2c24fb38.npz",
+    "video_sha256": "3278584b91284111728d4bd87be149d5ef17549364abb49fe77de28bf114147f",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_fd043595f56325be228a5e8d",
+   "episode_id": "minecraft/test/0/000928",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195
+   ],
+   "source": {
+    "video": "test/0/000928.mp4",
+    "actions": "test/0/000928.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_fd043595f56325be228a5e8d.npz",
+    "video_sha256": "fa4c3242a40dc97b8d23b4e6142f32d131e82717133ca6d0f91d8ad44478e6c9",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_bd89e256568be8a8a7ab4915",
+   "episode_id": "minecraft/test/0/000626",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125
+   ],
+   "source": {
+    "video": "test/0/000626.mp4",
+    "actions": "test/0/000626.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_bd89e256568be8a8a7ab4915.npz",
+    "video_sha256": "94fb7569c4a59ee56692f93cbe0b27d24db784af6ccb78e17643cb3a475aa49c",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_b2aa813076751d949e1658a7",
+   "episode_id": "minecraft/test/0/000297",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62
+   ],
+   "source": {
+    "video": "test/0/000297.mp4",
+    "actions": "test/0/000297.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_b2aa813076751d949e1658a7.npz",
+    "video_sha256": "6c8570a32ad4362d1c3d9b3bd1233fdc8d4cfa6a691384b29921bb31981c4421",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_141d8b173bde03c185d272f4",
+   "episode_id": "minecraft/test/0/000122",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+   ],
+   "source": {
+    "video": "test/0/000122.mp4",
+    "actions": "test/0/000122.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_141d8b173bde03c185d272f4.npz",
+    "video_sha256": "a5ac62c5bc5c9948622ed593a9fd531c2b1c5174c1d021eeddb3aeb1aa8334bf",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_4c48c06c42dfc82a7685f9d9",
+   "episode_id": "minecraft/test/0/000655",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195
+   ],
+   "source": {
+    "video": "test/0/000655.mp4",
+    "actions": "test/0/000655.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_4c48c06c42dfc82a7685f9d9.npz",
+    "video_sha256": "74214088d67be716fcee6803f38ba750ab7c76ed440bb1488bdeee617dc3ab82",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_fb4cedae03d3b458f1b2acb1",
+   "episode_id": "minecraft/test/0/000636",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111
+   ],
+   "source": {
+    "video": "test/0/000636.mp4",
+    "actions": "test/0/000636.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_fb4cedae03d3b458f1b2acb1.npz",
+    "video_sha256": "6b0bc593d4c396c2d19d5f6ca7322799d37c19f536d04020a64c7cc1a319b3ec",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_2451a9e40d8ce3c6a4e6ab8d",
+   "episode_id": "minecraft/test/0/000870",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160
+   ],
+   "source": {
+    "video": "test/0/000870.mp4",
+    "actions": "test/0/000870.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_2451a9e40d8ce3c6a4e6ab8d.npz",
+    "video_sha256": "5840e2c3b3a9885972c73b477479ee32e6d4628e74eb7ae701530903ebf2211f",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_0569fc0627e0d72598705759",
+   "episode_id": "minecraft/test/0/000882",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209
+   ],
+   "source": {
+    "video": "test/0/000882.mp4",
+    "actions": "test/0/000882.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_0569fc0627e0d72598705759.npz",
+    "video_sha256": "690666eb201a3b9ffe81c6990d9995a03a19699b1a050d7e302671df86a216db",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_95dce98fdc76339538e05b46",
+   "episode_id": "minecraft/test/0/000405",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146
+   ],
+   "source": {
+    "video": "test/0/000405.mp4",
+    "actions": "test/0/000405.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_95dce98fdc76339538e05b46.npz",
+    "video_sha256": "4ec1f5b4b2b710559b74d84134163f94607f6a8fcfdfdb7ff7336b40e38282b6",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_9393ee790c4a46ab748f6957",
+   "episode_id": "minecraft/test/0/000649",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279
+   ],
+   "source": {
+    "video": "test/0/000649.mp4",
+    "actions": "test/0/000649.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_9393ee790c4a46ab748f6957.npz",
+    "video_sha256": "85df8f39f43b6ea94ab093300aa8463261ce4966964de99be52126a22720dce2",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_bcecdab6c6be90944d0a420a",
+   "episode_id": "minecraft/test/0/000059",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125
+   ],
+   "source": {
+    "video": "test/0/000059.mp4",
+    "actions": "test/0/000059.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_bcecdab6c6be90944d0a420a.npz",
+    "video_sha256": "a3dbdfee3bfe444676e10d705325fc02bbde741249416ada39340d02b8ed94f0",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_97911a90f3a8d28ccd05c808",
+   "episode_id": "minecraft/test/0/000588",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293
+   ],
+   "source": {
+    "video": "test/0/000588.mp4",
+    "actions": "test/0/000588.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_97911a90f3a8d28ccd05c808.npz",
+    "video_sha256": "f0604ad67d79bcef79fdf3cfe28aaa86804874306c87174c019e0b3a5ff3f393",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_0bf94299c10217758543619d",
+   "episode_id": "minecraft/test/0/000001",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+   ],
+   "source": {
+    "video": "test/0/000001.mp4",
+    "actions": "test/0/000001.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_0bf94299c10217758543619d.npz",
+    "video_sha256": "4b4a16fda5864f51c7e708ae14f8ae1fe9ec3d2fcae46e3bedad60212730f2d6",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_7d901cbb0cff768a55a17739",
+   "episode_id": "minecraft/test/0/000592",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+   ],
+   "source": {
+    "video": "test/0/000592.mp4",
+    "actions": "test/0/000592.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_7d901cbb0cff768a55a17739.npz",
+    "video_sha256": "35bf5f542532020fb857806b045fcc651833fbaa3d28c3367feec890e26e64c3",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_280b5af7f65954a32f957430",
+   "episode_id": "minecraft/test/0/000407",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160
+   ],
+   "source": {
+    "video": "test/0/000407.mp4",
+    "actions": "test/0/000407.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_280b5af7f65954a32f957430.npz",
+    "video_sha256": "5a078a6a1cdef0de4d4c2c135b9c26c28c1a178eeac453580787f89474236790",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_92312f3396cb47dd0d917201",
+   "episode_id": "minecraft/test/0/000193",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "source": {
+    "video": "test/0/000193.mp4",
+    "actions": "test/0/000193.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_92312f3396cb47dd0d917201.npz",
+    "video_sha256": "586213562a5272e19276899dcd8606d202af6383aa441816ab0bb363695e9710",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_507335aeb1f6136622c9e37b",
+   "episode_id": "minecraft/test/0/001012",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62
+   ],
+   "source": {
+    "video": "test/0/001012.mp4",
+    "actions": "test/0/001012.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_507335aeb1f6136622c9e37b.npz",
+    "video_sha256": "18b308880efbdb80a8f7fbe1b939ea0804f8ffe4d24fe30a451c73e24cd2431b",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_49b6cb5e32fae3400cc13cfc",
+   "episode_id": "minecraft/test/0/000211",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223
+   ],
+   "source": {
+    "video": "test/0/000211.mp4",
+    "actions": "test/0/000211.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_49b6cb5e32fae3400cc13cfc.npz",
+    "video_sha256": "9185da47581184e4ddc2c746b5fc4d0287e97839cc116a4d5c466180745bfe91",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_e12f97a808ca94c09b89f80c",
+   "episode_id": "minecraft/test/0/000885",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272
+   ],
+   "source": {
+    "video": "test/0/000885.mp4",
+    "actions": "test/0/000885.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_e12f97a808ca94c09b89f80c.npz",
+    "video_sha256": "77da5cb47d64092b801642ae45242b4bad41a263e1df8c6d2cdfed091ac14d78",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_ae94e0eb75dea884ac24775a",
+   "episode_id": "minecraft/test/0/000148",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    2,
+    2,
+    2,
+    1,
+    1
+   ],
+   "frame_indices": [
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97
+   ],
+   "source": {
+    "video": "test/0/000148.mp4",
+    "actions": "test/0/000148.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_ae94e0eb75dea884ac24775a.npz",
+    "video_sha256": "69c784e101bef89ca6ee13d196c8b643cbe0287c6c04dfcad37e659ad4b23687",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_40dbd0e59dcfb30ffb813614",
+   "episode_id": "minecraft/test/0/000852",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+   ],
+   "source": {
+    "video": "test/0/000852.mp4",
+    "actions": "test/0/000852.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_40dbd0e59dcfb30ffb813614.npz",
+    "video_sha256": "1b4a8ee4b3c5e22a028f93c3dd1e6630dac4f9d4c444625d251a206aaae990d1",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_ef6b6123c4f0a942c19be24d",
+   "episode_id": "minecraft/test/0/000937",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132
+   ],
+   "source": {
+    "video": "test/0/000937.mp4",
+    "actions": "test/0/000937.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_ef6b6123c4f0a942c19be24d.npz",
+    "video_sha256": "49f6297eab52aa18247f237550f005c3da3341c4aaa8955f3338291d7346be91",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_8c5fd6af9312d964e26356c1",
+   "episode_id": "minecraft/test/0/000074",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    2,
+    2,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153
+   ],
+   "source": {
+    "video": "test/0/000074.mp4",
+    "actions": "test/0/000074.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_8c5fd6af9312d964e26356c1.npz",
+    "video_sha256": "fc1a80bc5b824322c1e173a5131ba08b622e64202fb141ef83ec73ffb3f27c88",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_60f0f64ba1dfc65628d7f573",
+   "episode_id": "minecraft/test/0/000163",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    3,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209
+   ],
+   "source": {
+    "video": "test/0/000163.mp4",
+    "actions": "test/0/000163.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_60f0f64ba1dfc65628d7f573.npz",
+    "video_sha256": "d5a498c314791627928044f42f5686401bb6eec9fb6b00bd23a0fff03b1738b8",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_76f62bdcede46def644fddd5",
+   "episode_id": "minecraft/test/0/000100",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244
+   ],
+   "source": {
+    "video": "test/0/000100.mp4",
+    "actions": "test/0/000100.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_76f62bdcede46def644fddd5.npz",
+    "video_sha256": "d7666a54c906275a6be6edf8617a3afd87d5e398aee03d534faac8909ea70cb7",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_52623278c4156766eca116f1",
+   "episode_id": "minecraft/test/0/000755",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "frame_indices": [
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279
+   ],
+   "source": {
+    "video": "test/0/000755.mp4",
+    "actions": "test/0/000755.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_52623278c4156766eca116f1.npz",
+    "video_sha256": "166dde9be4dddb6650c1b2398a19763cefdc93ac9cf3944de40ee674e11a2a25",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_d3492d34d9db36a41ef2ed6b",
+   "episode_id": "minecraft/test/0/000538",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+   ],
+   "source": {
+    "video": "test/0/000538.mp4",
+    "actions": "test/0/000538.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_d3492d34d9db36a41ef2ed6b.npz",
+    "video_sha256": "304a15bb48183d3a3e0fc5b50f068cae73b1e21dec9c8ea704f2a4f41904a494",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_bde3f61de71c44b755d80bb8",
+   "episode_id": "minecraft/test/0/001026",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244
+   ],
+   "source": {
+    "video": "test/0/001026.mp4",
+    "actions": "test/0/001026.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_bde3f61de71c44b755d80bb8.npz",
+    "video_sha256": "6af47535cf3fccf44e4ae4ddae00f13616e4ac914f7f30d5b8f343e9c90d2123",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_4f1f0dd5015e13a9abc4621b",
+   "episode_id": "minecraft/test/0/000119",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    3,
+    3,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258
+   ],
+   "source": {
+    "video": "test/0/000119.mp4",
+    "actions": "test/0/000119.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_4f1f0dd5015e13a9abc4621b.npz",
+    "video_sha256": "0acafddc920287f107c3e1acd433fde782945657d1569f1bbb8b1c97adda9370",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_526c15740e481385cd00e6b3",
+   "episode_id": "minecraft/test/0/000754",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+   ],
+   "source": {
+    "video": "test/0/000754.mp4",
+    "actions": "test/0/000754.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_526c15740e481385cd00e6b3.npz",
+    "video_sha256": "3c2084053eeebafc7a994e024db4fbfedcaa310e48fe29d155b4e37bd2a87067",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_65c1781316edf2fce0020e5d",
+   "episode_id": "minecraft/test/0/000676",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174
+   ],
+   "source": {
+    "video": "test/0/000676.mp4",
+    "actions": "test/0/000676.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_65c1781316edf2fce0020e5d.npz",
+    "video_sha256": "b265bb63279232547c71f1ecc1766a2856c65bbf49d174b86f03200160056081",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_effccef781359a46429f7c00",
+   "episode_id": "minecraft/test/0/000200",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188
+   ],
+   "source": {
+    "video": "test/0/000200.mp4",
+    "actions": "test/0/000200.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_effccef781359a46429f7c00.npz",
+    "video_sha256": "c6100dc654579f77355f57e449f896de46d3b7b2e0359c0e15c1426819a286ca",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_b239a5a4e50c54f88137eb58",
+   "episode_id": "minecraft/test/0/000445",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62
+   ],
+   "source": {
+    "video": "test/0/000445.mp4",
+    "actions": "test/0/000445.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_b239a5a4e50c54f88137eb58.npz",
+    "video_sha256": "9f20e354d7994a045233fab8940c9b270a3353b520c6dab4b57136dfc6f609c6",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_a4d6137d7a61532d5e3756b2",
+   "episode_id": "minecraft/test/0/000793",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    3,
+    3,
+    3,
+    1,
+    1
+   ],
+   "frame_indices": [
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202
+   ],
+   "source": {
+    "video": "test/0/000793.mp4",
+    "actions": "test/0/000793.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_a4d6137d7a61532d5e3756b2.npz",
+    "video_sha256": "9186c9f35c150ff99f256fbc58e371965cc45c8a294639c5ed058b0947b99461",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_fa7c277635012593926a5795",
+   "episode_id": "minecraft/test/0/000593",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    238,
+    239,
+    240,
+    241,
+    242,
+    243,
+    244
+   ],
+   "source": {
+    "video": "test/0/000593.mp4",
+    "actions": "test/0/000593.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_fa7c277635012593926a5795.npz",
+    "video_sha256": "04a1a4931c436eb452ea41dc17d84c8a74ca71c746e506ea44c6643e58935124",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_7e30abb4af600ecf3dbee8c0",
+   "episode_id": "minecraft/test/0/000612",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83
+   ],
+   "source": {
+    "video": "test/0/000612.mp4",
+    "actions": "test/0/000612.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_7e30abb4af600ecf3dbee8c0.npz",
+    "video_sha256": "4257d4070ea734cb6cae9d249cc980abd8afc7fed187a3cfe1c621b349867588",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_f3d1c7c7c06b14bc6eb97441",
+   "episode_id": "minecraft/test/0/000603",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174
+   ],
+   "source": {
+    "video": "test/0/000603.mp4",
+    "actions": "test/0/000603.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_f3d1c7c7c06b14bc6eb97441.npz",
+    "video_sha256": "b10340503a306a2adecb26d86a481639597b56cd33b013f8ce4dcb576b20315c",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_1e5a5e1600bc530cad8d58d6",
+   "episode_id": "minecraft/test/0/000893",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+   ],
+   "source": {
+    "video": "test/0/000893.mp4",
+    "actions": "test/0/000893.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_1e5a5e1600bc530cad8d58d6.npz",
+    "video_sha256": "364d28dae67d3084266dda343e0518697241742e4fe37842fc902b001e9c4158",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_a24fef3bc58f9c6bf69db5cd",
+   "episode_id": "minecraft/test/0/000954",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202
+   ],
+   "source": {
+    "video": "test/0/000954.mp4",
+    "actions": "test/0/000954.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_a24fef3bc58f9c6bf69db5cd.npz",
+    "video_sha256": "49497de500fb9a470b600ab8d7781953a4c084a2fb029d4d13c4bf27904b2e9f",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_e26db4e537b733f2134ff70b",
+   "episode_id": "minecraft/test/0/000010",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+   ],
+   "source": {
+    "video": "test/0/000010.mp4",
+    "actions": "test/0/000010.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_e26db4e537b733f2134ff70b.npz",
+    "video_sha256": "c4c3a974d13a8201d3a5514777a0c58f917140b818a990ac35d3b77e30ca2219",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_3cc43d5b48b06ad09cddb130",
+   "episode_id": "minecraft/test/0/000727",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272
+   ],
+   "source": {
+    "video": "test/0/000727.mp4",
+    "actions": "test/0/000727.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_3cc43d5b48b06ad09cddb130.npz",
+    "video_sha256": "b2be1a6febf5fe3b9c4c06aa07df4a7915d06f7c5a947ddd1a1b18f3e326d142",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_a1737a7d715424253a8f17b6",
+   "episode_id": "minecraft/test/0/000149",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+   ],
+   "source": {
+    "video": "test/0/000149.mp4",
+    "actions": "test/0/000149.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_a1737a7d715424253a8f17b6.npz",
+    "video_sha256": "654bd99e98cd4eb7c454e9c58d31b2dc69c15399b423f7e5fc5bafa6ddbb25e0",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_11b273c1e8726bd7de6dc6d5",
+   "episode_id": "minecraft/test/0/000670",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139
+   ],
+   "source": {
+    "video": "test/0/000670.mp4",
+    "actions": "test/0/000670.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_11b273c1e8726bd7de6dc6d5.npz",
+    "video_sha256": "939c4f4b58ad3d564acd4d830b214c38999075fcffacd28268fb4387204bec4c",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_facc07418ab937f34e5e11d5",
+   "episode_id": "minecraft/test/0/000172",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167
+   ],
+   "source": {
+    "video": "test/0/000172.mp4",
+    "actions": "test/0/000172.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_facc07418ab937f34e5e11d5.npz",
+    "video_sha256": "c876a7e674acfff1149037391df954f520fd10bd2a8577ef4b5b5a71512343ff",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_eb9f038be7521c6a3e991798",
+   "episode_id": "minecraft/test/0/000792",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300
+   ],
+   "source": {
+    "video": "test/0/000792.mp4",
+    "actions": "test/0/000792.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_eb9f038be7521c6a3e991798.npz",
+    "video_sha256": "f72033b6a0bbc7b97721a150152511c5d8c106f81169dcb9d47d9138458075ca",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_0181c0e1893bf598427d9c22",
+   "episode_id": "minecraft/test/0/000075",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97
+   ],
+   "source": {
+    "video": "test/0/000075.mp4",
+    "actions": "test/0/000075.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_0181c0e1893bf598427d9c22.npz",
+    "video_sha256": "abb3ddde29c6ac53cf33dee9f3dc63e29e1771af555c40d270c6cdb9a4c9ba9f",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_e923743f6ae2ca87cf8bfcab",
+   "episode_id": "minecraft/test/0/000135",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    2
+   ],
+   "frame_indices": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83
+   ],
+   "source": {
+    "video": "test/0/000135.mp4",
+    "actions": "test/0/000135.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_e923743f6ae2ca87cf8bfcab.npz",
+    "video_sha256": "8cfcb7a1ab583bdb4ef5edee7c3ebac627dafae9fa2a3b4693061ac32802670d",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_57810f9f265433a83f13db77",
+   "episode_id": "minecraft/test/0/000648",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132
+   ],
+   "source": {
+    "video": "test/0/000648.mp4",
+    "actions": "test/0/000648.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_57810f9f265433a83f13db77.npz",
+    "video_sha256": "8369a338f91de59723392246e35d0405740370506242abbcd75549f953b225d0",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_8dec709eb72a479eb4ae2aa7",
+   "episode_id": "minecraft/test/0/000839",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "source": {
+    "video": "test/0/000839.mp4",
+    "actions": "test/0/000839.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_8dec709eb72a479eb4ae2aa7.npz",
+    "video_sha256": "ce320bf286b8d2ef8bca03d7a1a50bac287984406a8e0a151f7a1ada210e87af",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_b6b4b61a45fe91cb9ad33ee0",
+   "episode_id": "minecraft/test/0/000147",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+   ],
+   "source": {
+    "video": "test/0/000147.mp4",
+    "actions": "test/0/000147.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_b6b4b61a45fe91cb9ad33ee0.npz",
+    "video_sha256": "182488f828d9aa3331baea996a13d8974c2e9b17dcb57bead38c2d228eb36968",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_0f670948881d7bcd90d79dce",
+   "episode_id": "minecraft/test/0/000742",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41
+   ],
+   "source": {
+    "video": "test/0/000742.mp4",
+    "actions": "test/0/000742.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_0f670948881d7bcd90d79dce.npz",
+    "video_sha256": "6c4bd390c41c05cbe7febdfd2e71270b660cd82601cfb75ed43385fef651af8a",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_0e8e5810e7f6c86ecd44ceb5",
+   "episode_id": "minecraft/test/0/000630",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "frame_indices": [
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132
+   ],
+   "source": {
+    "video": "test/0/000630.mp4",
+    "actions": "test/0/000630.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_0e8e5810e7f6c86ecd44ceb5.npz",
+    "video_sha256": "60b8b54c2afc169e233d8e6b568c19bfbd68f6d8ede2ce4aea5dafe16aad5559",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_e621159e1b1f0f923e98610a",
+   "episode_id": "minecraft/test/0/000228",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139
+   ],
+   "source": {
+    "video": "test/0/000228.mp4",
+    "actions": "test/0/000228.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_e621159e1b1f0f923e98610a.npz",
+    "video_sha256": "386cd737a9463c827fbfc89c89007555a6e44a4a10d0d314560a8c0b09a9623b",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_0394fdd9c369a4765672494b",
+   "episode_id": "minecraft/test/0/001013",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146
+   ],
+   "source": {
+    "video": "test/0/001013.mp4",
+    "actions": "test/0/001013.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_0394fdd9c369a4765672494b.npz",
+    "video_sha256": "b096cc5aedcd99f9c2febd350109af406150d246a1c6a01cd2f1e0ee71c80ee1",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_7a163f97882a62685ba3af85",
+   "episode_id": "minecraft/test/0/001027",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223
+   ],
+   "source": {
+    "video": "test/0/001027.mp4",
+    "actions": "test/0/001027.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_7a163f97882a62685ba3af85.npz",
+    "video_sha256": "41d1296eaa2a8289d52d23a1cfa7117cc833642f1f53d67b8b8e6248181d94f4",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_8352febb9f4b2cd0eebaac18",
+   "episode_id": "minecraft/test/0/000957",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "source": {
+    "video": "test/0/000957.mp4",
+    "actions": "test/0/000957.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_8352febb9f4b2cd0eebaac18.npz",
+    "video_sha256": "f273be1e2e1ec5cdd031ff2f8e41c5a1691f9697622b6f63e66791fdac544250",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_e849b218de94f89f3120e06d",
+   "episode_id": "minecraft/test/0/000340",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+   ],
+   "source": {
+    "video": "test/0/000340.mp4",
+    "actions": "test/0/000340.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_e849b218de94f89f3120e06d.npz",
+    "video_sha256": "18afcc19942ce16674f9435b07eca3abb8a0e627d8394a27c68bbd26d2029e44",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_9eebff5360be3c06b5b173eb",
+   "episode_id": "minecraft/test/0/000561",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "source": {
+    "video": "test/0/000561.mp4",
+    "actions": "test/0/000561.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_9eebff5360be3c06b5b173eb.npz",
+    "video_sha256": "5fffda412f8412ad604f9779aa84079e17c78704b40846eb95e03899f07875b9",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_83ea1cade5cd822d4bd41881",
+   "episode_id": "minecraft/test/0/000133",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    1
+   ],
+   "frame_indices": [
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+   ],
+   "source": {
+    "video": "test/0/000133.mp4",
+    "actions": "test/0/000133.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_83ea1cade5cd822d4bd41881.npz",
+    "video_sha256": "a60038a62b97d43d52f72b28254454e822bef04953a99c0e81ac5a42d5fab5d6",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_806acb564cd85ff0c6700770",
+   "episode_id": "minecraft/test/0/000159",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139
+   ],
+   "source": {
+    "video": "test/0/000159.mp4",
+    "actions": "test/0/000159.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_806acb564cd85ff0c6700770.npz",
+    "video_sha256": "6047d8563776f20e31b629a8fb8b41300ffae76ed0b7bff2e32ada84dd10d8aa",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_62db81c6d9f609b44b65484c",
+   "episode_id": "minecraft/test/0/000924",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279
+   ],
+   "source": {
+    "video": "test/0/000924.mp4",
+    "actions": "test/0/000924.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_62db81c6d9f609b44b65484c.npz",
+    "video_sha256": "b3b23aa2ece7744e3b256aaae1f80426589b7b950910f26578bf7d0b24ae6548",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_6b00cee55e8671727ff09c72",
+   "episode_id": "minecraft/test/0/000520",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "source": {
+    "video": "test/0/000520.mp4",
+    "actions": "test/0/000520.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_6b00cee55e8671727ff09c72.npz",
+    "video_sha256": "69b2aea00682c60084aa3bf05fd48822e50250a39271ca337a53deedf5b079bf",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_d0045a2d7b400e2a0df09e13",
+   "episode_id": "minecraft/test/0/000145",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62
+   ],
+   "source": {
+    "video": "test/0/000145.mp4",
+    "actions": "test/0/000145.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_d0045a2d7b400e2a0df09e13.npz",
+    "video_sha256": "4e62093967f171261d1621e14b1a4f83d0b20dd841872449cd41a9777886ce21",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_ec0a68b040ca6a9ed69e9fee",
+   "episode_id": "minecraft/test/0/000285",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167
+   ],
+   "source": {
+    "video": "test/0/000285.mp4",
+    "actions": "test/0/000285.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_ec0a68b040ca6a9ed69e9fee.npz",
+    "video_sha256": "89e485c918e76a564b21fd2f1153ef1a9de4c4de89ae2e8c0d8a925180e51708",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_7f6dad5af85557eb3a9b175e",
+   "episode_id": "minecraft/test/0/000695",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230
+   ],
+   "source": {
+    "video": "test/0/000695.mp4",
+    "actions": "test/0/000695.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_7f6dad5af85557eb3a9b175e.npz",
+    "video_sha256": "8ddd4a8ca6ca0f6d926c50b5ac6ac99b728a733cfa8e6cf839d402016af3f43b",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_809a3cf1de0e53fa96c09f23",
+   "episode_id": "minecraft/test/0/001003",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    2,
+    2,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153
+   ],
+   "source": {
+    "video": "test/0/001003.mp4",
+    "actions": "test/0/001003.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_809a3cf1de0e53fa96c09f23.npz",
+    "video_sha256": "3ecadf1ef0fe6bdf78934642927791a894ff5a5ec415e9d989494ef397ee86d3",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_c5666d36a9ca9f93dccc2bd9",
+   "episode_id": "minecraft/test/0/000715",
+   "split": "test",
+   "raw_action": 3,
+   "actions_transition": [
+    1,
+    3,
+    3,
+    3,
+    3,
+    3
+   ],
+   "frame_indices": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+   ],
+   "source": {
+    "video": "test/0/000715.mp4",
+    "actions": "test/0/000715.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_c5666d36a9ca9f93dccc2bd9.npz",
+    "video_sha256": "08f1a8e082a41bb43a2994f81f74b88f0a5ac4a3284730bddd332d93d5dbef06",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_8c4787ecd1c991c1b6249311",
+   "episode_id": "minecraft/test/0/000041",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76
+   ],
+   "source": {
+    "video": "test/0/000041.mp4",
+    "actions": "test/0/000041.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_8c4787ecd1c991c1b6249311.npz",
+    "video_sha256": "73d3c645225a8b14ee6dfaf889fe0bebfa53675eaa5e11572218624061bcc77a",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_f144eaef0c24a1afe28d87d0",
+   "episode_id": "minecraft/test/0/000931",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83
+   ],
+   "source": {
+    "video": "test/0/000931.mp4",
+    "actions": "test/0/000931.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_f144eaef0c24a1afe28d87d0.npz",
+    "video_sha256": "1a1d00463d0753faf72fd9a0931721e199dde8f3924c316883a81ce4144017cd",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_39a1fb28e92ee2cd033f8cee",
+   "episode_id": "minecraft/test/0/000035",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300
+   ],
+   "source": {
+    "video": "test/0/000035.mp4",
+    "actions": "test/0/000035.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_39a1fb28e92ee2cd033f8cee.npz",
+    "video_sha256": "bd3ab80218685250cbfdda389f90f33dab8773099eede1cc0fb4a7752fe06054",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_609ef6ad3d8feb3c82ee0ebc",
+   "episode_id": "minecraft/test/0/000531",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    3,
+    3,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118
+   ],
+   "source": {
+    "video": "test/0/000531.mp4",
+    "actions": "test/0/000531.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_609ef6ad3d8feb3c82ee0ebc.npz",
+    "video_sha256": "e8688e638078aa98874169d45355cc8ea7be754e7fd43b692c82c38c24e37473",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_c53129434f2b4a7f1d29edbc",
+   "episode_id": "minecraft/test/0/000570",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209
+   ],
+   "source": {
+    "video": "test/0/000570.mp4",
+    "actions": "test/0/000570.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_c53129434f2b4a7f1d29edbc.npz",
+    "video_sha256": "b55d962637cf9cf724fdcb4f9c9c266d71374566d95744a9d35f154d2fdf9ea9",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_456da9b4458d00f445deda12",
+   "episode_id": "minecraft/test/0/000454",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195
+   ],
+   "source": {
+    "video": "test/0/000454.mp4",
+    "actions": "test/0/000454.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_456da9b4458d00f445deda12.npz",
+    "video_sha256": "953d5c66328511c47710e2b8419a7b1ec5b5b73bd1142de1fb08c82ff86d85c6",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_999ac83b7de06c8732fd69f3",
+   "episode_id": "minecraft/test/0/000868",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300
+   ],
+   "source": {
+    "video": "test/0/000868.mp4",
+    "actions": "test/0/000868.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_999ac83b7de06c8732fd69f3.npz",
+    "video_sha256": "086222b5bf611e3386189b89244b10670f2c3ad584c654deff93dd7c631af931",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_4df001a664a97b5e28bc8c16",
+   "episode_id": "minecraft/test/0/001037",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "source": {
+    "video": "test/0/001037.mp4",
+    "actions": "test/0/001037.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_4df001a664a97b5e28bc8c16.npz",
+    "video_sha256": "4d5510a7cb70d2e167ac7dcb94814bb1085076fccec72ccacb5e0e54ac7fe243",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_9972233dc874807c01bba358",
+   "episode_id": "minecraft/test/0/000605",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195
+   ],
+   "source": {
+    "video": "test/0/000605.mp4",
+    "actions": "test/0/000605.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_9972233dc874807c01bba358.npz",
+    "video_sha256": "d16074d4da2ecc427fc54aea804d6a572b82b0957dfc9207158cc3cb667c8fb8",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_8b5a4cf9843c7b14844502ea",
+   "episode_id": "minecraft/test/0/000453",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167
+   ],
+   "source": {
+    "video": "test/0/000453.mp4",
+    "actions": "test/0/000453.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_8b5a4cf9843c7b14844502ea.npz",
+    "video_sha256": "5e1d2caeb2c41a0101e58f11b070a6d3c52a9ee859641e6f75ef3279c7eb5a72",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_e894ba812f21e818a05cb6a8",
+   "episode_id": "minecraft/test/0/000702",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132
+   ],
+   "source": {
+    "video": "test/0/000702.mp4",
+    "actions": "test/0/000702.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_e894ba812f21e818a05cb6a8.npz",
+    "video_sha256": "efe0ced0e483443b4025b022e12f00a85662b67869641c2887ad2319c76ffc21",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_23a7d859bb14ad549a0059a4",
+   "episode_id": "minecraft/test/0/000117",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "frame_indices": [
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125
+   ],
+   "source": {
+    "video": "test/0/000117.mp4",
+    "actions": "test/0/000117.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_23a7d859bb14ad549a0059a4.npz",
+    "video_sha256": "111a150d58c813599a6066969a9c1e3d3822bed3f7c810f7e80d3c5dbe645ac2",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_6bc459bffc218e0e2d12e920",
+   "episode_id": "minecraft/test/0/000471",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293
+   ],
+   "source": {
+    "video": "test/0/000471.mp4",
+    "actions": "test/0/000471.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_6bc459bffc218e0e2d12e920.npz",
+    "video_sha256": "2c2816055279339c4011a7fba22d2ac5aa4c8e8354ad87369d2acec3e8992bfe",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_f4856c2b3384d4bad28042ce",
+   "episode_id": "minecraft/test/0/000912",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    2,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209
+   ],
+   "source": {
+    "video": "test/0/000912.mp4",
+    "actions": "test/0/000912.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_f4856c2b3384d4bad28042ce.npz",
+    "video_sha256": "70154813ec785fae5eec149e2b221708e167ee0d7c4f3e4a28486a289c4dc0e1",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_d58036786b9602bb4d9a7999",
+   "episode_id": "minecraft/test/0/000470",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160
+   ],
+   "source": {
+    "video": "test/0/000470.mp4",
+    "actions": "test/0/000470.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_d58036786b9602bb4d9a7999.npz",
+    "video_sha256": "25492923b84642a0f17aee37ecf4a571a15fcc56996f2a4ccfdde8890c5aed3e",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_f54c07ae6dc89e7c4bd27832",
+   "episode_id": "minecraft/test/0/000939",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209
+   ],
+   "source": {
+    "video": "test/0/000939.mp4",
+    "actions": "test/0/000939.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_f54c07ae6dc89e7c4bd27832.npz",
+    "video_sha256": "0cd024d07e09b163e952943bb019cb768b75a41cf6cfbf3bbec0c437871c2a1d",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_e69984c87b4ad2ae88d835dd",
+   "episode_id": "minecraft/test/0/000402",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174
+   ],
+   "source": {
+    "video": "test/0/000402.mp4",
+    "actions": "test/0/000402.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_e69984c87b4ad2ae88d835dd.npz",
+    "video_sha256": "2df4bafa8db369cf81fabaeacc56a433f7d1676caf2d0e4408b491327a23f6e2",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_5fd1e999cebc3ad47d3bbba7",
+   "episode_id": "minecraft/test/0/000399",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300
+   ],
+   "source": {
+    "video": "test/0/000399.mp4",
+    "actions": "test/0/000399.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_5fd1e999cebc3ad47d3bbba7.npz",
+    "video_sha256": "4709d01a6fde2c165ff36c90f94c624180ff446db091bec5c258b524ea94c577",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_63b75ba85aa535c8762c834a",
+   "episode_id": "minecraft/test/0/000024",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104
+   ],
+   "source": {
+    "video": "test/0/000024.mp4",
+    "actions": "test/0/000024.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_63b75ba85aa535c8762c834a.npz",
+    "video_sha256": "e1d9bd17d77e4dad41a0d2612562dca82f33a3f7cc297216e485311df2ef589f",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_69ee8e9eb10ad2e84d1bb9bc",
+   "episode_id": "minecraft/test/0/000430",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300
+   ],
+   "source": {
+    "video": "test/0/000430.mp4",
+    "actions": "test/0/000430.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_69ee8e9eb10ad2e84d1bb9bc.npz",
+    "video_sha256": "7573746e99efee450cd0d643453f5d329de1ceaf6459f36b60a4c1726c3c8543",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_bfb5dc674112a678c6c1aa85",
+   "episode_id": "minecraft/test/0/000049",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265
+   ],
+   "source": {
+    "video": "test/0/000049.mp4",
+    "actions": "test/0/000049.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_bfb5dc674112a678c6c1aa85.npz",
+    "video_sha256": "eaa35bdc6be6c22445b989cff45ff1f3a5155ea3030f8678ba76278bddbb3287",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_7102847c4eb4c18f97074e73",
+   "episode_id": "minecraft/test/0/000979",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+   ],
+   "source": {
+    "video": "test/0/000979.mp4",
+    "actions": "test/0/000979.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_7102847c4eb4c18f97074e73.npz",
+    "video_sha256": "4779bcc0cb6fdf66b7855d88ccfc2a3a60b95b9535ee04d4530f2ac50d044420",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_c55ecdefd266cf2b53f89029",
+   "episode_id": "minecraft/test/0/000525",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    2
+   ],
+   "frame_indices": [
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279
+   ],
+   "source": {
+    "video": "test/0/000525.mp4",
+    "actions": "test/0/000525.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_c55ecdefd266cf2b53f89029.npz",
+    "video_sha256": "4c4c7900eac20502890450a0600998b83c47b7561dc751d955970ab0d3f67010",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_8239f06b05ea247e70b7ac37",
+   "episode_id": "minecraft/test/0/000929",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258
+   ],
+   "source": {
+    "video": "test/0/000929.mp4",
+    "actions": "test/0/000929.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_8239f06b05ea247e70b7ac37.npz",
+    "video_sha256": "6e7a9518a703c6206b13f1922c19fdbb02395618d35c7b11aec2aec91fb03e73",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_e821100291b265ee87f24cb2",
+   "episode_id": "minecraft/test/0/000654",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    3,
+    3,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293
+   ],
+   "source": {
+    "video": "test/0/000654.mp4",
+    "actions": "test/0/000654.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_e821100291b265ee87f24cb2.npz",
+    "video_sha256": "5894c60c8d676ba1bb9b9b90a9748eeb833a8bcb3c320eb8eb531dbc522fe9a9",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_7bbdeea3fb2b0eaee7dfabe4",
+   "episode_id": "minecraft/test/0/000363",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279
+   ],
+   "source": {
+    "video": "test/0/000363.mp4",
+    "actions": "test/0/000363.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_7bbdeea3fb2b0eaee7dfabe4.npz",
+    "video_sha256": "88021beea05f9da513488b1c0c8f203b6c95a40be6c12d0085c174294095d822",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_51e87bd14bbfb3884f0753a8",
+   "episode_id": "minecraft/test/0/000257",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "frame_indices": [
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230
+   ],
+   "source": {
+    "video": "test/0/000257.mp4",
+    "actions": "test/0/000257.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_51e87bd14bbfb3884f0753a8.npz",
+    "video_sha256": "ae66faf9abcdb0a7617164fa740dbc287aeb1e698ecf2067f4cf19120f716c63",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_bafccc45f005587f348a0cd9",
+   "episode_id": "minecraft/test/0/000025",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167
+   ],
+   "source": {
+    "video": "test/0/000025.mp4",
+    "actions": "test/0/000025.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_bafccc45f005587f348a0cd9.npz",
+    "video_sha256": "cb0fc46ab1533265f3574a822bcdb2b76ddd4f2fb5b6750195d7d7af5df80193",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_0b351267387ff7b56b75bf48",
+   "episode_id": "minecraft/test/0/000251",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132
+   ],
+   "source": {
+    "video": "test/0/000251.mp4",
+    "actions": "test/0/000251.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_0b351267387ff7b56b75bf48.npz",
+    "video_sha256": "6b07387c64a7e244172c5213a5d89739bd35bdc7c5a2f187be0be8194badb861",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_2000d2bcb38c065287d0b3a9",
+   "episode_id": "minecraft/test/0/000011",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125
+   ],
+   "source": {
+    "video": "test/0/000011.mp4",
+    "actions": "test/0/000011.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_2000d2bcb38c065287d0b3a9.npz",
+    "video_sha256": "80d0b625b415735473465f6baaaa15715143a524c0fbbdf6b0c5a6d89da3de19",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_ed24c9ec673883e6f7f54a01",
+   "episode_id": "minecraft/test/0/000843",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    280,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286
+   ],
+   "source": {
+    "video": "test/0/000843.mp4",
+    "actions": "test/0/000843.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_ed24c9ec673883e6f7f54a01.npz",
+    "video_sha256": "259f6ef1e288327c0a1fd218bb1e7fee5d471451372cca9a0d742f239e460936",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_3ed969a42614b1ff7eb0b667",
+   "episode_id": "minecraft/test/0/000703",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "frame_indices": [
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62
+   ],
+   "source": {
+    "video": "test/0/000703.mp4",
+    "actions": "test/0/000703.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_3ed969a42614b1ff7eb0b667.npz",
+    "video_sha256": "cc0a4092189e41437d8975c9cf2835370fcdbdf9ee2a0bb376c6f0745acfc364",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_c59790dfb163ae3d7ce7c11a",
+   "episode_id": "minecraft/test/0/000526",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90
+   ],
+   "source": {
+    "video": "test/0/000526.mp4",
+    "actions": "test/0/000526.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_c59790dfb163ae3d7ce7c11a.npz",
+    "video_sha256": "4c4fb07324aa4416fdb3ca085f81f90985d52116f8ee60c448cbcd5818220172",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_41900c39f7bacc7a71130388",
+   "episode_id": "minecraft/test/0/000855",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209
+   ],
+   "source": {
+    "video": "test/0/000855.mp4",
+    "actions": "test/0/000855.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_41900c39f7bacc7a71130388.npz",
+    "video_sha256": "77f393716e932b0926180392fa3cd6d782f5b4f5361c3f5be8f8e60b07164404",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_097f477fc7ddce894b049ae2",
+   "episode_id": "minecraft/test/0/000536",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223
+   ],
+   "source": {
+    "video": "test/0/000536.mp4",
+    "actions": "test/0/000536.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_097f477fc7ddce894b049ae2.npz",
+    "video_sha256": "22fe8b04320587235764aee835314a33654fc2a29bf5ea2f08f5959b10ca144c",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_9798ded706a81171478c339a",
+   "episode_id": "minecraft/test/0/000883",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "frame_indices": [
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195
+   ],
+   "source": {
+    "video": "test/0/000883.mp4",
+    "actions": "test/0/000883.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_9798ded706a81171478c339a.npz",
+    "video_sha256": "804e24ae64b58ff8019e59adb79697d94b225f61d690c671542f3168533ec67a",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_2bca30259e0825a2132df92b",
+   "episode_id": "minecraft/test/0/000123",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55
+   ],
+   "source": {
+    "video": "test/0/000123.mp4",
+    "actions": "test/0/000123.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_2bca30259e0825a2132df92b.npz",
+    "video_sha256": "4ddd6a66035843b80a3791146cba2281a3a62b10024929b45c0f85a8862c0206",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_763e4f729088b45574c229e9",
+   "episode_id": "minecraft/test/0/001021",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97
+   ],
+   "source": {
+    "video": "test/0/001021.mp4",
+    "actions": "test/0/001021.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_763e4f729088b45574c229e9.npz",
+    "video_sha256": "42c3f70958d5b18f028dfd304a77cad6282dc59a5be1ddcae19b718da80de5a5",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_aef60eb0f2679acade92f8bb",
+   "episode_id": "minecraft/test/0/000390",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "frame_indices": [
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237
+   ],
+   "source": {
+    "video": "test/0/000390.mp4",
+    "actions": "test/0/000390.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_aef60eb0f2679acade92f8bb.npz",
+    "video_sha256": "ed705e164a0bc34e3afe0aa4a699a9bf0a30c7cb755f85261897ab7cb8e3c245",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_1b0843b738d366a13c4054f9",
+   "episode_id": "minecraft/test/0/000066",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    1
+   ],
+   "frame_indices": [
+    280,
+    281,
+    282,
+    283,
+    284,
+    285,
+    286
+   ],
+   "source": {
+    "video": "test/0/000066.mp4",
+    "actions": "test/0/000066.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_1b0843b738d366a13c4054f9.npz",
+    "video_sha256": "1f39920e309d2a868d885c3222e3d00b6f2b04f47291a347754b9b9b42ff52e5",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_cf8ca1bee8787d24b7ef58d1",
+   "episode_id": "minecraft/test/0/000867",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195
+   ],
+   "source": {
+    "video": "test/0/000867.mp4",
+    "actions": "test/0/000867.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_cf8ca1bee8787d24b7ef58d1.npz",
+    "video_sha256": "e50357f5baae907526ae2f6fad8e1a2cd11fca9a14d8bb595ffa1f5c3c5d7124",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_160876ba9d0fffcc678e1b02",
+   "episode_id": "minecraft/test/0/000894",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ],
+   "source": {
+    "video": "test/0/000894.mp4",
+    "actions": "test/0/000894.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_160876ba9d0fffcc678e1b02.npz",
+    "video_sha256": "a100fdc4dcc84b99f93dd95f5e93e1ba16c087da4960fcf5bf63fdce5cae42b4",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_8fb886f26acae4c5d3988ab7",
+   "episode_id": "minecraft/test/0/000050",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    3,
+    3,
+    3,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+   ],
+   "source": {
+    "video": "test/0/000050.mp4",
+    "actions": "test/0/000050.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_8fb886f26acae4c5d3988ab7.npz",
+    "video_sha256": "74ba4747500450193cf8fd3d8b34fdccaf1283174afa1cd9946b98e353d0a0eb",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_cb76063e28c5b6e7cd1d205d",
+   "episode_id": "minecraft/test/0/000442",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62
+   ],
+   "source": {
+    "video": "test/0/000442.mp4",
+    "actions": "test/0/000442.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_cb76063e28c5b6e7cd1d205d.npz",
+    "video_sha256": "08b4cda559813f2955825b7d491f8db07807b90accc2b9081147ad6c9f6d0ab9",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_4b5a6b51baae8de90771fd80",
+   "episode_id": "minecraft/test/0/000713",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+   ],
+   "source": {
+    "video": "test/0/000713.mp4",
+    "actions": "test/0/000713.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_4b5a6b51baae8de90771fd80.npz",
+    "video_sha256": "830f0f8a48423792d69aca2568db9481745057175f3faac6c68bdc7434a752b0",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_d712ed4a0262af465192120f",
+   "episode_id": "minecraft/test/0/000915",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111
+   ],
+   "source": {
+    "video": "test/0/000915.mp4",
+    "actions": "test/0/000915.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_d712ed4a0262af465192120f.npz",
+    "video_sha256": "1c08cf7f5ced54c4799ccecccae151aa13e09df2a08181b6d01124f98fb225a8",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_e547740a5445252ce6e2c9b0",
+   "episode_id": "minecraft/test/0/000589",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251
+   ],
+   "source": {
+    "video": "test/0/000589.mp4",
+    "actions": "test/0/000589.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_e547740a5445252ce6e2c9b0.npz",
+    "video_sha256": "05b87739b6eb2da0693449285637afdb4b555bb0faa7b4ead4274fe2bdccce8a",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_8d39cd7836a3b016e07fb8dc",
+   "episode_id": "minecraft/test/0/000201",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "frame_indices": [
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132
+   ],
+   "source": {
+    "video": "test/0/000201.mp4",
+    "actions": "test/0/000201.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_8d39cd7836a3b016e07fb8dc.npz",
+    "video_sha256": "5de976ac96d5f63d02abfde7c18a9b870872cabad80ee2b030e4a20ee84dbe0c",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_05d4bf8e0bc219212d6b0e1e",
+   "episode_id": "minecraft/test/0/000627",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+   ],
+   "source": {
+    "video": "test/0/000627.mp4",
+    "actions": "test/0/000627.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_05d4bf8e0bc219212d6b0e1e.npz",
+    "video_sha256": "c9b2f5dbeadb5b0bb84e62bc7a8d94089b2559cd5accd1c6fb9a686efe50a4f7",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_cdc08f03b5fa9bf7ef007f1b",
+   "episode_id": "minecraft/test/0/000359",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    2,
+    2,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    252,
+    253,
+    254,
+    255,
+    256,
+    257,
+    258
+   ],
+   "source": {
+    "video": "test/0/000359.mp4",
+    "actions": "test/0/000359.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_cdc08f03b5fa9bf7ef007f1b.npz",
+    "video_sha256": "6882bc0945b8fa743015d7f8c558c27e0f702458572e50793f5f7a4c0b24bc45",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_9d4b7a5b3466346b8eed850c",
+   "episode_id": "minecraft/test/0/000566",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181
+   ],
+   "source": {
+    "video": "test/0/000566.mp4",
+    "actions": "test/0/000566.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_9d4b7a5b3466346b8eed850c.npz",
+    "video_sha256": "4afad881e61bc307ecd373c88c849d36353d492532739bc4b5421b920d4de9b5",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_c82813fcb0eac5781cb09e8d",
+   "episode_id": "minecraft/test/0/000515",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    2,
+    2,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "source": {
+    "video": "test/0/000515.mp4",
+    "actions": "test/0/000515.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_c82813fcb0eac5781cb09e8d.npz",
+    "video_sha256": "965bb878fa501d1f9549f9ca4ffa3e640d0a6eea45b848e2eb658e7c43257c37",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_f37b6d6df15f1f4de2f5ceb0",
+   "episode_id": "minecraft/test/0/000753",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209
+   ],
+   "source": {
+    "video": "test/0/000753.mp4",
+    "actions": "test/0/000753.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_f37b6d6df15f1f4de2f5ceb0.npz",
+    "video_sha256": "048589ca28653dd204c62954bedcb6ef3383524c7ab452192606776432ab622f",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_c2d8e43c7052cda6c83b295a",
+   "episode_id": "minecraft/test/0/000288",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    294,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300
+   ],
+   "source": {
+    "video": "test/0/000288.mp4",
+    "actions": "test/0/000288.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_c2d8e43c7052cda6c83b295a.npz",
+    "video_sha256": "3861c9bc6fe2560ae19975a67ccf2d3be123ae12d715854dac32711fc87b2326",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_7aa95667553220adde23a794",
+   "episode_id": "minecraft/test/0/000568",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265
+   ],
+   "source": {
+    "video": "test/0/000568.mp4",
+    "actions": "test/0/000568.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_7aa95667553220adde23a794.npz",
+    "video_sha256": "ae8fb9856fd1a829731d329398e1b3d44d28ccb5acd3c733ff88e35f88863806",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_21bb05ae9c0783d5657dcfcc",
+   "episode_id": "minecraft/test/0/000064",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    259,
+    260,
+    261,
+    262,
+    263,
+    264,
+    265
+   ],
+   "source": {
+    "video": "test/0/000064.mp4",
+    "actions": "test/0/000064.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_21bb05ae9c0783d5657dcfcc.npz",
+    "video_sha256": "794f27e4db77efa824edfc27291ca9d6db06366fe05ffe3ebcf9eca3f4055e3c",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_dc618bf29535ef7ae3ae3fea",
+   "episode_id": "minecraft/test/0/000081",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97
+   ],
+   "source": {
+    "video": "test/0/000081.mp4",
+    "actions": "test/0/000081.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_dc618bf29535ef7ae3ae3fea.npz",
+    "video_sha256": "4775527932840e3acf81388b8238df8a54ecd54525c2e2b00f6514a38fad19ce",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_9b38d1f9b5fff24bfb8a569e",
+   "episode_id": "minecraft/test/0/000986",
+   "split": "test",
+   "raw_action": 2,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    2,
+    2
+   ],
+   "frame_indices": [
+    266,
+    267,
+    268,
+    269,
+    270,
+    271,
+    272
+   ],
+   "source": {
+    "video": "test/0/000986.mp4",
+    "actions": "test/0/000986.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_9b38d1f9b5fff24bfb8a569e.npz",
+    "video_sha256": "7e11c65cc0b01715be5568fe2bdd188c73150c2a507914960dc1701780a61b4e",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  },
+  {
+   "task_id": "paper_minecraft_a684af8206b1c706d011b992",
+   "episode_id": "minecraft/test/0/000386",
+   "split": "test",
+   "raw_action": 1,
+   "actions_transition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "frame_indices": [
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174
+   ],
+   "source": {
+    "video": "test/0/000386.mp4",
+    "actions": "test/0/000386.npz"
+   },
+   "clip": {
+    "path": "paper_minecraft_a684af8206b1c706d011b992.npz",
+    "video_sha256": "2c6a88c4d1174047a2f7b81afaabc72a8392e8c8206a2666a6999e173dad20d2",
+    "shape": [
+     7,
+     128,
+     128,
+     3
+    ]
+   }
+  }
+ ]
+}

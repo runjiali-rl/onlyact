@@ -1,0 +1,4809 @@
+{
+ "domain": "nuscenes",
+ "partition": "test",
+ "action": "ego motion (forward, lateral) in metres between consecutive frames",
+ "data_root": "folder of 256 x 256 RGB PNGs <frame_token>.png made from nuScenes CAM_FRONT 'source_filenames' (downstream/prepare.py nuscenes)",
+ "count": 60,
+ "tasks": [
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0165_0100",
+   "scene_id": "scene-0165",
+   "scene_token": "8fbbe701baf641359129ea166e1674ec",
+   "log_token": "b05f285d53744542a3413476d6dd9270",
+   "frame_tokens": [
+    "a24d5f8a4ec041d0b4ac73e0dc300868",
+    "4f95bf2765d544eeae8b41e2ae7501b2",
+    "8aebe05356fa42e4996b7409672937dc",
+    "a2c3833567ec47b4b2c076299cf661e4",
+    "95cceeb748c14e34906d5dff80003a68",
+    "8f92000e3b184c11b0e4a0fa420f78f7",
+    "eebc542179bc42d383bac3440258edf0"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915363362465.jpg",
+    "samples/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915363412465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915363512465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915363612465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915363662465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915363762465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915363862465.jpg"
+   ],
+   "timestamps_us": [
+    1526915363362465,
+    1526915363412465,
+    1526915363512465,
+    1526915363612465,
+    1526915363662465,
+    1526915363762465,
+    1526915363862465
+   ],
+   "actions_ego_xy": [
+    [
+     0.3747336652752292,
+     0.0038256975125945704
+    ],
+    [
+     0.7277885909528191,
+     0.000904766670337967
+    ],
+    [
+     0.719291275321376,
+     -0.0012026781566914849
+    ],
+    [
+     0.34656075797367986,
+     0.0011444485462444205
+    ],
+    [
+     0.6883876072484437,
+     -0.0026400350874893827
+    ],
+    [
+     0.6658171715160286,
+     -0.0036511556702292502
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "a24d5f8a4ec041d0b4ac73e0dc300868.png",
+     "4f95bf2765d544eeae8b41e2ae7501b2.png",
+     "8aebe05356fa42e4996b7409672937dc.png",
+     "a2c3833567ec47b4b2c076299cf661e4.png",
+     "95cceeb748c14e34906d5dff80003a68.png",
+     "8f92000e3b184c11b0e4a0fa420f78f7.png",
+     "eebc542179bc42d383bac3440258edf0.png"
+    ],
+    "pixels_sha256": [
+     "506c81d315b37f677ec15c26d7986541791f779e6f47764754ac6818b0825099",
+     "b3752889ef0cc448c2b688ff5e85ecba92e0155e5d6ccf8a96d7688fe8e4bab9",
+     "8e8194c88dccf769f000577e57dfc4d82adb4e5eeea3f6284474469d12327234",
+     "4b12e14ede7b00435c8a4a04eff97c4bbc678dac8ca7f96dc9d0f0c1ac450a6e",
+     "3312638b910ff0957a7d09a96089708a20c004b01951a0a4b9b9729d6047a822",
+     "605be95a40c5b5bbd951603c8165f12ab2405c8718c17e3762310df7491625c2",
+     "3bc39e65faca1da8b661a1e7399ff788fb14a97eb184eee0dbd2bc2234b002b9"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0164_0200",
+   "scene_id": "scene-0164",
+   "scene_token": "75a4ec12042542149b0a77a0a10d6330",
+   "log_token": "b05f285d53744542a3413476d6dd9270",
+   "frame_tokens": [
+    "7c8d67a7cff04fdca984b573ccb77fb4",
+    "aa44ad40c5444b5a9d109b2626ed0613",
+    "f173b6266dde4f51a49d4877c6b20b44",
+    "19daa2cb34ad4a6b9597d7ae0423095b",
+    "4c6bf1dd43254b408326fe3551e76e0e",
+    "329917bf6bbe417487e04bfb4d6d21e0",
+    "1a7b7c8afa6f4014b2d628ea96d7ff47"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915334662465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915334762465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915334862465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915334912465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915335012465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915335112465.jpg",
+    "samples/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915335162465.jpg"
+   ],
+   "timestamps_us": [
+    1526915334662465,
+    1526915334762465,
+    1526915334862465,
+    1526915334912465,
+    1526915335012465,
+    1526915335112465,
+    1526915335162465
+   ],
+   "actions_ego_xy": [
+    [
+     0.9002634414478412,
+     -0.00593513466266201
+    ],
+    [
+     0.9338618270449939,
+     -0.00024347189218219129
+    ],
+    [
+     0.47062546649320397,
+     -0.0005602878231418286
+    ],
+    [
+     0.9144454668634884,
+     -0.0011010838173617678
+    ],
+    [
+     0.9123584227728532,
+     -0.0037905321721982237
+    ],
+    [
+     0.47107771440408297,
+     -0.0015623334655849742
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "7c8d67a7cff04fdca984b573ccb77fb4.png",
+     "aa44ad40c5444b5a9d109b2626ed0613.png",
+     "f173b6266dde4f51a49d4877c6b20b44.png",
+     "19daa2cb34ad4a6b9597d7ae0423095b.png",
+     "4c6bf1dd43254b408326fe3551e76e0e.png",
+     "329917bf6bbe417487e04bfb4d6d21e0.png",
+     "1a7b7c8afa6f4014b2d628ea96d7ff47.png"
+    ],
+    "pixels_sha256": [
+     "c57300f49b242a6497b504bb3007f45f5af30677a9bc43880b0bb4ef664b8536",
+     "fe400e4096aa8e562510e8765a77637d112ee99d292e462385d3b6fbd08078ee",
+     "446607816c5b71fa115c7c74bb3f4b8b02789003b01fbb60ddd4b149b8f0b066",
+     "c7af245d9653534f644ff413bd5c1f2aa3bb4d3714f820d2874b213f9d7ca5da",
+     "c31a8049596e14bbcb8be6dcf8070f01bbdf5cc79cc0bfb261dbf93546747a85",
+     "3cf751079719b90626bcba916f2a1acce15532057d31607f486a24d5c48b3942",
+     "57b6cfd04d06db7a8a4bf25df7f121678dfacbb682a2a60821c7ea013796c92a"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0167_0000",
+   "scene_id": "scene-0167",
+   "scene_token": "448cf480b0b8400a86881d28c2c5f734",
+   "log_token": "b05f285d53744542a3413476d6dd9270",
+   "frame_tokens": [
+    "d0cc6d8bf12e4ca0bc13ad1e6bff6d00",
+    "a7b6b14452ad4378bc3b146f91903194",
+    "2ae1dd379830495e8bf295d982e01625",
+    "30cb07215a9d42d1a390b5d51c02e9b3",
+    "ac92464de7264cedbb61157b0bf1d11c",
+    "86ad81a41a37452893ec685a3232cfd9",
+    "6b0e2663b9024c1d9b5975996034834d"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915413012465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915413112465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915413162465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915413262465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915413362465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915413412465.jpg",
+    "samples/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915413512465.jpg"
+   ],
+   "timestamps_us": [
+    1526915413012465,
+    1526915413112465,
+    1526915413162465,
+    1526915413262465,
+    1526915413362465,
+    1526915413412465,
+    1526915413512465
+   ],
+   "actions_ego_xy": [
+    [
+     0.858674677716187,
+     8.021358066051618e-05
+    ],
+    [
+     0.4377100965764856,
+     0.0007816641846663955
+    ],
+    [
+     0.8800349175882325,
+     0.004194394909295332
+    ],
+    [
+     0.8775283538009383,
+     0.0053061469611970155
+    ],
+    [
+     0.4354786993255534,
+     0.00031346666212896763
+    ],
+    [
+     0.8706827584497673,
+     -0.0003932575699118826
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "d0cc6d8bf12e4ca0bc13ad1e6bff6d00.png",
+     "a7b6b14452ad4378bc3b146f91903194.png",
+     "2ae1dd379830495e8bf295d982e01625.png",
+     "30cb07215a9d42d1a390b5d51c02e9b3.png",
+     "ac92464de7264cedbb61157b0bf1d11c.png",
+     "86ad81a41a37452893ec685a3232cfd9.png",
+     "6b0e2663b9024c1d9b5975996034834d.png"
+    ],
+    "pixels_sha256": [
+     "dc4045a83804a0d30b17e320c9f51f3a55c6ab0f1bbbf75160e9eff2aea84f26",
+     "4891337c5f4b5967282472346069202df7b8f1f8ba2a70b26812d913491b0e0c",
+     "3e5b0ea6cfb9b4497f91797b440da95457730a11540e1263509fdc70884e0432",
+     "000193934e24c385b66c05ccdfcc30359185864af5ecf340eb00109a6a0bd4db",
+     "7facceaad88bcf8fcffb14dff803bec0b786c307ab00d5f413b5c4a52f95048f",
+     "82fa71793b2439cc88001ef5a5bd272de4fa915c1ce3f1108b0f4038d3962b58",
+     "ebbee69e040f22139c8e9d9153187790f3a54ea54dbc5a10bdc81038a819bed9"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0170_0150",
+   "scene_id": "scene-0170",
+   "scene_token": "ab6eea0e06c84f70be411a9d36636a7a",
+   "log_token": "b05f285d53744542a3413476d6dd9270",
+   "frame_tokens": [
+    "131794fc5cf34cf0bf1732efb7a0e854",
+    "f4d07f89eb044d7692444f68bf5fa670",
+    "e8397f0d383248ffa951eadcac757c02",
+    "31ee9c40df864fd7a87e253fb2dcb906",
+    "fc6ccb9b4ad44b859f39823e67ef1458",
+    "df46ee68f4284578875814070834e2ca",
+    "0a7d193d6dc441c2a08d3d1e86594baf"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915629512465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915629612465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915629662465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915629762465.jpg",
+    "samples/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915629862465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915630012465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915630112465.jpg"
+   ],
+   "timestamps_us": [
+    1526915629512465,
+    1526915629612465,
+    1526915629662465,
+    1526915629762465,
+    1526915629862465,
+    1526915630012465,
+    1526915630112465
+   ],
+   "actions_ego_xy": [
+    [
+     0.5196446737107248,
+     0.0024806194982398277
+    ],
+    [
+     0.25688771482568523,
+     -0.00011622739862790499
+    ],
+    [
+     0.5084427351963342,
+     0.002002621952306799
+    ],
+    [
+     0.4960450108204819,
+     0.0006556315968579696
+    ],
+    [
+     0.7595839296561515,
+     0.002778149814152364
+    ],
+    [
+     0.49148059051957094,
+     -0.0021063448878054225
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "131794fc5cf34cf0bf1732efb7a0e854.png",
+     "f4d07f89eb044d7692444f68bf5fa670.png",
+     "e8397f0d383248ffa951eadcac757c02.png",
+     "31ee9c40df864fd7a87e253fb2dcb906.png",
+     "fc6ccb9b4ad44b859f39823e67ef1458.png",
+     "df46ee68f4284578875814070834e2ca.png",
+     "0a7d193d6dc441c2a08d3d1e86594baf.png"
+    ],
+    "pixels_sha256": [
+     "20f2838c24734d446a9b881731fd178ecf8b79c8a9dc8ffe5de87c1f5c8af673",
+     "eb9cc5975f6a0d71c967e787de1f86c2fcedba27a458f412de8489be928698b6",
+     "9519d3bacce7cba65851aed19def421ea20aeefe95cd544214fe212a9ebe686f",
+     "a5dcc217c313861a38701c67157a92bf5165b6fe9a24209aa48929f20f967073",
+     "b1058a9c3ba2363aa0397e3e55819a0fe8018204ae0f6009a9cbfdc1d667c813",
+     "70a5cfbbb73ded959ed2410c7c8e1bf3f4f46d5bac41c54cc25296133e3de340",
+     "0b63e29c3d5c613734a202fa919fcb91fb60b66b1d90d281ca7337d6e7b41d5a"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0174_0000",
+   "scene_id": "scene-0174",
+   "scene_token": "fd5a3c6d3ad44954a8045edbe9d93763",
+   "log_token": "b05f285d53744542a3413476d6dd9270",
+   "frame_tokens": [
+    "2d4444484e2c4c7eb0b67cafbaa644f9",
+    "d3944a70bf174bb9a0d218207b46f6f8",
+    "03e33b04394b46b2a9a9e5143734927c",
+    "72debacc38d240eb99dd43de93edf37f",
+    "6715d1626c924fa6b0ea689ac25d0aaa",
+    "1f2a6ea327c940a28b0401f02e631416",
+    "3e31352782b040d491808e8bf71a69b2"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915697012465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915697112465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915697162465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915697262465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915697362465.jpg",
+    "sweeps/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915697412465.jpg",
+    "samples/CAM_FRONT/n008-2018-05-21-11-06-59-0400__CAM_FRONT__1526915697512465.jpg"
+   ],
+   "timestamps_us": [
+    1526915697012465,
+    1526915697112465,
+    1526915697162465,
+    1526915697262465,
+    1526915697362465,
+    1526915697412465,
+    1526915697512465
+   ],
+   "actions_ego_xy": [
+    [
+     0.24213130059564564,
+     -0.0006611938538931689
+    ],
+    [
+     0.12744449412422873,
+     -0.0013007002009614022
+    ],
+    [
+     0.2617882618965642,
+     0.00033542629583882544
+    ],
+    [
+     0.25984040442421763,
+     0.0005865008739991268
+    ],
+    [
+     0.1351413276350376,
+     -0.0006267770477425931
+    ],
+    [
+     0.2865430523570423,
+     4.482150260284867e-05
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "2d4444484e2c4c7eb0b67cafbaa644f9.png",
+     "d3944a70bf174bb9a0d218207b46f6f8.png",
+     "03e33b04394b46b2a9a9e5143734927c.png",
+     "72debacc38d240eb99dd43de93edf37f.png",
+     "6715d1626c924fa6b0ea689ac25d0aaa.png",
+     "1f2a6ea327c940a28b0401f02e631416.png",
+     "3e31352782b040d491808e8bf71a69b2.png"
+    ],
+    "pixels_sha256": [
+     "aecb345ff7f2ac37e3d42d4d12c095209550d20823c8c8ce928b7a7839b1f424",
+     "b991d3444713f7805d673b5b88660f94553c5beb46c6175f25a7f36aa98634d4",
+     "770e6215790d1ff218381bbabcf5e269edd155d959613e8550785c6b1c43bb41",
+     "74a64fee8f0f5adfeedea6fd21f2388a7dbe2ff707e759f95b9fd2cc370510ca",
+     "7045f6d935c3e07043f9fc939bd03b796900ff66606404fdf29b8d006b95aba8",
+     "1dd29952d0ac8c7ac3a011bc44a169698e4ad745319135b302e6a2293104db00",
+     "4a88cca302252a6250802f65e67e80f30c7854fe2fbc4410ec503f64bc2d6707"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0361_0100",
+   "scene_id": "scene-0361",
+   "scene_token": "212b65c558254e2084489bf76e371e1a",
+   "log_token": "f8699afb7a2247e38549e4d250b4581b",
+   "frame_tokens": [
+    "72a435d4cd004779997df4783edc87e9",
+    "176dbad789a543999d8612f72a27ef53",
+    "579f35b89e724727b302b6f44de1f25b",
+    "8167c391476c43b99f05201565fd78d0",
+    "5ad43dee0804480ba2b5c7f44758e31d",
+    "bc6072877cc44ea7a1c985bf5008c168",
+    "f4a81552bdf34f6c9311a4c02d2fedd0"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279666912460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279667012460.jpg",
+    "samples/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279667112460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279667162460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279667262460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279667362460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279667412460.jpg"
+   ],
+   "timestamps_us": [
+    1533279666912460,
+    1533279667012460,
+    1533279667112460,
+    1533279667162460,
+    1533279667262460,
+    1533279667362460,
+    1533279667412460
+   ],
+   "actions_ego_xy": [
+    [
+     0.003317326860818499,
+     -0.00037389508623203124
+    ],
+    [
+     -0.004796190750196132,
+     -0.0005343389443567669
+    ],
+    [
+     -0.003044533109284796,
+     -0.0002561740701475016
+    ],
+    [
+     -0.005696359836690862,
+     -0.0004944806755399276
+    ],
+    [
+     -0.004434312814002945,
+     -0.00047283971941016996
+    ],
+    [
+     -0.0002765150843489059,
+     -0.00023048893150844164
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "72a435d4cd004779997df4783edc87e9.png",
+     "176dbad789a543999d8612f72a27ef53.png",
+     "579f35b89e724727b302b6f44de1f25b.png",
+     "8167c391476c43b99f05201565fd78d0.png",
+     "5ad43dee0804480ba2b5c7f44758e31d.png",
+     "bc6072877cc44ea7a1c985bf5008c168.png",
+     "f4a81552bdf34f6c9311a4c02d2fedd0.png"
+    ],
+    "pixels_sha256": [
+     "82b8b426c235de277f48b72d4f28803bd5ad9fd4850eaa5e4574c91cb7535d90",
+     "32bf9936792f27b00d047d9127da355af7cb2611de151d08796b21a79a53db58",
+     "9fd264b89db7f4b0b0a1875776a34ef496de185e2262914ea6ee42fd827cb5bf",
+     "63a24b1e247fcff16c8306c51f5a1493db2f754e58381be9943daf09806a50de",
+     "835fe20a250bfd716310e63b02da20b267d697bd6d55544e6bfef68763bfc530",
+     "b35aee9280e2390af0e001abf98f29b3a326804855e4b784356263951ed7c974",
+     "9d66d4b6d1bf44ff8110181c5d5e5c8b465d4c5bbc3291d26778241538380227"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0363_0150",
+   "scene_id": "scene-0363",
+   "scene_token": "88084e0150d64dd1949a9cf1493e5188",
+   "log_token": "f8699afb7a2247e38549e4d250b4581b",
+   "frame_tokens": [
+    "724ad50612704beca49eb0ad89d31507",
+    "4aae996f35b64274ae907e9a8be6a732",
+    "e1d24dc4f20d428a9943a110bf421e30",
+    "8e3ef585e0de4df593188ee23629798a",
+    "cc2c96866a204f29baa47650ef071f12",
+    "090134a2476b42349a1d68686f7ce32a",
+    "686a8475154349a59fa26b1fef9dd668"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279761362460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279761412460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279761612460.jpg",
+    "samples/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279761662460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279761762460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279761862460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279761912460.jpg"
+   ],
+   "timestamps_us": [
+    1533279761362460,
+    1533279761412460,
+    1533279761612460,
+    1533279761662460,
+    1533279761762460,
+    1533279761862460,
+    1533279761912460
+   ],
+   "actions_ego_xy": [
+    [
+     0.3861883609467113,
+     -0.0017953824069854019
+    ],
+    [
+     1.5383499732013468,
+     -0.010955019658741016
+    ],
+    [
+     0.39191900097563176,
+     -0.0034059880545582732
+    ],
+    [
+     0.7822206466205367,
+     -0.0035770528133695634
+    ],
+    [
+     0.7656311217534514,
+     -0.001121218138330049
+    ],
+    [
+     0.37696177777175105,
+     -0.0025441037589947757
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "724ad50612704beca49eb0ad89d31507.png",
+     "4aae996f35b64274ae907e9a8be6a732.png",
+     "e1d24dc4f20d428a9943a110bf421e30.png",
+     "8e3ef585e0de4df593188ee23629798a.png",
+     "cc2c96866a204f29baa47650ef071f12.png",
+     "090134a2476b42349a1d68686f7ce32a.png",
+     "686a8475154349a59fa26b1fef9dd668.png"
+    ],
+    "pixels_sha256": [
+     "99b04dfaf52fbceed3111dc16a485631cbfb6b5ea6759aefd86945349182d39b",
+     "ecf839bfa5f43c3389917f24382ad360f33748e0bf29aaaf67dc4e4c4f50b585",
+     "1d60981f83c513e78115b0932d2c475c7925a8cc999d826b63f6c67706f98b57",
+     "31ef8718d222c05913a068f05eab079000da9aa81f679cf3eea3f1578ad55909",
+     "45fc9abf8fd713eac04064b3629d7d5ba84053baffad17f18f01ec423c893d78",
+     "43c80ca27e8dbf2948f4c22288d5814e67f31bb819ff7078ef440628a15b16e7",
+     "8280f2c7b7b4ea767c5e60f62dddf14af6ffdc429234de4317b88e3eda761dfb"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0364_0000",
+   "scene_id": "scene-0364",
+   "scene_token": "f13bd38bf9b64d579a63d4e7d750f592",
+   "log_token": "f8699afb7a2247e38549e4d250b4581b",
+   "frame_tokens": [
+    "75c242cbb4b84c69a6af3b9181672714",
+    "367ef9cd816445de8045f9c3bec6aec9",
+    "3ec8c6251ee548358bed454e476b9033",
+    "9131df598c7f48738790b39fc8fb9cef",
+    "8b9fc53373b24b658d39919e56e56408",
+    "cd51d2d1c3d2438aaca5323896aed5c4",
+    "c7fc08fcd8b54df7ae70ef34ff6dd6d9"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279768862460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279768912460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279769012468.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279769112460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279769162460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279769262460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533279769362460.jpg"
+   ],
+   "timestamps_us": [
+    1533279768862460,
+    1533279768912460,
+    1533279769012468,
+    1533279769112460,
+    1533279769162460,
+    1533279769262460,
+    1533279769362460
+   ],
+   "actions_ego_xy": [
+    [
+     0.4197624883293933,
+     -0.002771834769725534
+    ],
+    [
+     0.8224818545228217,
+     -0.005130319363892244
+    ],
+    [
+     0.8167238305240845,
+     -0.005337677001616137
+    ],
+    [
+     0.3984571164178713,
+     -0.0017535448451155844
+    ],
+    [
+     0.791341069559923,
+     -0.004488532366972109
+    ],
+    [
+     0.8015806324250057,
+     -0.0059617676631095184
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "75c242cbb4b84c69a6af3b9181672714.png",
+     "367ef9cd816445de8045f9c3bec6aec9.png",
+     "3ec8c6251ee548358bed454e476b9033.png",
+     "9131df598c7f48738790b39fc8fb9cef.png",
+     "8b9fc53373b24b658d39919e56e56408.png",
+     "cd51d2d1c3d2438aaca5323896aed5c4.png",
+     "c7fc08fcd8b54df7ae70ef34ff6dd6d9.png"
+    ],
+    "pixels_sha256": [
+     "32b044a8090305ef863514c093b87264921d9c0ebb79837e2929571944e63dd7",
+     "e68ee20205f9bdd655552a7092286891155b0cf22bbfd2ad7691afb85a407ff0",
+     "4a23321f5109568f40925b5fb40a257f70c89ab3a1332e75537ad1496e64a842",
+     "a3bbfc69bbaaf567ca7e6f70f981f997afe8547245e658b9f0576732559ac89b",
+     "38b94ca0143df8fb383022ee7e8a469cfde764b8b2d1c46cd41951a66ed7d55f",
+     "57d324b2adf65a3adb98d843170d0949c502e228839fe555ab1007683d6482f3",
+     "f925b06a829a9d2cf4276093ad700ce14ad0646fff35ce2d7c77947b7057615e"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0368_0200",
+   "scene_id": "scene-0368",
+   "scene_token": "54cdaaae372d421fa4734d66f51a8c48",
+   "log_token": "f8699afb7a2247e38549e4d250b4581b",
+   "frame_tokens": [
+    "17253b0d207344f38bc6e6a71a50b349",
+    "a0fdf3a7ea954bf5b7af11a0e2580f4b",
+    "244a78dd60fd4c9dbe0e69e623b7cd4f",
+    "63c6403e34fe4cf7b68c3276398744db",
+    "137d5824e6714240accf6ad401865653",
+    "ce397f8450ac430dbe9b23872812e520",
+    "fb1068f580bd43bf800b3b054096541c"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533280050362460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533280050412460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533280050512460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533280050612460.jpg",
+    "samples/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533280050662460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533280050762460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533280050862460.jpg"
+   ],
+   "timestamps_us": [
+    1533280050362460,
+    1533280050412460,
+    1533280050512460,
+    1533280050612460,
+    1533280050662460,
+    1533280050762460,
+    1533280050862460
+   ],
+   "actions_ego_xy": [
+    [
+     1.156554258861396e-08,
+     -1.1190855240727714e-05
+    ],
+    [
+     1.6023034378162784e-07,
+     -2.1966066528762188e-05
+    ],
+    [
+     2.3790565065128261e-07,
+     -2.1398661692174846e-05
+    ],
+    [
+     5.037204411949877e-08,
+     -1.0445649315646097e-05
+    ],
+    [
+     -2.4534166728331437e-08,
+     -2.0507018038065604e-05
+    ],
+    [
+     3.327939790187989e-08,
+     -1.969339096341072e-05
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "17253b0d207344f38bc6e6a71a50b349.png",
+     "a0fdf3a7ea954bf5b7af11a0e2580f4b.png",
+     "244a78dd60fd4c9dbe0e69e623b7cd4f.png",
+     "63c6403e34fe4cf7b68c3276398744db.png",
+     "137d5824e6714240accf6ad401865653.png",
+     "ce397f8450ac430dbe9b23872812e520.png",
+     "fb1068f580bd43bf800b3b054096541c.png"
+    ],
+    "pixels_sha256": [
+     "72eb1a95022b9f52e51ac92adaad2fc8983353ab25b1a8bde1c10fac36a5f61b",
+     "d5a3aec0e3efff23be7cda0119e9ed5f7730c519bf5d49631d19579c3bfc1f48",
+     "94fb3dfacb23c89cc6156a636ac320bf07d29941267b0cf6f9cf6515989db3b1",
+     "962341da443bf0f3c7781a8832cb9edd122ebf0ba9c715da936cab69539bbe5d",
+     "e8a840f723dde599c33013e14d17a901e5e7ea1d459f01b158aff279d1e6dea5",
+     "134c6a16ab4e97d59ddab18c3632378e4e8d2a28fed47a09ea43afccc996b7b9",
+     "a446e01ceb810bdb13f46747ead51538a131ecb2f8513c12741a3db2d181d046"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0372_0150",
+   "scene_id": "scene-0372",
+   "scene_token": "b68cfa7e0bd64bd395fd922d750cfdd2",
+   "log_token": "f8699afb7a2247e38549e4d250b4581b",
+   "frame_tokens": [
+    "312e05bb7dcd4178a955c63d8ba50f18",
+    "98f321eaab2041b2bed8d5b60b0335a4",
+    "bfaaa9678f1040d186a163f26d998509",
+    "71869c663ded4e538e684345628c5f38",
+    "5d581a4d56b842a6bdb207e80c20e9c8",
+    "a891d721632a4cd680d62a9d3e191e81",
+    "34b975bf8e5c45b5881d70210e69b2c8"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533280201512460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533280201612460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533280201662460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533280201762460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533280201862460.jpg",
+    "samples/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533280201912460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-00-36+0800__CAM_FRONT__1533280202012460.jpg"
+   ],
+   "timestamps_us": [
+    1533280201512460,
+    1533280201612460,
+    1533280201662460,
+    1533280201762460,
+    1533280201862460,
+    1533280201912460,
+    1533280202012460
+   ],
+   "actions_ego_xy": [
+    [
+     0.5881444593050364,
+     -0.0006667413197697925
+    ],
+    [
+     0.29600430819941936,
+     -0.000645315176407632
+    ],
+    [
+     0.590594633318145,
+     -0.0025477974722400987
+    ],
+    [
+     0.5629669094897713,
+     -0.0019182211300400043
+    ],
+    [
+     0.2893137794279257,
+     -0.0016932464268441944
+    ],
+    [
+     0.5404146820430556,
+     -0.0038419963849578576
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "312e05bb7dcd4178a955c63d8ba50f18.png",
+     "98f321eaab2041b2bed8d5b60b0335a4.png",
+     "bfaaa9678f1040d186a163f26d998509.png",
+     "71869c663ded4e538e684345628c5f38.png",
+     "5d581a4d56b842a6bdb207e80c20e9c8.png",
+     "a891d721632a4cd680d62a9d3e191e81.png",
+     "34b975bf8e5c45b5881d70210e69b2c8.png"
+    ],
+    "pixels_sha256": [
+     "cde5efaa4607894f7f8099264dcd116acf078f0b635431ae6ae5c139b446602a",
+     "c25ef14bf7f177f59cd8ae6690af80cf38b19e4e3f6ac3e6786d2b64458e931c",
+     "ddb0c598b5514cff234ae708d89a334b598b9bdd9cc88fdb16001ab0314a8c11",
+     "d58251128b78115821d6239d615a3c6dcae9907a092b948d8ec1fc230a3b98fd",
+     "076a2d40104fd86317a9218abb3021cb69e892b88a2a89bd9ad0e3140fd0ede2",
+     "bd5ceb3c1ed4ab7fb909d0b0728c94adfef5ff8d3e00474f954c24dc01392b1d",
+     "05da4df78e0a6dc6befda00aab03d906a8e7731fe4638332e6a30ab08872cee0"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0384_0150",
+   "scene_id": "scene-0384",
+   "scene_token": "25f40f7316954a3e978e24d691e1a117",
+   "log_token": "1c9b302455ff44a9a290c372b31aa3ce",
+   "frame_tokens": [
+    "3234e69050e5437b9bd641de10e21e89",
+    "21a8c0ef33fa4c3e97d9cf64d02b0b4b",
+    "c864decd932d4ce1b8e3a9d70806fa83",
+    "81f9692ec54a465db57bd12813c9e4c6",
+    "f23ffd5f3c7c4ab19c2597746693550c",
+    "b7c3751a36934835850f1c93033b16fe",
+    "35d48ae5e49a42279c9e0e3dbd2f68d5"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281616012460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281616112460.jpg",
+    "samples/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281616162460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281616262460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281616412460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281616512460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281616612460.jpg"
+   ],
+   "timestamps_us": [
+    1533281616012460,
+    1533281616112460,
+    1533281616162460,
+    1533281616262460,
+    1533281616412460,
+    1533281616512460,
+    1533281616612460
+   ],
+   "actions_ego_xy": [
+    [
+     0.574256301487551,
+     -0.0024542676047749346
+    ],
+    [
+     0.2904714000023891,
+     0.0006509997026663134
+    ],
+    [
+     0.5848258659236595,
+     -0.003077136829369942
+    ],
+    [
+     0.8952905791182195,
+     -0.009205325641104933
+    ],
+    [
+     0.6055191771895223,
+     -0.005649642582983727
+    ],
+    [
+     0.618992417907944,
+     -0.004784922346235815
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "3234e69050e5437b9bd641de10e21e89.png",
+     "21a8c0ef33fa4c3e97d9cf64d02b0b4b.png",
+     "c864decd932d4ce1b8e3a9d70806fa83.png",
+     "81f9692ec54a465db57bd12813c9e4c6.png",
+     "f23ffd5f3c7c4ab19c2597746693550c.png",
+     "b7c3751a36934835850f1c93033b16fe.png",
+     "35d48ae5e49a42279c9e0e3dbd2f68d5.png"
+    ],
+    "pixels_sha256": [
+     "f87b6ecd626aaf8f058b13493d0d07e5f5d45e5294a5303db837bb4a39f4c9ef",
+     "fc93a5cdbc1df4d016fdd05482bbfaba6abf5c0413acea14e5ff84072a87e5f6",
+     "a344728e34f07a3bbb04e2381f7ec6a5adc0fa7da568d684ce158b17f36b0454",
+     "18a135e9a28ed60159e2fa6d26117807667c9e4d2de0b6c7daa867a7a27cbafc",
+     "25d8cb5a247cc6fe93e5ba22791405796713a70e2ceb698f4fd7d0d07686c409",
+     "f700e21a3810738b0e7f2798c0741112c86a5f1e611dde61d09d8eac5598b4bb",
+     "d6199ad31dadf8b382ee639b0fa4b6700d44644293634e3d5e3ae83a6ea4d15f"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0384_0000",
+   "scene_id": "scene-0384",
+   "scene_token": "25f40f7316954a3e978e24d691e1a117",
+   "log_token": "1c9b302455ff44a9a290c372b31aa3ce",
+   "frame_tokens": [
+    "efac1d904d784001bfd1800020bd1e16",
+    "28a6e94112274753b0a82eabbc028f08",
+    "95090db0b4da4915a13ab2225e2d1579",
+    "c50e5937efa843db886394bf3ee5816c",
+    "22415a2d713e4882974f0e8015372fde",
+    "82d266f4cc414d40adabfb88eadbe9cb",
+    "d7b57569363a45289ca8d0c5e97478ac"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281603162460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281603262460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281603362460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281603412460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281603512460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281603612460.jpg",
+    "samples/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281603662460.jpg"
+   ],
+   "timestamps_us": [
+    1533281603162460,
+    1533281603262460,
+    1533281603362460,
+    1533281603412460,
+    1533281603512460,
+    1533281603612460,
+    1533281603662460
+   ],
+   "actions_ego_xy": [
+    [
+     0.5102119054574467,
+     0.0077079894137180305
+    ],
+    [
+     0.5012093663955226,
+     0.004325631569493532
+    ],
+    [
+     0.2722789215648146,
+     0.0021766450475742827
+    ],
+    [
+     0.5369151833179571,
+     0.0041422202016338505
+    ],
+    [
+     0.5045112938315286,
+     0.006902499953385183
+    ],
+    [
+     0.2429379550315246,
+     0.002808436113016996
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "efac1d904d784001bfd1800020bd1e16.png",
+     "28a6e94112274753b0a82eabbc028f08.png",
+     "95090db0b4da4915a13ab2225e2d1579.png",
+     "c50e5937efa843db886394bf3ee5816c.png",
+     "22415a2d713e4882974f0e8015372fde.png",
+     "82d266f4cc414d40adabfb88eadbe9cb.png",
+     "d7b57569363a45289ca8d0c5e97478ac.png"
+    ],
+    "pixels_sha256": [
+     "4fb476f7ec5ae804693ff1610e7f00ec9ae9aa1a9d16e9ea529c89be4795f8ee",
+     "67f428f60b8cfc4025f7484f8f4b53782fb5e28cf031821ff0c4f7adc5fc8edd",
+     "8022e8d9fe88928bd6f86b6e9ab2952e9f4b9ef649fcc60a008a01f38393a7f1",
+     "dec9090811716c97e80a169995e9d8ac61f6425de55a35c0d7d54e97fddd8a2c",
+     "faee5a31af6e2be8a0e1819eb8711e5f9807283e934650dd155056c09ace61e7",
+     "70484036b0a1faae8dfa34e9813e8d05f687b7a6f302ba14c91b339a856c29b2",
+     "f5f95991305d081b69a41507d1798033a52fea6d2c2075bc7f607cef8687402c"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0386_0200",
+   "scene_id": "scene-0386",
+   "scene_token": "11058d54abcd4829828523040372ce05",
+   "log_token": "1c9b302455ff44a9a290c372b31aa3ce",
+   "frame_tokens": [
+    "f5aac1c760f7480ab2609ffff468d879",
+    "458bb558ce3849eb9c6e7ce50de812b3",
+    "84809230e86e43b18dc1fb9174510925",
+    "cd2a400889934d3f85f27cb658193578",
+    "1af7e2ce8a234164a48f59e16a01dfe9",
+    "194e612220254ea09b1c345340a4bacc",
+    "830217e071cf45a5aa8fc1484da6b459"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281895262460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281895362460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281895412460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281895512460.jpg",
+    "samples/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281895612460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281895662460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281895762460.jpg"
+   ],
+   "timestamps_us": [
+    1533281895262460,
+    1533281895362460,
+    1533281895412460,
+    1533281895512460,
+    1533281895612460,
+    1533281895662460,
+    1533281895762460
+   ],
+   "actions_ego_xy": [
+    [
+     0.8192119392558578,
+     -0.0069577329463545445
+    ],
+    [
+     0.41394789540717203,
+     -0.004486771757548136
+    ],
+    [
+     0.8540684545306404,
+     -0.008960731648156306
+    ],
+    [
+     0.8566007364399373,
+     -0.00505941029484247
+    ],
+    [
+     0.4353438530476774,
+     0.0007020688317254664
+    ],
+    [
+     0.8821635499007555,
+     -0.007239949622080022
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "f5aac1c760f7480ab2609ffff468d879.png",
+     "458bb558ce3849eb9c6e7ce50de812b3.png",
+     "84809230e86e43b18dc1fb9174510925.png",
+     "cd2a400889934d3f85f27cb658193578.png",
+     "1af7e2ce8a234164a48f59e16a01dfe9.png",
+     "194e612220254ea09b1c345340a4bacc.png",
+     "830217e071cf45a5aa8fc1484da6b459.png"
+    ],
+    "pixels_sha256": [
+     "9ec51f80f70f45bc94bf44f18a26eaeaf6e6910884ea51be56cd5e9c7415b995",
+     "76e3133863455805f0f8112f3ba1467c8764014f034b28eba917e99ae3bc6535",
+     "f0bf321f64d3bd974f623b4d9377895e610f519ded16668a1952f305e247b6d6",
+     "72364b730e45127d58cda1ff1d7239acafbe4394d14daa4e379e51ac5be4d782",
+     "f898133bd88447c5a6bd5ad0e4e97c7a20d9ba033fee7f2ef64f6b711524b66e",
+     "19081c12959e12274f9e09cc1988bc747a5154080daee727a1c704ad029e9cf0",
+     "d20d1c60dcdf30c9b29f5eaf3c4e9d7e19ec0ded7d8bb336cbe55f020391bcc1"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0386_0050",
+   "scene_id": "scene-0386",
+   "scene_token": "11058d54abcd4829828523040372ce05",
+   "log_token": "1c9b302455ff44a9a290c372b31aa3ce",
+   "frame_tokens": [
+    "a8c2f8a2c092468b812f86a609d609d5",
+    "5ada188b4ae04180bbc9ffff51293593",
+    "2c5edae9bf4546ee9fdfd48278e5570f",
+    "0be8018117a44cb6a4b3e0603cbca270",
+    "67d785c930c540b4877c56084734a2e9",
+    "5e12b4365ebf402a8d6c951c0d30d665",
+    "b89b51e54dea4ea5b771abb244ae35b7"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281882412460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281882512460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281882612460.jpg",
+    "samples/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281882662460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281882762460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281882862460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281882912460.jpg"
+   ],
+   "timestamps_us": [
+    1533281882412460,
+    1533281882512460,
+    1533281882612460,
+    1533281882662460,
+    1533281882762460,
+    1533281882862460,
+    1533281882912460
+   ],
+   "actions_ego_xy": [
+    [
+     0.3632479635146779,
+     -0.00018603464092589728
+    ],
+    [
+     0.3456771905756411,
+     -0.0008641676669840781
+    ],
+    [
+     0.15899006704206706,
+     -0.0014088273665694429
+    ],
+    [
+     0.32692414862992925,
+     -0.001411672227320665
+    ],
+    [
+     0.31322474087580554,
+     -0.000516684672183465
+    ],
+    [
+     0.1511541517083328,
+     -0.0008485371676957287
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "a8c2f8a2c092468b812f86a609d609d5.png",
+     "5ada188b4ae04180bbc9ffff51293593.png",
+     "2c5edae9bf4546ee9fdfd48278e5570f.png",
+     "0be8018117a44cb6a4b3e0603cbca270.png",
+     "67d785c930c540b4877c56084734a2e9.png",
+     "5e12b4365ebf402a8d6c951c0d30d665.png",
+     "b89b51e54dea4ea5b771abb244ae35b7.png"
+    ],
+    "pixels_sha256": [
+     "d20821cb0f0a9cfb491975dd3c7222ae5df37bfca5660a21bc02486e82cadd79",
+     "f688bed0210884e886175067b5d06092c6bc69e45ca460a40e70e55889b30be4",
+     "c649ebe5636d7bc6a5a9a9ee864fa2e5c2987205d2d302333449dd3a99df2486",
+     "db80342646d6445af449c6de8964326a19684208833cce440fd4e2712e04206b",
+     "7e86a81a5c498dea9173ae1baea53e318660650983d2e4d9a08da5220c659057",
+     "53530e5460cfd9df474be31007030ddb6ff4ac7d24cb9f5d346ac640a51027b1",
+     "19c72d173222a488f1e43d34a9ecf923cab4c6092bb67620fb597e5d61f630fa"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0384_0100",
+   "scene_id": "scene-0384",
+   "scene_token": "25f40f7316954a3e978e24d691e1a117",
+   "log_token": "1c9b302455ff44a9a290c372b31aa3ce",
+   "frame_tokens": [
+    "571b16f8bff8456889e4fe0d00010327",
+    "93297187276e4e379dfed7dd394ee3fa",
+    "50615c74cf1d4cfbb039ee47da8f566a",
+    "44c5dd3edb904fb4b409bb320677fb1d",
+    "3b3b736bc96b4edb8290a35ca17dbc6e",
+    "0febff59e8d748319a75d225540861e2",
+    "0176ff36adb7472f969b8954e3f42e4e"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281611762707.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281611862460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281611912460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281612012460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281612112460.jpg",
+    "samples/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281612162464.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-03-15-31-50+0800__CAM_FRONT__1533281612262460.jpg"
+   ],
+   "timestamps_us": [
+    1533281611762707,
+    1533281611862460,
+    1533281611912460,
+    1533281612012460,
+    1533281612112460,
+    1533281612162464,
+    1533281612262460
+   ],
+   "actions_ego_xy": [
+    [
+     0.13156594311640923,
+     -0.0008031517234805552
+    ],
+    [
+     0.074875317079457,
+     -0.00047862576765078657
+    ],
+    [
+     0.1737224917027117,
+     -0.000537437846430705
+    ],
+    [
+     0.18181507585420106,
+     -0.0008526566092317417
+    ],
+    [
+     0.09719193789540002,
+     -0.00034012765532116795
+    ],
+    [
+     0.20414574019282117,
+     -0.000623751934027944
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "571b16f8bff8456889e4fe0d00010327.png",
+     "93297187276e4e379dfed7dd394ee3fa.png",
+     "50615c74cf1d4cfbb039ee47da8f566a.png",
+     "44c5dd3edb904fb4b409bb320677fb1d.png",
+     "3b3b736bc96b4edb8290a35ca17dbc6e.png",
+     "0febff59e8d748319a75d225540861e2.png",
+     "0176ff36adb7472f969b8954e3f42e4e.png"
+    ],
+    "pixels_sha256": [
+     "3c8d19f684f29a3a664af4cdcc72fa2c2b3eba5ecdb3518af4010e424dbb62df",
+     "e5804fc0714dbab33fd45d6be0e34e5094e6a3f9ecb15dbd953277e015c8d330",
+     "0b844c9e013941576286ba256a3773dfbcef743ca0758a4d7e963aec38abffda",
+     "1134f1d3b586437fc39d2f21625a82aff4bce802cf829efcc34fedb4ae6fa236",
+     "c3241d22310583396b75939b3dc982dd88e2c86fc955f3977fb063c8394a30da",
+     "5ada3afdc15fe0bd20ce71e8e75b241bd8376573271ff46db56a70ddf5d86f36",
+     "b0b20d6b7eb637024a190693d85393a71065657486f91e8b29b709e421e33735"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0403_0150",
+   "scene_id": "scene-0403",
+   "scene_token": "f2e4460c1fd149ec8068626837f20013",
+   "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+   "frame_tokens": [
+    "de79657638e045849b74f7b87e586cb4",
+    "442c39ee623841d9bcbb0533ea6b052d",
+    "0d8ea5d922d74965936635ba368af05f",
+    "e92444b454f74a8da4e94cce73abc2cb",
+    "9d2dec87330a4e3e9a3f25cf36dd925c",
+    "91aa6663ad714906870248d4f5919618",
+    "b93204e832cc4fa6ac41c49afa36949e"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033725362460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033725412493.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033725512460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033725612460.jpg",
+    "samples/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033725662460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033725762460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033725862460.jpg"
+   ],
+   "timestamps_us": [
+    1538033725362460,
+    1538033725412493,
+    1538033725512460,
+    1538033725612460,
+    1538033725662460,
+    1538033725762460,
+    1538033725862460
+   ],
+   "actions_ego_xy": [
+    [
+     0.6464306989992479,
+     -0.0013121929909978847
+    ],
+    [
+     1.2855061797638696,
+     -0.009812122270030366
+    ],
+    [
+     1.299098365692633,
+     -0.005778161088204947
+    ],
+    [
+     0.6391010642339183,
+     -0.004258394826523515
+    ],
+    [
+     1.294020099995799,
+     -0.012652842906510031
+    ],
+    [
+     1.3159902438279396,
+     -0.006994838852306562
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "de79657638e045849b74f7b87e586cb4.png",
+     "442c39ee623841d9bcbb0533ea6b052d.png",
+     "0d8ea5d922d74965936635ba368af05f.png",
+     "e92444b454f74a8da4e94cce73abc2cb.png",
+     "9d2dec87330a4e3e9a3f25cf36dd925c.png",
+     "91aa6663ad714906870248d4f5919618.png",
+     "b93204e832cc4fa6ac41c49afa36949e.png"
+    ],
+    "pixels_sha256": [
+     "8dbbe5fe7fc3eb7d48dc46526d68b75e028c295fe4491ff1f58514bc572d990a",
+     "7b19b59a954dfcca234d94c3edb573136f1fd40ca14f7a3a2b1db753d1788da8",
+     "bc121e83f5d35cb93888be8a815aae09c0a6fd52135b0e08c23a5d5ecf3c2ea6",
+     "af340bf4a31aebfe22088eb58d9d9b81de12797fca129082bc1467e2f637f1bf",
+     "ee72f32ba50d7e307599fac60c55ce1b047d9daa8cf4e95cabb9898bda00c1f7",
+     "1e49f8046f484f6901c80f8ecd3fd13f4e57382b17f307527b2ca1677a52fc8f",
+     "08c804279a152bde8eaded8206f09b4a7a5d484ca4b828bbd65557ff0f4705af"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0410_0000",
+   "scene_id": "scene-0410",
+   "scene_token": "5c6620829a1f492b8482218670aa0541",
+   "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+   "frame_tokens": [
+    "aaa326e65e4846bb958934eda349bce9",
+    "316a5552a2b843d18be075c4b3f6b699",
+    "4500ab4bfcc04c28b6bb9945ba6f9be4",
+    "b97f76a2a9f44d56a9606db50526b559",
+    "f2048ed2c53a481385106a8cbe048997",
+    "ccaa23da5ffe4a16b71441d84a3649b9",
+    "07cc148e234745e09e27a7c2a093abaa"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033852762460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033852862460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033852912460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033853012460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033853112460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033853162460.jpg",
+    "samples/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033853262460.jpg"
+   ],
+   "timestamps_us": [
+    1538033852762460,
+    1538033852862460,
+    1538033852912460,
+    1538033853012460,
+    1538033853112460,
+    1538033853162460,
+    1538033853262460
+   ],
+   "actions_ego_xy": [
+    [
+     0.4769527375749848,
+     -0.004797738439731816
+    ],
+    [
+     0.24723808726884564,
+     0.0009564382589920609
+    ],
+    [
+     0.5014645939001229,
+     -0.006929780228036586
+    ],
+    [
+     0.5145748644840324,
+     -0.0017967053945567857
+    ],
+    [
+     0.2616655081216652,
+     -0.003347939321887705
+    ],
+    [
+     0.536096848010419,
+     -0.0014115372790686198
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "aaa326e65e4846bb958934eda349bce9.png",
+     "316a5552a2b843d18be075c4b3f6b699.png",
+     "4500ab4bfcc04c28b6bb9945ba6f9be4.png",
+     "b97f76a2a9f44d56a9606db50526b559.png",
+     "f2048ed2c53a481385106a8cbe048997.png",
+     "ccaa23da5ffe4a16b71441d84a3649b9.png",
+     "07cc148e234745e09e27a7c2a093abaa.png"
+    ],
+    "pixels_sha256": [
+     "0824a0f6e6d6f6dfa53605a8736abc8232075b2338fb57e7da9fd945297ab8f5",
+     "d4e02de625f2bd917b0340a1fcf6774987548c82efde3dbc96f8959a87c20245",
+     "af346dc0cf1ab1a472843c4994def6323b1a9464b59614f98c344946c97aced2",
+     "95f1516dd33a241a0fe60983180516ec1164678c3ec02e7baf10e59edf30a18f",
+     "72b3e3fb827b743cb2db4d315d3929aeb6cf55f9ad1bca981198e0cd2090df76",
+     "423d9f8f0831d3c27e47654a14edc9fdd0ed827769416cf1bc5c94c92db5d3f2",
+     "524570ab81a733273cd9fe459b55f2e2bd7bb988c934727b9a90b67d08b9f975"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0400_0100",
+   "scene_id": "scene-0400",
+   "scene_token": "9f5f2211d6f943a89dd87bbe9703539d",
+   "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+   "frame_tokens": [
+    "3d2a6eb86bf149709ce86016f7dccf17",
+    "6c3cb7d360d74ddf81829c348308e9b8",
+    "3dd992ebdd954e3385afc27b82f28908",
+    "96339eee48b94815a67afc939a534cb8",
+    "faf2742d3c6440df85d1a2ee2d3b9952",
+    "66d0eddc8afe40e48f0730312251ece3",
+    "6e1539ee248342f3a266ea839fafe9bc"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033650112460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033650162460.jpg",
+    "samples/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033650262460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033650362460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033650412460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033650512460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033650612707.jpg"
+   ],
+   "timestamps_us": [
+    1538033650112460,
+    1538033650162460,
+    1538033650262460,
+    1538033650362460,
+    1538033650412460,
+    1538033650512460,
+    1538033650612707
+   ],
+   "actions_ego_xy": [
+    [
+     -8.096813040677059e-06,
+     -5.395875786540038e-07
+    ],
+    [
+     -1.774578844496087e-05,
+     -1.0735275321941462e-06
+    ],
+    [
+     -2.6083478008776097e-05,
+     -1.0279780319725418e-06
+    ],
+    [
+     -1.2061016841940113e-05,
+     -5.162782550307448e-07
+    ],
+    [
+     -1.5719474898343337e-05,
+     -9.915571439130812e-07
+    ],
+    [
+     4.179741709800595e-06,
+     -9.619336480281807e-07
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "3d2a6eb86bf149709ce86016f7dccf17.png",
+     "6c3cb7d360d74ddf81829c348308e9b8.png",
+     "3dd992ebdd954e3385afc27b82f28908.png",
+     "96339eee48b94815a67afc939a534cb8.png",
+     "faf2742d3c6440df85d1a2ee2d3b9952.png",
+     "66d0eddc8afe40e48f0730312251ece3.png",
+     "6e1539ee248342f3a266ea839fafe9bc.png"
+    ],
+    "pixels_sha256": [
+     "ec99300312c5f63aa14c598f8559630c606ee81b841d4d756b546f72215a45f0",
+     "009b399b7d5cda6683d525583bffe28a376c4e72bfa10ea4ef2dc63ee6507f02",
+     "8ef95d04b1c945c901453ca4214a5cac217670d69545a3078f541f7c4d7483e9",
+     "68af29db0d85412d2a098f47df704c3b6b9b6d5cbd108355e203b37c7313da47",
+     "0f2b8c4fa3fb03e4db2ba0472d9af489263249cb356273878f8e177040827e37",
+     "9b4bba56adf87b492d65665ff838bb22a7c60a6a3bb03323b2551e9eafc8357f",
+     "894ea6fed96d23fb6cf86561f4e0bf9feff0f5acbd35b196e9a2aa9b8de2d14a"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0399_0200",
+   "scene_id": "scene-0399",
+   "scene_token": "36349e9caeff483e9d8d25e9743b9f5b",
+   "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+   "frame_tokens": [
+    "4827cd48dc3b4dad9392445f800eb77d",
+    "c5e22e42fb0c4fbfb942a46a021ce5af",
+    "2db24384c1844b418ae9289863bce0e5",
+    "2d8d4aef57b442f191b23945d6a7a468",
+    "752522427e404337b2face767aba1796",
+    "2fcd5a2977dc4fea92c77789e930a93b",
+    "fd9c75e1c56c4e7bb8af8e563d04136d"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033638512460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033638612460.jpg",
+    "samples/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033638662460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033638762460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033638862460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033638912460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033639012460.jpg"
+   ],
+   "timestamps_us": [
+    1538033638512460,
+    1538033638612460,
+    1538033638662460,
+    1538033638762460,
+    1538033638862460,
+    1538033638912460,
+    1538033639012460
+   ],
+   "actions_ego_xy": [
+    [
+     -1.4263185885945756e-05,
+     -3.535403433761473e-05
+    ],
+    [
+     -7.142250276662598e-06,
+     -1.7216570697891813e-05
+    ],
+    [
+     -1.1956263455989345e-05,
+     -3.384336954966398e-05
+    ],
+    [
+     -5.08974939746735e-06,
+     -3.268471245481472e-05
+    ],
+    [
+     -6.825837658309795e-07,
+     -1.613472507299709e-05
+    ],
+    [
+     -1.6492044432032273e-06,
+     -3.1234040800076546e-05
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "4827cd48dc3b4dad9392445f800eb77d.png",
+     "c5e22e42fb0c4fbfb942a46a021ce5af.png",
+     "2db24384c1844b418ae9289863bce0e5.png",
+     "2d8d4aef57b442f191b23945d6a7a468.png",
+     "752522427e404337b2face767aba1796.png",
+     "2fcd5a2977dc4fea92c77789e930a93b.png",
+     "fd9c75e1c56c4e7bb8af8e563d04136d.png"
+    ],
+    "pixels_sha256": [
+     "8b0fb40538115add07c7a2301ed12739d09b00cec522bd48b0c5e78bd76ec13b",
+     "a705e505cbdd6ed380e370956af64fa42c3d0833b4096bcd1897120c6213be43",
+     "5627f3da2a3309a3d5b872395321c93816d98b908ad1223b543e68aa2ea39244",
+     "d51ed8c2e46238950061814681fc6971b543ac5c2db637edd03a0bf4d5ff6509",
+     "00f9003a8d69ea6ea49740aaee2146c3760146f42a003a40e3a9d441ea118d7c",
+     "423e6b5df8b9f71e8dbf41330451f71df4de791356a85c8bb8de69ead9109002",
+     "09c7a61051b02020d29222c122488349e2a61fd3f2fb4dfde3d9b286b6017423"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0410_0200",
+   "scene_id": "scene-0410",
+   "scene_token": "5c6620829a1f492b8482218670aa0541",
+   "log_token": "89a56a5dc3aa4e56a2e57b52de738da5",
+   "frame_tokens": [
+    "961e9e37ec844dea9cc9a9d0ce93e1c4",
+    "f9ccd759514840c7a9c61dc54fe6e8be",
+    "a49e2952d0fd4faaaf531c91c9ef6228",
+    "1ee880ab997a419dad6f723963c5f8be",
+    "4b20406bdb274c3db8ba6accc5a30305",
+    "366f0bc7ce1b49bfa8debcf1f34203b4",
+    "ca3684aea3f84fa4b8aec487051543fb"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033869612460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033869662460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033869762460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033869862460.jpg",
+    "samples/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033869912460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033870012460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-27-15-33-17+0800__CAM_FRONT__1538033870112460.jpg"
+   ],
+   "timestamps_us": [
+    1538033869612460,
+    1538033869662460,
+    1538033869762460,
+    1538033869862460,
+    1538033869912460,
+    1538033870012460,
+    1538033870112460
+   ],
+   "actions_ego_xy": [
+    [
+     0.3658452556840241,
+     -0.002952532187408971
+    ],
+    [
+     0.719312607691178,
+     -0.006905591809588607
+    ],
+    [
+     0.7248899560433569,
+     -0.002006905019542121
+    ],
+    [
+     0.35377050697567713,
+     -0.0018102899349432822
+    ],
+    [
+     0.7241495807171544,
+     -0.001999598881914866
+    ],
+    [
+     0.7112319887777381,
+     -0.0033675451861373273
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "961e9e37ec844dea9cc9a9d0ce93e1c4.png",
+     "f9ccd759514840c7a9c61dc54fe6e8be.png",
+     "a49e2952d0fd4faaaf531c91c9ef6228.png",
+     "1ee880ab997a419dad6f723963c5f8be.png",
+     "4b20406bdb274c3db8ba6accc5a30305.png",
+     "366f0bc7ce1b49bfa8debcf1f34203b4.png",
+     "ca3684aea3f84fa4b8aec487051543fb.png"
+    ],
+    "pixels_sha256": [
+     "2d5c5ded1c4c115d199fe5ffe6e98a107a083822d845efd9d8a05e5d0441848d",
+     "67a176127652c4adabf762e209355dc00ba9a3ad32a324ed2428c4972c2ede27",
+     "72e3c5b8386abe1244bb89b33282f28eb1908968220b1e524e2170fb211bdd4b",
+     "4cf98420a63ddb9396428147b5cd73c9899bebae0b3731faba19d2967ae33947",
+     "0b526c7be5f444ba8699e51fac4db99c7ae6c3446c105fac8967d550d2157dfa",
+     "98ffe87160ed7d8b9a62e005e72ecf6d66db89718fb628c3ad54a36a0bc17fe0",
+     "f5f7c3c3724c372c0929d91f5132fadc7d7e9732e3bee7d87f262ff83751d78a"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0245_0050",
+   "scene_id": "scene-0245",
+   "scene_token": "bcb05cffb5814973a6cff4fbdca2b99b",
+   "log_token": "08ba46dd716d42a69d108638fef5bbb9",
+   "frame_tokens": [
+    "9af73f5967404c1faa40b5a4ff596c9e",
+    "d9961cb8bfdd4ac98af811b07cb3920d",
+    "6c800e83fcbd42f89688d2c6c004eca8",
+    "2706d2118b58478f9ccdd70919dff284",
+    "5083f31ece0f4aa4a0e6b0a6c746d761",
+    "c9c21217d4f8416b8d7a76faf568d76c",
+    "f33e43e95baa4e0d8e556ed3190ea660"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867214112404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867214162598.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867214262404.jpg",
+    "samples/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867214362404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867214412404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867214512410.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867214612419.jpg"
+   ],
+   "timestamps_us": [
+    1534867214112404,
+    1534867214162598,
+    1534867214262404,
+    1534867214362404,
+    1534867214412404,
+    1534867214512410,
+    1534867214612419
+   ],
+   "actions_ego_xy": [
+    [
+     0.5103652463573838,
+     -0.006753749114756846
+    ],
+    [
+     1.014739134681272,
+     -0.010049103859926967
+    ],
+    [
+     1.0138748706908636,
+     -0.004193055957063485
+    ],
+    [
+     0.5061460318009834,
+     -0.004795620623301411
+    ],
+    [
+     1.0115575035575155,
+     -0.010336742273687083
+    ],
+    [
+     1.0121477843000624,
+     -0.007656133931568054
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "9af73f5967404c1faa40b5a4ff596c9e.png",
+     "d9961cb8bfdd4ac98af811b07cb3920d.png",
+     "6c800e83fcbd42f89688d2c6c004eca8.png",
+     "2706d2118b58478f9ccdd70919dff284.png",
+     "5083f31ece0f4aa4a0e6b0a6c746d761.png",
+     "c9c21217d4f8416b8d7a76faf568d76c.png",
+     "f33e43e95baa4e0d8e556ed3190ea660.png"
+    ],
+    "pixels_sha256": [
+     "20f0ae0627843f069120081e79bae315f390cf8f78c02f9a386c5e06954f6b1d",
+     "ce1d61d2654639b33539893ef5c835784c3f5f5f1b8fce276ff18cc03529bd14",
+     "b81d10fd956711d3368d8ac2235dcde7b5d7a62abb54a26030d7e9176b5064e7",
+     "822aacb55d508fc1207744579d28c9559ca0162a12f7053bf80053a702be5d3e",
+     "4e62b5e20a48cd4f2b952810a6fc766f3462bc157a2e3d170bc5f773c641be45",
+     "eb6d440f00c6ae18311f139915445bf665c1f89c0b3be88a6ab9ab994343baff",
+     "c2c89ae3248d06c1b853328c05183295063a47f92ba87cf4ad4f8c05d7731bd3"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0250_0200",
+   "scene_id": "scene-0250",
+   "scene_token": "892ed06c432448fe87ecb5d31756f14a",
+   "log_token": "08ba46dd716d42a69d108638fef5bbb9",
+   "frame_tokens": [
+    "f0b78a6e1ece488dad0ff2ffc5c91ec3",
+    "772071ccce86458389863f1d0c51aecc",
+    "8f949c2d364f4f599d57ef60d4ee9e0f",
+    "afdef7bf82b64482b60f0483c91bc91d",
+    "1ac71d7db76c4dcb8902ac547241acbd",
+    "91c4b0e4ec1e42a08619bc30f4f80d18",
+    "0dae43b607cb47bc94c2c8e2c79c52e9"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867384762404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867384862404.jpg",
+    "samples/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867384912404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867385012404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867385112404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867385162404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867385262404.jpg"
+   ],
+   "timestamps_us": [
+    1534867384762404,
+    1534867384862404,
+    1534867384912404,
+    1534867385012404,
+    1534867385112404,
+    1534867385162404,
+    1534867385262404
+   ],
+   "actions_ego_xy": [
+    [
+     0.8513955929282386,
+     -0.00470606979573146
+    ],
+    [
+     0.42394964045617123,
+     -0.0019041769280895848
+    ],
+    [
+     0.8296131955205897,
+     -0.002066410314972844
+    ],
+    [
+     0.8352101725106175,
+     -0.009553040533460677
+    ],
+    [
+     0.42393334311211306,
+     -0.003958169514718474
+    ],
+    [
+     0.8330952136905279,
+     -0.003502223438045071
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "f0b78a6e1ece488dad0ff2ffc5c91ec3.png",
+     "772071ccce86458389863f1d0c51aecc.png",
+     "8f949c2d364f4f599d57ef60d4ee9e0f.png",
+     "afdef7bf82b64482b60f0483c91bc91d.png",
+     "1ac71d7db76c4dcb8902ac547241acbd.png",
+     "91c4b0e4ec1e42a08619bc30f4f80d18.png",
+     "0dae43b607cb47bc94c2c8e2c79c52e9.png"
+    ],
+    "pixels_sha256": [
+     "803de3b212303435818a4b1f6c67f76ea9240fb979cf53584eb5b85e837954b1",
+     "60e4cbcf52eabd44e64f8aed58460b4c1d717ed723b538a6d719e8931fe8d459",
+     "5fa2c51b18e0797a6f97f8ded2ec7041c615d96d15ba604b9f641a438deb4b20",
+     "5b37904e7c3e3df9fc0b25fb6a933e6876d2de7bcf222f6bd3d7695ee98a79da",
+     "06b7fe5cd7f8dba72ad9904e84873512d9a4e0e1bfbec0960fff842dc7869adb",
+     "cad81f1ec72797bc84e276772edc99be3ab8f88edea535634b0489d666ace45a",
+     "a7733655313ea1c6b0b72f95c09111c9b1236584b974c6c931a0b80d30f31648"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0248_0100",
+   "scene_id": "scene-0248",
+   "scene_token": "36b7b02f0f034f0595e3437a85554151",
+   "log_token": "08ba46dd716d42a69d108638fef5bbb9",
+   "frame_tokens": [
+    "b7758b2aadac4fd7b728ef126511ff16",
+    "f8981a30f5b14b979bd881939fce06ea",
+    "6f5988b0d13e499b9890e12867913e86",
+    "0c70a7c463b641d98d45ecdb6e9ac857",
+    "968002b80767428184cb93801e611466",
+    "78e9bf0d5c4c4cf99208d89541b66695",
+    "a4e9c206d6d84894b400ffcf1d36956d"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867311362404.jpg",
+    "samples/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867311412405.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867311512404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867311612404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867311662404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867311762404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867311862404.jpg"
+   ],
+   "timestamps_us": [
+    1534867311362404,
+    1534867311412405,
+    1534867311512404,
+    1534867311612404,
+    1534867311662404,
+    1534867311762404,
+    1534867311862404
+   ],
+   "actions_ego_xy": [
+    [
+     1.12974729682732e-07,
+     -3.863919008307499e-05
+    ],
+    [
+     2.717988502827154e-08,
+     -7.560017481597456e-05
+    ],
+    [
+     1.557383606090983e-07,
+     -7.30831487418005e-05
+    ],
+    [
+     1.4037972296653266e-07,
+     -3.6042366894180325e-05
+    ],
+    [
+     6.043585965285323e-07,
+     -6.970741639688866e-05
+    ],
+    [
+     6.78735175881282e-08,
+     -6.795604203288853e-05
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "b7758b2aadac4fd7b728ef126511ff16.png",
+     "f8981a30f5b14b979bd881939fce06ea.png",
+     "6f5988b0d13e499b9890e12867913e86.png",
+     "0c70a7c463b641d98d45ecdb6e9ac857.png",
+     "968002b80767428184cb93801e611466.png",
+     "78e9bf0d5c4c4cf99208d89541b66695.png",
+     "a4e9c206d6d84894b400ffcf1d36956d.png"
+    ],
+    "pixels_sha256": [
+     "95ceba73a4d44bd99f742172ece627878ffde2c657b6af8c23f568aa81d86fdf",
+     "40af3b11f5cf7ff9816d244befdaeef725816dc7f642b86c08a923ab387bbc29",
+     "0f61654b6ae7bcc73e21e7539889faf043868024568436e3ef7c8de16b06722b",
+     "daec4f890b9153688f04f061348fa9acdeec9521d679851345a92011dd348c23",
+     "2ccbdca9aefcbfabb3d1d9b5a26ee939978e3920e56f7113910d1933d1cb0d48",
+     "9997fb173650f99a9b651cfaf253f8aedb34584d04fd08d87813f12c222692d9",
+     "ae79e79851fa5018d2e5f74f4357cf310d2a9f8867826b0787f4d5c6fa50e616"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0252_0050",
+   "scene_id": "scene-0252",
+   "scene_token": "7ca5e90766dc4b7bb6a9b3b0d95c99da",
+   "log_token": "08ba46dd716d42a69d108638fef5bbb9",
+   "frame_tokens": [
+    "7c4893590f2f4ec696c01e8bd31a5db2",
+    "2862f1b3856f4e77ba748cc7a797a304",
+    "ff69048136b343c195ef40e66bb696d8",
+    "92b724ed934d4b648d698fd3044511b8",
+    "f9a37be966314e49a812e4e6d4a308c9",
+    "8b3efdf97e894028b0a16ea8b1097106",
+    "807f7e54bac2457d8762783b9c8bbf00"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867437112404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867437162404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867437262404.jpg",
+    "samples/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867437362404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867437412404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867437512404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867437612404.jpg"
+   ],
+   "timestamps_us": [
+    1534867437112404,
+    1534867437162404,
+    1534867437262404,
+    1534867437362404,
+    1534867437412404,
+    1534867437512404,
+    1534867437612404
+   ],
+   "actions_ego_xy": [
+    [
+     0.2938187677189485,
+     -0.0019730333247326703
+    ],
+    [
+     0.5682612497552371,
+     -0.002350443744347175
+    ],
+    [
+     0.5781684815082151,
+     -0.0023003182888383655
+    ],
+    [
+     0.2817250449796291,
+     -0.000631177844117814
+    ],
+    [
+     0.5616685871385938,
+     0.0012064607302939567
+    ],
+    [
+     0.5643003935837341,
+     -0.0011175237348344247
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "7c4893590f2f4ec696c01e8bd31a5db2.png",
+     "2862f1b3856f4e77ba748cc7a797a304.png",
+     "ff69048136b343c195ef40e66bb696d8.png",
+     "92b724ed934d4b648d698fd3044511b8.png",
+     "f9a37be966314e49a812e4e6d4a308c9.png",
+     "8b3efdf97e894028b0a16ea8b1097106.png",
+     "807f7e54bac2457d8762783b9c8bbf00.png"
+    ],
+    "pixels_sha256": [
+     "2538087b5bcc907075581ac623dfcbb3cf3ecd6df51568118d7fd6832b33f59a",
+     "44694066e72033900da0afecb74a3df0a86fa966e460111ab68c3de5fd27e1de",
+     "65196651aab958a5dc260f4fffca31a6ff056f51fca236a57901bd214a210001",
+     "c2de3d094caad737defb30d864ad71d53c3b8cfa738136f7a9bc708c1444099a",
+     "069cd8961e8d128b0d7a08c9ebd69e788d84aa48b15a62d6dfa96526f40f0ba2",
+     "e795ea3e789b29ce76a9e8b696f9a22ae3eea2e50931fe37706a4e2382f0988f",
+     "703f7d543a13e26567b7280151f175803e19f86058aa2dd00296d57f09016831"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0244_0200",
+   "scene_id": "scene-0244",
+   "scene_token": "c9d654d4279c4efa9745a25ba6b373ee",
+   "log_token": "08ba46dd716d42a69d108638fef5bbb9",
+   "frame_tokens": [
+    "e9c8b0ae3d204bfa8c14715a87f47d60",
+    "4f9c13ae7fc74923b0bf5a09197b89f6",
+    "07628a8dc4724ab4b09421b89d6fd626",
+    "f775545e3b4c48a480c8f7dd417febd7",
+    "03043d384dfe4a6ea8a9eddcdf72651b",
+    "6458f9ebcb9c4eb0992df03cec5fe644",
+    "29f833bfc4d747c095d23aff157fcf0d"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867167012404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867167112404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867167162404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867167262404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867167362404.jpg",
+    "samples/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867167412404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-21-11-53-44-0400__CAM_FRONT__1534867167512404.jpg"
+   ],
+   "timestamps_us": [
+    1534867167012404,
+    1534867167112404,
+    1534867167162404,
+    1534867167262404,
+    1534867167362404,
+    1534867167412404,
+    1534867167512404
+   ],
+   "actions_ego_xy": [
+    [
+     -1.023070150648806e-07,
+     -0.00012461639101079907
+    ],
+    [
+     2.7026073620271156e-08,
+     -6.148520723225993e-05
+    ],
+    [
+     1.3339274737974384e-07,
+     -0.0001190376155105406
+    ],
+    [
+     2.5037198044204677e-07,
+     -0.00011581043454218066
+    ],
+    [
+     1.7362340828424702e-07,
+     -5.673394079517835e-05
+    ],
+    [
+     -3.756519794659757e-08,
+     -0.00011076038471420677
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "e9c8b0ae3d204bfa8c14715a87f47d60.png",
+     "4f9c13ae7fc74923b0bf5a09197b89f6.png",
+     "07628a8dc4724ab4b09421b89d6fd626.png",
+     "f775545e3b4c48a480c8f7dd417febd7.png",
+     "03043d384dfe4a6ea8a9eddcdf72651b.png",
+     "6458f9ebcb9c4eb0992df03cec5fe644.png",
+     "29f833bfc4d747c095d23aff157fcf0d.png"
+    ],
+    "pixels_sha256": [
+     "4727b348d58a16d02675c9e6d10d6c82df535b06de00e7d102c4583355a2443c",
+     "a89a1c54a720711bea31ce1bf7dcc0c669fd4279715102edcd2f67cb7bb0b2ba",
+     "4ba9fbd5f24019e3590c49d4fd0d7a4356cb42b03d36b75f1ae2e32bda3fac59",
+     "f228a7e9082e6fa82d31fd9489d7c53997615e0e56ee19d87ecec2e6372ffd8b",
+     "82b94a2f9dd51f3606652df99f3d951c3a97d215377143a1b25ec38ab62fa3f6",
+     "78b90697c664e199493722544a4786b6533b824e3f05e61caff5d8244e6a2d0d",
+     "b96b721b789a7414edb732dac770de21176403eb0b3c038bd3e5cee7615ca3f2"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0354_0000",
+   "scene_id": "scene-0354",
+   "scene_token": "312102fd97de4bd4859374946e24ccdc",
+   "log_token": "ddc03471df3e4c9bb9663629a4097743",
+   "frame_tokens": [
+    "09f78ff5609c4571b4439c8dada8f2f4",
+    "ac7f5ab51fb94f698f76a1f6d3ce8f18",
+    "e591e6ed63ed4210bbcd85748aa00569",
+    "b5a901808eae4974b54960fa0b9f57df",
+    "550f297b09b1446889c697751fd02697",
+    "88fd2d1f77d547dabdfbed3ffe2dd556",
+    "07aedd37c9f74e3b810d5cd4100d0c59"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202558012460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202558112460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202558162460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202558262460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202558362460.jpg",
+    "samples/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202558412460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202558512460.jpg"
+   ],
+   "timestamps_us": [
+    1533202558012460,
+    1533202558112460,
+    1533202558162460,
+    1533202558262460,
+    1533202558362460,
+    1533202558412460,
+    1533202558512460
+   ],
+   "actions_ego_xy": [
+    [
+     0.06892086209920253,
+     -0.0005515295455868659
+    ],
+    [
+     0.03907704451749221,
+     -0.00024522153888564303
+    ],
+    [
+     0.0840058969106988,
+     -0.0004378458545020031
+    ],
+    [
+     0.10871496512843001,
+     -0.0003291940695135595
+    ],
+    [
+     0.06345463479058837,
+     -0.000272515671456839
+    ],
+    [
+     0.14653097548535785,
+     -0.0008981356079659567
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "09f78ff5609c4571b4439c8dada8f2f4.png",
+     "ac7f5ab51fb94f698f76a1f6d3ce8f18.png",
+     "e591e6ed63ed4210bbcd85748aa00569.png",
+     "b5a901808eae4974b54960fa0b9f57df.png",
+     "550f297b09b1446889c697751fd02697.png",
+     "88fd2d1f77d547dabdfbed3ffe2dd556.png",
+     "07aedd37c9f74e3b810d5cd4100d0c59.png"
+    ],
+    "pixels_sha256": [
+     "3ca6360ad3f3ef0fb608f8295f6e55aa320d95d7db827bc253180f78d6a418ee",
+     "de9ff7cf9a1b1755491c8d1b9a3b72d52f32e1497d73e8b66a7728135e90a2c9",
+     "9e414526ba7a808fb8ae933a3ed6b4e154bf340d5f4f032de1c26d472cc4b360",
+     "9368fd3391e4325369593f9b990cc60a431f3ce5c933997b9760e02c7a8854de",
+     "1530252b880f56977cb5d394cd89839f0944052b253feb6f3771b64bdf430c43",
+     "0601aa839979775900f0426628555651d92a29e8bdc885b01b4fb0fbb411b3af",
+     "8f2035c133ef57273b32359b0a571fc34c4f6a751dea9379b4f30ad31110acb5"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0354_0050",
+   "scene_id": "scene-0354",
+   "scene_token": "312102fd97de4bd4859374946e24ccdc",
+   "log_token": "ddc03471df3e4c9bb9663629a4097743",
+   "frame_tokens": [
+    "5e4e61fd2c334cafaf555f2c77d02e4e",
+    "149a65e6033f4171ad57c67309242615",
+    "3e5de546c7704715a55fcba64273bfbd",
+    "c35d57927a584c38ab5100b56bc0d9bc",
+    "90dc2f3c0e2e480688d434736cd265ca",
+    "7ba9a87166bf454487fce344b8e00021",
+    "376a9e31996d4134921e686d33c5bc46"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202562162460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202562262460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202562362460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202562412460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202562512460.jpg",
+    "samples/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202562612460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202562662460.jpg"
+   ],
+   "timestamps_us": [
+    1533202562162460,
+    1533202562262460,
+    1533202562362460,
+    1533202562412460,
+    1533202562512460,
+    1533202562612460,
+    1533202562662460
+   ],
+   "actions_ego_xy": [
+    [
+     0.6822622964257676,
+     -0.0009774015536703207
+    ],
+    [
+     0.7010834142746347,
+     -0.0026466271622068716
+    ],
+    [
+     0.36080187759228816,
+     -0.0007105114066476292
+    ],
+    [
+     0.7456954410614374,
+     -0.0030692847054348826
+    ],
+    [
+     0.7405673891572194,
+     0.0006443026429986398
+    ],
+    [
+     0.37595183607793553,
+     -0.002056758991513502
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "5e4e61fd2c334cafaf555f2c77d02e4e.png",
+     "149a65e6033f4171ad57c67309242615.png",
+     "3e5de546c7704715a55fcba64273bfbd.png",
+     "c35d57927a584c38ab5100b56bc0d9bc.png",
+     "90dc2f3c0e2e480688d434736cd265ca.png",
+     "7ba9a87166bf454487fce344b8e00021.png",
+     "376a9e31996d4134921e686d33c5bc46.png"
+    ],
+    "pixels_sha256": [
+     "21664fe2f8b18e534492e329cb3a7a41f32bac902bb508c5938b7d657e4c2695",
+     "3ddb588d6a6ee58a3a9bd334609e5bd7fa26b6722afc571308ac361d557d4f6e",
+     "6866bbc98f025721c2392c03126916bc49742b4f802c410f6356c3d04a141035",
+     "b955701ce6af293680438697657fa014f3db931029a16f52e8d4c2d5d7d7adf4",
+     "177e7e18a62e254fbf8510b4f204da81a9d7ffef758764c1b0900e6b369e22f4",
+     "0d3a648fd1d265d2913f341eb392660a6c33274b26791b0e159b867e1ead9feb",
+     "fb15aace9ed34f28fab1b589e2713c06dbfb0f236fca36741b60318093ad17b5"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0358_0200",
+   "scene_id": "scene-0358",
+   "scene_token": "2121cc12888e47ce856dc5391f202594",
+   "log_token": "ddc03471df3e4c9bb9663629a4097743",
+   "frame_tokens": [
+    "3bc4a62214b24856a39d410cf45afed1",
+    "a5d02e631d654d4289c6d1e18b4e8ea7",
+    "9b7f1c07a391454c82cce8204a8d3da2",
+    "3f57be69880044c686b1bd2aea2fcc32",
+    "53224a95ca85453e9c66ac1a687e382b",
+    "929c48c3e32c4decab527b76aa0f9e5d",
+    "65ef6fad02ef447e8a4d5df876cd8a78"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202685412460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202685512460.jpg",
+    "samples/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202685612460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202685662460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202685762460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202685862460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202685912460.jpg"
+   ],
+   "timestamps_us": [
+    1533202685412460,
+    1533202685512460,
+    1533202685612460,
+    1533202685662460,
+    1533202685762460,
+    1533202685862460,
+    1533202685912460
+   ],
+   "actions_ego_xy": [
+    [
+     -1.1783131443090464e-06,
+     1.6568174354616738e-09
+    ],
+    [
+     8.972222336551803e-07,
+     -3.390059915407705e-09
+    ],
+    [
+     5.4724179318137404e-08,
+     -3.650707117067643e-10
+    ],
+    [
+     2.810313654479475e-07,
+     -4.846807214179327e-10
+    ],
+    [
+     -5.616464640547924e-07,
+     -4.5963803426100295e-10
+    ],
+    [
+     -1.052962830902289e-06,
+     -2.54151659896147e-10
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "3bc4a62214b24856a39d410cf45afed1.png",
+     "a5d02e631d654d4289c6d1e18b4e8ea7.png",
+     "9b7f1c07a391454c82cce8204a8d3da2.png",
+     "3f57be69880044c686b1bd2aea2fcc32.png",
+     "53224a95ca85453e9c66ac1a687e382b.png",
+     "929c48c3e32c4decab527b76aa0f9e5d.png",
+     "65ef6fad02ef447e8a4d5df876cd8a78.png"
+    ],
+    "pixels_sha256": [
+     "d9109ff909e41aa2200b2403e7093a2f0abf15a2cd14a043668bcaa527b2f33d",
+     "1658dbad57c26c840a7aaddcdfd981c1a32bfbcb65b9cbb64de437fcbfbf0eda",
+     "06ea8b970f704fdbef2570727722a299a2d1472de6b4d3d56e6c84abfa4cd33c",
+     "a00ccd410a0901b575ccb791bdbdbb52de7d6046d8dfefe93a103920d92400de",
+     "c94936e419ddffe0a673fcb5d5847b1b31f002be4928855d90e2c3119e8209df",
+     "08cdd3965f2c2b6ce3c4e2f98135232c6675327f04de295dcc6f96c08cb9a937",
+     "b65c6389a8a2b397257616be174d685f57e1a7676c89ea1f2a82658faf9d136d"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0354_0100",
+   "scene_id": "scene-0354",
+   "scene_token": "312102fd97de4bd4859374946e24ccdc",
+   "log_token": "ddc03471df3e4c9bb9663629a4097743",
+   "frame_tokens": [
+    "17a9372772df4ccda9d79e056c9d465b",
+    "84290c07691046aaa1f37f94ed15d1ec",
+    "5e460eddbc1d435b8eb4a4cba12fd20a",
+    "278de33a16cc4383838ec8e088894cdd",
+    "49092bc6640c4145b317ebd944fb2a57",
+    "01b31be2a38b462ba68c954d3fa3df43",
+    "1e6e856e02054cba9091270fc4a44d52"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202566412460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202566512460.jpg",
+    "samples/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202566612460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202566662460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202566762466.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202566862460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202566912460.jpg"
+   ],
+   "timestamps_us": [
+    1533202566412460,
+    1533202566512460,
+    1533202566612460,
+    1533202566662460,
+    1533202566762466,
+    1533202566862460,
+    1533202566912460
+   ],
+   "actions_ego_xy": [
+    [
+     1.0790718193386812,
+     -0.0012796269915776315
+    ],
+    [
+     1.061872228807117,
+     -0.002821812769778609
+    ],
+    [
+     0.5257565581644627,
+     -0.0012757832827409998
+    ],
+    [
+     1.0546712936594718,
+     -0.0029456688931860375
+    ],
+    [
+     1.0780625852994885,
+     -0.009813586619864811
+    ],
+    [
+     0.5381597322134439,
+     -0.00393205058859683
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "17a9372772df4ccda9d79e056c9d465b.png",
+     "84290c07691046aaa1f37f94ed15d1ec.png",
+     "5e460eddbc1d435b8eb4a4cba12fd20a.png",
+     "278de33a16cc4383838ec8e088894cdd.png",
+     "49092bc6640c4145b317ebd944fb2a57.png",
+     "01b31be2a38b462ba68c954d3fa3df43.png",
+     "1e6e856e02054cba9091270fc4a44d52.png"
+    ],
+    "pixels_sha256": [
+     "b07e612b8a0e4409ccdbe11e2b68cc7326311b8866710029c5662c600bce5497",
+     "54f61aa49fe7829ae3522f4394c49a86b0eef529ffa9b826dfcd6d5e8b71727a",
+     "0c3e5d5ba3afd8e7026fd7048db133ea122b71cb5aaa77ba8ef2e296e87bcd7e",
+     "522ac22c0cf7487855e3c190f9c33ffc83d6b017115838bafa2e836e8792687a",
+     "964405ad293ad1fa454c4b373476d1a55566bf2bde7388fe31f75cfa6cc79ac7",
+     "34abcf427a087a5945cabea81db815a642846d4995d48bd5455571592a2af925",
+     "c1f159274efd5183ddbea50e58d4003d859111103516d5df63bb5cfdaf8bc847"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0355_0125",
+   "scene_id": "scene-0355",
+   "scene_token": "2f093cad7209436aa06e103bfe062857",
+   "log_token": "ddc03471df3e4c9bb9663629a4097743",
+   "frame_tokens": [
+    "f95fc7f0ceec43239bffa0d75aab9412",
+    "f35df2dfd68340368e24c0c7c7865695",
+    "d29f266201d74a2dae43294ca1f33594",
+    "5104998a906b4484b834d334322f1be9",
+    "599b8d0e233a4a05861b3572d42187e1",
+    "071f99e224ea4eb8b4126585d5c02516",
+    "1fbff8f2a27740e2abd7a6a8d0e6c9e2"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202619862460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202619912460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202620012460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202620112460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202620162489.jpg",
+    "samples/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202620262460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-08-02-17-28-51+0800__CAM_FRONT__1533202620362460.jpg"
+   ],
+   "timestamps_us": [
+    1533202619862460,
+    1533202619912460,
+    1533202620012460,
+    1533202620112460,
+    1533202620162489,
+    1533202620262460,
+    1533202620362460
+   ],
+   "actions_ego_xy": [
+    [
+     -7.342192760985624e-08,
+     -1.585541745437701e-07
+    ],
+    [
+     1.84220274039935e-08,
+     -3.092780774709705e-07
+    ],
+    [
+     4.602885473945058e-07,
+     -3.0182061110610224e-07
+    ],
+    [
+     2.1966126023416195e-07,
+     -1.4775617715715404e-07
+    ],
+    [
+     5.282382249746966e-10,
+     -2.892479677979131e-07
+    ],
+    [
+     -3.362744977857123e-07,
+     -2.766786103614767e-07
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "f95fc7f0ceec43239bffa0d75aab9412.png",
+     "f35df2dfd68340368e24c0c7c7865695.png",
+     "d29f266201d74a2dae43294ca1f33594.png",
+     "5104998a906b4484b834d334322f1be9.png",
+     "599b8d0e233a4a05861b3572d42187e1.png",
+     "071f99e224ea4eb8b4126585d5c02516.png",
+     "1fbff8f2a27740e2abd7a6a8d0e6c9e2.png"
+    ],
+    "pixels_sha256": [
+     "84f58408e7cf4c6136f72b277e27bb646894cb8e22d5ec3fe2f293cb7313b7d5",
+     "263ebba69575f320083b08414296544351680ba68fa383b9a74a187025158723",
+     "618602feac2096e367e82a8dd2bcb9215deccae8bbc53d8371e68b93fe5f7ac9",
+     "75fc6b323203ad5e7562cd4bc93217682b81a1bf2a9ca9ffbbfc6c7c05f78c7b",
+     "a8ef9f53c78722cfb3a4510fea0e7268bb9c06c8103bc67891cfdf7a8820826d",
+     "6b1ea209429aa7b88e79e33814f5a4aba41d98645e6f44986c555450b1b27073",
+     "5516b84abd7263c1db220c612b6724694edd3d9943bcea6307149507e174150b"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0517_0100",
+   "scene_id": "scene-0517",
+   "scene_token": "55638ae3a8b34572aef756ee7fbce0df",
+   "log_token": "6577357788b24c35a3b0419c138f50db",
+   "frame_tokens": [
+    "e0915fe81a8f476fa81354707d2e467e",
+    "66e6a7ba9d124c5bac02a4e8c23f434a",
+    "e8bc210a70c443279225eae4f710d152",
+    "208f20e2c3f74d77bce3f99ccb475692",
+    "6009a8ddd9994281943fdcdf441327c4",
+    "f1cc5f84a08f40b897a4b66127ba4b1e",
+    "0bd9137904944f7ea5adcc76ac9e6f18"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489980362404.jpg",
+    "samples/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489980412404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489980512404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489980612404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489980662404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489980762404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489980862404.jpg"
+   ],
+   "timestamps_us": [
+    1535489980362404,
+    1535489980412404,
+    1535489980512404,
+    1535489980612404,
+    1535489980662404,
+    1535489980762404,
+    1535489980862404
+   ],
+   "actions_ego_xy": [
+    [
+     0.33267483617252497,
+     -0.0006349006163166859
+    ],
+    [
+     0.7032243035044135,
+     0.000848405381916828
+    ],
+    [
+     0.7113052750930557,
+     0.0019482730332116005
+    ],
+    [
+     0.3583631472794196,
+     -0.0003550649227485325
+    ],
+    [
+     0.7191091298267165,
+     0.003074161747856352
+    ],
+    [
+     0.6927631297010518,
+     -0.002806002066303326
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "e0915fe81a8f476fa81354707d2e467e.png",
+     "66e6a7ba9d124c5bac02a4e8c23f434a.png",
+     "e8bc210a70c443279225eae4f710d152.png",
+     "208f20e2c3f74d77bce3f99ccb475692.png",
+     "6009a8ddd9994281943fdcdf441327c4.png",
+     "f1cc5f84a08f40b897a4b66127ba4b1e.png",
+     "0bd9137904944f7ea5adcc76ac9e6f18.png"
+    ],
+    "pixels_sha256": [
+     "4cf119626927e3d949fde61160d8c1aafcd7cecdc79b2236f0e471ea64583fa3",
+     "315e4472f0f071b9fb6536074c9a482ec15dfaf86a3b55ffa71a3ac02161b345",
+     "e990ba6d64f60c6e10e463d2359fb9a11a9fc129f985caabd59a7ef7f4638b2c",
+     "c548f17562a6768f519b2076beea9efe5e93bf9e6bb902853353123fd972a530",
+     "c16904583867baf36562ab9b5d1aea148d30166bb96cf2ec86729353799fc22d",
+     "1a4b009ca4f0386242e5c1442b90cc0430999f366bff7e2d7b15be9fdaedc644",
+     "a75836658cef9c294c1df91c3e32d76a7161ede5828ba370486b6a3a722114ab"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0515_0000",
+   "scene_id": "scene-0515",
+   "scene_token": "02f1e5e2fc544798aad223f5ae5e8440",
+   "log_token": "6577357788b24c35a3b0419c138f50db",
+   "frame_tokens": [
+    "b3ad6587faf04f68abb5c85774cbb815",
+    "9f7e9506f63a40db8c8bbc3798e871ba",
+    "deaac1a2efd043a6b2ecc6ece44bc4f5",
+    "37292f541d0746bda9d81fe042a8cb07",
+    "6eb3576a25804790ba6d3f280882b201",
+    "3b5e316e10534250bb85dd357d719dd5",
+    "cadbe64bbf18447d93f8a2a813ea2965"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489931762404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489931862711.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489931912404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489932012404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489932112404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489932162404.jpg",
+    "samples/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489932262404.jpg"
+   ],
+   "timestamps_us": [
+    1535489931762404,
+    1535489931862711,
+    1535489931912404,
+    1535489932012404,
+    1535489932112404,
+    1535489932162404,
+    1535489932262404
+   ],
+   "actions_ego_xy": [
+    [
+     0.6125933694798921,
+     -0.017194896649785185
+    ],
+    [
+     0.3050024176329382,
+     -0.009032916331772028
+    ],
+    [
+     0.6230505123596877,
+     -0.019529540568922366
+    ],
+    [
+     0.6561994449037476,
+     -0.018016996608120894
+    ],
+    [
+     0.3331765086890813,
+     -0.008856855475574521
+    ],
+    [
+     0.6772637471972676,
+     -0.016326734171615676
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "b3ad6587faf04f68abb5c85774cbb815.png",
+     "9f7e9506f63a40db8c8bbc3798e871ba.png",
+     "deaac1a2efd043a6b2ecc6ece44bc4f5.png",
+     "37292f541d0746bda9d81fe042a8cb07.png",
+     "6eb3576a25804790ba6d3f280882b201.png",
+     "3b5e316e10534250bb85dd357d719dd5.png",
+     "cadbe64bbf18447d93f8a2a813ea2965.png"
+    ],
+    "pixels_sha256": [
+     "6ab74be82a112d1e2134786ac2b5e0a8f8c20d33814706049182919a17fa9ba9",
+     "bb27dadf824745ddc5be7cdf7e9ffee6fcf4f99cbec469200fe4897596f859bd",
+     "79042dc2be5dbc0532264e42aaff94eabd98b3e76ea8b6cc7604831b3ed3520a",
+     "d2b711b1d848d7a57c68ee2d452611922b1540509db7594707a41b84f04a4ee8",
+     "0b151fdf0fbdeda475cbd0103f969abe920ba3f29de5a58bccc13f932f462dc5",
+     "141719d51c430e20db6886f9c6d7e42653758edcc50e9d6891cfc8e009dcfb42",
+     "278d81c083ee56dfa12531454c720b967d54fdc4228d8ad988432132ad5655a6"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0514_0150",
+   "scene_id": "scene-0514",
+   "scene_token": "49eb09ab4c4142268131125d6e619a0c",
+   "log_token": "6577357788b24c35a3b0419c138f50db",
+   "frame_tokens": [
+    "82f8904f906c4612b4be7210e4bebfa6",
+    "c9cbd891caa84c2d8bc1735895a8e954",
+    "0b557849508340d0afd1c0848d0bc381",
+    "6297fd60611e4e0e81d468c3c80669b6",
+    "2b62c486e174496e899545730de165db",
+    "5838ceabde8746f8823371ac341069a0",
+    "359f9f85a9ef4984bf46310c7793ff3d"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489914262404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489914364892.jpg",
+    "samples/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489914412404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489914512404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489914612404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489914662404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489914762404.jpg"
+   ],
+   "timestamps_us": [
+    1535489914262404,
+    1535489914364892,
+    1535489914412404,
+    1535489914512404,
+    1535489914612404,
+    1535489914662404,
+    1535489914762404
+   ],
+   "actions_ego_xy": [
+    [
+     0.19137470933184045,
+     -0.0019297746496639624
+    ],
+    [
+     0.08898135121512739,
+     -0.0007555354970859051
+    ],
+    [
+     0.19564221788338582,
+     -0.0006442434609826918
+    ],
+    [
+     0.20419483909590455,
+     0.00020073667126968044
+    ],
+    [
+     0.10104105938237609,
+     -0.00010795440326906653
+    ],
+    [
+     0.19746350096893292,
+     -0.000554935307937092
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "82f8904f906c4612b4be7210e4bebfa6.png",
+     "c9cbd891caa84c2d8bc1735895a8e954.png",
+     "0b557849508340d0afd1c0848d0bc381.png",
+     "6297fd60611e4e0e81d468c3c80669b6.png",
+     "2b62c486e174496e899545730de165db.png",
+     "5838ceabde8746f8823371ac341069a0.png",
+     "359f9f85a9ef4984bf46310c7793ff3d.png"
+    ],
+    "pixels_sha256": [
+     "91bd294abffc94299ac13899f98cadcb6c2751db38f33c3911e0d2f635cc54b9",
+     "6154ee13857c41c5545dec02c9bc8c383f989ebb00aeeba1b4a6961136537c12",
+     "fc79ac490e61375d47d9fc07f82d5878bd97923c309eac275c7911bf3d5f28bc",
+     "1f4379db3e9883edcbfbdb4f3c0c53827f9700e390ae0aaa32b23b5c99705cef",
+     "c681e8d61de7d2c5f7389b2d9da3e15061bd05a13fd950dc6c407829d21e9a82",
+     "2fd8bc2378af8844e056180eb7606dde85b0f3595190c8988c50e03bac7171ba",
+     "53cebfa5ffad71057f7748a53dd4892d7f366bace868db4fed57add4333d8301"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0515_0050",
+   "scene_id": "scene-0515",
+   "scene_token": "02f1e5e2fc544798aad223f5ae5e8440",
+   "log_token": "6577357788b24c35a3b0419c138f50db",
+   "frame_tokens": [
+    "54b1fd6fab824af1859a0f47cc47aeb4",
+    "0a08e134b16a49e397d6e02dd0612d06",
+    "6ac7955d87124a2ea278d626d992d1c6",
+    "e002b8e1d7974128b67e80bbd6e384c0",
+    "f279614605f9447ea2986ee773e453dc",
+    "f02cb94f855740aeafbd9da24f51a6f3",
+    "0165c4133bce4ef19963dd4fcdb483a5"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489935912404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489936012404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489936112404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489936162404.jpg",
+    "samples/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489936262404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489936362404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489936412404.jpg"
+   ],
+   "timestamps_us": [
+    1535489935912404,
+    1535489936012404,
+    1535489936112404,
+    1535489936162404,
+    1535489936262404,
+    1535489936362404,
+    1535489936412404
+   ],
+   "actions_ego_xy": [
+    [
+     0.9043202828544937,
+     -0.006466869839152289
+    ],
+    [
+     0.9195672567896684,
+     -0.003883480219479485
+    ],
+    [
+     0.46497366453291067,
+     -0.005840274872042889
+    ],
+    [
+     0.938653555490241,
+     -0.00435304197587677
+    ],
+    [
+     0.9350608233084927,
+     -0.0032473938057065443
+    ],
+    [
+     0.4701806199428006,
+     -0.0028840537596767635
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "54b1fd6fab824af1859a0f47cc47aeb4.png",
+     "0a08e134b16a49e397d6e02dd0612d06.png",
+     "6ac7955d87124a2ea278d626d992d1c6.png",
+     "e002b8e1d7974128b67e80bbd6e384c0.png",
+     "f279614605f9447ea2986ee773e453dc.png",
+     "f02cb94f855740aeafbd9da24f51a6f3.png",
+     "0165c4133bce4ef19963dd4fcdb483a5.png"
+    ],
+    "pixels_sha256": [
+     "0ac5e7f9dd1ee981c47b29e8b58da7feffa015e02285da0683297cbc77b2e70c",
+     "76d3a052220a7781a28f47858aecc471f674ed2485f4c3c37684f2e11d15cd54",
+     "019d96e0fbb37a8edc4c018bb3e9baa78f880dad516bd3b7ea0209a400606cd9",
+     "e27dadfd4a5ee3e7f5e409f6f5776abdff605a241995e989ee0fe2423efff62e",
+     "832a866720057e2842d09fa6aeae5c0dfa5cf660feb067f512cd9df327d3be78",
+     "9dea5d5e7171f106b95b5586cbfaff8a8415e8212a09cb7a52a379b8fd813ab1",
+     "26f2fa7fdcbe3a677553e9cbfb2861ca7e141f329c94e75c24d326fe88cae208"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0514_0000",
+   "scene_id": "scene-0514",
+   "scene_token": "49eb09ab4c4142268131125d6e619a0c",
+   "log_token": "6577357788b24c35a3b0419c138f50db",
+   "frame_tokens": [
+    "dc9306ba2ea4421bbacead58ba4fe249",
+    "c8a18c5ae5de40edb028851b65821187",
+    "864d53fad4ba4c4ab467c5f18e40b9d9",
+    "63056aac98764824ba1c30d4a0934a81",
+    "dfa78fb22e1b413ab2f52d216cccbc82",
+    "28eee1523b604a5ea7101d393ae9d78b",
+    "34ad432b06ad422a86b095e0bc2b9058"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489901762404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489901862404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489901912404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489902012404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489902112404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489902162404.jpg",
+    "samples/CAM_FRONT/n008-2018-08-28-16-57-39-0400__CAM_FRONT__1535489902262404.jpg"
+   ],
+   "timestamps_us": [
+    1535489901762404,
+    1535489901862404,
+    1535489901912404,
+    1535489902012404,
+    1535489902112404,
+    1535489902162404,
+    1535489902262404
+   ],
+   "actions_ego_xy": [
+    [
+     -4.0893497667331915e-05,
+     -3.856296147770767e-09
+    ],
+    [
+     -1.5685014160625034e-05,
+     -1.47619973440876e-09
+    ],
+    [
+     -3.0512796557221295e-05,
+     -1.8384787913830479e-09
+    ],
+    [
+     -4.960729263800901e-06,
+     -1.5753589233515563e-10
+    ],
+    [
+     6.8682043907952045e-06,
+     8.164323873732114e-10
+    ],
+    [
+     1.2501181854360298e-05,
+     -1.797435880533566e-09
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "dc9306ba2ea4421bbacead58ba4fe249.png",
+     "c8a18c5ae5de40edb028851b65821187.png",
+     "864d53fad4ba4c4ab467c5f18e40b9d9.png",
+     "63056aac98764824ba1c30d4a0934a81.png",
+     "dfa78fb22e1b413ab2f52d216cccbc82.png",
+     "28eee1523b604a5ea7101d393ae9d78b.png",
+     "34ad432b06ad422a86b095e0bc2b9058.png"
+    ],
+    "pixels_sha256": [
+     "538a060feb7b07e5d3afe4403a9ef272c7a8f74007fc11089514c2a0c4478b32",
+     "276bd5d801a25942c79a5fced81d286579a1a9ef5d37dc7535d4582d2f067396",
+     "22e0267b682a654cc412116d31521afff8a31ab04bd92968719567ea0600d79b",
+     "2369d7f97cd2b1e20f6c7f875b9727035713b35c3129513b5a69706ea03f7360",
+     "ddd762320d8d73020323a296df7a6b44428e171d29f53ac8bbe64b855ae39ff9",
+     "7d6369442bafcda37d729f9a5130cd6d67a1c624c683f9d0763d9cb91f895540",
+     "8112d09755188707f20748e88ceed1f5a32dae66b36dfc2b265b38a59da95b00"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0185_0150",
+   "scene_id": "scene-0185",
+   "scene_token": "b886756c3fd641eeba9dda3932e196c0",
+   "log_token": "6f5b61bfb298454eb6fe7ba279792815",
+   "frame_tokens": [
+    "7b94642c2914474a95bc5ec7f506d3bc",
+    "3f2841e3bac946b6899b593b95ac16a3",
+    "e17d3255dd85472ea3fc27a1d0024462",
+    "4b04d8a7694f485e87b85ccb1bf0a31e",
+    "d315baf9e2b74a429b11dad5bf8ed3db",
+    "e95e27e3315142f7a64e92f10e815615",
+    "c2f0eeef0bb1498183d4eb28a5509e1f"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532663023612460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532663023662460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532663023762460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532663023862460.jpg",
+    "samples/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532663023912460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532663024012460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532663024112460.jpg"
+   ],
+   "timestamps_us": [
+    1532663023612460,
+    1532663023662460,
+    1532663023762460,
+    1532663023862460,
+    1532663023912460,
+    1532663024012460,
+    1532663024112460
+   ],
+   "actions_ego_xy": [
+    [
+     -5.514904855859811e-06,
+     -0.00019629140804084256
+    ],
+    [
+     -9.959983565354776e-06,
+     -0.0003815228186892228
+    ],
+    [
+     -2.4639511938375825e-06,
+     -0.00037056196372571484
+    ],
+    [
+     -3.0035820070913906e-07,
+     -0.00017946364418899488
+    ],
+    [
+     -4.511697882024452e-07,
+     -0.0003518726614423918
+    ],
+    [
+     -5.360022884886223e-07,
+     -0.0003422055971832273
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "7b94642c2914474a95bc5ec7f506d3bc.png",
+     "3f2841e3bac946b6899b593b95ac16a3.png",
+     "e17d3255dd85472ea3fc27a1d0024462.png",
+     "4b04d8a7694f485e87b85ccb1bf0a31e.png",
+     "d315baf9e2b74a429b11dad5bf8ed3db.png",
+     "e95e27e3315142f7a64e92f10e815615.png",
+     "c2f0eeef0bb1498183d4eb28a5509e1f.png"
+    ],
+    "pixels_sha256": [
+     "06105a1729e1628ef808bc6838ad1e178cc9366e63374473c50ccd5c382ff14c",
+     "8c42ff3d94f846b7837e7897fda7ca1f497359273e912338b8a995458260134e",
+     "730669ee76730cefd0a9de269f189466960ba87e6492fb6a599789548fa74a56",
+     "8524fd9a28b0d7f527030d8470e59f0cd6ef8e0d2c7c24328565418fc1633e65",
+     "c25990a30f8e2fb1843a60fd9428aaa8a59ce9e61c4e51268908f6f4e4f3d9c7",
+     "d11ecb380b3a52d568d37551a362ac658b75d0c495e6d44ae8a030d20137aa15",
+     "074834071a051c49c41397debee98684d1aa474c186f9c2c595857677c84dd78"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0187_0000",
+   "scene_id": "scene-0187",
+   "scene_token": "019b370afb444a2e8ce85654898307c8",
+   "log_token": "6f5b61bfb298454eb6fe7ba279792815",
+   "frame_tokens": [
+    "c49766ba7a654b4db5582d37903c1d65",
+    "edb5d7229d2e45a2aee3d789f7d554b8",
+    "542e07d388e94d589e5c586168334bcc",
+    "bc68f8aca4b04366ad2afc4e5b088738",
+    "a909d4530b684515a0e1dd14cf28e754",
+    "b2f6a17b431d439886fc33892422b11d",
+    "17ca7e862639472dbebc9d3f9836e026"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532663088912460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532663089012460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532663089112460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532663089162460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532663089262460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532663089362460.jpg",
+    "samples/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532663089412460.jpg"
+   ],
+   "timestamps_us": [
+    1532663088912460,
+    1532663089012460,
+    1532663089112460,
+    1532663089162460,
+    1532663089262460,
+    1532663089362460,
+    1532663089412460
+   ],
+   "actions_ego_xy": [
+    [
+     0.3159453201445027,
+     -0.0002746411227556589
+    ],
+    [
+     0.30319500743860833,
+     -0.0003166057829449287
+    ],
+    [
+     0.14909958597371545,
+     2.5332151986044715e-05
+    ],
+    [
+     0.2958280059987286,
+     0.0003249674661359586
+    ],
+    [
+     0.2865016220753943,
+     0.000478942724244924
+    ],
+    [
+     0.1472619847487233,
+     -0.0006649070889262754
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "c49766ba7a654b4db5582d37903c1d65.png",
+     "edb5d7229d2e45a2aee3d789f7d554b8.png",
+     "542e07d388e94d589e5c586168334bcc.png",
+     "bc68f8aca4b04366ad2afc4e5b088738.png",
+     "a909d4530b684515a0e1dd14cf28e754.png",
+     "b2f6a17b431d439886fc33892422b11d.png",
+     "17ca7e862639472dbebc9d3f9836e026.png"
+    ],
+    "pixels_sha256": [
+     "e071f7055e2c7ddc15d0cfa183bcd496f6baf13f97d0dd914bc58c1f921e79fd",
+     "47e2cb42ff4c647694578e283cf4c7448c03cac2f5f6be84d38749df2c419f6f",
+     "62c1a2a9dab48818215bd970832f589bd5fb74bfd79d34a66c3d1460266ac49f",
+     "46d1999a75f94da66e725f0be9479bea23b81e4e29be0f2db9210dbda0696e9e",
+     "3b3871693d29c28c4f0bad64b9bb5a17e7008424fb05f8222f21075ef6ddaaf0",
+     "f24a1532fd67e6bd66ad03ed23fc30f815cb17c0439ad75208c703e137ca6fa2",
+     "bf98d3842f64caa261c7735bf13b401f0d57a52c0d2f056d18d973a6d08aab81"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0178_0200",
+   "scene_id": "scene-0178",
+   "scene_token": "f4395dd8e4004f12a8dec3079a93d804",
+   "log_token": "6f5b61bfb298454eb6fe7ba279792815",
+   "frame_tokens": [
+    "ce2b7d87ce4047d88a1a6ee4c589c34a",
+    "9d8efc50eec94fc9824106670abf1573",
+    "bc16c52d0712402e9d90a26b8b7dbbc2",
+    "9926d768e1304cb9b30527deaad04ce8",
+    "96123b6cd5724095a91729a0cb41110c",
+    "9d632cfc3589444b8467f7f501b81df7",
+    "f36af8b863c24f9dbc3ea78d795bf4ca"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662716612460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662716662460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662716762460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662716862460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662716912460.jpg",
+    "samples/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662717012460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662717112460.jpg"
+   ],
+   "timestamps_us": [
+    1532662716612460,
+    1532662716662460,
+    1532662716762460,
+    1532662716862460,
+    1532662716912460,
+    1532662717012460,
+    1532662717112460
+   ],
+   "actions_ego_xy": [
+    [
+     0.30809796557847563,
+     -0.0029280049384376103
+    ],
+    [
+     0.6110934848093011,
+     -0.006361725413606467
+    ],
+    [
+     0.6065073322354751,
+     -0.010912581892732767
+    ],
+    [
+     0.29880398033926664,
+     -0.00432825519145031
+    ],
+    [
+     0.5814267037296246,
+     -0.011482102866359603
+    ],
+    [
+     0.5743869554776951,
+     -0.007396899937374038
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "ce2b7d87ce4047d88a1a6ee4c589c34a.png",
+     "9d8efc50eec94fc9824106670abf1573.png",
+     "bc16c52d0712402e9d90a26b8b7dbbc2.png",
+     "9926d768e1304cb9b30527deaad04ce8.png",
+     "96123b6cd5724095a91729a0cb41110c.png",
+     "9d632cfc3589444b8467f7f501b81df7.png",
+     "f36af8b863c24f9dbc3ea78d795bf4ca.png"
+    ],
+    "pixels_sha256": [
+     "21594feb460c3ec0670f860434dcff9083604e03475f84e31eb71f959cb28ec7",
+     "fa6401aa660fff4fc99fac0e890fcf12854525052f4ae25ed7affa4e721ea5d4",
+     "6871877db998fd3dea27dbb0a17fe2c4359d86b4f8ae652b2b3860b4adc3b915",
+     "e613f7f46152424fe824493cfa82c1df1a172ef689b4dc183d601b9b512fed87",
+     "6220288d4db10dfd5961f6192d67e69859735937113a428057e51da59dddb6fe",
+     "8f75480759c3799a14ffbc7aa893500776e7f80293116874ef147237324333f3",
+     "5bac616fe72dc1607eacd08c0adb30b665347e49d0faaa4980aaead066139d60"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0182_0050",
+   "scene_id": "scene-0182",
+   "scene_token": "2c1f2e5096434cd78919b2ae442d4ba4",
+   "log_token": "6f5b61bfb298454eb6fe7ba279792815",
+   "frame_tokens": [
+    "cc3cca815b584c12bd6be81079a26dcb",
+    "85d703ddefc44dafb48032454fa6e0a8",
+    "50e546b71db140e38436bccf07a317da",
+    "dc283b921e47462a8e6b2aabf35052d9",
+    "cb77f762c5884f928799b5b59a797564",
+    "d5fbd374e4474be694e24784b3302dec",
+    "00fd9cc48c96421f87dc5e7310630d20"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662848162460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662848262460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662848362460.jpg",
+    "samples/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662848412460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662848512460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662848612460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662848662460.jpg"
+   ],
+   "timestamps_us": [
+    1532662848162460,
+    1532662848262460,
+    1532662848362460,
+    1532662848412460,
+    1532662848512460,
+    1532662848612460,
+    1532662848662460
+   ],
+   "actions_ego_xy": [
+    [
+     0.7950272493560185,
+     -0.003718547093820024
+    ],
+    [
+     0.7876729209237606,
+     -0.0015225586363710741
+    ],
+    [
+     0.4020375675135186,
+     0.00011098457752325985
+    ],
+    [
+     0.7736464995537917,
+     -0.0008356049991505299
+    ],
+    [
+     0.7685596799671638,
+     -0.0018082990720773018
+    ],
+    [
+     0.38466986260990715,
+     -0.0012179037705612183
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "cc3cca815b584c12bd6be81079a26dcb.png",
+     "85d703ddefc44dafb48032454fa6e0a8.png",
+     "50e546b71db140e38436bccf07a317da.png",
+     "dc283b921e47462a8e6b2aabf35052d9.png",
+     "cb77f762c5884f928799b5b59a797564.png",
+     "d5fbd374e4474be694e24784b3302dec.png",
+     "00fd9cc48c96421f87dc5e7310630d20.png"
+    ],
+    "pixels_sha256": [
+     "4979341acd5bc5108798e59f0b024c4e65c41315f6a3d73cc7df0aad5bfcce72",
+     "b08d341a206741edd871ae02cfa11a3e8ee71cc11bddafd7eb156309d60d83e1",
+     "fcb3db020ff7dc38118ecc21153f2bca97c4e312904010fabfbebcfeabef674d",
+     "b32802ef9b2a293db730a8b0fd4d10f27eb9d4c09bfc016178f76a351c3da79c",
+     "5fbca9c3d16e28a763ce51aa94e4f1b65004b442cf74d22208e5ce6586ad6a77",
+     "c52041d9e2dfccc59b3622a1c2a3df3237a2d0713f02b2c6d9b5b28ddfe90671",
+     "ef43d94ab5a659cfd4afe6960f7c4add618b9280a5f859b065db33fd1b41a9f3"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0181_0050",
+   "scene_id": "scene-0181",
+   "scene_token": "c9c28de6e66442f7921858f1ebbec3ef",
+   "log_token": "6f5b61bfb298454eb6fe7ba279792815",
+   "frame_tokens": [
+    "6de432e28a384bca8fc039410f9f9683",
+    "119b3d68412d439ba8a9cda384a68e78",
+    "8d0a37ddccf848f0a4c69a8c0c418b38",
+    "239f94825d0046e39a490ba24f30d3e5",
+    "9447db305b4944b4bcf643b4b7fc8442",
+    "9b2dba659c8b4d718a710e9f39a08fb6",
+    "0af150269a4840a499218394cd08c0cc"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662806112460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662806162460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662806262460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662806362460.jpg",
+    "samples/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662806412462.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662806512460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-07-27-11-36-48+0800__CAM_FRONT__1532662806612460.jpg"
+   ],
+   "timestamps_us": [
+    1532662806112460,
+    1532662806162460,
+    1532662806262460,
+    1532662806362460,
+    1532662806412462,
+    1532662806512460,
+    1532662806612460
+   ],
+   "actions_ego_xy": [
+    [
+     0.05037629328928932,
+     0.00015797170394854163
+    ],
+    [
+     0.09852537827481697,
+     0.0001681047595499946
+    ],
+    [
+     0.09552180213588493,
+     0.00011674094915602173
+    ],
+    [
+     0.04908305844559638,
+     0.00011746745784962584
+    ],
+    [
+     0.10099150359875611,
+     0.00040802202541792565
+    ],
+    [
+     0.10935391740742913,
+     -0.00028181015869524484
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "6de432e28a384bca8fc039410f9f9683.png",
+     "119b3d68412d439ba8a9cda384a68e78.png",
+     "8d0a37ddccf848f0a4c69a8c0c418b38.png",
+     "239f94825d0046e39a490ba24f30d3e5.png",
+     "9447db305b4944b4bcf643b4b7fc8442.png",
+     "9b2dba659c8b4d718a710e9f39a08fb6.png",
+     "0af150269a4840a499218394cd08c0cc.png"
+    ],
+    "pixels_sha256": [
+     "51fc5dd0a715080d2cc6e7cef73e6a6239af41bf4593dee1f246487892121280",
+     "e807a7d143b448c684e27a831472d19f2eca3ca550a40303664665114e7b4ca4",
+     "15b91246ff8ba239b621fa178e7c4339bbe485db32cba37adf6fd7e217008b3d",
+     "9600a70a36fd7c9845e262d82ac97a595d2499b80d4ee5e702f14ed98c59b158",
+     "e4a60abf1cee4ea38b71a10f5e66be8a2419f8597da5172ccf75d92e8b87862d",
+     "5cf4e4ededd94b6ffb9b21d07fbb2c237f4c53ed9c2fa7dc94177b1c143b310f",
+     "9c792ac6b3c8c3209b518d3006981549f8b8f9a41ec6ec784815783cb438f237"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0730_0200",
+   "scene_id": "scene-0730",
+   "scene_token": "f92422ed4b4e427194a4958ccf15709a",
+   "log_token": "4de1fda752ae4cf8b650a5245734eb4c",
+   "frame_tokens": [
+    "20e4ae8cf0504fa1ad8445075411ccf7",
+    "a931b0ab4c6542ffa48bf1b1d98cfa66",
+    "5002b529ef6d4af1b8330ed5125797ec",
+    "8813c47da8864bf2ae1810f4c68671ea",
+    "376c57804f1f44e2924d356411689f91",
+    "62b3b03596dd481dbf6d479fef0460f6",
+    "acb15540721c4fe098b4da864800852d"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573956862404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573956912404.jpg",
+    "samples/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573957012404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573957112404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573957162532.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573957262404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573957362404.jpg"
+   ],
+   "timestamps_us": [
+    1535573956862404,
+    1535573956912404,
+    1535573957012404,
+    1535573957112404,
+    1535573957162532,
+    1535573957262404,
+    1535573957362404
+   ],
+   "actions_ego_xy": [
+    [
+     1.164082002453254e-05,
+     -0.00015649750198853512
+    ],
+    [
+     1.5651770281087588e-05,
+     -0.0003077171597528928
+    ],
+    [
+     8.420065284006192e-06,
+     -0.00028954635320409055
+    ],
+    [
+     2.3390349886430516e-06,
+     -0.00014125292231093045
+    ],
+    [
+     1.8164529350470505e-06,
+     -0.0002693186443278324
+    ],
+    [
+     7.147030629742603e-08,
+     -0.00025961481300404584
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "20e4ae8cf0504fa1ad8445075411ccf7.png",
+     "a931b0ab4c6542ffa48bf1b1d98cfa66.png",
+     "5002b529ef6d4af1b8330ed5125797ec.png",
+     "8813c47da8864bf2ae1810f4c68671ea.png",
+     "376c57804f1f44e2924d356411689f91.png",
+     "62b3b03596dd481dbf6d479fef0460f6.png",
+     "acb15540721c4fe098b4da864800852d.png"
+    ],
+    "pixels_sha256": [
+     "2139bc1d5eb52041305b1d457128d7b0f1db95857baead44557b7f163d5c391e",
+     "d1d6381b1ffa2834c8b24f385899f7953b853b1c63efe2c63753cd6c5ad86a70",
+     "bcd4f8fa497b0410e5ef66eaec780ca1eff7e6c1ba3819ad2970ad6bd0f42acf",
+     "859c3f07d6a9a2b1a700e718825ca9dedf9908f4c0ff307149831db17370dbde",
+     "4fc5534f5b2c829b32b0b09043de419107057a5ac897a3cb7bf33adf4a8f07ae",
+     "a15ebedb828d4204adcf1e50e3cec77e07430b0627a7ad2a254b0dbfde889f91",
+     "f0bd70fecc0706d3cb16c65789de6b189d94fed07e0820d476c6661b13195209"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0731_0200",
+   "scene_id": "scene-0731",
+   "scene_token": "85e8f6d6743a4897b5e07e685267868e",
+   "log_token": "4de1fda752ae4cf8b650a5245734eb4c",
+   "frame_tokens": [
+    "076f45474570435bb302a2df977be0b5",
+    "5262c19e987f438aaea329b0634facaf",
+    "396fb91454d4493d8f99043c4c4ad85d",
+    "418b47d44aca4c05a9f5965ad51c7267",
+    "9d96fd8892fe4e60a6c1d728a06a457d",
+    "cbbb4a5c4c1c414e830c5f85ca1d0e42",
+    "190ed58ee1c6444cbec5cdfa07675a5a"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573976662404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573976762404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573976862404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573976912404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573977012404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573977112404.jpg",
+    "samples/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573977162404.jpg"
+   ],
+   "timestamps_us": [
+    1535573976662404,
+    1535573976762404,
+    1535573976862404,
+    1535573976912404,
+    1535573977012404,
+    1535573977112404,
+    1535573977162404
+   ],
+   "actions_ego_xy": [
+    [
+     1.1123947380824162e-07,
+     -9.596714102268623e-05
+    ],
+    [
+     1.5880329647111735e-07,
+     -9.312942309737132e-05
+    ],
+    [
+     3.164518929480914e-08,
+     -4.578827265274943e-05
+    ],
+    [
+     6.028828704073344e-08,
+     -8.898637397609054e-05
+    ],
+    [
+     1.9826274281602987e-07,
+     -8.616164662691639e-05
+    ],
+    [
+     8.747647928123985e-08,
+     -4.202318330582528e-05
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "076f45474570435bb302a2df977be0b5.png",
+     "5262c19e987f438aaea329b0634facaf.png",
+     "396fb91454d4493d8f99043c4c4ad85d.png",
+     "418b47d44aca4c05a9f5965ad51c7267.png",
+     "9d96fd8892fe4e60a6c1d728a06a457d.png",
+     "cbbb4a5c4c1c414e830c5f85ca1d0e42.png",
+     "190ed58ee1c6444cbec5cdfa07675a5a.png"
+    ],
+    "pixels_sha256": [
+     "9401f7d1da927a5ae7d173629b17113b24c75ddf9a31accb63736dc81d0eb022",
+     "28742d7b1aa7b7665305d986d67adb4c670cabab6806b598c0b86231cde79198",
+     "0964b50d22c90c84328a8731190fdc597bc0e82c0298687644cdda75839ddefc",
+     "66624efbb3338b73744fe56405df0f1f450ebd8d0738c3aab59d5bafef17f71c",
+     "a4d7e51e0fc3dbd1f2075f9506955cf1f1c669919f87e0eb12424668a929c806",
+     "8616b10a46fe8c2001133f7d524cffbcae67e0e52fba64d511e779419ce63af8",
+     "9ee1073b5746827402791fcbe462a4a892816b6e8a3094e2bb9d0899b491fffa"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0700_0000",
+   "scene_id": "scene-0700",
+   "scene_token": "41e0d46e715a476ab05e4d62e415ea41",
+   "log_token": "4de1fda752ae4cf8b650a5245734eb4c",
+   "frame_tokens": [
+    "d8d03214c68b4c21b4c34c3ef86ef50a",
+    "4642c7f6fee043a6a0fffd38d08505ed",
+    "39dd4306ff7e4adaa407a0dfad309567",
+    "d392c55d936a40fab3793e0eb096bf4c",
+    "a77363f2ec3e49c69469284977590377",
+    "b3b4dce5536849cda4fc0bf9c7995dd3",
+    "ffb46f5c6ac745d088b4e7c3ebbeeaf5"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573154912404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573155012404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573155112404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573155162404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573155262404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573155362404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573155412404.jpg"
+   ],
+   "timestamps_us": [
+    1535573154912404,
+    1535573155012404,
+    1535573155112404,
+    1535573155162404,
+    1535573155262404,
+    1535573155362404,
+    1535573155412404
+   ],
+   "actions_ego_xy": [
+    [
+     0.4739365095809748,
+     -0.0018796875130732138
+    ],
+    [
+     0.4701578043544835,
+     -0.004777310468728618
+    ],
+    [
+     0.2354955910332025,
+     -0.0035593089195137956
+    ],
+    [
+     0.47289230059052223,
+     -0.005533727064339494
+    ],
+    [
+     0.46410290791934605,
+     -0.008636831415786472
+    ],
+    [
+     0.2317505037552169,
+     -0.004188557433429579
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "d8d03214c68b4c21b4c34c3ef86ef50a.png",
+     "4642c7f6fee043a6a0fffd38d08505ed.png",
+     "39dd4306ff7e4adaa407a0dfad309567.png",
+     "d392c55d936a40fab3793e0eb096bf4c.png",
+     "a77363f2ec3e49c69469284977590377.png",
+     "b3b4dce5536849cda4fc0bf9c7995dd3.png",
+     "ffb46f5c6ac745d088b4e7c3ebbeeaf5.png"
+    ],
+    "pixels_sha256": [
+     "270d872783e3cc3e1bd8ea8aa288b3136fc70011c9ac67d1997e1cac1a68ff41",
+     "c2fe6e5be23c97e138a27f11a10f7e00c98ff41001d881785ea1f6b406651e9a",
+     "6ca5338317f49bc2ef3cc0da1bfa80e4a33d93c988ec2aaa36a12937b3c060d8",
+     "514cc318c5a8d3ba268e345fed278c14315811cf05862a0503bc614ece38bd45",
+     "1b3bc5d0be5e574424442223878669a0187980fafde01a155819f6459787144c",
+     "36fff4e5959a99399158be450e4486e4dc0aea54d17c374eb86e155f58b9e255",
+     "74db3e76bb048820d2d84f6774812c49d4da89f66d2b4cbe3e02a5a7302616ef"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0712_0200",
+   "scene_id": "scene-0712",
+   "scene_token": "fb20ca9935c4439e8125ba830abcf9dc",
+   "log_token": "4de1fda752ae4cf8b650a5245734eb4c",
+   "frame_tokens": [
+    "2bbd1d1954574a419ff99a095d8352d7",
+    "7d662b74e7894d6996aeae9e3ffeb4b0",
+    "83adc8b91be648e68c86cd0f38acc2f6",
+    "a1c5218c596542b0a0f3386df614177e",
+    "ebb5d51ccb4a44e09ae745f927776f88",
+    "39a477ede6654487aebd94a054d9ba0c",
+    "d17db3a1479c45dcbe5a327ede5fcfe7"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573507112404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573507162404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573507262404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573507362404.jpg",
+    "samples/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573507412404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573507512404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573507612404.jpg"
+   ],
+   "timestamps_us": [
+    1535573507112404,
+    1535573507162404,
+    1535573507262404,
+    1535573507362404,
+    1535573507412404,
+    1535573507512404,
+    1535573507612404
+   ],
+   "actions_ego_xy": [
+    [
+     0.3100946813737481,
+     -0.002623657472568014
+    ],
+    [
+     0.5966635151176505,
+     -0.002825721454597474
+    ],
+    [
+     0.5930150800374273,
+     -0.003972609681817674
+    ],
+    [
+     0.30524177285362847,
+     -0.0023801212400353933
+    ],
+    [
+     0.6188380628231382,
+     -0.005262916922826322
+    ],
+    [
+     0.6165154906345836,
+     -0.006894005179695906
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "2bbd1d1954574a419ff99a095d8352d7.png",
+     "7d662b74e7894d6996aeae9e3ffeb4b0.png",
+     "83adc8b91be648e68c86cd0f38acc2f6.png",
+     "a1c5218c596542b0a0f3386df614177e.png",
+     "ebb5d51ccb4a44e09ae745f927776f88.png",
+     "39a477ede6654487aebd94a054d9ba0c.png",
+     "d17db3a1479c45dcbe5a327ede5fcfe7.png"
+    ],
+    "pixels_sha256": [
+     "86cab0c23e04093e8dd4a2c7679fcb19584c59be08291f9a5a49dfd9b24dfe85",
+     "d0682d9157103687d55461902176d601329fe1d1efb2c5a66105e6d2c83d9d61",
+     "a3b25cb3d36f7aee4171ec847773e7a78315733d1b1d626aa5977e729a8d2265",
+     "80a9971857451cbd3de1a957eb610a8a9157efaf7276b97be7fcf2219ceacb03",
+     "2b5b72379db1b25cfa680c222b7783a3e7e29635a3d86cbc0bcd0e935d29c228",
+     "79569f47bbe1b39404ade61c4e6fb6130f0667a3a756956d72416520267b4c8c",
+     "13bc5a2ab2c40782322d9d256013625ad52c10e064d186ecd597dfc94d9b3912"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0695_0000",
+   "scene_id": "scene-0695",
+   "scene_token": "1466f33b56704942a368fa03d10708dd",
+   "log_token": "4de1fda752ae4cf8b650a5245734eb4c",
+   "frame_tokens": [
+    "6ab8747a3f9541fbba16fdcb95421b43",
+    "c52296c36d7e49a495b3f7e502ec75c6",
+    "629a515226b0421cae852818b56543cf",
+    "c42f8d477d7a47b58f4f5463426008f4",
+    "208c81fe0c0440bab5591ada4c77320d",
+    "8eb85f40fa62499d96255ccef8a78444",
+    "a5f09896811741ad9e2721c0aa6aeba3"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573054862404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573054912404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573055012404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573055112404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573055162404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573055262404.jpg",
+    "samples/CAM_FRONT/n008-2018-08-29-16-04-13-0400__CAM_FRONT__1535573055362404.jpg"
+   ],
+   "timestamps_us": [
+    1535573054862404,
+    1535573054912404,
+    1535573055012404,
+    1535573055112404,
+    1535573055162404,
+    1535573055262404,
+    1535573055362404
+   ],
+   "actions_ego_xy": [
+    [
+     0.25868136672484865,
+     -0.0026909348675482215
+    ],
+    [
+     0.8842827865608767,
+     -0.008113019226613803
+    ],
+    [
+     0.8585110702838935,
+     -0.005740415310879994
+    ],
+    [
+     0.430057923984232,
+     -0.0036295317984452596
+    ],
+    [
+     0.8782627438711067,
+     -0.008789646836423325
+    ],
+    [
+     0.8839477582154773,
+     -0.01094255076082068
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "6ab8747a3f9541fbba16fdcb95421b43.png",
+     "c52296c36d7e49a495b3f7e502ec75c6.png",
+     "629a515226b0421cae852818b56543cf.png",
+     "c42f8d477d7a47b58f4f5463426008f4.png",
+     "208c81fe0c0440bab5591ada4c77320d.png",
+     "8eb85f40fa62499d96255ccef8a78444.png",
+     "a5f09896811741ad9e2721c0aa6aeba3.png"
+    ],
+    "pixels_sha256": [
+     "3e94cf598f47a59bf7f4cc79f2d3e50b26554a121f0fcd111006de8a0c1a4664",
+     "ba9543e9b10a2396b97b9c7cd2d60393cdbfe767727e744f70b9087b8c35f08f",
+     "7a064ff795eb2caa0d7cd824c6eaab7ad6c5a12b2a0d6f460964e42d7e59c453",
+     "6960b007459eec4aa4c175f1fb4451481c436ac314bc1a0829f92b352b230814",
+     "c6c82a44d757cfdf210c751dee22eeb09be41d3627e3319c07cf45dc8638b399",
+     "f95f86f7de95e8c7e57246d1331da7b9b6e1f69c7fc84f9df662d3498cf4a2cb",
+     "a0907766028826412f91102424fd6db89d4aedf9cfb5531599a9f10bb1447c6e"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0626_0100",
+   "scene_id": "scene-0626",
+   "scene_token": "3ada261efee347cba2e7557794f1aec8",
+   "log_token": "01ebe4444f624b4699ec6bf58837b153",
+   "frame_tokens": [
+    "a398204848b74738a3135b115b34d1ad",
+    "8d63970d39ac496b9da9f7ae34f00b37",
+    "0991690ded4a4d30b88a4ae9a370e16e",
+    "0124f6cf02a64f648bc958ccc761fe8b",
+    "cbad5c8e6b714161ad7e746c5e1678d7",
+    "94aa9bf1558d4938a5427dcef9c05b7b",
+    "43fbb84c05dd4e64802640e41fcded29"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295842262404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295842362404.jpg",
+    "samples/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295842412404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295842512404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295842612404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295842662404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295842762404.jpg"
+   ],
+   "timestamps_us": [
+    1537295842262404,
+    1537295842362404,
+    1537295842412404,
+    1537295842512404,
+    1537295842612404,
+    1537295842662404,
+    1537295842762404
+   ],
+   "actions_ego_xy": [
+    [
+     0.6357308860137796,
+     -0.01196265659244189
+    ],
+    [
+     0.3181038619951794,
+     -0.008626449939978686
+    ],
+    [
+     0.649724539119579,
+     -0.010851976019929821
+    ],
+    [
+     0.6592398608155654,
+     -0.007521802632250774
+    ],
+    [
+     0.3258514840457671,
+     -0.006044745952585695
+    ],
+    [
+     0.6377055354677307,
+     -0.014187889916940533
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "a398204848b74738a3135b115b34d1ad.png",
+     "8d63970d39ac496b9da9f7ae34f00b37.png",
+     "0991690ded4a4d30b88a4ae9a370e16e.png",
+     "0124f6cf02a64f648bc958ccc761fe8b.png",
+     "cbad5c8e6b714161ad7e746c5e1678d7.png",
+     "94aa9bf1558d4938a5427dcef9c05b7b.png",
+     "43fbb84c05dd4e64802640e41fcded29.png"
+    ],
+    "pixels_sha256": [
+     "659a9f40e6cb9c2fc45d4206b25defbdd6a6459d5c074f616a2223e52a32c0ef",
+     "8a18a5f1410e85dec84904a9d0511891c1ff5631fa02e918fab977c8819e55fd",
+     "a5afa6833799f14caa3813f47c3fb9385846641ed1b6a3bf82a1dbf1a99c5808",
+     "a3303ff50f0865fbb7e4d9bc38162582d55cd1bfef9a6da31ffc100c82f1fc71",
+     "ff128e2b357a6867207eeb129748ee044bc4dacc2cd79849b528717fd5a333d6",
+     "e45e829ede0d6bf74cccded676ccbeb95abfd5c2fb583ac231ad198d7a97402a",
+     "0773782a3d15ef9eb4b5c9196e21fc77234cd310b539071aca82345fe0d3e1d5"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0627_0100",
+   "scene_id": "scene-0627",
+   "scene_token": "5301151d8b6a42b0b252e95634bd3995",
+   "log_token": "01ebe4444f624b4699ec6bf58837b153",
+   "frame_tokens": [
+    "2d6f6364f1eb4cd38c232a6430f3437a",
+    "0dd7c1eba1604bcaac4bc57327c0ce16",
+    "ab18a37329b74f30bbfd899c9257f614",
+    "58602aaf3db24b9bbfbfc234fefcf446",
+    "01c9c38958a04192a3b82d92c75bf7c3",
+    "edb1f708b2154ccf892db2eafc25a4a8",
+    "005743e357844d98a2d9052de750aa39"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295882262404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295882362404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295882412404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295882512404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295882612404.jpg",
+    "samples/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295882662404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295882762404.jpg"
+   ],
+   "timestamps_us": [
+    1537295882262404,
+    1537295882362404,
+    1537295882412404,
+    1537295882512404,
+    1537295882612404,
+    1537295882662404,
+    1537295882762404
+   ],
+   "actions_ego_xy": [
+    [
+     0.6895191133377331,
+     -0.0020489205142990574
+    ],
+    [
+     0.34784092467075367,
+     -0.0007858952647873951
+    ],
+    [
+     0.6938456967329382,
+     -0.0037840662537434455
+    ],
+    [
+     0.6961237683743171,
+     -0.001737035796557762
+    ],
+    [
+     0.345485360055031,
+     -0.0012138083569496472
+    ],
+    [
+     0.7037963838432136,
+     -0.003617447315208966
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "2d6f6364f1eb4cd38c232a6430f3437a.png",
+     "0dd7c1eba1604bcaac4bc57327c0ce16.png",
+     "ab18a37329b74f30bbfd899c9257f614.png",
+     "58602aaf3db24b9bbfbfc234fefcf446.png",
+     "01c9c38958a04192a3b82d92c75bf7c3.png",
+     "edb1f708b2154ccf892db2eafc25a4a8.png",
+     "005743e357844d98a2d9052de750aa39.png"
+    ],
+    "pixels_sha256": [
+     "d2f01a7d15c7e4ee1d530f80ef4af25eb3423c678fa351a3b844347ed8641c5f",
+     "6533e957165da74d72c518c02bd595aa6bcd94a79a22f1cceb23fc2b529df4e3",
+     "cec455115ffdf86c773eb4793e1c4b486b5784003fbbb7c819f67cfaa5dbf27e",
+     "e31c2f94e1e1f43c3c381052b6065c27c4b8aaf14509679bed4b8b2952ff9459",
+     "db60bd78d90cb87b347b05f79646b99a50a822417f85a2b2a0a3931fe33244d3",
+     "36fa497798053dbe54cff48f9e3e3b23c190507a8c338a95fd3c7fef4cebbdb7",
+     "ad0d102ec8af35ec8a80d658785bf5f3f7b3801a04ff7c5063184304a0952c01"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0636_0100",
+   "scene_id": "scene-0636",
+   "scene_token": "19d97841d6f64eba9f6eb9b6e8c257dc",
+   "log_token": "01ebe4444f624b4699ec6bf58837b153",
+   "frame_tokens": [
+    "9e4a6d973a0442e1b6eb5fe624e9e779",
+    "585bca287952422598fe28979a8db60e",
+    "5c4fcddf34c54efc888247bb6a44ef5d",
+    "e065507f93484939a2d07e6515f071ce",
+    "94b6d2acc65a4f149b6669aa76ac45c3",
+    "868169e1b8514af1b57f2a24eeca457a",
+    "90df5e0a8e604991b47796096d8e0278"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537296124412404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537296124512404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537296124612404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537296124662404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537296124762404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537296124862404.jpg",
+    "samples/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537296124912404.jpg"
+   ],
+   "timestamps_us": [
+    1537296124412404,
+    1537296124512404,
+    1537296124612404,
+    1537296124662404,
+    1537296124762404,
+    1537296124862404,
+    1537296124912404
+   ],
+   "actions_ego_xy": [
+    [
+     0.02498100223951394,
+     -0.002049430814751365
+    ],
+    [
+     0.009914576078000902,
+     -0.0025628358629469637
+    ],
+    [
+     0.0019962103957595224,
+     -0.001296647848162621
+    ],
+    [
+     -0.0025992548911951893,
+     -0.002483589468485336
+    ],
+    [
+     -0.0059385951934722535,
+     -0.0023498188700844342
+    ],
+    [
+     -0.0029723519772347903,
+     -0.001115630211063443
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "9e4a6d973a0442e1b6eb5fe624e9e779.png",
+     "585bca287952422598fe28979a8db60e.png",
+     "5c4fcddf34c54efc888247bb6a44ef5d.png",
+     "e065507f93484939a2d07e6515f071ce.png",
+     "94b6d2acc65a4f149b6669aa76ac45c3.png",
+     "868169e1b8514af1b57f2a24eeca457a.png",
+     "90df5e0a8e604991b47796096d8e0278.png"
+    ],
+    "pixels_sha256": [
+     "ea6031d5350a9f4d6aba9523df7356f5e7e22a1e519e54fa5c91e2ef4e771832",
+     "926e4c74b1d2dfe117a1f24cbb0525724cb322636548fd14f1a1c14c6e1c2252",
+     "7e35cc2133b7e4f9dfbbc4b80ec8867f23d9f3b54cd4c42dc2e58d648bf3ca1b",
+     "b57827d0b508ad1467b8f2a1db3d043e8120c8427575e1d0cd0edde59fc5c4ac",
+     "5090789fc41857e7458462f98b102ab0b6d2347bbdef58c81132ea0257707aca",
+     "339592c98f41349ae171658afcc962b6bfc78e0c52266dfc436b28cfa0936d7d",
+     "0e8f45a7b140059cd65df03d66d70120dcc55017bfdffb4b1cf6d9d8b8f62be8"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0637_0000",
+   "scene_id": "scene-0637",
+   "scene_token": "3045ed93c2534ec2a5cabea89b186bd9",
+   "log_token": "01ebe4444f624b4699ec6bf58837b153",
+   "frame_tokens": [
+    "1180915d9b57488c94500f5a17892f5a",
+    "8368f228235a418fb60890592f5f7de5",
+    "41030f07a66445cc942e61f720fc3ed4",
+    "de1b7ce5cb8240d2a0ccf113fc01021c",
+    "01ae6638800745c6a6db679c999529d3",
+    "93e66347558a41d390e2ee0e14a1cc0a",
+    "8c1511d3fa3a42198d2ddfa95208585a"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537296175862404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537296175912404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537296176012404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537296176112404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537296176162404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537296176262404.jpg",
+    "samples/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537296176362404.jpg"
+   ],
+   "timestamps_us": [
+    1537296175862404,
+    1537296175912404,
+    1537296176012404,
+    1537296176112404,
+    1537296176162404,
+    1537296176262404,
+    1537296176362404
+   ],
+   "actions_ego_xy": [
+    [
+     0.4023696019952005,
+     -0.004520166990963359
+    ],
+    [
+     0.8150290489475556,
+     -0.008183832184853856
+    ],
+    [
+     0.804838871779429,
+     -0.005440718641490372
+    ],
+    [
+     0.41164808692140464,
+     -0.00229264694584122
+    ],
+    [
+     0.8120749958906791,
+     -0.005168868955444494
+    ],
+    [
+     0.8158729006202861,
+     -0.0063361175325422625
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "1180915d9b57488c94500f5a17892f5a.png",
+     "8368f228235a418fb60890592f5f7de5.png",
+     "41030f07a66445cc942e61f720fc3ed4.png",
+     "de1b7ce5cb8240d2a0ccf113fc01021c.png",
+     "01ae6638800745c6a6db679c999529d3.png",
+     "93e66347558a41d390e2ee0e14a1cc0a.png",
+     "8c1511d3fa3a42198d2ddfa95208585a.png"
+    ],
+    "pixels_sha256": [
+     "8f79cbe475b714092dffa488b05b31d418e6bf1cff046ab64c474b1bc3b1de90",
+     "0bb56e56baf83aab4ff7f2aeab6a54490d106df667a8f7affb8fae69e60a2b6e",
+     "b9e52ec00cb9317ed3a2fb8b85a69f5c1a667d47bc12970b8db1add324fdff04",
+     "a70d39d279b4d25f01cbeee0399a1ed5c290aa90b9c117dec0c77b7dc20fdbf9",
+     "41afc05d334afb42e4e31633506daa5be92e4ea4678a851c96774c2ac24cbc0e",
+     "455815b3693b50070586568792c0af0ee1118a52bd3f5f582f673b5f294b8d31",
+     "aef23d327778cda82aa19224d601912f326f013f9a2f215bee332fe6d5627c97"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0630_0000",
+   "scene_id": "scene-0630",
+   "scene_token": "9068766ee9374872a380fe75fcfb299e",
+   "log_token": "01ebe4444f624b4699ec6bf58837b153",
+   "frame_tokens": [
+    "b825e848d193435ebf933168d03bdd38",
+    "f9d38364c3144aba915f93f105b16e49",
+    "00688bfcfedc418ba58a7f961530efaf",
+    "8731c4422a79469d83a331d33aea4dc9",
+    "6e7ba3a06a2a441292a864669ce88979",
+    "230aa8049d154a6cb36bd06ca349c404",
+    "24e886f5ad214b7596401e4dfe833ed5"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295946862404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295946912404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295947012404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295947112404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295947162404.jpg",
+    "sweeps/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295947262404.jpg",
+    "samples/CAM_FRONT/n008-2018-09-18-14-35-12-0400__CAM_FRONT__1537295947362404.jpg"
+   ],
+   "timestamps_us": [
+    1537295946862404,
+    1537295946912404,
+    1537295947012404,
+    1537295947112404,
+    1537295947162404,
+    1537295947262404,
+    1537295947362404
+   ],
+   "actions_ego_xy": [
+    [
+     0.3986222060818462,
+     -0.0009300760706150712
+    ],
+    [
+     0.7912212502426643,
+     0.0008440206112439452
+    ],
+    [
+     0.7738201331840552,
+     -0.00637208105559256
+    ],
+    [
+     0.3996376852892621,
+     -0.002721069061987519
+    ],
+    [
+     0.8016203197876799,
+     -0.00544565096063282
+    ],
+    [
+     0.7958541061346422,
+     -0.004081094407756947
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "b825e848d193435ebf933168d03bdd38.png",
+     "f9d38364c3144aba915f93f105b16e49.png",
+     "00688bfcfedc418ba58a7f961530efaf.png",
+     "8731c4422a79469d83a331d33aea4dc9.png",
+     "6e7ba3a06a2a441292a864669ce88979.png",
+     "230aa8049d154a6cb36bd06ca349c404.png",
+     "24e886f5ad214b7596401e4dfe833ed5.png"
+    ],
+    "pixels_sha256": [
+     "1fb26033d61943db9228f7b459cd85d67b21fc410735c0481e15f7adf8f2e2e2",
+     "3d7c30d6b86db2cd7fd5b597e0e8257fb0551e8d3647a02c649603dcdf2cad15",
+     "1e67c6c7b726e7add27308103803985c5aaad51e85de9a9f8f6c43e5a9c2bc35",
+     "6fe074bbd9c93c82b5133bc9fd60a15141d5638f4370e0f8c9c772e5ec787236",
+     "d8da77645ba8d4b86082fceb8554a170b1819973179af0fd7e4004f21b209100",
+     "e5376e90d7592ea68c8ec3fce7d0779a18bd371e14304aac683200a6328c4651",
+     "c16de79cb8de29387ba27bca817249d1492d5129ab03940ff042595067b05213"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0931_0000",
+   "scene_id": "scene-0931",
+   "scene_token": "e60ef590e3614187b7800db3e5284e1a",
+   "log_token": "f61e86a4241b484484da143725dce8fc",
+   "frame_tokens": [
+    "03ee7fbdd18e45ff97f57977fb704b7f",
+    "c5a9a8ac757c4ddcb6b1d7668c115b33",
+    "bd152f8dea984d87a14c446d6b4506ff",
+    "3c740fbba2fc43c68d06f704fc7be4b1",
+    "20d3e22d045e477d8c61d440b51afa7f",
+    "57609aa99dc44497bbf977d8e4795713",
+    "82de8620160e44acaf3ea3a09bd02dee"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985049912460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985050012460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985050112460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985050162460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985050262460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985050362460.jpg",
+    "samples/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985050412460.jpg"
+   ],
+   "timestamps_us": [
+    1538985049912460,
+    1538985050012460,
+    1538985050112460,
+    1538985050162460,
+    1538985050262460,
+    1538985050362460,
+    1538985050412460
+   ],
+   "actions_ego_xy": [
+    [
+     0.4942142997225946,
+     -0.006287077620556122
+    ],
+    [
+     0.4975149782800132,
+     -0.00485255127669601
+    ],
+    [
+     0.2566237277804688,
+     -0.002636397007541841
+    ],
+    [
+     0.4907746663365514,
+     -0.010292703792997598
+    ],
+    [
+     0.5005836178540033,
+     -0.010385715393070684
+    ],
+    [
+     0.25838205798018166,
+     -0.002628427646731435
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "03ee7fbdd18e45ff97f57977fb704b7f.png",
+     "c5a9a8ac757c4ddcb6b1d7668c115b33.png",
+     "bd152f8dea984d87a14c446d6b4506ff.png",
+     "3c740fbba2fc43c68d06f704fc7be4b1.png",
+     "20d3e22d045e477d8c61d440b51afa7f.png",
+     "57609aa99dc44497bbf977d8e4795713.png",
+     "82de8620160e44acaf3ea3a09bd02dee.png"
+    ],
+    "pixels_sha256": [
+     "2762a732cd3eb450a02032cd77ce0b1cf700c1fd417a71358662be84291f0886",
+     "56bdb716f7c5050b0993fde5c7c8cdbb24779b2e2b4da6a0a3b56b7daf9844ef",
+     "e3ff9591f15e9025b8c4a5cb1f24db237a71017497df5ede448522e609cc27d0",
+     "b78ae6f2871fcf9e8b0be579be1247be385f1d3ca2ff833fc3b00e34f828b20c",
+     "ad4909b5732de55c43988a77e4c4e8023e40951ae3736b2fae5ac180bbce5e23",
+     "73d874368ba96cb20dcf8ff0a82c3128bf7bacc0b750cbb1e863d47ab5c73afb",
+     "69950560e026fc59de5242b7ec7f610b54ca8902afe06a3b43b49fa58143f32f"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0928_0150",
+   "scene_id": "scene-0928",
+   "scene_token": "e036014a715945aa965f4ec24e8639c9",
+   "log_token": "f61e86a4241b484484da143725dce8fc",
+   "frame_tokens": [
+    "79fdfded699c4ecc98ca9141b9b993ca",
+    "7b8e5840a1e8477288547cbbc4395c52",
+    "eaa38b53fa9f41c68c3d0b26654d1c0c",
+    "579659ec839347e1871f356e5ed3fcb5",
+    "fe2a8d8a75424ce3b9b39dc34780b94d",
+    "19e47f8cad284c13b2c2e1f603462eae",
+    "1972be68dfcc4da48e19243141439355"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985002362460.jpg",
+    "samples/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985002412460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985002512460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985002612460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985002662460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985002762460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985002862460.jpg"
+   ],
+   "timestamps_us": [
+    1538985002362460,
+    1538985002412460,
+    1538985002512460,
+    1538985002612460,
+    1538985002662460,
+    1538985002762460,
+    1538985002862460
+   ],
+   "actions_ego_xy": [
+    [
+     0.1882116595263001,
+     -0.0006109893125445711
+    ],
+    [
+     0.36909728774065065,
+     -5.316990235740976e-05
+    ],
+    [
+     0.36320303546961635,
+     -0.0018985643951632911
+    ],
+    [
+     0.18465581563899983,
+     0.0006996401168644084
+    ],
+    [
+     0.3663647787559872,
+     0.000985982912127566
+    ],
+    [
+     0.3521785218460746,
+     0.000173781556546012
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "79fdfded699c4ecc98ca9141b9b993ca.png",
+     "7b8e5840a1e8477288547cbbc4395c52.png",
+     "eaa38b53fa9f41c68c3d0b26654d1c0c.png",
+     "579659ec839347e1871f356e5ed3fcb5.png",
+     "fe2a8d8a75424ce3b9b39dc34780b94d.png",
+     "19e47f8cad284c13b2c2e1f603462eae.png",
+     "1972be68dfcc4da48e19243141439355.png"
+    ],
+    "pixels_sha256": [
+     "bfeb99cd0ff6ab5cf287c7911fc1b9f29d3498ad3d380655d637e752ddd957f2",
+     "1c16b36f79e2875a338fcf92ff475e79014efc07081ccf0fcb624d3f16275332",
+     "89dcaa941a2c2c7dd7156b367ed2fd8dce0f37871277c474ed7fed848fa035a9",
+     "c7d71d3feb3a16745ea36b2665d3f07e5ff088d1da1c0252c4d88246ff57e42e",
+     "d15885ec3486e1475195bed7a1d52d8bfba2807289919e3b9887636c5c160706",
+     "ab4c70af59f65d6204627d11980db6b30c9150021055d5fa1a835d22fde53f71",
+     "99ac0671d21f0c9f7e8bb7ba76084831a752b12001bb1de06281b5d27096dc8d"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0930_0100",
+   "scene_id": "scene-0930",
+   "scene_token": "a04daf2d0f194b2ab2ff2a47dfebc1d7",
+   "log_token": "f61e86a4241b484484da143725dce8fc",
+   "frame_tokens": [
+    "4783af8ff11146f1b3473edb3f3e394e",
+    "e2366ac99d92452488d02977ca1831a9",
+    "48387036f0ca497fb9f1ed153ab61a53",
+    "ac73c0546dff4d0f881b21b2d3b152d3",
+    "96df368d361d4bcaaac40d954bff8b1f",
+    "4b382f30088d41e2ba0bca32cdc2bab0",
+    "4aef693834d4484d9b7e3d0482c76d0f"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985038162460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985038262460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985038362460.jpg",
+    "samples/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985038412460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985038512460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985038612460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538985038662460.jpg"
+   ],
+   "timestamps_us": [
+    1538985038162460,
+    1538985038262460,
+    1538985038362460,
+    1538985038412460,
+    1538985038512460,
+    1538985038612460,
+    1538985038662460
+   ],
+   "actions_ego_xy": [
+    [
+     0.5408719168064462,
+     -0.0059361328156744
+    ],
+    [
+     0.5253464140085807,
+     -0.002841103922093191
+    ],
+    [
+     0.26524681081206575,
+     -0.0004169583420591261
+    ],
+    [
+     0.5333356749720465,
+     -0.002881475909809722
+    ],
+    [
+     0.5381545056491362,
+     -0.002167259496038604
+    ],
+    [
+     0.27065262705327403,
+     -0.0011203834480331826
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "4783af8ff11146f1b3473edb3f3e394e.png",
+     "e2366ac99d92452488d02977ca1831a9.png",
+     "48387036f0ca497fb9f1ed153ab61a53.png",
+     "ac73c0546dff4d0f881b21b2d3b152d3.png",
+     "96df368d361d4bcaaac40d954bff8b1f.png",
+     "4b382f30088d41e2ba0bca32cdc2bab0.png",
+     "4aef693834d4484d9b7e3d0482c76d0f.png"
+    ],
+    "pixels_sha256": [
+     "4d83e22d5002cd90b9a6902522181ccbce3d4abfff7952a2362ed24b3c82983a",
+     "2ef72e06967c868d226840199c4054fbd3cb2a4ba216e10aa5baf892f17e22df",
+     "354090bc58c81366a64f4dc2e2ff3a2830606d4888afedf1eb64341cee520764",
+     "95d9533d87e37e3e29b2ca1828abfe49d138e2f2deb59586ed14d32e9ee7df9d",
+     "d179c7a3d004e0d2ef56f3921cfd00413e8b386dc875f31fdb150b0f2e376948",
+     "0f8ea694e697076208c07633d7f4e53ed4ab3ee0ac34e99784e7366f6dd067e1",
+     "00e201279a15a3597e778f43931c2bb0a558366116ede629d18c4b90239939b1"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0927_0150",
+   "scene_id": "scene-0927",
+   "scene_token": "5521cd85ed0e441f8d23938ed09099dd",
+   "log_token": "f61e86a4241b484484da143725dce8fc",
+   "frame_tokens": [
+    "f96ea5bb5e6441ddae959484a771f25e",
+    "be87f4f713c54693ac9c1a58ba5dfd06",
+    "3ae7213b979a48fba218540cee3cbbc2",
+    "0212a098b30b47baba55efa770f08eef",
+    "5911893fa0da4c74a1fd0200b4f661f6",
+    "685f89a6b7a24c5cb69b4fe4c8d9ad61",
+    "022b4a61638a4cb786527e5224100b19"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538984982362460.jpg",
+    "samples/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538984982412460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538984982512460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538984982612460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538984982662460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538984982762460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538984982862460.jpg"
+   ],
+   "timestamps_us": [
+    1538984982362460,
+    1538984982412460,
+    1538984982512460,
+    1538984982612460,
+    1538984982662460,
+    1538984982762460,
+    1538984982862460
+   ],
+   "actions_ego_xy": [
+    [
+     0.1587103630845283,
+     -0.00140334775987018
+    ],
+    [
+     0.32623669151773094,
+     -0.0036853685811131243
+    ],
+    [
+     0.32734283286101984,
+     -0.0028680324879070684
+    ],
+    [
+     0.16400170805506326,
+     -0.0014436270744919988
+    ],
+    [
+     0.33548716863691597,
+     -0.0037710690572671512
+    ],
+    [
+     0.33881348471304273,
+     -0.0038285801271324416
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "f96ea5bb5e6441ddae959484a771f25e.png",
+     "be87f4f713c54693ac9c1a58ba5dfd06.png",
+     "3ae7213b979a48fba218540cee3cbbc2.png",
+     "0212a098b30b47baba55efa770f08eef.png",
+     "5911893fa0da4c74a1fd0200b4f661f6.png",
+     "685f89a6b7a24c5cb69b4fe4c8d9ad61.png",
+     "022b4a61638a4cb786527e5224100b19.png"
+    ],
+    "pixels_sha256": [
+     "176531684a8515611b3b22b2e47e147935098e09c5f1d14c46f73c898e3c9808",
+     "5a5436bc975a6d225771e8bfabe2373f7fd010b92df5690aa3508b5d79f03192",
+     "08ba77407ee426374ab48407991ee183f8cde0166629b50e38276ec661f0d88c",
+     "b1eac3a87266fdc23c96eeeeb0d9c912a5a126b53c5262ef3cada9d3f08a71d2",
+     "6350ead572f323baa663cb3c4e5d2b4d4fe52486a152b119556f9c1821346186",
+     "370468bfeb972e4b03642993564f67be023227e9b701944961b1c88ee9cd7e05",
+     "8c47f33ddc9b1fc40190529e85d9948bdc22bdd9bc8d3ce8afcbf99af0d8878d"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0927_0000",
+   "scene_id": "scene-0927",
+   "scene_token": "5521cd85ed0e441f8d23938ed09099dd",
+   "log_token": "f61e86a4241b484484da143725dce8fc",
+   "frame_tokens": [
+    "4fb3d2de2ac34a378b67114c415d2723",
+    "0c833d278c564b19865a642c2fe7baaa",
+    "f1d66e8baefe41db8eda117adbadc49b",
+    "86eb021a799d4653879755bcdfcc7b83",
+    "7507e7c73f7c433080d9df8267d0de2e",
+    "467c03f218ea4a64bfb20795fa2d0dcd",
+    "e5758be57c62472a97fe2a020721c719"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538984969862460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538984969912460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538984970012460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538984970112460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538984970162463.jpg",
+    "sweeps/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538984970262460.jpg",
+    "samples/CAM_FRONT/n015-2018-10-08-15-44-23+0800__CAM_FRONT__1538984970362460.jpg"
+   ],
+   "timestamps_us": [
+    1538984969862460,
+    1538984969912460,
+    1538984970012460,
+    1538984970112460,
+    1538984970162463,
+    1538984970262460,
+    1538984970362460
+   ],
+   "actions_ego_xy": [
+    [
+     0.2854901489161011,
+     -0.0014552309161559862
+    ],
+    [
+     0.5573017340366493,
+     -0.0031796365790690007
+    ],
+    [
+     0.5680900590834794,
+     -0.004997662978053041
+    ],
+    [
+     0.2870681559317244,
+     -0.001868503140081773
+    ],
+    [
+     0.5839032297756122,
+     -0.0018855612478276829
+    ],
+    [
+     0.5898090297657452,
+     -0.001447757098054503
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "4fb3d2de2ac34a378b67114c415d2723.png",
+     "0c833d278c564b19865a642c2fe7baaa.png",
+     "f1d66e8baefe41db8eda117adbadc49b.png",
+     "86eb021a799d4653879755bcdfcc7b83.png",
+     "7507e7c73f7c433080d9df8267d0de2e.png",
+     "467c03f218ea4a64bfb20795fa2d0dcd.png",
+     "e5758be57c62472a97fe2a020721c719.png"
+    ],
+    "pixels_sha256": [
+     "d24867f564784c0c6eb4a0617bf3e53490ba0abcccbc853e8da2f5ad7687c76c",
+     "60f99439699a9bddc83e561939be2a855b312541bfa99b07537bfeff91bf935e",
+     "19b1f4d2a21bb3bac8a7d4920ccb75f28789e048de68eca809e1b047d4936701",
+     "487d32d72f501c154fbdd4d8f912a9f03337a2962f09d8b0d715bacd3980cd3f",
+     "0d63395353a3526da71a97d19b9e8098ed1c2155fe15c1731fbd8488a1ba15e7",
+     "0e89ff8089d58850ec239f5a9670a5eb69998232ea6879498021b9ff9f5db5c4",
+     "9270e1ece91dc2cb2ee21f2aa11cdcec18499eec19bb77f338e902b8a2d8d228"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0963_0150",
+   "scene_id": "scene-0963",
+   "scene_token": "4efbf4c0b77f467385fc2e19da45c989",
+   "log_token": "ee155e99938a4c2698fed50fc5b5d16a",
+   "frame_tokens": [
+    "c6a97291c320443faef3aad0e43081f9",
+    "76ceba59f0ca44459dbc61d569454618",
+    "8152ac563ce141f4bfea0d72c1f5ef4d",
+    "6aea06cd95ae47eab3e06f5231557e92",
+    "12347eb9290d4bff8c5ea949a4c82175",
+    "9a0099d5ce7a41acae0ad056378ccabb",
+    "0008d7e4c5a642f7aa7b57e577d87863"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852787862460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852787912460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852788012460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852788112460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852788162465.jpg",
+    "samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852788262460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852788362460.jpg"
+   ],
+   "timestamps_us": [
+    1537852787862460,
+    1537852787912460,
+    1537852788012460,
+    1537852788112460,
+    1537852788162465,
+    1537852788262460,
+    1537852788362460
+   ],
+   "actions_ego_xy": [
+    [
+     0.1214357332713252,
+     -0.00027836899547984545
+    ],
+    [
+     0.24673539027731148,
+     -0.0008340505793067859
+    ],
+    [
+     0.23041357097266457,
+     -0.00151066751814867
+    ],
+    [
+     0.10823591910136204,
+     -0.0007230339203236277
+    ],
+    [
+     0.21660137701416507,
+     -0.0011414312632214985
+    ],
+    [
+     0.21185947460096874,
+     -0.0007429382943900803
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "c6a97291c320443faef3aad0e43081f9.png",
+     "76ceba59f0ca44459dbc61d569454618.png",
+     "8152ac563ce141f4bfea0d72c1f5ef4d.png",
+     "6aea06cd95ae47eab3e06f5231557e92.png",
+     "12347eb9290d4bff8c5ea949a4c82175.png",
+     "9a0099d5ce7a41acae0ad056378ccabb.png",
+     "0008d7e4c5a642f7aa7b57e577d87863.png"
+    ],
+    "pixels_sha256": [
+     "6616404b365e5678887322dccfdd4bdf7e19079611e17cb59236ba97b51108ac",
+     "f8ed3a5efe75a0edd6c099a94d999ff570ce1927857ee553492293958c5bfe0c",
+     "a895eebe18b190b47631d0612d13169f79ee63ead760d733fb21d6bc0055651f",
+     "7663796190c8e3d52647be10ae6349ba134c9bf3de984a26f39e856997880824",
+     "8f68cc1d5ab30e9b2428be3072a50fd45d1231f5b91f2ef51175243cc93cfb46",
+     "5497e6b14bbbd9a19d3f9df000fbd43219d4287bdc1ceb39e25801387b0fa675",
+     "69cce8a32c8f5665bce2a4a49141113f6138a2629e031b90bfb60520da057e4e"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0963_0050",
+   "scene_id": "scene-0963",
+   "scene_token": "4efbf4c0b77f467385fc2e19da45c989",
+   "log_token": "ee155e99938a4c2698fed50fc5b5d16a",
+   "frame_tokens": [
+    "3e16457516964904b43f7079f6db08c8",
+    "50050be0d2264892aa1eb33acb8c9a86",
+    "ba3850f1a8644748b76b92a7c149ea41",
+    "52588dac6cfb477e90d4fd7f07e6a630",
+    "2cc5dbc031f24d6fa6c23fd1d6b58acf",
+    "61f9e931169d4faabc2e6be1a400c531",
+    "ccf0e47154b243e6bef647c141add372"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852779412460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852779512460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852779612460.jpg",
+    "samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852779662460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852779762460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852779862460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852779912460.jpg"
+   ],
+   "timestamps_us": [
+    1537852779412460,
+    1537852779512460,
+    1537852779612460,
+    1537852779662460,
+    1537852779762460,
+    1537852779862460,
+    1537852779912460
+   ],
+   "actions_ego_xy": [
+    [
+     0.3833773393606689,
+     -0.0002401053241001816
+    ],
+    [
+     0.36960690473188396,
+     0.002430418450452193
+    ],
+    [
+     0.1821789177749102,
+     0.0010570672670458525
+    ],
+    [
+     0.3545420818858345,
+     0.0002601654906028983
+    ],
+    [
+     0.3586835828100494,
+     -0.0017186990281415349
+    ],
+    [
+     0.1847721555079056,
+     -0.001606351722222149
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "3e16457516964904b43f7079f6db08c8.png",
+     "50050be0d2264892aa1eb33acb8c9a86.png",
+     "ba3850f1a8644748b76b92a7c149ea41.png",
+     "52588dac6cfb477e90d4fd7f07e6a630.png",
+     "2cc5dbc031f24d6fa6c23fd1d6b58acf.png",
+     "61f9e931169d4faabc2e6be1a400c531.png",
+     "ccf0e47154b243e6bef647c141add372.png"
+    ],
+    "pixels_sha256": [
+     "74ea6e2374701e92dd48ea9e2e259dfc10de3eb8ebc89661615cf4e51c940462",
+     "7eccf86b3fe81ec8a023e5c58317fbea5066376791f16f2dcf15d500f5a0f71e",
+     "b0eca1993bb1cf319db010aa1ec8abc94c8a219e08fd36a82eead06bd2a3cbac",
+     "3fa77edb477b695b52e1b8305a726d5958c26411858eab3c787fed99fbea9850",
+     "821017073b32d828dad1235ca4beff96b51bb3603d5edf08a7cd9636c8e4cf2f",
+     "49859222df5a3bf3e92b28af2507975c063b0e5c75f761f4b9083dea9204672e",
+     "5ece1773804c5da96e355c0363a2c45feb45da3a11fce0c524cdf414cdae167f"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0968_0150",
+   "scene_id": "scene-0968",
+   "scene_token": "931c5c57011944459bba3825ab8777a9",
+   "log_token": "ee155e99938a4c2698fed50fc5b5d16a",
+   "frame_tokens": [
+    "f3a72c8f999e49368b5f80b8ab89f80d",
+    "817352a5e4bc470fb57ac303924d02f3",
+    "899e44b547c54112af8358d99e2b3c6d",
+    "3e75397bc8bc4c16a5e65a6daaf3722f",
+    "151439e25b5d49e68fad855da947c9c4",
+    "65b914b3fa714afda7c49ea7efba7f2b",
+    "885c4a8d3b4a418b963764288049b961"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852966762460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852966862460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852966912460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852967012460.jpg",
+    "samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852967112460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852967162460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852967262460.jpg"
+   ],
+   "timestamps_us": [
+    1537852966762460,
+    1537852966862460,
+    1537852966912460,
+    1537852967012460,
+    1537852967112460,
+    1537852967162460,
+    1537852967262460
+   ],
+   "actions_ego_xy": [
+    [
+     0.3081281125503944,
+     -0.001283020286659691
+    ],
+    [
+     0.1481571547399731,
+     -0.0009448757758540858
+    ],
+    [
+     0.2904892421439326,
+     -0.0026070244518256753
+    ],
+    [
+     0.2942964440369109,
+     -0.004353787041389883
+    ],
+    [
+     0.1463214935955963,
+     -0.002500585537646219
+    ],
+    [
+     0.2913155649915158,
+     -0.0031085850591880126
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "f3a72c8f999e49368b5f80b8ab89f80d.png",
+     "817352a5e4bc470fb57ac303924d02f3.png",
+     "899e44b547c54112af8358d99e2b3c6d.png",
+     "3e75397bc8bc4c16a5e65a6daaf3722f.png",
+     "151439e25b5d49e68fad855da947c9c4.png",
+     "65b914b3fa714afda7c49ea7efba7f2b.png",
+     "885c4a8d3b4a418b963764288049b961.png"
+    ],
+    "pixels_sha256": [
+     "374d7e577030980b5f3b7ce71c70070cd2dfac3b0ad8f1bfac6a5d588e4606de",
+     "1140c77419b57b77748d917293b20745039cf13c589816349f6f2b4c24e73d0c",
+     "20143e1ad3104fa59d0b044df55b90fae27c252c1471ef2f965251c90884476d",
+     "50bfc9ef2586b573a7484db43fb46f8633d02618ae649b0f0959ffc8fd1f9ee9",
+     "fddfd14492c0343b27145ec818d5fce03a0bfb6af04071ba2f3587d97555c21c",
+     "244936701f1bc0388080be068e530ba808479dccccacf6c4e6d2f9d16380d79f",
+     "f0ffe96f57b8eae94ef87ed89e9d03fcf3d92c1b9963eb601213fe87f82bea8f"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0963_0200",
+   "scene_id": "scene-0963",
+   "scene_token": "4efbf4c0b77f467385fc2e19da45c989",
+   "log_token": "ee155e99938a4c2698fed50fc5b5d16a",
+   "frame_tokens": [
+    "5b0fb24d87164db29ce81296b070ba99",
+    "3cb023eaf1f840ed9c2395a563dc9cf0",
+    "b0148603ab4443faa57cfeedd0361e51",
+    "b8c84a296a314381a6aa8274f6748dba",
+    "008c8a7df9b14d36bc60cfdb19cf6d6c",
+    "47fcb8012316412a8a102c6d360198dc",
+    "f63e0ffff98b4671b3c356ef6da4ad8b"
+   ],
+   "source_filenames": [
+    "samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852792112460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852792162460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852792262460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852792362460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852792412469.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852792512460.jpg",
+    "samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852792612460.jpg"
+   ],
+   "timestamps_us": [
+    1537852792112460,
+    1537852792162460,
+    1537852792262460,
+    1537852792362460,
+    1537852792412469,
+    1537852792512460,
+    1537852792612460
+   ],
+   "actions_ego_xy": [
+    [
+     0.09611010671803956,
+     -0.0004639934588555883
+    ],
+    [
+     0.18988247672749517,
+     -0.002047199245601622
+    ],
+    [
+     0.18413110382289588,
+     -0.0027921259426665485
+    ],
+    [
+     0.0888669622910941,
+     -0.0010483301415708593
+    ],
+    [
+     0.17811107249860592,
+     -0.0026011594479906364
+    ],
+    [
+     0.15945647712797684,
+     -0.0019077481008627772
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "5b0fb24d87164db29ce81296b070ba99.png",
+     "3cb023eaf1f840ed9c2395a563dc9cf0.png",
+     "b0148603ab4443faa57cfeedd0361e51.png",
+     "b8c84a296a314381a6aa8274f6748dba.png",
+     "008c8a7df9b14d36bc60cfdb19cf6d6c.png",
+     "47fcb8012316412a8a102c6d360198dc.png",
+     "f63e0ffff98b4671b3c356ef6da4ad8b.png"
+    ],
+    "pixels_sha256": [
+     "3aee3fc084efe28b1ccaf93b73d7f4de46e167bb77bb25bb61752a17b0bb9e49",
+     "bc653ef1a2b26f8ee7569561f831129b60a2643365c5475454b27138c84601b2",
+     "796447d29bc44895ce74ef72aa481dc21710a3b89b043884af8ee06a1340a06d",
+     "ab71fd9c49fbe5eb0d4aabd3499ba08926f5b23811d547b28c45ce3b17ce557e",
+     "49aa7a6cd0049d4fbc2785d527b7089bd9b0911645111c1b66c7ecf201151184",
+     "9715051e15288bc70664f0b9547f5c6cc6b2a1b4cca69c5ef58ac35fce08a34a",
+     "c0137a9f8bfeff7cc10802925b5b930699d6d11afb7b8f5ad46fc752ee76913f"
+    ],
+    "n_frames": 7
+   }
+  },
+  {
+   "task_id": "nusc_adapt_v1_confirmation_scene-0963_0100",
+   "scene_id": "scene-0963",
+   "scene_token": "4efbf4c0b77f467385fc2e19da45c989",
+   "log_token": "ee155e99938a4c2698fed50fc5b5d16a",
+   "frame_tokens": [
+    "fe74183a9e1c46188a489a4dfd811f72",
+    "bbce241b89d941aabba22116311eaab9",
+    "e0dbae985f4d47a19fe6e2d79f3e1066",
+    "88fb81d955dc439a8aaab3319ac9fc32",
+    "78b46cf3863c4c448ad3b9d99c209af0",
+    "d5778b8778f0480fa6368da47c056f62",
+    "a68b1af79a614c6cba2650873ba22b6f"
+   ],
+   "source_filenames": [
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852783612460.jpg",
+    "samples/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852783662460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852783762460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852783862460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852783912460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852784012460.jpg",
+    "sweeps/CAM_FRONT/n015-2018-09-25-13-17-43+0800__CAM_FRONT__1537852784112500.jpg"
+   ],
+   "timestamps_us": [
+    1537852783612460,
+    1537852783662460,
+    1537852783762460,
+    1537852783862460,
+    1537852783912460,
+    1537852784012460,
+    1537852784112500
+   ],
+   "actions_ego_xy": [
+    [
+     0.07266595458710305,
+     -0.0005920881842216841
+    ],
+    [
+     0.13228453094296422,
+     -0.0008282650035199846
+    ],
+    [
+     0.12594635859038572,
+     -0.0007285208564733262
+    ],
+    [
+     0.05837275245843436,
+     -0.0002961130954352506
+    ],
+    [
+     0.11357094567807052,
+     -0.0005039938106242772
+    ],
+    [
+     0.10491245268629495,
+     -0.0005265905123615702
+    ]
+   ],
+   "target_frames": {
+    "paths": [
+     "fe74183a9e1c46188a489a4dfd811f72.png",
+     "bbce241b89d941aabba22116311eaab9.png",
+     "e0dbae985f4d47a19fe6e2d79f3e1066.png",
+     "88fb81d955dc439a8aaab3319ac9fc32.png",
+     "78b46cf3863c4c448ad3b9d99c209af0.png",
+     "d5778b8778f0480fa6368da47c056f62.png",
+     "a68b1af79a614c6cba2650873ba22b6f.png"
+    ],
+    "pixels_sha256": [
+     "51c36a1cbcbfe7ee434cbd7b505002a76df0a41614ad3f4a278d04a5b69d1262",
+     "c05f4fe7e2db8afaec2e519b419d8850747147ca3cd8bb86a45da6b993f1060c",
+     "7beaefcca1f11d83436b5b094d24d34919f24019dc40a49a4449af8cbca34cef",
+     "71b5f9de25e0d3dbf9fe5eb590027a287532365cb58f30ab21fbffb2212ade14",
+     "a3a836d91410584fa9de953f49cfd4abebea19d5d604a30c2ab98fdf66a346b2",
+     "15da3c0fe6f9155ba2084bcfd291b2dd284b90dbc717886b6e60bfced1742da1",
+     "a5ba275003da9c2e94895ded753a15c3942ec4eae1bb0cb3214e3c35300bd263"
+    ],
+    "n_frames": 7
+   }
+  }
+ ]
+}

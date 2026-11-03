@@ -1,0 +1,77 @@
+{
+ "domain": "minecraft",
+ "action_type": "discrete",
+ "actions": [
+  1,
+  2,
+  3
+ ],
+ "action_meanings": {
+  "1": "forward+jump",
+  "2": "camera_left_20deg+jump",
+  "3": "camera_right_20deg+jump"
+ },
+ "frames": "clip",
+ "train_list": "data/downstream/minecraft/train.json",
+ "test_list": "data/downstream/minecraft/test.json",
+ "recipe": {
+  "name": "standardised action interface",
+  "interface": "standardised",
+  "interface_lr": 0.00242,
+  "interface_lr_unit": "standard deviations of the arm's own world-model training features (per dimension)",
+  "unet_lr": 5e-06,
+  "optimizer_steps": 800,
+  "global_batch": 32,
+  "micro_batch": 1,
+  "betas": [
+   0.9,
+   0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0.01,
+  "gradient_clip": 0.3,
+  "warmup_steps": 100,
+  "warmup_initial_factor": 1e-06,
+  "ema_decay": 0.9999,
+  "precision": "FP32 weights, bf16 autocast",
+  "activation_checkpointing": true,
+  "seed": 32,
+  "save_steps": [
+   200,
+   400,
+   800
+  ]
+ },
+ "generation": {
+  "context_frames": 6,
+  "target_frame": 6,
+  "steps": 5,
+  "cfg_scale": 1.05,
+  "sampler": "EulerEDMSampler",
+  "discretization": "EDMShiftDiscretization",
+  "context_aug": 0.1,
+  "precision": "float16 autocast",
+  "metric_argument_order": "target_first"
+ },
+ "follow": {
+  "type": "inverse-dynamics classifier",
+  "checkpoint": "checkpoints/downstream/idm_minecraft.safetensors"
+ },
+ "idm": {
+  "train_source": "clips"
+ },
+ "arms": {
+  "adaworld_lam_retrained": {
+   "native_dim": 32,
+   "world_model": "adaworld_lam"
+  },
+  "dreamdojo_lam_retrained": {
+   "native_dim": 32,
+   "world_model": "dreamdojo_lam"
+  },
+  "justact": {
+   "native_dim": 640,
+   "world_model": "justact"
+  }
+ }
+}

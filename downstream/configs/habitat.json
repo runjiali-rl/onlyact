@@ -1,0 +1,77 @@
+{
+ "domain": "habitat",
+ "action_type": "discrete",
+ "actions": [
+  1,
+  2,
+  3
+ ],
+ "action_meanings": {
+  "1": "move_forward",
+  "2": "turn_left",
+  "3": "turn_right"
+ },
+ "frames": "png",
+ "train_list": "data/downstream/habitat/train.json",
+ "test_list": "data/downstream/habitat/test.json",
+ "recipe": {
+  "name": "native action interface",
+  "interface": "native",
+  "interface_lr": 5e-05,
+  "interface_lr_unit": "native condition units",
+  "unet_lr": 5e-06,
+  "optimizer_steps": 800,
+  "global_batch": 32,
+  "micro_batch": 1,
+  "betas": [
+   0.9,
+   0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0.01,
+  "gradient_clip": 0.3,
+  "warmup_steps": 100,
+  "warmup_initial_factor": 1e-06,
+  "ema_decay": 0.9999,
+  "precision": "FP32 weights, bf16 autocast",
+  "activation_checkpointing": true,
+  "seed": 32,
+  "save_steps": [
+   200,
+   400,
+   800
+  ]
+ },
+ "generation": {
+  "context_frames": 6,
+  "target_frame": 6,
+  "steps": 5,
+  "cfg_scale": 1.05,
+  "sampler": "EulerEDMSampler",
+  "discretization": "EDMShiftDiscretization",
+  "context_aug": 0.1,
+  "precision": "float16 autocast",
+  "metric_argument_order": "prediction_first"
+ },
+ "follow": {
+  "type": "inverse-dynamics classifier",
+  "checkpoint": "checkpoints/downstream/idm_habitat.safetensors"
+ },
+ "idm": {
+  "train_source": "png"
+ },
+ "arms": {
+  "adaworld_lam_retrained": {
+   "native_dim": 32,
+   "world_model": "adaworld_lam"
+  },
+  "dreamdojo_lam_retrained": {
+   "native_dim": 32,
+   "world_model": "dreamdojo_lam"
+  },
+  "justact": {
+   "native_dim": 640,
+   "world_model": "justact"
+  }
+ }
+}

@@ -1,0 +1,18 @@
+# AdaWorld-LAM (retrained): run settings of the released checkpoint adaworld_lam_retrained.safetensors.
+# Network size, beta (2e-4), AdamW learning rate (2.5e-5) / weight decay (0.01) and gradient clipping (0.3)
+# are read from the upstream file third_party/adaworld_lam/lam/config/lam.yaml.
+# Training input: square centre crop, bicubic resize to 256 x 256.
+arch: adaworld
+total_steps: 20000      # 20,000 steps x 8 pairs = 160,000 pair views
+micro_batch: 8
+grad_accum: 1
+seed: 0
+val_frac: 0.02          # held-out share of the cache records
+num_workers: 4          # also fixes the random streams of the brightness augmentation
+prefetch: 4
+log_every: 100
+val_every: 2000
+val_batches: 20
+save_every: 5000
+sheet_steps: "0,300"
+sheet_pairs: 6

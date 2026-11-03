@@ -1,0 +1,17 @@
+# Probe-data preparation (all datasets except Procgen). Python 3.12; the versions with which the prepared files were
+# checked against the paper's files (byte-identical where the raw data was available).
+numpy==2.3.5
+pillow==12.0.0
+opencv-python==4.13.0.92
+scipy==1.17.1
+h5py==3.16.0
+pandas==3.0.3
+pyarrow==24.0.0
+av==16.1.0          # MUTEX (AV1 video), SpatialVID
+decord==0.6.0       # RoboCasa
+torch==2.10.0       # RealEstate10K chunks (CPU is enough)
+requests==2.32.5    # ARKitScenes --remote only
+huggingface_hub     # downloads
+
+# Procgen (procgen_plan.py) needs its own environment: Python 3.10 with
+#   procgen==0.10.7 gym3==0.3.3 numpy==1.26.4 pillow==12.2.0

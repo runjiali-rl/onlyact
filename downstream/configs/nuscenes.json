@@ -1,0 +1,69 @@
+{
+ "domain": "nuscenes",
+ "action_type": "continuous",
+ "actions": "ego motion (forward, lateral) metres",
+ "frames": "png",
+ "train_list": "data/downstream/nuscenes/train.json",
+ "test_list": "data/downstream/nuscenes/test.json",
+ "recipe": {
+  "name": "continuous action head",
+  "interface": "head",
+  "interface_lr": 5e-05,
+  "interface_lr_unit": "head weights",
+  "unet_lr": 5e-06,
+  "optimizer_steps": 800,
+  "global_batch": 32,
+  "micro_batch": 1,
+  "betas": [
+   0.9,
+   0.999
+  ],
+  "eps": 1e-08,
+  "weight_decay": 0.01,
+  "gradient_clip": 0.3,
+  "warmup_steps": 100,
+  "warmup_initial_factor": 1e-06,
+  "ema_decay": 0.9999,
+  "precision": "FP32 weights, bf16 autocast",
+  "activation_checkpointing": true,
+  "seed": 32,
+  "save_steps": [
+   200,
+   400,
+   800
+  ]
+ },
+ "generation": {
+  "context_frames": 6,
+  "target_frame": 6,
+  "steps": 5,
+  "cfg_scale": 1.05,
+  "sampler": "EulerEDMSampler",
+  "discretization": "EDMShiftDiscretization",
+  "context_aug": 0.1,
+  "precision": "float16 autocast",
+  "metric_argument_order": "target_first",
+  "other_actions": "4 draws from the 100 training-clip actions, numpy Generator(PCG64(case seed)).integers(0, 100, 4)"
+ },
+ "follow": {
+  "type": "forward-motion readout",
+  "checkpoint": "checkpoints/downstream/readout_nuscenes.safetensors"
+ },
+ "readout": {
+  "development_list": "data/downstream/nuscenes/dev.json"
+ },
+ "arms": {
+  "adaworld_lam_retrained": {
+   "native_dim": 32,
+   "world_model": "adaworld_lam"
+  },
+  "dreamdojo_lam_retrained": {
+   "native_dim": 32,
+   "world_model": "dreamdojo_lam"
+  },
+  "justact": {
+   "native_dim": 640,
+   "world_model": "justact"
+  }
+ }
+}

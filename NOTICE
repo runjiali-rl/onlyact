@@ -1,0 +1,29 @@
+JustAct
+Copyright (c) 2026 the JustAct authors (University of Oxford)
+
+This repository includes third-party code. Each component keeps its licence; details per file are in the notices listed below.
+
+1. AdaWorld (https://github.com/Little-Podi/AdaWorld), Apache License 2.0.
+   - World-model code in worldmodel/vwm/, worldmodel/sample_utils.py and worldmodel/train.py (some files modified; see
+     worldmodel/NOTICE_ADAWORLD.md). Licence text: worldmodel/LICENSE_ADAWORLD.
+   - Latent action model code in baselines/third_party/adaworld_lam/ (unmodified; see baselines/NOTICE.md).
+     Licence text: baselines/third_party/adaworld_lam/LICENSE.
+   AdaWorld builds on Vista (https://github.com/OpenDriveLab/Vista, Apache License 2.0), Stability AI generative-models
+   (https://github.com/Stability-AI/generative-models, MIT License) and k-diffusion (https://github.com/crowsonkb/k-diffusion,
+   MIT License).
+
+2. DreamDojo (https://github.com/NVIDIA/DreamDojo), source code under the Apache License 2.0.
+   - Latent action model code in baselines/third_party/dreamdojo_lam/ (unmodified; see baselines/NOTICE.md).
+     Licence text: baselines/third_party/dreamdojo_lam/LICENSE.
+
+Weights used but not redistributed:
+   - V-JEPA 2 ViT-L, facebook/vjepa2-vitl-fpc64-256 (MIT licence). The JustAct adapters are trained on top of it.
+   - AdaWorld world model, Little-Podi/AdaWorld (Apache License 2.0), itself fine-tuned from Stable Video Diffusion
+     (Stability AI licence terms apply).
+   - OpenCLIP ViT-H-14, laion2b_s32b_b79k (https://github.com/mlfoundations/open_clip).
+   - RAFT-large optical flow (torchvision), used to build the training positives.
+   - The authors' released AdaWorld and DreamDojo latent action models are not used by the released checkpoints; the
+     retrained baselines were trained from random initialisation.
+
+Datasets: every dataset used for training or evaluation keeps its own licence (see data/probe/README.md,
+downstream/README.md, worldmodel/README.md and justact/training/README.md).

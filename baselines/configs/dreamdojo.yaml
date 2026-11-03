@@ -1,0 +1,18 @@
+# DreamDojo-LAM (retrained): run settings of the released checkpoint dreamdojo_lam_retrained.safetensors.
+# Network size, beta (1e-6), AdamW learning rate (2.5e-5) / weight decay (0.01) and gradient clipping (0.3)
+# are read from the upstream file third_party/dreamdojo_lam/external/lam_project/config/lam_0.yaml.
+# Training input: centre crop to a 4:3 aspect ratio, bilinear resize to 240 x 320 (height x width).
+arch: dreamdojo
+total_steps: 80000      # 80,000 steps x 2 pairs = 160,000 pair views
+micro_batch: 2
+grad_accum: 1
+seed: 0
+val_frac: 0.02          # held-out share of the cache records
+num_workers: 4          # also fixes the random streams of the brightness augmentation
+prefetch: 4
+log_every: 200
+val_every: 10000
+val_batches: 20
+save_every: 20000
+sheet_steps: "0,300"
+sheet_pairs: 6

@@ -1,0 +1,37 @@
+# Training recipe of the JustAct encoder (the configuration of the released checkpoint).
+# Every key is a field of justact/training/config.py:TrainConfig; command-line flags of train.py override it.
+
+# encoder
+model_name: facebook/vjepa2-vitl-fpc64-256
+model_revision: b3c1679b7c34d3255ef3547f27c7b226aefab26f
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_targets: [query, key, value, proj, fc1, fc2]
+proj_dim: 640              # fixed random projection, not optimised
+
+# objective
+tau: 0.07                  # InfoNCE temperature
+
+# optimisation
+lr: 1.0e-4
+weight_decay: 0.0
+betas: [0.9, 0.95]
+warmup_steps: 500          # linear warm-up, then cosine decay to 0 at total_steps
+total_steps: 10000
+grad_clip: 1.0
+micro_batch: 2             # pairs per forward pass (3 clips each: anchor, positive, hard negative)
+grad_accum: 8              # 16 pairs per optimiser step
+seed: 0
+
+# data (sample cache built by build_sample_cache.py + precompute_flow_cache.py)
+val_frac: 0.02             # held-out share of the cache (not used for training)
+epoch_multiplier: 4        # each cached sample appears 4 times per pass, with different augmentation seeds
+bg_max_motion_px: 0.5      # camera-motion guard: mean flow outside the moving part (256-grid px) above this -> no compositing
+feather_px: 0.0            # no feathering of the pasted core
+core_shift_min_px: 16      # core offsets smaller than this on both axes are re-drawn (up to 8 attempts)
+num_workers: 2
+
+# logging and checkpoints
+log_every: 20
+save_every: 2000
