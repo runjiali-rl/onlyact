@@ -1,8 +1,8 @@
-# Training the JustAct encoder
+# Training the OnlyAct encoder
 
-This folder trains the JustAct encoder, the checkpoint used in every table of the paper. V-JEPA 2 ViT-L
+This folder trains the OnlyAct encoder, the checkpoint used in every table of the paper. V-JEPA 2 ViT-L
 (`facebook/vjepa2-vitl-fpc64-256`) is adapted with LoRA and trained contrastively on frame pairs from nine video
-datasets. The code implements a single recipe, `configs/justact.yaml`.
+datasets. The code implements a single recipe, `configs/onlyact.yaml`.
 
 | | |
 |---|---|
@@ -32,9 +32,9 @@ released checkpoint.
 | `cache_dataset.py` | builds (anchor, positive, hard negative) from the caches |
 | `model.py` | training-time encoder (V-JEPA 2 + LoRA + projection), saves the checkpoint |
 | `loss.py` | symmetric InfoNCE with hard negatives |
-| `train.py`, `config.py`, `configs/justact.yaml` | the trainer and its recipe |
+| `train.py`, `config.py`, `configs/onlyact.yaml` | the trainer and its recipe |
 
-Run every command from the repository root (the folder that contains `justact/`).
+Run every command from the repository root (the folder that contains `onlyact/`).
 
 ## Environment
 
@@ -102,7 +102,7 @@ trained on (clip id, dataset, scene id and the four frame indices; no frames). R
 manifest is only used to look up the clips by id, so pass the full manifest from before subsampling:
 
 ```bash
-python -m justact.training.build_sample_cache --manifest <data>/union_9ds/manifest_union.json --data_root <data> \
+python -m onlyact.training.build_sample_cache --manifest <data>/union_9ds/manifest_union.json --data_root <data> \
     --samples data/training/samples_168k.jsonl.gz --out_dir <cache> --workers 4 --max_short_side 292
 ```
 
@@ -112,7 +112,7 @@ Something-Something v2 0.10). The draw depends on the task order of the manifest
 for the paper's manifest.
 
 ```bash
-python -m justact.training.build_sample_cache --manifest <data>/union_9ds/manifest_union_sub.json --data_root <data> \
+python -m onlyact.training.build_sample_cache --manifest <data>/union_9ds/manifest_union_sub.json --data_root <data> \
     --out_dir <cache> --n_samples 168000 --gap_lo 1 --gap_hi 3 --seed 0 --workers 4 --max_short_side 292 \
     --dataset_weights "vpt=0.25,calvin=0.15,libero=0.05,droid=0.05,atari=0.05,agibot=0.10,egodex=0.10,spatialvid=0.15,sthv2=0.10"
 ```
@@ -123,7 +123,7 @@ resumable; with 4 workers it takes about 3 h, mostly video decoding.
 ## 3. Optical-flow cache (about 5.8 GB)
 
 ```bash
-python -m justact.training.precompute_flow_cache --cache_dir <cache>     # one GPU, about 17 min on an RTX 4090
+python -m onlyact.training.precompute_flow_cache --cache_dir <cache>     # one GPU, about 17 min on an RTX 4090
 ```
 
 RAFT-large (torchvision `Raft_Large_Weights.C_T_SKHT_V2`), 12 flow updates, float16 autocast, at 256x256, stored at
@@ -134,14 +134,14 @@ composite is built.
 ## 4. Train
 
 ```bash
-python -m justact.training.train --cache_dir <cache> --out_dir runs/justact
+python -m onlyact.training.train --cache_dir <cache> --out_dir runs/onlyact
 ```
 
-Output: `runs/justact/config.json`, `runs/justact/train_log.jsonl` (step 1 and every 20 steps: loss, learning rate,
+Output: `runs/onlyact/config.json`, `runs/onlyact/train_log.jsonl` (step 1 and every 20 steps: loss, learning rate,
 anchor-to-positive accuracy, positive / hard-negative cosine similarities and their gap, and `synth_ok` / `synth_n`,
-the number of composited positives / samples per micro-batch, averaged over the step), checkpoints `runs/justact/step_<N>/` every 2,000 steps and
-`runs/justact/final/` with `adapter_config.json`, `adapter_model.safetensors` and `projection.safetensors`. Copy
-`final/` to `checkpoints/justact/` to use it with the extraction code (`justact/extract.py`).
+the number of composited positives / samples per micro-batch, averaged over the step), checkpoints `runs/onlyact/step_<N>/` every 2,000 steps and
+`runs/onlyact/final/` with `adapter_config.json`, `adapter_model.safetensors` and `projection.safetensors`. Copy
+`final/` to `checkpoints/onlyact/` to use it with the extraction code (`onlyact/extract.py`).
 
 What a healthy run looks like: at step 1 the anchor-to-positive accuracy is about 0.5 and the positive is slightly
 less similar to the anchor than the hard negative (the composited positive starts out harder than the same-clip

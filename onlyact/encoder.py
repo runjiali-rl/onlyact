@@ -1,4 +1,4 @@
-"""The JustAct encoder: V-JEPA 2 ViT-L with merged LoRA adapters and a fixed 640-d projection.
+"""The OnlyAct encoder: V-JEPA 2 ViT-L with merged LoRA adapters and a fixed 640-d projection.
 
 A frame pair (f_t, f_t+1) is fed to V-JEPA 2 as one two-frame clip (a single temporal tubelet). The encoder's
 last hidden state is mean-pooled (1024-d), mapped by the projection to 640-d and L2-normalised.
@@ -17,7 +17,7 @@ BASE_MODEL = "facebook/vjepa2-vitl-fpc64-256"
 BASE_REVISION = "b3c1679b7c34d3255ef3547f27c7b226aefab26f"
 
 
-class JustActEncoder:
+class OnlyActEncoder:
     """Encodes batches of frame pairs. ckpt_dir=None gives frozen V-JEPA 2."""
 
     def __init__(self, ckpt_dir=None, base_model=BASE_MODEL, revision=BASE_REVISION, device="cuda:0", merge_threads=6):

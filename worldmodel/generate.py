@@ -17,8 +17,8 @@ Outputs in --out_dir:
   grid_XX.png    ground-truth row (frames ctx .. ctx+horizon-1) above the predicted row, one per rollout
   summary.json   means, standard deviations and the settings used
 
-    python generate.py --arm justact --cell ../data/worldmodel/libero_transfer.json --data_root $DATA/libero \
-        --emb_root $EMB --out_dir runs/table2/justact/libero_transfer
+    python generate.py --arm onlyact --cell ../data/worldmodel/libero_transfer.json --data_root $DATA/libero \
+        --emb_root $EMB --out_dir runs/table2/onlyact/libero_transfer
 """
 import argparse
 import hashlib
@@ -41,7 +41,7 @@ from loading import inject_lora, load_adaworld_base, load_config, load_trainable
 from sample_utils import get_batch, init_sampling  # noqa: E402
 from vwm.util import instantiate_from_config  # noqa: E402
 
-ARMS = ("no_action", "adaworld_lam", "dreamdojo_lam", "justact")
+ARMS = ("no_action", "adaworld_lam", "dreamdojo_lam", "onlyact")
 
 
 def load_frame(path: str, res: int) -> torch.Tensor:
@@ -123,8 +123,8 @@ def main():
     ap.add_argument("--base_ckpt", default=os.path.join(REPO, "checkpoints", "adaworld", "adaworld.safetensors"),
                     help="released AdaWorld weights (Hugging Face Little-Podi/AdaWorld)")
     ap.add_argument("--ckpt", default="", help="world-model checkpoint, default checkpoints/worldmodel/<arm>.safetensors")
-    ap.add_argument("--whitening_stats", default=os.path.join(REPO, "checkpoints", "worldmodel", "justact_whitening.safetensors"),
-                    help="per-provider whitening statistics (JustAct world model only)")
+    ap.add_argument("--whitening_stats", default=os.path.join(REPO, "checkpoints", "worldmodel", "onlyact_whitening.safetensors"),
+                    help="per-provider whitening statistics (OnlyAct world model only)")
     ap.add_argument("--lora_rank", type=int, default=128)
     ap.add_argument("--lora_alpha", type=int, default=0, help="0 = rank")
     ap.add_argument("--lora_targets", default="to_q,to_k,to_v,to_out.0")
@@ -220,7 +220,7 @@ def main():
                                    "sharp": [round(float(sf[:, lo:hi].mean()), 4) for lo, hi in ((0, 6), (6, 12), (12, sf.shape[1]))]}
     summ.update({"n": len(results), "arm": a.arm, "cell": cell.get("cell"), "mode": cell.get("mode"), "dataset": cell["dataset"],
                  "representation": representation, "ckpt_sha256": sha256(ckpt),
-                 "whitening_sha256": sha256(a.whitening_stats) if a.arm == "justact" else None,
+                 "whitening_sha256": sha256(a.whitening_stats) if a.arm == "onlyact" else None,
                  "steps": a.steps, "cfg": a.cfg, "ctx": a.ctx, "horizon": a.horizon, "resolution": a.resolution, "seed": a.seed,
                  "aug_level": a.aug_level, "gap": a.gap, "start": a.start})
     with open(os.path.join(a.out_dir, "summary.json"), "w") as f:

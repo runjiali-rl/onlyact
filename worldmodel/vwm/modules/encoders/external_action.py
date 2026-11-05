@@ -5,7 +5,7 @@ embedder: a (B, 1, D) cross-attention token and a (B, D) vector.
 
 ExternalActionEmbedder          passes the vector through unchanged. Used by the no-action, AdaWorld-LAM (retrained) and
                                 DreamDojo-LAM (retrained) world models (D = 32).
-WhitenedExternalActionEmbedder  applies per-provider whitening first. Used by the JustAct world model (D = 640). The map
+WhitenedExternalActionEmbedder  applies per-provider whitening first. Used by the OnlyAct world model (D = 640). The map
                                 x -> ((x - mean) / std) @ W is fixed and parameter-free: mean, std and the symmetric matrix W
                                 are measured once on the provider's own training-pool embeddings (compute_whitening.py) and
                                 the same map is applied in training and in evaluation.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare training data of the JustAct encoder (AgiBot World part).
+"""Prepare training data of the OnlyAct encoder (AgiBot World part).
 
 Downloads the AgiBotWorld-Alpha observation shards from Hugging Face
 (https://huggingface.co/datasets/agibot-world/AgiBotWorld-Alpha) and

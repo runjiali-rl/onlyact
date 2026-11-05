@@ -14,7 +14,7 @@ from torch.utils.data import Dataset
 
 class LeakageDataset(Dataset):
     def __init__(self, task_ids, tasks, emb_dir, resolution=128):
-        """task_ids: clips of this split; tasks: the clip list loaded by justact.data.load_manifest (frame paths resolved)."""
+        """task_ids: clips of this split; tasks: the clip list loaded by onlyact.data.load_manifest (frame paths resolved)."""
         tasks_by_id = {t["task_id"]: t for t in tasks}
         self.tasks = [tasks_by_id[tid] for tid in task_ids if tid in tasks_by_id]
         self.embed_dir = emb_dir

@@ -13,9 +13,9 @@ from pathlib import Path
 
 import numpy as np
 
-ARMS = ("adaworld_lam_retrained", "dreamdojo_lam_retrained", "justact")
+ARMS = ("adaworld_lam_retrained", "dreamdojo_lam_retrained", "onlyact")
 BASELINES = ("adaworld_lam_retrained", "dreamdojo_lam_retrained")
-OURS = "justact"
+OURS = "onlyact"
 REPO = Path(__file__).resolve().parents[1]
 
 

@@ -1,4 +1,4 @@
-"""Training-time JustAct encoder: V-JEPA 2 ViT-L with LoRA adapters and a fixed random 640-d projection.
+"""Training-time OnlyAct encoder: V-JEPA 2 ViT-L with LoRA adapters and a fixed random 640-d projection.
 
 A frame pair (f_t, f_t+k) is one two-frame clip (a single temporal tubelet). It goes through the V-JEPA 2 video
 processor (resize the short side to 292, centre-crop 256, ImageNet normalisation) and the V-JEPA 2 encoder only (the
@@ -10,7 +10,7 @@ from the global seed. It is never optimised: only the LoRA adapters are in the o
 requires_grad=True, so their gradient is computed and enters the global gradient-norm clipping of the trainer.
 
 save() writes the adapter with PEFT (adapter_config.json, adapter_model.safetensors) and the projection as
-projection.safetensors ("weight", "bias"); this is the checkpoint layout justact.encoder.JustActEncoder loads.
+projection.safetensors ("weight", "bias"); this is the checkpoint layout onlyact.encoder.OnlyActEncoder loads.
 """
 from __future__ import annotations
 
@@ -36,7 +36,7 @@ def _unwrap_peft(m):
     return m
 
 
-class JustActTrainModel(nn.Module):
+class OnlyActTrainModel(nn.Module):
     def __init__(self, model_name: str = BASE_MODEL, revision: Optional[str] = BASE_REVISION, lora_r: int = 16,
                  lora_alpha: int = 32, lora_dropout: float = 0.05, lora_targets: Sequence[str] = LORA_TARGETS,
                  proj_dim: int = 640, dtype: torch.dtype = torch.bfloat16, device: Optional[str] = None):

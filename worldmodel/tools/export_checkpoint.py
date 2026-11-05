@@ -2,7 +2,7 @@
 a safetensors file holding only the trainable tensors (LoRA weights and label_emb, float32), with no metadata.
 Every tensor is checked for exact equality after writing.
 
-    python tools/export_checkpoint.py logs/justact/checkpoints/trainable_step020000_end.pt checkpoints/worldmodel/justact.safetensors
+    python tools/export_checkpoint.py logs/onlyact/checkpoints/trainable_step020000_end.pt checkpoints/worldmodel/onlyact.safetensors
 """
 import argparse
 import hashlib

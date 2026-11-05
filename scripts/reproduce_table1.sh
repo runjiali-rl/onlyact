@@ -1,6 +1,6 @@
 #!/bin/bash
 # Table 1: linear probing of action information on 13 datasets.
-#   1. embeddings of every clip with JustAct, frozen V-JEPA 2, the two retrained latent-action models and the random control
+#   1. embeddings of every clip with OnlyAct, frozen V-JEPA 2, the two retrained latent-action models and the random control
 #   2. a linear probe per (representation, dataset, seed 0 / 1 / 2)
 #   3. the LaTeX table
 # Environment variables (defaults in brackets):
@@ -19,13 +19,13 @@ cd "$(dirname "$0")/.."
 EVAL_DATA=${EVAL_DATA:-$DATA/eval_data}
 CKPT=${CKPT:-checkpoints}; RUNS=${RUNS:-runs}; PY_ENC=${PY_ENC:-python}; PY_WM=${PY_WM:-python}
 DATASETS=${DATASETS:-"vp2_robosuite vp2_robodesk procgen_plan utaustin_mutex spatialvid_nav arkitscenes realestate10k droid droid_iprl robocasa metaworld rlbench libero"}
-REPS="justact vjepa2_frozen adaworld_lam_retrained dreamdojo_lam_retrained random"
+REPS="onlyact vjepa2_frozen adaworld_lam_retrained dreamdojo_lam_retrained random"
 EMB=$RUNS/emb; OUT=$RUNS/table1; mkdir -p $OUT/logs
 
 for d in $DATASETS; do
   L=data/probe/$d.json; R=$DATA/probe/$d
-  $PY_ENC -m justact.extract --manifest $L --data_root $R --ckpt $CKPT/justact --out_dir $EMB/justact/$d
-  $PY_ENC -m justact.extract --manifest $L --data_root $R --frozen --out_dir $EMB/vjepa2_frozen/$d
+  $PY_ENC -m onlyact.extract --manifest $L --data_root $R --ckpt $CKPT/onlyact --out_dir $EMB/onlyact/$d
+  $PY_ENC -m onlyact.extract --manifest $L --data_root $R --frozen --out_dir $EMB/vjepa2_frozen/$d
   for a in adaworld dreamdojo; do
     $PY_WM baselines/extract.py --arch $a --manifest $L --data_root $R --ckpt $CKPT/${a}_lam_retrained.safetensors \
       --out_dir $EMB/${a}_lam_retrained/$d

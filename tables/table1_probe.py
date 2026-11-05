@@ -2,7 +2,7 @@
 
 Reads <results>/<representation>/<dataset>_seed{0,1,2}.json written by probe/probe.py and prints / writes the LaTeX table:
 mean over the three probe seeds (R^2; Procgen: macro-F1), Avg. = mean over the 12 continuous-action datasets,
-Delta = JustAct minus the best other method. The LaTeX uses the paper macros \\best, \\second, \\mname and the colours
+Delta = OnlyAct minus the best other method. The LaTeX uses the paper macros \\best, \\second, \\mname and the colours
 oursblue, deltapos, deltaneg.
 
     python tables/table1_probe.py --results results/table1 --out table1.tex
@@ -12,7 +12,7 @@ import json
 import os
 import statistics
 
-SEEN = {"libero", "droid", "spatialvid_nav"}  # videos seen (without labels) by the JustAct encoder during training
+SEEN = {"libero", "droid", "spatialvid_nav"}  # videos seen (without labels) by the OnlyAct encoder during training
 GROUPS = [("Robot manipulation", ["libero", "droid", "rlbench", "robocasa", "droid_iprl", "metaworld", "utaustin_mutex", "vp2_robosuite", "vp2_robodesk"]),
           ("Camera navigation", ["spatialvid_nav", "arkitscenes", "realestate10k"]),
           ("Game (F1)", ["procgen_plan"])]
@@ -21,7 +21,7 @@ NAME = {"libero": "LIBERO", "droid": "DROID", "rlbench": "RLBench", "robocasa": 
         "arkitscenes": "ARKitScenes", "realestate10k": "RE10K", "procgen_plan": "Procgen"}
 METHODS = [("random", "Random"), ("adaworld_lam_retrained", "AdaWorld$^\\dagger$~\\cite{gao2025adaworld}"),
            ("dreamdojo_lam_retrained", "DreamDojo$^\\dagger$~\\cite{gao2026dreamdojo}"),
-           ("vjepa2_frozen", "V-JEPA~2~\\cite{vjepa2}"), ("justact", "\\textbf{\\mname} (ours)")]
+           ("vjepa2_frozen", "V-JEPA~2~\\cite{vjepa2}"), ("onlyact", "\\textbf{\\mname} (ours)")]
 OTHERS = ["adaworld_lam_retrained", "dreamdojo_lam_retrained", "vjepa2_frozen"]
 CAPTION = ("\\caption{\\textbf{Linear probing of action information.} A linear layer predicts the ground-truth action from each frozen representation. "
            "We report test $R^2$ on held-out scenes (Procgen: macro-F1 over 15 discrete actions), averaged over 3 probe seeds (std $\\le$ 0.02). "
@@ -56,12 +56,12 @@ def render(E):
     def fmt(c, k):
         if k == "random":
             return f"\\textcolor{{gray}}{{{num(val(c, k))}}}"
-        order = sorted(OTHERS + ["justact"], key=lambda m: -val(c, m))
+        order = sorted(OTHERS + ["onlyact"], key=lambda m: -val(c, m))
         s = num(val(c, k))
         return f"\\best{{{s}}}" if k == order[0] else f"\\second{{{s}}}" if k == order[1] else s
 
     def delta(c):
-        d = val(c, "justact") - max(val(c, m) for m in OTHERS)
+        d = val(c, "onlyact") - max(val(c, m) for m in OTHERS)
         return f"\\textcolor{{{'deltapos' if d >= 0 else 'deltaneg'}}}{{{'+' if d >= 0 else '$-$'}{abs(d):.2f}}}"
 
     head = lambda c: "Avg." if c == "avg" else NAME[c] + ("$^{\\circ}$" if c in SEEN else "")
@@ -78,7 +78,7 @@ def render(E):
     a.append("\\textbf{Representation} & " + " & ".join(head(c) for c in cols) + " \\\\")
     a.append("\\midrule")
     for k, label in METHODS:
-        pre = "\\rowcolor{oursblue}\n" if k == "justact" else ""
+        pre = "\\rowcolor{oursblue}\n" if k == "onlyact" else ""
         lab = f"\\textcolor{{gray}}{{{label}}}" if k == "random" else label
         a.append(pre + lab + " & " + " & ".join(fmt(c, k) for c in cols) + " \\\\")
         if k in ("random", "dreamdojo_lam_retrained"):

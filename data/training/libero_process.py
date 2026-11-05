@@ -1,4 +1,4 @@
-"""Prepare training data of the JustAct encoder: LIBERO frame extraction.
+"""Prepare training data of the OnlyAct encoder: LIBERO frame extraction.
 
 Reads the LIBERO HDF5 demonstration files (one file per task, 50 demos each)
 from <libero_root>/<split>/*.hdf5 and writes, under <data_root>/<subdir>/:

@@ -1,5 +1,5 @@
-JustAct
-Copyright (c) 2026 the JustAct authors (University of Oxford)
+OnlyAct
+Copyright (c) 2026 the OnlyAct authors (University of Oxford)
 
 This repository includes third-party code. Each component keeps its licence; details per file are in the notices listed below.
 
@@ -17,7 +17,7 @@ This repository includes third-party code. Each component keeps its licence; det
      Licence text: baselines/third_party/dreamdojo_lam/LICENSE.
 
 Weights used but not redistributed:
-   - V-JEPA 2 ViT-L, facebook/vjepa2-vitl-fpc64-256 (MIT licence). The JustAct adapters are trained on top of it.
+   - V-JEPA 2 ViT-L, facebook/vjepa2-vitl-fpc64-256 (MIT licence). The OnlyAct adapters are trained on top of it.
    - AdaWorld world model, Little-Podi/AdaWorld (Apache License 2.0), itself fine-tuned from Stable Video Diffusion
      (Stability AI licence terms apply).
    - OpenCLIP ViT-H-14, laion2b_s32b_b79k (https://github.com/mlfoundations/open_clip).
@@ -26,4 +26,4 @@ Weights used but not redistributed:
      retrained baselines were trained from random initialisation.
 
 Datasets: every dataset used for training or evaluation keeps its own licence (see data/probe/README.md,
-downstream/README.md, worldmodel/README.md and justact/training/README.md).
+downstream/README.md, worldmodel/README.md and onlyact/training/README.md).

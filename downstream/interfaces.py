@@ -9,12 +9,12 @@ Step 0 ("0 updates") uses no gradient update of the world model but does use the
   standardise: per-dimension mean / std (float64) of the arm's world-model training features after the input transform
         (used by the standardised interface of DMLab / Minecraft).
 
-  python -m downstream.interfaces book --config downstream/configs/dmlab.json --arm justact --features EMB/justact/dmlab_train \
-      --out checkpoints/downstream/step0/dmlab_justact.safetensors
-  python -m downstream.interfaces head --config downstream/configs/nuscenes.json --arm justact --features EMB/justact/nuscenes_train \
-      --out checkpoints/downstream/step0/nuscenes_justact.safetensors
-  python -m downstream.interfaces standardise --arm justact --pool_list POOL.json --features EMB/justact/pool \
-      --out checkpoints/downstream/standardise/justact.safetensors
+  python -m downstream.interfaces book --config downstream/configs/dmlab.json --arm onlyact --features EMB/onlyact/dmlab_train \
+      --out checkpoints/downstream/step0/dmlab_onlyact.safetensors
+  python -m downstream.interfaces head --config downstream/configs/nuscenes.json --arm onlyact --features EMB/onlyact/nuscenes_train \
+      --out checkpoints/downstream/step0/nuscenes_onlyact.safetensors
+  python -m downstream.interfaces standardise --arm onlyact --pool_list POOL.json --features EMB/onlyact/pool \
+      --out checkpoints/downstream/standardise/onlyact.safetensors
 (--features: folder of <task_id>.npy, (6, d) float16 per clip, from the arm's extractor; the pool is the world model's
 training clip list of Table 2; the whitening file must hold "mean", "std" and "transform".)
 """
@@ -101,15 +101,15 @@ def main():
     ap.add_argument("what", choices=["book", "head", "standardise"])
     ap.add_argument("--config"); ap.add_argument("--arm", required=True); ap.add_argument("--features", required=True)
     ap.add_argument("--wm_config", help="default: worldmodel/configs/<world model>.yaml")
-    ap.add_argument("--whitening_stats", help="JustAct only; default: checkpoints/worldmodel/justact_whitening.safetensors")
+    ap.add_argument("--whitening_stats", help="OnlyAct only; default: checkpoints/worldmodel/onlyact_whitening.safetensors")
     ap.add_argument("--data_root", default="."); ap.add_argument("--pool_list")
     ap.add_argument("--out", required=True)
     a = ap.parse_args(); torch.set_num_threads(4)
     if a.what == "standardise":
         tasks = load_clips(a.pool_list, a.data_root)
         rows = lambda: (np.load(os.path.join(a.features, t["task_id"] + ".npy")) for t in tasks)
-        wpath = a.whitening_stats or REPO / "checkpoints" / "worldmodel" / "justact_whitening.safetensors"
-        m, sd = standardise_stats(rows, load_whitening(wpath) if a.arm == "justact" else None)
+        wpath = a.whitening_stats or REPO / "checkpoints" / "worldmodel" / "onlyact_whitening.safetensors"
+        m, sd = standardise_stats(rows, load_whitening(wpath) if a.arm == "onlyact" else None)
         save_file({"mean": torch.from_numpy(m), "std": torch.from_numpy(sd)}, a.out); return
     cfg = load_config(a.config); dim = cfg["arms"][a.arm]["native_dim"]
     tasks = load_clips(cfg["train_list"], a.data_root)

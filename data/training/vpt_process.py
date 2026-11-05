@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare training data of the JustAct encoder: VPT Minecraft frames and actions.
+"""Prepare training data of the OnlyAct encoder: VPT Minecraft frames and actions.
 
 Downloads OpenAI's VPT contractor recordings (public Azure blob storage) and
 extracts fixed-length segments of JPEG frames plus encoded keyboard / mouse

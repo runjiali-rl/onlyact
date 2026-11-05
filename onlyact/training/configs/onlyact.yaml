@@ -1,5 +1,5 @@
-# Training recipe of the JustAct encoder (the configuration of the released checkpoint).
-# Every key is a field of justact/training/config.py:TrainConfig; command-line flags of train.py override it.
+# Training recipe of the OnlyAct encoder (the configuration of the released checkpoint).
+# Every key is a field of onlyact/training/config.py:TrainConfig; command-line flags of train.py override it.
 
 # encoder
 model_name: facebook/vjepa2-vitl-fpc64-256

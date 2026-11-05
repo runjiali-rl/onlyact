@@ -1,8 +1,8 @@
-"""Train the AdaWorld and DreamDojo latent action models from scratch on the JustAct training pairs.
+"""Train the AdaWorld and DreamDojo latent action models from scratch on the OnlyAct training pairs.
 
 Produces the AdaWorld-LAM (retrained) and DreamDojo-LAM (retrained) checkpoints behind the retrained
 latent-action baseline rows of Tables 1-4. Each model keeps its upstream network, objective and optimiser;
-only the training data changes: the frame pairs the JustAct encoder is trained on, at the same budget
+only the training data changes: the frame pairs the OnlyAct encoder is trained on, at the same budget
 (160,000 pair views).
 
   network     vendored unmodified (third_party/, see lam_models.py)
@@ -13,7 +13,7 @@ only the training data changes: the frame pairs the JustAct encoder is trained o
               bfloat16 autocast, random initialisation, seed 0
   input       each repository's training preprocessing (see CachePairDataset)
 
-Input (--cache_dir), the training-pair cache written by the JustAct cache builder:
+Input (--cache_dir), the training-pair cache written by the OnlyAct cache builder:
   index.jsonl                                one JSON record per pair: {"i", "task_id", "dataset", ...}
   frames/<i // 1000:03d>/<i:06d>_a0.jpg      frame t
   frames/<i // 1000:03d>/<i:06d>_a1.jpg      frame t + gap (gap 1-3)
@@ -74,7 +74,7 @@ class CachePairDataset(Dataset):
     architecture's upstream training dataset (lam/dataset.py :: VideoDataset) preprocesses a clip.
 
     Split: records sorted by "i", index order shuffled with random.Random(seed); the first val_frac of that
-    order is the validation split (the same split rule as the JustAct encoder's cache loader).
+    order is the validation split (the same split rule as the OnlyAct encoder's cache loader).
 
     Geometry, pixels in [0, 1], channels last:
       adaworld   centre crop to a square of side min(H, W), bicubic resize to `resolution` square

@@ -10,7 +10,7 @@ cd "$(dirname "$0")/.."
 : "${DATA:?set DATA}"
 RUNS=${RUNS:-runs}; PY_WM=${PY_WM:-python}
 DOMAINS=${DOMAINS:-"dmlab minecraft habitat nuscenes"}; STEPS=${STEPS:-"0 200 800"}
-ARMS="adaworld_lam_retrained dreamdojo_lam_retrained justact"
+ARMS="adaworld_lam_retrained dreamdojo_lam_retrained onlyact"
 O=$RUNS/table3
 for D in $DOMAINS; do
   for A in $ARMS; do

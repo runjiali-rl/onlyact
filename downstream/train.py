@@ -12,8 +12,8 @@ safetensors, at the updates listed in "save_steps" (a standardised book is saved
 
 Needs one 24 GB GPU and 24-26 GiB of free host memory; about 4 h on an RTX 4090 (7 h on an RTX A5500).
 
-  python -m downstream.train --config downstream/configs/dmlab.json --arm justact --data_root DATA/dmlab \
-      --out runs/table3/dmlab/justact
+  python -m downstream.train --config downstream/configs/dmlab.json --arm onlyact --data_root DATA/dmlab \
+      --out runs/table3/dmlab/onlyact
 """
 from __future__ import annotations
 
@@ -41,7 +41,7 @@ def main():
     ap.add_argument("--wm_config", help="default: worldmodel/configs/<world model>.yaml")
     ap.add_argument("--wm_ckpt", help="default: checkpoints/worldmodel/<world model>.safetensors")
     ap.add_argument("--base_ckpt", help="default: checkpoints/adaworld/adaworld.safetensors")
-    ap.add_argument("--whitening_stats", help="JustAct only; default: checkpoints/worldmodel/justact_whitening.safetensors")
+    ap.add_argument("--whitening_stats", help="OnlyAct only; default: checkpoints/worldmodel/onlyact_whitening.safetensors")
     ap.add_argument("--step0", help="step-0 interface (default: checkpoints/downstream/step0/<domain>_<arm>.safetensors)")
     ap.add_argument("--standardise", help="standardisation statistics (default: checkpoints/downstream/standardise/<arm>.safetensors)")
     ap.add_argument("--out", required=True); ap.add_argument("--no_check_hashes", action="store_true")

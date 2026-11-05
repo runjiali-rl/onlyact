@@ -1,4 +1,4 @@
-"""Build the sample cache the JustAct encoder is trained from (168,000 samples drawn from the 9-dataset manifest).
+"""Build the sample cache the OnlyAct encoder is trained from (168,000 samples drawn from the 9-dataset manifest).
 
 Each sample is one clip of the manifest and two windows of it: the anchor pair (a0, a1) = frames (a_lo, a_hi) with a
 gap of gap_lo..gap_hi frames, and the hard-negative pair (h0, h1) = frames (h_lo, h_hi) from a window that does not
@@ -18,7 +18,7 @@ Layout:
     <out_dir>/frames/<i//1000:03d>/<i:06d>_{a0,a1,h0,h1}.jpg
     <out_dir>/meta.json
 
-    python -m justact.training.build_sample_cache --manifest <manifest.json> --data_root <data> --out_dir <cache> \
+    python -m onlyact.training.build_sample_cache --manifest <manifest.json> --data_root <data> --out_dir <cache> \
         --n_samples 168000 --gap_lo 1 --gap_hi 3 --seed 0 --workers 4 --max_short_side 292 \
         --dataset_weights "vpt=0.25,calvin=0.15,libero=0.05,droid=0.05,atari=0.05,agibot=0.10,egodex=0.10,spatialvid=0.15,sthv2=0.10"
 

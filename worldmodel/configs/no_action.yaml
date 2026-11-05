@@ -2,7 +2,7 @@
 # AdaWorld (configs/training/adaworld.yaml) with the latent-action encoder replaced by a precomputed per-transition action
 # vector; differences from AdaWorld: no EMA copy, gradient checkpointing, external-action data module, single-GPU trainer.
 # Vector input width = 512 + D (adm_in_channels), cross-attention context width = 1024 + D (context_dim).
-# Fields set at run time by train.py / generate.py: data.params.sources[0].{manifest,data_root,emb_dir} and, for JustAct,
+# Fields set at run time by train.py / generate.py: data.params.sources[0].{manifest,data_root,emb_dir} and, for OnlyAct,
 # the whitening statistics file.
 model:
   base_learning_rate: 5.0e-05

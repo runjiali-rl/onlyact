@@ -1,4 +1,4 @@
-"""Training views of the JustAct encoder, read from the pre-drawn sample cache.
+"""Training views of the OnlyAct encoder, read from the pre-drawn sample cache.
 
 Each cached sample (build_sample_cache.py) holds four frames of one clip: the anchor pair (a0, a1), 1-3 frames apart,
 and the hard-negative pair (h0, h1) from a disjoint window of the same clip. Its optical flow a0 -> a1 is in the flow

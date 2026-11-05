@@ -1,6 +1,6 @@
-"""Per-provider whitening statistics for the JustAct world model of Table 2.
+"""Per-provider whitening statistics for the OnlyAct world model of Table 2.
 
-The JustAct action vector (640-d, unit norm) enters the world model through a fixed, parameter-free whitening map
+The OnlyAct action vector (640-d, unit norm) enters the world model through a fixed, parameter-free whitening map
     x -> ((x - mean) / std) @ W,
 measured once on the provider's own embeddings of ALL transitions of the world-model training pool (no evaluation data):
   1. mean / std per dimension (float64 accumulation, stored as float32; std below 1e-6 is replaced by 1);
@@ -13,7 +13,7 @@ Output: a safetensors file with mean, std, transform (= W), inverse (float32) an
 plus a JSON report next to it.
 
     python compute_whitening.py --train_list ../data/worldmodel/train_pool.json.gz \
-        --emb_dir $EMB/justact/worldmodel_pool --out checkpoints/worldmodel/justact_whitening.safetensors
+        --emb_dir $EMB/onlyact/worldmodel_pool --out checkpoints/worldmodel/onlyact_whitening.safetensors
 
 The released statistics were computed with --device cuda. A CPU run reproduces mean and std bit for bit; 2 of the
 409,600 transform entries differ, by at most 1.4e-14.

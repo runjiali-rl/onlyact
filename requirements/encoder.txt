@@ -1,4 +1,4 @@
-# Environment 1: JustAct encoder (training, extraction), linear probe (Table 1), scene-leakage decoder (Table 4).
+# Environment 1: OnlyAct encoder (training, extraction), linear probe (Table 1), scene-leakage decoder (Table 4).
 # Python 3.12, CUDA 12.8. These are the versions that produced the paper's numbers. The transformers build is a
 # development commit; public releases with V-JEPA 2 support also run the code but have not been checked for identical outputs.
 torch==2.10.0

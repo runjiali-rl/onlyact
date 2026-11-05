@@ -7,8 +7,8 @@ deterministic function of the clip list and --split_seed; --seed reseeds every r
 the result of one representation does not depend on anything probed before it.
 
     python -m probe.probe --dataset libero --clips data/probe/libero.json \
-        --actions_dir $EVAL_DATA/probe/libero/actions --emb_dir $EMB/justact/libero \
-        --seed 0 --output results/table1/justact/libero_seed0.json
+        --actions_dir $EVAL_DATA/probe/libero/actions --emb_dir $EMB/onlyact/libero \
+        --seed 0 --output results/table1/onlyact/libero_seed0.json
 """
 import argparse
 import json

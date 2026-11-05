@@ -1,10 +1,10 @@
-# JustAct: Extracting Action Representations from Foundation Models for World Models
+# OnlyAct: Extracting Action Representations from Foundation Models for World Models
 
 Runjia Li, Minghao Chen, Junyu Xie, Philip Torr, Andrea Vedaldi, Tomas Jakab (University of Oxford)
 
-NeurIPS 2026 · Project page: https://runjiali-rl.github.io/justact/
+NeurIPS 2026 · Project page: https://runjiali-rl.github.io/onlyact/
 
-JustAct turns a self-supervised video encoder into an action encoder, without action labels. A frame pair goes into
+OnlyAct turns a self-supervised video encoder into an action encoder, without action labels. A frame pair goes into
 V-JEPA 2 ViT-L as one two-frame clip. The encoder's tokens are mean-pooled, a fixed random projection maps them to 640
 dimensions, and the result is L2-normalised. Only LoRA adapters inside the encoder are trained (7.1 million parameters,
 1.5 hours on one RTX 4090), with a contrastive loss on 168,000 frame pairs from nine video datasets. The positive of a pair
@@ -17,7 +17,7 @@ This repository contains the code, the checkpoints and the evaluation protocol f
 
 | folder | what it does | paper |
 |---|---|---|
-| `justact/` | the encoder, embedding extraction and the contrastive training code (`justact/training/`) | all |
+| `onlyact/` | the encoder, embedding extraction and the contrastive training code (`onlyact/training/`) | all |
 | `baselines/` | AdaWorld and DreamDojo latent action models retrained on our frame pairs: training and extraction | all |
 | `probe/` | linear probe of action information | Table 1 |
 | `worldmodel/` | AdaWorld world model conditioned on an external action representation: training, rollouts, scoring | Table 2 |
@@ -28,7 +28,7 @@ This repository contains the code, the checkpoints and the evaluation protocol f
 | `scripts/` | one script per table that runs the whole evaluation | all |
 | `checkpoints/` | download instructions and checksums of the released weights | all |
 
-`baselines/`, `worldmodel/`, `downstream/`, `leakage/`, `justact/training/`, `data/probe/` and `checkpoints/` have their
+`baselines/`, `worldmodel/`, `downstream/`, `leakage/`, `onlyact/training/`, `data/probe/` and `checkpoints/` have their
 own README with the protocol, the commands and the compute cost; the linear probe (`probe/probe.py`) and the table
 scripts (`tables/`) are described in their module docstrings.
 
@@ -37,10 +37,10 @@ scripts (`tables/`) are described in their module docstrings.
 Two Python environments are used (Python 3.12, CUDA 12.8):
 
 ```bash
-conda create -n justact python=3.12 && conda activate justact
+conda create -n onlyact python=3.12 && conda activate onlyact
 pip install -r requirements/encoder.txt        # encoder, extraction, probe, leakage decoder, encoder training
 
-conda create -n justact-wm python=3.12 && conda activate justact-wm
+conda create -n onlyact-wm python=3.12 && conda activate onlyact-wm
 pip install -r requirements/worldmodel.txt     # world model, downstream fine-tuning, latent-action baselines
 ```
 
@@ -49,7 +49,7 @@ The versions are the ones that produced the paper's numbers.
 ## Checkpoints
 
 The weights are on Hugging Face at https://huggingface.co/liguang0115/justact; see
-[`checkpoints/README.md`](checkpoints/README.md) for the download command. In short: the JustAct adapters and projection (37 MB), the two
+[`checkpoints/README.md`](checkpoints/README.md) for the download command. In short: the OnlyAct adapters and projection (37 MB), the two
 retrained latent action models (1.9 GB and 2.8 GB), the four world models (about 230 MB each) and the small Table 3
 classifiers and interfaces. V-JEPA 2 and the AdaWorld base model are downloaded from their authors.
 
@@ -57,9 +57,9 @@ classifiers and interfaces. V-JEPA 2 and the AdaWorld base model are downloaded 
 
 ```python
 import numpy as np
-from justact import JustActEncoder
+from onlyact import OnlyActEncoder
 
-encoder = JustActEncoder("checkpoints/justact", device="cuda:0")   # JustActEncoder(None) = frozen V-JEPA 2
+encoder = OnlyActEncoder("checkpoints/onlyact", device="cuda:0")   # OnlyActEncoder(None) = frozen V-JEPA 2
 pair = np.stack([frame_t, frame_t_plus_1])                         # (2, H, W, 3) uint8 RGB
 embedding = encoder.encode([pair])                                 # (1, 640) float32, unit norm
 ```
@@ -67,8 +67,8 @@ embedding = encoder.encode([pair])                                 # (1, 640) fl
 For a whole clip list (one row per consecutive frame pair):
 
 ```bash
-python -m justact.extract --manifest data/probe/libero.json --data_root $DATA/probe/libero \
-    --ckpt checkpoints/justact --out_dir runs/emb/justact/libero
+python -m onlyact.extract --manifest data/probe/libero.json --data_root $DATA/probe/libero \
+    --ckpt checkpoints/onlyact --out_dir runs/emb/onlyact/libero
 ```
 
 ## Data
@@ -83,7 +83,7 @@ that prepare each dataset. Download each dataset from its source and prepare it 
 | Table 2 | LIBERO, RLBench, SpatialVID | [`data/probe/README.md`](data/probe/README.md) (the same frames as Table 1) |
 | Table 2 | nuScenes v1.0-mini | [`worldmodel/README.md`](worldmodel/README.md) |
 | Table 3 | DMLab, Minecraft, Habitat, nuScenes | [`downstream/README.md`](downstream/README.md) |
-| encoder training, world-model training | the nine training datasets | [`justact/training/README.md`](justact/training/README.md) |
+| encoder training, world-model training | the nine training datasets | [`onlyact/training/README.md`](onlyact/training/README.md) |
 
 The scripts in `scripts/` read everything from one data root `$DATA`: `probe/`, `leakage128/` and `eval_data/` (frames,
 128x128 frames and action targets, all written by `data/probe/prepare/`, whose requirements are in
@@ -102,13 +102,13 @@ Each script skips outputs that already exist, so it can be stopped and restarted
 | Table 4, scene leakage | `DATA=... bash scripts/reproduce_table4.sh` (after Table 1) | about 10 h (208 decoders) |
 
 `PY_ENC` and `PY_WM` select the Python of the two environments. The training of every model is also included:
-`justact/training/` (encoder), `baselines/train.py`, `worldmodel/train.py` and `downstream/train.py`.
+`onlyact/training/` (encoder), `baselines/train.py`, `worldmodel/train.py` and `downstream/train.py`.
 
 ## Reproducibility
 
 - On the same GPU model and software versions, embedding extraction, the linear probe, world-model rollouts and
   downstream generation are deterministic. The LoRA adapters are merged into the bfloat16 encoder weights on the CPU,
-  and the rounding of that merge depends on the number of CPU threads: `JustActEncoder` merges with 6 threads, as in
+  and the rounding of that merge depends on the number of CPU threads: `OnlyActEncoder` merges with 6 threads, as in
   the paper.
 - On other GPU models, bfloat16 embeddings differ slightly (cosine similarity above 0.998 to the paper's files). This moves
   probe values by up to about 0.015 R^2.
@@ -121,8 +121,8 @@ Each script skips outputs that already exist, so it can be stopped and restarted
 ## Citation
 
 ```bibtex
-@inproceedings{li2026justact,
-  title     = {JustAct: Extracting Action Representations from Foundation Models for World Models},
+@inproceedings{li2026onlyact,
+  title     = {OnlyAct: Extracting Action Representations from Foundation Models for World Models},
   author    = {Li, Runjia and Chen, Minghao and Xie, Junyu and Torr, Philip and Vedaldi, Andrea and Jakab, Tomas},
   booktitle = {Advances in Neural Information Processing Systems},
   year      = {2026}

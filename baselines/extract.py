@@ -36,7 +36,7 @@ import lam_models
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if REPO_ROOT not in sys.path:
     sys.path.insert(0, REPO_ROOT)
-from justact.data import load_manifest, resolve_tasks  # noqa: E402
+from onlyact.data import load_manifest, resolve_tasks  # noqa: E402
 
 ADAWORLD_RES = 256
 DREAMDOJO_H, DREAMDOJO_W = 240, 320

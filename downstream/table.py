@@ -1,7 +1,7 @@
 """Collect the four per-domain score files into the numbers of paper Table 3 (no inference).
 
 Panel (a), after 800 updates: Follow and Control per domain; "Real frames" = the classifier on real transitions.
-Panel (b): PSNR after 0, 200 and 800 updates. Delta = JustAct minus the better baseline in that column; it is marked as not
+Panel (b): PSNR after 0, 200 and 800 updates. Delta = OnlyAct minus the better baseline in that column; it is marked as not
 significant (grey in the paper) when the paired bootstrap 95 % interval of that difference contains 0.
 
   python -m downstream.table --scores runs/table3/scores --out runs/table3/table3_source.json
@@ -41,7 +41,7 @@ def build(scores):
 
 
 def show(src):
-    names = {"adaworld_lam_retrained": "AdaWorld-LAM (retrained)", "dreamdojo_lam_retrained": "DreamDojo-LAM (retrained)", "justact": "JustAct"}
+    names = {"adaworld_lam_retrained": "AdaWorld-LAM (retrained)", "dreamdojo_lam_retrained": "DreamDojo-LAM (retrained)", "onlyact": "OnlyAct"}
     cols_a = [(ds, m) for ds in DOMAINS for m in ("follow", "margin")]
     print("(a) after 800 updates: " + " | ".join(f"{ds} {m}" for ds, m in cols_a))
     print(f"{'Real frames':28s}" + "".join(f"{src['follow_ceiling_real_frames'].get(ds, float('nan')):9.3f}{'--':>9s}" for ds in DOMAINS))

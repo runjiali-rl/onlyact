@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare training data of the JustAct encoder (EgoDex part).
+"""Prepare training data of the OnlyAct encoder (EgoDex part).
 
 Streams the EgoDex training parts 1-5 from Apple's public server
 (https://ml-site.cdn-apple.com/datasets/egodex/partN.zip) and re-encodes every

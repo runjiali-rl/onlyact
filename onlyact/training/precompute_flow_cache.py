@@ -8,7 +8,7 @@ dequantised flow, i.e. exactly what the data loader recomputes.
 Resumable (existing files are skipped; each file is written under a temporary name and renamed). One RTX 4090: about
 17 minutes for the 168,000 samples (5.8 GB).
 
-    python -m justact.training.precompute_flow_cache --cache_dir <cache>
+    python -m onlyact.training.precompute_flow_cache --cache_dir <cache>
 """
 from __future__ import annotations
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare training data of the JustAct encoder: DROID training manifest.
+"""Prepare training data of the OnlyAct encoder: DROID training manifest.
 
 Reads the episode folders written by droid_download_and_process.py under
 <data_root>/<subdir>/<lab>/success/<date>/<timestamp>/ and writes one task per episode.

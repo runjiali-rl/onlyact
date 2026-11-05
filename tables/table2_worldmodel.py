@@ -13,8 +13,8 @@ COLS = [("libero_self", "psnr"), ("libero_transfer", "direction"), ("rlbench_sel
         ("spatialvid_self", "psnr"), ("spatialvid_transfer", "direction"), ("nuscenes_dev_self", "psnr"),
         ("nuscenes_dev_transfer", "direction"), ("nuscenes_conf_self", "psnr"), ("nuscenes_conf_transfer", "direction")]
 METHODS = [("no_action", "No action"), ("adaworld_lam", "AdaWorld$^\\dagger$~\\cite{gao2025adaworld}"),
-           ("dreamdojo_lam", "DreamDojo$^\\dagger$~\\cite{gao2026dreamdojo}"), ("justact", "\\textbf{\\mname} (ours)")]
-RANKED = ["adaworld_lam", "dreamdojo_lam", "justact"]
+           ("dreamdojo_lam", "DreamDojo$^\\dagger$~\\cite{gao2026dreamdojo}"), ("onlyact", "\\textbf{\\mname} (ours)")]
+RANKED = ["adaworld_lam", "dreamdojo_lam", "onlyact"]
 CAP = ("\\caption{\\textbf{Action-conditioned world model.} The same world model (AdaWorld backbone, same recipe and data) is trained with each "
        "action representation. \\emph{Self}: PSNR$\\uparrow$ (dB) when driven by the clip's own actions. \\emph{Transfer}: a source clip's actions "
        "drive a different scene; Dir$\\uparrow$ is the cosine between the optical-flow direction of the generated video and of the source (0: unrelated; "
@@ -36,7 +36,7 @@ def render(V):
         return f"\\best{{{s}}}" if m == order[0] else f"\\second{{{s}}}" if m == order[1] else s
 
     def delta(c):
-        d = V[c]["justact"] - max(V[c]["adaworld_lam"], V[c]["dreamdojo_lam"])
+        d = V[c]["onlyact"] - max(V[c]["adaworld_lam"], V[c]["dreamdojo_lam"])
         s = f"{abs(d):.2f}" if psnr(c) else f"{abs(d):.3f}"
         return f"\\textcolor{{{'deltapos' if d >= 0 else 'deltaneg'}}}{{{'+' if d >= 0 else '$-$'}{s}}}"
 
@@ -61,7 +61,7 @@ def render(V):
                                                               for c, _ in COLS) + " \\\\")
     t.append("\\midrule")
     for m, label in METHODS:
-        pre = "\\rowcolor{oursblue}\n" if m == "justact" else ""
+        pre = "\\rowcolor{oursblue}\n" if m == "onlyact" else ""
         lab = f"\\textcolor{{gray}}{{{label}}}" if m == "no_action" else label
         t.append(pre + lab + " & " + " & ".join(fmt(c, m) for c, _ in COLS) + " \\\\")
         if m in ("no_action", "dreamdojo_lam"):

@@ -5,3 +5,4 @@ runs/
 checkpoints/*
 !checkpoints/README.md
 !checkpoints/SHA256SUMS
+!checkpoints/download.sh

@@ -1,7 +1,7 @@
 # Downstream world-model fine-tuning (Table 3)
 
 Each pretrained world model of Table 2 (the AdaWorld world model conditioned on AdaWorld-LAM (retrained),
-DreamDojo-LAM (retrained) or JustAct action representations) is fine-tuned on a small labelled set of a new domain and
+DreamDojo-LAM (retrained) or OnlyAct action representations) is fine-tuned on a small labelled set of a new domain and
 evaluated on held-out test cases after 0, 200 and 800 updates.
 
 | Domain | Actions | Labelled fine-tuning clips | Test cases | Recipe (`configs/<domain>.json`, block `recipe`) |
@@ -47,7 +47,7 @@ case's own seed before every generated action, so all actions and all arms share
   The "Real frames" row is the same classifier applied to (real frame 5, real frame 6). For nuScenes, Follow is a
   per-case Spearman correlation: the five commanded forward displacements against the displacement that a forward-motion
   readout (`readout.py`) reads from (real frame 5, generated frame). Chance is 0.
-- **Delta**: JustAct minus the better baseline. A Delta is not significant when its 95 % paired bootstrap interval
+- **Delta**: OnlyAct minus the better baseline. A Delta is not significant when its 95 % paired bootstrap interval
   contains 0. The bootstrap resamples whole episodes (driving logs on nuScenes) with 20 000 draws and seed 20261020. It
   covers test-case sampling only, not the variance between training seeds.
 
@@ -69,9 +69,9 @@ checkpoints/downstream/     idm_{dmlab,minecraft,habitat}.safetensors, readout_n
                             step0/<domain>_<arm>.safetensors, standardise/<arm>.safetensors
 ```
 
-Arms: `justact`, `adaworld_lam_retrained` and `dreamdojo_lam_retrained`. The pretrained world models are read from
-`worldmodel/configs/<world model>.yaml` and `checkpoints/worldmodel/<world model>.safetensors` (JustAct also needs
-`checkpoints/worldmodel/justact_whitening.safetensors`), together with the public AdaWorld weights in
+Arms: `onlyact`, `adaworld_lam_retrained` and `dreamdojo_lam_retrained`. The pretrained world models are read from
+`worldmodel/configs/<world model>.yaml` and `checkpoints/worldmodel/<world model>.safetensors` (OnlyAct also needs
+`checkpoints/worldmodel/onlyact_whitening.safetensors`), together with the public AdaWorld weights in
 `checkpoints/adaworld/adaworld.safetensors`. Each path can be overridden with `--wm_config`, `--wm_ckpt`, `--whitening_stats`
 or `--base_ckpt`.
 
@@ -154,7 +154,7 @@ resize:
 conda create -n habitat -c conda-forge -c aihabitat python=3.9 numpy=1.26.4 habitat-sim=0.3.3 headless
 conda activate habitat
 pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu    # the last torch release for Python 3.9
-cd justact && python -m downstream.prepare habitat --list data/downstream/habitat/train.json --source $HM3D --out $DATA/downstream/habitat
+cd onlyact && python -m downstream.prepare habitat --list data/downstream/habitat/train.json --source $HM3D --out $DATA/downstream/habitat
 ```
 
 Each frame is rendered at its stored pose with the settings of the list header (`render`: 128 x 128 pinhole RGB
@@ -171,8 +171,8 @@ numbers may then differ slightly from the paper.
 The commands below are for one domain and one arm; repeat them for every domain and arm.
 
 ```bash
-cd justact            # repository root
-D=dmlab; A=justact    # domain, arm
+cd onlyact            # repository root
+D=dmlab; A=onlyact    # domain, arm
 
 # 0 updates
 python -m downstream.generate --config downstream/configs/$D.json --arm $A --data_root $DATA/downstream/$D --out runs/table3/cells/$D/${A}_step0
@@ -213,7 +213,7 @@ the listed training clips. The book uses row 5, the last transition.
   of the UNet live on the CPU (about 17 GiB). Do not run two fine-tuning runs on one host unless it has the memory for both.
   One 800-update run takes about 4 h on an RTX 4090 and 7 h on an RTX A5500. All 12 runs together take about 50 to 80
   GPU-hours.
-- **Checkpoints.** Each saved checkpoint is 6.1 GB (32-d arms) or 6.2 GB (JustAct), FP32.
+- **Checkpoints.** Each saved checkpoint is 6.1 GB (32-d arms) or 6.2 GB (OnlyAct), FP32.
 - **Generation.** One 300-case discrete cell takes 14 min on an RTX 4090 (26 min on an RTX A5500), and one 60-case
   nuScenes cell takes 9 min. A cell's predictions take 180 MB.
 - **Scoring.** All four domains score in a few minutes. The classifiers and the readout are small and also run on a CPU.

@@ -8,7 +8,7 @@ Reads <cells>/<arm>_step<n>/{results.jsonl, preds/} written by generate.py and w
                        classifier, applied to (real frame 5, generated frame), assigns to the generated action (chance 1/3);
   follow               Follow, nuScenes: per-case Spearman correlation between the commanded forward displacements of the
                        five generated actions and the readout's displacement from (real frame 5, generated frame) (chance 0);
-plus LPIPS and motion-region PSNR, and per number of updates the contrasts JustAct minus each baseline: paired bootstrap
+plus LPIPS and motion-region PSNR, and per number of updates the contrasts OnlyAct minus each baseline: paired bootstrap
 over whole episodes (discrete: one case per episode; nuScenes: driving logs), 20 000 draws, seed 20261020, percentile
 95 % interval. "ceiling" (discrete) = the classifier's accuracy on (real frame 5, real frame 6) of the test cases.
 

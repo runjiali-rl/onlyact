@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare training data of the JustAct encoder: DROID download and frame extraction.
+"""Prepare training data of the OnlyAct encoder: DROID download and frame extraction.
 
 Downloads raw DROID episodes from the public bucket gs://gresearch/robotics/droid_raw/1.0.1
 (needs `gsutil`), keeps trajectory.h5 and the episode metadata, and decodes every mono MP4

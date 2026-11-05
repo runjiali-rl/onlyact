@@ -1,4 +1,4 @@
-"""Prepare training data of the JustAct encoder: cap the large video datasets.
+"""Prepare training data of the OnlyAct encoder: cap the large video datasets.
 
 Randomly subsamples AgiBot World, EgoDex, SpatialVID and Something-Something v2
 to fixed caps (other datasets are kept whole), then shuffles the task list.

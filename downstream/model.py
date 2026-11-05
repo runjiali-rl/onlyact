@@ -39,7 +39,7 @@ def world_model_files(cfg, arm, wm_config=None, wm_ckpt=None, base_ckpt=None, wh
     return {"wm_config": wm_config or str(REPO / "worldmodel" / "configs" / f"{name}.yaml"),
             "wm_ckpt": wm_ckpt or str(REPO / "checkpoints" / "worldmodel" / f"{name}.safetensors"),
             "base_ckpt": base_ckpt or str(REPO / "checkpoints" / "adaworld" / "adaworld.safetensors"),
-            "whitening_stats": whitening_stats or str(REPO / "checkpoints" / "worldmodel" / "justact_whitening.safetensors")}
+            "whitening_stats": whitening_stats or str(REPO / "checkpoints" / "worldmodel" / "onlyact_whitening.safetensors")}
 
 
 def _config(wm_config, whitening_stats):
@@ -109,7 +109,7 @@ def build_pretrained(files, native_dim):
 
 
 def original_action_embedder(files, native_dim):
-    """The pretrained world model's own action input transform (per-provider whitening for JustAct, identity for the LAMs)."""
+    """The pretrained world model's own action input transform (per-provider whitening for OnlyAct, identity for the LAMs)."""
     worldmodel_path()
     from vwm.util import instantiate_from_config
     rows = [c for c in _config(files["wm_config"], files["whitening_stats"]).model.params.conditioner_config.params.emb_models

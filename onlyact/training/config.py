@@ -1,4 +1,4 @@
-"""Training configuration of the JustAct encoder. The defaults are the released recipe (configs/justact.yaml)."""
+"""Training configuration of the OnlyAct encoder. The defaults are the released recipe (configs/onlyact.yaml)."""
 from __future__ import annotations
 
 from dataclasses import asdict, dataclass, field, fields

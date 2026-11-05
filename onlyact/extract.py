@@ -1,11 +1,11 @@
-"""Extract per-frame-pair embeddings with JustAct or frozen V-JEPA 2 (inputs of Tables 1, 2 and 4).
+"""Extract per-frame-pair embeddings with OnlyAct or frozen V-JEPA 2 (inputs of Tables 1, 2 and 4).
 
 For every task of a clip list, writes <out_dir>/<task_id>.npy: float16, shape (n_frames - gap, D), one unit-norm row per
-pair (frame i, frame i + gap). D = 640 for JustAct, 1024 for frozen V-JEPA 2. Existing files are skipped, so a run can be resumed.
+pair (frame i, frame i + gap). D = 640 for OnlyAct, 1024 for frozen V-JEPA 2. Existing files are skipped, so a run can be resumed.
 
-    python -m justact.extract --manifest data/probe/libero.json --data_root $DATA/libero \
-        --ckpt checkpoints/justact --out_dir $EMB/justact/libero
-    python -m justact.extract --manifest data/probe/libero.json --data_root $DATA/libero \
+    python -m onlyact.extract --manifest data/probe/libero.json --data_root $DATA/libero \
+        --ckpt checkpoints/onlyact --out_dir $EMB/onlyact/libero
+    python -m onlyact.extract --manifest data/probe/libero.json --data_root $DATA/libero \
         --frozen --out_dir $EMB/vjepa2_frozen/libero
 """
 from __future__ import annotations
@@ -17,7 +17,7 @@ import numpy as np
 from tqdm import tqdm
 
 from .data import load_manifest
-from .encoder import BASE_MODEL, BASE_REVISION, JustActEncoder, encode_frame_sequence
+from .encoder import BASE_MODEL, BASE_REVISION, OnlyActEncoder, encode_frame_sequence
 
 
 def main():
@@ -26,7 +26,7 @@ def main():
     p.add_argument("--data_root", default=None, help="root that the clip list's relative frame paths start from")
     p.add_argument("--out_dir", required=True)
     g = p.add_mutually_exclusive_group(required=True)
-    g.add_argument("--ckpt", help="JustAct checkpoint folder (adapter_config.json, adapter_model.safetensors, projection.safetensors)")
+    g.add_argument("--ckpt", help="OnlyAct checkpoint folder (adapter_config.json, adapter_model.safetensors, projection.safetensors)")
     g.add_argument("--frozen", action="store_true", help="frozen V-JEPA 2 baseline (no adapter, no projection)")
     p.add_argument("--base_model", default=BASE_MODEL)
     p.add_argument("--revision", default=BASE_REVISION)
@@ -39,7 +39,7 @@ def main():
     args = p.parse_args()
 
     tasks = load_manifest(args.manifest, args.data_root)
-    encoder = JustActEncoder(None if args.frozen else args.ckpt, args.base_model, args.revision, args.device, args.merge_threads)
+    encoder = OnlyActEncoder(None if args.frozen else args.ckpt, args.base_model, args.revision, args.device, args.merge_threads)
     os.makedirs(args.out_dir, exist_ok=True)
     todo = [t for t in tasks if not os.path.exists(os.path.join(args.out_dir, f"{t['task_id']}.npy"))]
     print(f"[extract] tasks={len(tasks)} done={len(tasks) - len(todo)} todo={len(todo)} dim={encoder.dim} out={args.out_dir}")

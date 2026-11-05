@@ -1,4 +1,4 @@
-"""Symmetric InfoNCE with hard negatives, the training objective of the JustAct encoder.
+"""Symmetric InfoNCE with hard negatives, the training objective of the OnlyAct encoder.
 
 Inputs are L2-normalised embeddings, each [N, D]:
     anchors    A_i  the anchor pair

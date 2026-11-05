@@ -1,4 +1,4 @@
-"""Prepare training data of the JustAct encoder: CALVIN frames and manifest.
+"""Prepare training data of the OnlyAct encoder: CALVIN frames and manifest.
 
 Input: the CALVIN task_ABC_D split (http://calvin.cs.uni-freiburg.de/dataset/task_ABC_D.zip,
 see https://github.com/mees/calvin). CALVIN stores one .npz file per time step (rgb_static 200x200, rel_actions 7-D)

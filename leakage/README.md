@@ -17,7 +17,7 @@ and L1, low SSIM), the representation carries little scene information beyond th
 
 ## Protocol
 
-- **Representations** (`--representation`): `justact` (D = 640), `vjepa2_frozen` (1024),
+- **Representations** (`--representation`): `onlyact` (D = 640), `vjepa2_frozen` (1024),
   `adaworld_lam_retrained` (32), `dreamdojo_lam_retrained` (32). One row per consecutive frame pair, as written by the
   extraction scripts.
 - **Training**: L1 + 0.5 x LPIPS (`lpips` 0.1.4, AlexNet, v0.1 linear weights), AdamW (learning rate 1e-4, weight
@@ -60,9 +60,9 @@ Run from the repository root.
 
 ```bash
 # one decoder
-python -m leakage.train --dataset libero --representation justact --seed 0 \
+python -m leakage.train --dataset libero --representation onlyact --seed 0 \
     --clips data/probe/libero.json --data_root $FRAMES128/libero \
-    --emb_dir $EMB/justact/libero --out_dir runs/table4/libero/justact/seed0
+    --emb_dir $EMB/onlyact/libero --out_dir runs/table4/libero/onlyact/seed0
 
 # all 208 decoders (13 datasets x 4 representations x 4 seeds), restartable
 EMB=$EMB FRAMES128=$FRAMES128 OUT=runs/table4 bash leakage/run_table4.sh

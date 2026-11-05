@@ -1,4 +1,4 @@
-"""Prepare training data of the JustAct encoder: union manifest over the datasets.
+"""Prepare training data of the OnlyAct encoder: union manifest over the datasets.
 
 Combines the per-dataset outputs into one manifest of training clips:
   - frame-backed manifests (calvin, atari, libero, droid) are passed through,

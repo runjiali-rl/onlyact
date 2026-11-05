@@ -1,7 +1,7 @@
 """Table 3 (downstream world-model fine-tuning) from the source file written by `python -m downstream.table`.
 
 (a) Controllability after 800 updates: Follow and Control per domain, with the "Real frames" row. (b) Fidelity: PSNR after
-0, 200 and 800 updates. Delta = JustAct minus the better baseline; grey when its 95 % paired bootstrap interval contains 0.
+0, 200 and 800 updates. Delta = OnlyAct minus the better baseline; grey when its 95 % paired bootstrap interval contains 0.
 The LaTeX uses the paper macros \\best, \\second, \\mname and the colours oursblue, deltapos, deltaneg.
 
     python tables/table3_downstream.py --source runs/table3/table3_source.json --out table3.tex
@@ -11,10 +11,10 @@ import json
 
 DS = ["dmlab", "minecraft", "habitat", "nuscenes"]
 STEPS = [0, 200, 800]
-ARMS = ["adaworld_lam_retrained", "dreamdojo_lam_retrained", "justact"]
+ARMS = ["adaworld_lam_retrained", "dreamdojo_lam_retrained", "onlyact"]
 NAMES = {"dmlab": "DMLab", "minecraft": "Minecraft", "habitat": "Habitat", "nuscenes": "nuScenes"}
 LAB = {"adaworld_lam_retrained": "AdaWorld$^\\dagger$~\\cite{gao2025adaworld}", "dreamdojo_lam_retrained": "DreamDojo$^\\dagger$~\\cite{gao2026dreamdojo}",
-       "justact": "\\textbf{\\mname} (ours)"}
+       "onlyact": "\\textbf{\\mname} (ours)"}
 CAP = ("\\caption{\\textbf{Downstream world-model fine-tuning: controllability and fidelity.} Each pretrained world model from "
        "Table~\\ref{tab:main_video_quality} is fine-tuned on a small labelled set of a new domain. \\textbf{(a) Controllability} after 800 updates. "
        "Follow$\\uparrow$: accuracy of an inverse-dynamics classifier at recognising the commanded action in the generated frame (chance 0.333; "
@@ -39,7 +39,7 @@ def render(src):
                 r = shown.index(round(vals[a], dec))
                 out[a].append(f"\\best{{{t}}}" if r == 0 else (f"\\second{{{t}}}" if r == 1 else t))
             opp = max(ARMS[:2], key=lambda a: vals[a])
-            ci, d = C[key]["ci95"], vals["justact"] - vals[opp]
+            ci, d = C[key]["ci95"], vals["onlyact"] - vals[opp]
             col = "gray" if ci[0] <= 0 <= ci[1] else ("deltapos" if d >= 0 else "deltaneg")
             sign = "" if round(abs(d), dec) == 0 else ("+" if d > 0 else "$-$")
             dl.append(f"\\footnotesize \\textcolor{{{col}}}{{{sign}{abs(d):.{dec}f}}}")
@@ -58,12 +58,12 @@ def render(src):
     t.append(gray("Real frames") + " & " + span_a(sum(([gray(f"{CEIL[ds]:.3f}") if ds in CEIL else gray("--"), gray("--")] for ds in DS), [])) + " \\\\")
     for a in ARMS[:2]:
         t.append(LAB[a] + " & " + span_a(oa[a]) + " \\\\")
-    t += ["\\midrule", "\\rowcolor{oursblue}", LAB["justact"] + " & " + span_a(oa["justact"]) + " \\\\",
+    t += ["\\midrule", "\\rowcolor{oursblue}", LAB["onlyact"] + " & " + span_a(oa["onlyact"]) + " \\\\",
           "\\multicolumn{1}{@{}r}{\\footnotesize $\\Delta$} & " + span_a(da) + " \\\\", "\\midrule\\midrule",
           "\\multicolumn{13}{@{}l}{\\textbf{(b) Fidelity}, PSNR$\\uparrow$ (dB) after 0 / 200 / 800 updates} \\\\",
           "\\textbf{Action representation} & " + " & ".join(["{\\small 0}", "{\\small 200}", "{\\small 800}"] * 4) + " \\\\", "\\midrule"]
     t += [LAB[a] + " & " + " & ".join(ob[a]) + " \\\\" for a in ARMS[:2]]
-    t += ["\\midrule", "\\rowcolor{oursblue}", LAB["justact"] + " & " + " & ".join(ob["justact"]) + " \\\\",
+    t += ["\\midrule", "\\rowcolor{oursblue}", LAB["onlyact"] + " & " + " & ".join(ob["onlyact"]) + " \\\\",
           "\\multicolumn{1}{@{}r}{\\footnotesize $\\Delta$} & " + " & ".join(db) + " \\\\", "\\bottomrule"]
     t += ["\\end{tabular}}", "\\end{table*}"]
     return "\n".join(t) + "\n"

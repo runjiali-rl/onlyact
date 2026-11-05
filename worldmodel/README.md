@@ -8,7 +8,7 @@ the same recipe and data and differ only in the per-transition action vector the
 | `no_action` | all zeros (lower bound: the model sees only the context frames) | 32 | `configs/no_action.yaml` |
 | `adaworld_lam` | AdaWorld-LAM (retrained), `adaworld_lam_retrained` | 32 | `configs/adaworld_lam.yaml` |
 | `dreamdojo_lam` | DreamDojo-LAM (retrained), `dreamdojo_lam_retrained` | 32 | `configs/dreamdojo_lam.yaml` |
-| `justact` | JustAct, `justact`, with per-provider whitening | 640 | `configs/justact.yaml` |
+| `onlyact` | OnlyAct, `onlyact`, with per-provider whitening | 640 | `configs/onlyact.yaml` |
 
 Each model is evaluated on ten cells (`data/worldmodel/<cell>.json`): a **self** cell rolls a clip out from its first 6
 frames with its own actions and reports PSNR (dB) of the 19 predicted frames against the ground truth; a **transfer**
@@ -53,7 +53,7 @@ worldmodel/
   train.py              train one world model (LoRA on the AdaWorld UNet, 20,000 steps)
   generate.py           rollouts of one world model on one cell -> results.jsonl, grid_XX.png, summary.json
   score.py              self PSNR and transfer direction for all cells -> scores.json and the table
-  compute_whitening.py  per-provider whitening statistics of the JustAct input
+  compute_whitening.py  per-provider whitening statistics of the OnlyAct input
   run_table2.sh         generate + score all cells for the given world models
   loading.py            AdaWorld base weights (action pathway zeroed), LoRA, released checkpoints
   clip_lists.py         clip-list reader (relative paths, optional .json.gz)
@@ -79,8 +79,8 @@ Python 3.12, one CUDA GPU with at least 12 GB for generation and 24 GB for train
 | `checkpoints/worldmodel/no_action.safetensors` | LoRA (rank 128) + `label_emb`, 516 tensors, 55.7 M parameters | 222,949,304 B | `3318e60eb6b93cd3ce96214a63502df5257d4d6af22f4a4e49e0ede43d5f580c` |
 | `checkpoints/worldmodel/adaworld_lam.safetensors` | same layout | 222,949,304 B | `be632e503fc301b657c01d9e4e496e43c413a7bd37fc99cb48ae5027954694d4` |
 | `checkpoints/worldmodel/dreamdojo_lam.safetensors` | same layout | 222,949,304 B | `a7a95651b928413169299a9824d0605488328aec51807eddb450bdff412fda3a` |
-| `checkpoints/worldmodel/justact.safetensors` | same layout, 640-d action input, 61.5 M parameters | 245,985,256 B | `d9bdd027aea6dc900b112c3a4a68fe8a07def7174e59aca91649b5ad34fd0c4c` |
-| `checkpoints/worldmodel/justact_whitening.safetensors` | per-provider whitening statistics of JustAct | 3,292,672 B | `6034ecdba90bf51f91a2dffbeb1dc04ded62ee254ab5fd81d431c48965694bd0` |
+| `checkpoints/worldmodel/onlyact.safetensors` | same layout, 640-d action input, 61.5 M parameters | 245,985,256 B | `d9bdd027aea6dc900b112c3a4a68fe8a07def7174e59aca91649b5ad34fd0c4c` |
+| `checkpoints/worldmodel/onlyact_whitening.safetensors` | per-provider whitening statistics of OnlyAct | 3,292,672 B | `6034ecdba90bf51f91a2dffbeb1dc04ded62ee254ab5fd81d431c48965694bd0` |
 
 A world-model checkpoint holds only the trained tensors; the rest of the model is the AdaWorld base. When a model is
 built, `open_clip` downloads OpenCLIP ViT-H-14 (`laion2b_s32b_b79k`, 3.7 GB, overwritten by the AdaWorld weights) and
@@ -95,21 +95,21 @@ SpatialVID clips of the cells are clips of `data/probe/{libero,rlbench,spatialvi
 so the Table 1 embeddings can be reused. Otherwise extract them from the cell files, e.g.
 
 ```bash
-python -m justact.extract --manifest data/worldmodel/nuscenes_dev_self.json --data_root $NUSCENES \
-    --ckpt checkpoints/justact --out_dir $EMB/justact/nuscenes_mini
+python -m onlyact.extract --manifest data/worldmodel/nuscenes_dev_self.json --data_root $NUSCENES \
+    --ckpt checkpoints/onlyact --out_dir $EMB/onlyact/nuscenes_mini
 python baselines/extract.py --arch dreamdojo --manifest data/worldmodel/nuscenes_dev_self.json --data_root $NUSCENES \
     --ckpt checkpoints/dreamdojo_lam_retrained.safetensors --out_dir $EMB/dreamdojo_lam_retrained/nuscenes_mini
 ```
 
-(from the repository root; see `justact/` and `baselines/README.md`). The no-action model reads no embeddings.
+(from the repository root; see `onlyact/` and `baselines/README.md`). The no-action model reads no embeddings.
 
 ## Generating and scoring Table 2
 
 One cell of one world model:
 
 ```bash
-python generate.py --arm justact --cell ../data/worldmodel/libero_transfer.json --data_root $LIBERO \
-    --emb_root $EMB --out_dir runs/table2/justact/libero_transfer
+python generate.py --arm onlyact --cell ../data/worldmodel/libero_transfer.json --data_root $LIBERO \
+    --emb_root $EMB --out_dir runs/table2/onlyact/libero_transfer
 ```
 
 Paper settings are the defaults: seed 32, 6 context frames, 19 predicted frames, 25 Euler steps of AdaWorld's sampler
@@ -121,7 +121,7 @@ All 40 runs and the table:
 
 ```bash
 OUT=runs/table2 EMB=$EMB DATA_LIBERO=$LIBERO DATA_RLBENCH=$RLBENCH DATA_SPATIALVID=$SPATIALVID DATA_NUSCENES=$NUSCENES \
-    bash run_table2.sh                     # or one world model per GPU: bash run_table2.sh justact
+    bash run_table2.sh                     # or one world model per GPU: bash run_table2.sh onlyact
 python score.py --runs_root runs/table2 --data_root libero=$LIBERO rlbench=$RLBENCH spatialvid_nav=$SPATIALVID nuscenes_mini=$NUSCENES
 ```
 
@@ -153,7 +153,7 @@ loading, about 11 GB of GPU memory per process, so two processes fit on a 24 GB 
 The training pool `data/worldmodel/train_pool.json.gz` lists 19,946 clips of 25 consecutive frames from nine datasets
 (VPT 5,000, CALVIN 3,000, SpatialVID 3,000, EgoDex 2,000, AgiBot 2,000, Something-Something v2 1,946, DROID 1,000,
 Atari 1,000, LIBERO 1,000), the training datasets of the encoder, downloaded and processed as described in
-[`justact/training/README.md`](../justact/training/README.md). Each clip contains one of the frame windows the action encoders were trained on. Its paths
+[`onlyact/training/README.md`](../onlyact/training/README.md). Each clip contains one of the frame windows the action encoders were trained on. Its paths
 are relative to one pool root: frame-backed datasets are read in place (`<pool>/<dataset>/...`, link each dataset's frame
 root there), and the 8,946 video-backed clips are decoded once into `<pool>/decoded/`:
 
@@ -163,15 +163,15 @@ python tools/decode_pool_videos.py --data_root $POOL \
 ```
 
 Extract the pool embeddings of each representation into `$EMB/<representation>/worldmodel_pool/` (as above, with
-`--data_root $POOL` and the decompressed list, `gunzip -k data/worldmodel/train_pool.json.gz`, as `--manifest`). For JustAct, compute the whitening statistics on
+`--data_root $POOL` and the decompressed list, `gunzip -k data/worldmodel/train_pool.json.gz`, as `--manifest`). For OnlyAct, compute the whitening statistics on
 the pool (or use the released file), then train and export:
 
 ```bash
 python compute_whitening.py --train_list ../data/worldmodel/train_pool.json.gz \
-    --emb_dir $EMB/justact/worldmodel_pool --out ../checkpoints/worldmodel/justact_whitening.safetensors
-python train.py --base configs/justact.yaml --name justact --data_root $POOL --emb_root $EMB \
-    --whitening_stats ../checkpoints/worldmodel/justact_whitening.safetensors
-python tools/export_checkpoint.py logs/justact/checkpoints/trainable_step020000_end.pt ../checkpoints/worldmodel/justact.safetensors
+    --emb_dir $EMB/onlyact/worldmodel_pool --out ../checkpoints/worldmodel/onlyact_whitening.safetensors
+python train.py --base configs/onlyact.yaml --name onlyact --data_root $POOL --emb_root $EMB \
+    --whitening_stats ../checkpoints/worldmodel/onlyact_whitening.safetensors
+python tools/export_checkpoint.py logs/onlyact/checkpoints/trainable_step020000_end.pt ../checkpoints/worldmodel/onlyact.safetensors
 ```
 
 and likewise `--base configs/{no_action,adaworld_lam,dreamdojo_lam}.yaml` (the no-action model needs no `--emb_root`).

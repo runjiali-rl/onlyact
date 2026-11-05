@@ -5,9 +5,9 @@ the action representation alone, with L1 + 0.5 x LPIPS for 10 epochs at 128x128.
 clips from scenes held out from its training (leakage/split.py; the seed picks the held-out scenes, the initialisation
 and the data order). Table 4 reports the last epoch's validation LPIPS / SSIM / L1, averaged over seeds 0-3.
 
-    python -m leakage.train --dataset libero --representation justact \
+    python -m leakage.train --dataset libero --representation onlyact \
         --clips data/probe/libero.json --data_root $FRAMES128/libero \
-        --emb_dir $EMB/justact/libero --seed 0 --out_dir runs/table4/libero/justact/seed0
+        --emb_dir $EMB/onlyact/libero --seed 0 --out_dir runs/table4/libero/onlyact/seed0
 
 --data_root is the folder of the 128x128 frames, laid out with the clip list's relative frame paths.
 Writes to --out_dir: scene_split.json, config.json, train_log.jsonl (training losses every 50 steps and one {"val": ...}
@@ -25,7 +25,7 @@ import torch
 from torch.utils.data import DataLoader
 from torchvision.utils import save_image
 
-from justact.data import load_manifest
+from onlyact.data import load_manifest
 
 from .dataset import LeakageDataset, collate
 from .decoder import FrameDecoder

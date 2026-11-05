@@ -1,7 +1,7 @@
 # Retrained latent-action baselines
 
 AdaWorld-LAM (retrained) and DreamDojo-LAM (retrained) are the latent action models of AdaWorld and DreamDojo, trained
-from random initialisation on the same frame pairs and with the same budget (160,000 pair views) as the JustAct encoder.
+from random initialisation on the same frame pairs and with the same budget (160,000 pair views) as the OnlyAct encoder.
 Each keeps its upstream network, objective (beta-VAE: reconstruction of frame t+1 plus beta times a Kullback-Leibler term)
 and optimiser; only the training data changes. Their 32-dimensional latent actions are the retrained baseline rows of
 Tables 1-4 (representations `adaworld_lam_retrained` and `dreamdojo_lam_retrained`).
@@ -21,7 +21,7 @@ Tables 1-4 (representations `adaworld_lam_retrained` and `dreamdojo_lam_retraine
 ```
 baselines/
   extract.py       latent actions of a clip list -> <emb_root>/<representation>/<dataset>/<task_id>.npy
-  train.py         training on the JustAct training-pair cache
+  train.py         training on the OnlyAct training-pair cache
   lam_models.py    upstream code locations, configuration reader, network construction and checkpoint input / output
   configs/         run settings of the two released checkpoints
   third_party/     upstream network code and configuration, unmodified (see NOTICE.md)
@@ -101,7 +101,7 @@ probe pairs and about 2.7 hours per model for the 478,704 pairs of the world-mod
 
 ## Training
 
-Input: the training-pair cache of the JustAct encoder (`python -m justact.training.build_sample_cache ...`, 168,000 pairs
+Input: the training-pair cache of the OnlyAct encoder (`python -m onlyact.training.build_sample_cache ...`, 168,000 pairs
 from nine datasets). The trainer reads `index.jsonl` and the anchor frames `frames/<i // 1000:03d>/<i:06d>_{a0,a1}.jpg`;
 2 % of the records (seed 0) are held out for validation.
 

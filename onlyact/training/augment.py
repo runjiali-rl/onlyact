@@ -1,4 +1,4 @@
-"""Image operations used to build JustAct training views.
+"""Image operations used to build OnlyAct training views.
 
 Two operations:
   - photo_jitter: seeded photometric jitter (brightness, contrast, saturation, hue). Both frames of a pair receive the

@@ -1,4 +1,4 @@
-"""Prepare training data of the JustAct encoder: Atari frames and manifest.
+"""Prepare training data of the OnlyAct encoder: Atari frames and manifest.
 
 Source: the public Hugging Face datasets
     edbeeching/prj_gia_dataset_atari_2B_atari_<game>_1111   (file dataset.npy)

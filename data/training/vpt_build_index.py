@@ -1,4 +1,4 @@
-"""Prepare training data of the JustAct encoder: VPT segment index.
+"""Prepare training data of the OnlyAct encoder: VPT segment index.
 
 Scans <data_root>/<subdir>/episodes/ for segments written by vpt_process.py
 (marker file `_frames_ready`) and writes index.json, the VPT input of

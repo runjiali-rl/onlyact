@@ -13,7 +13,7 @@ cd "$(dirname "$0")/.."
 : "${EMB:?set EMB to the embeddings root}" "${FRAMES128:?set FRAMES128 to the 128x128 frames root}" "${OUT:?set OUT to the output root}"
 PYTHON=${PYTHON:-python}
 DATASETS=${DATASETS:-"libero droid rlbench robocasa droid_iprl metaworld utaustin_mutex vp2_robosuite vp2_robodesk spatialvid_nav arkitscenes realestate10k procgen_plan"}
-REPS=${REPS:-"adaworld_lam_retrained dreamdojo_lam_retrained vjepa2_frozen justact"}
+REPS=${REPS:-"adaworld_lam_retrained dreamdojo_lam_retrained vjepa2_frozen onlyact"}
 SEEDS=${SEEDS:-"0 1 2 3"}
 
 for d in $DATASETS; do

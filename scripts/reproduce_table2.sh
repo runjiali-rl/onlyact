@@ -12,7 +12,7 @@ EMB=$RUNS/emb; NUS=$DATA/nuscenes_mini
 
 # nuScenes evaluation clips (the transfer sources are among the self clips); the paper embedded them with a 4-thread LoRA merge
 for c in nuscenes_dev_self nuscenes_conf_self; do
-  $PY_ENC -m justact.extract --manifest data/worldmodel/$c.json --data_root $NUS --ckpt $CKPT/justact --out_dir $EMB/justact/nuscenes_mini \
+  $PY_ENC -m onlyact.extract --manifest data/worldmodel/$c.json --data_root $NUS --ckpt $CKPT/onlyact --out_dir $EMB/onlyact/nuscenes_mini \
     --merge_threads 4
   for a in adaworld dreamdojo; do
     $PY_WM baselines/extract.py --arch $a --manifest data/worldmodel/$c.json --data_root $NUS \
@@ -22,5 +22,5 @@ done
 
 PYTHON=$PY_WM OUT=$RUNS/table2 EMB=$EMB CKPT_DIR=$CKPT/worldmodel BASE_CKPT=${BASE_CKPT:-$CKPT/adaworld/adaworld.safetensors} \
   DATA_LIBERO=$DATA/probe/libero DATA_RLBENCH=$DATA/probe/rlbench DATA_SPATIALVID=$DATA/probe/spatialvid_nav DATA_NUSCENES=$NUS \
-  bash worldmodel/run_table2.sh no_action adaworld_lam dreamdojo_lam justact
+  bash worldmodel/run_table2.sh no_action adaworld_lam dreamdojo_lam onlyact
 $PY_WM tables/table2_worldmodel.py --scores $RUNS/table2/scores.json --out $RUNS/table2/table2.tex

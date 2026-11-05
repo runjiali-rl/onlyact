@@ -29,9 +29,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from clip_lists import load_clip_list, read_clip_list, rollout_pairs  # noqa: E402
 
-ARMS = ("no_action", "adaworld_lam", "dreamdojo_lam", "justact")
+ARMS = ("no_action", "adaworld_lam", "dreamdojo_lam", "onlyact")
 ARM_NAMES = {"no_action": "No action", "adaworld_lam": "AdaWorld-LAM (retrained)", "dreamdojo_lam": "DreamDojo-LAM (retrained)",
-             "justact": "JustAct"}
+             "onlyact": "OnlyAct"}
 CELLS = ("libero_self", "libero_transfer", "rlbench_self", "rlbench_transfer", "spatialvid_self", "spatialvid_transfer",
          "nuscenes_dev_self", "nuscenes_dev_transfer", "nuscenes_conf_self", "nuscenes_conf_transfer")
 START, CTX, HOR, GAP, FRES = 0, 6, 19, 1, 128

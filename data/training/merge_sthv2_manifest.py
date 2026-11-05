@@ -1,4 +1,4 @@
-"""Prepare training data of the JustAct encoder: append Something-Something v2.
+"""Prepare training data of the OnlyAct encoder: append Something-Something v2.
 
 Concatenates the eight-dataset union manifest and the Something-Something v2
 manifest (both written by build_union_manifest.py) into the nine-dataset union

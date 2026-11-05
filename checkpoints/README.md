@@ -3,21 +3,21 @@
 Download the files below into this folder, keeping the sub-folders. `SHA256SUMS` lists their checksums
 (`cd checkpoints && sha256sum -c SHA256SUMS`).
 
-The files are on Hugging Face at https://huggingface.co/liguang0115/justact. From the repository root:
+The files are on Hugging Face at https://huggingface.co/liguang0115/justact (the repository still carries the method's earlier
+name, JustAct). From the repository root:
 
 ```bash
-hf download liguang0115/justact --local-dir checkpoints --exclude README.md .gitattributes   # 5.4 GB
-cd checkpoints && sha256sum -c SHA256SUMS
+bash checkpoints/download.sh   # 5.4 GB: hf download, renames the nine files named after JustAct to OnlyAct, checks SHA256SUMS
 ```
 
 | file | size | content | used by |
 |---|---|---|---|
-| `justact/adapter_config.json`, `justact/adapter_model.safetensors` | 34 MB | JustAct LoRA adapters for V-JEPA 2 ViT-L (PEFT format) | everything |
-| `justact/projection.safetensors` | 2.6 MB | the fixed random 1024 -> 640 projection (`weight`, `bias`) | everything |
+| `onlyact/adapter_config.json`, `onlyact/adapter_model.safetensors` | 34 MB | OnlyAct LoRA adapters for V-JEPA 2 ViT-L (PEFT format) | everything |
+| `onlyact/projection.safetensors` | 2.6 MB | the fixed random 1024 -> 640 projection (`weight`, `bias`) | everything |
 | `adaworld_lam_retrained.safetensors` | 1.9 GB | AdaWorld latent action model trained on our frame pairs | Tables 1, 2, 4 |
 | `dreamdojo_lam_retrained.safetensors` | 2.8 GB | DreamDojo latent action model trained on our frame pairs | Tables 1, 2, 4 |
-| `worldmodel/{no_action,adaworld_lam,dreamdojo_lam,justact}.safetensors` | 223-246 MB each | trained weights (LoRA + action conditioning) of the four AdaWorld world models | Tables 2, 3 |
-| `worldmodel/justact_whitening.safetensors` | 3.3 MB | per-provider whitening statistics of the JustAct input of the world model | Tables 2, 3 |
+| `worldmodel/{no_action,adaworld_lam,dreamdojo_lam,onlyact}.safetensors` | 223-246 MB each | trained weights (LoRA + action conditioning) of the four AdaWorld world models | Tables 2, 3 |
+| `worldmodel/onlyact_whitening.safetensors` | 3.3 MB | per-provider whitening statistics of the OnlyAct input of the world model | Tables 2, 3 |
 | `downstream/idm_{dmlab,minecraft,habitat}.safetensors`, `downstream/readout_nuscenes.safetensors` | about 1 MB each | inverse-dynamics classifiers (Follow) and the nuScenes forward-motion readout, with their training logs | Table 3 |
 | `downstream/step0/*.safetensors`, `downstream/standardise/*.safetensors` | small | action interfaces before fine-tuning (books / heads) and the standardisation statistics | Table 3 |
 

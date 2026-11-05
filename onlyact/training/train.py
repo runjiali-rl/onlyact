@@ -1,11 +1,11 @@
-"""Contrastive training of the JustAct encoder (the checkpoint used in every table of the paper).
+"""Contrastive training of the OnlyAct encoder (the checkpoint used in every table of the paper).
 
 V-JEPA 2 ViT-L is adapted with LoRA (rank 16) through a fixed random 640-d projection. Each micro-batch holds
 micro_batch training samples from the sample cache; every sample gives three frame-pair clips (anchor, background-
 replaced positive, hard negative from a disjoint window of the same clip). The loss is the symmetric InfoNCE of
 loss.py. AdamW, linear warm-up then cosine decay, gradient-norm clipping at 1.0, gradient accumulation.
 
-    python -m justact.training.train --cache_dir <cache> --out_dir runs/justact
+    python -m onlyact.training.train --cache_dir <cache> --out_dir runs/onlyact
 
 Writes <out_dir>/config.json, <out_dir>/train_log.jsonl (step 1 and every log_every steps), checkpoints
 <out_dir>/step_<N>/ every save_every steps and <out_dir>/final/ (adapter_config.json, adapter_model.safetensors,
@@ -25,9 +25,9 @@ from torch.utils.data import DataLoader
 from .cache_dataset import CachedPairDataset, collate
 from .config import TrainConfig
 from .loss import info_nce_with_hard_negatives
-from .model import JustActTrainModel
+from .model import OnlyActTrainModel
 
-DEFAULT_CONFIG = Path(__file__).resolve().parent / "configs" / "justact.yaml"
+DEFAULT_CONFIG = Path(__file__).resolve().parent / "configs" / "onlyact.yaml"
 
 
 def cosine_lr(step: int, cfg: TrainConfig) -> float:
@@ -71,7 +71,7 @@ def main():
     torch.manual_seed(cfg.seed)
 
     print(f"[init] loading {cfg.model_name} + LoRA r={cfg.lora_r}")
-    model = JustActTrainModel(cfg.model_name, revision=cfg.model_revision, lora_r=cfg.lora_r,
+    model = OnlyActTrainModel(cfg.model_name, revision=cfg.model_revision, lora_r=cfg.lora_r,
                               lora_alpha=cfg.lora_alpha, lora_dropout=cfg.lora_dropout, lora_targets=cfg.lora_targets,
                               proj_dim=cfg.proj_dim, device=args.device)
     print(f"[init] parameters with requires_grad: {sum(p.numel() for p in model.parameters() if p.requires_grad):,}")

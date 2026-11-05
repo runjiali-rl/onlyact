@@ -8,7 +8,7 @@ seed 32, on the 19,946-clip training pool. Every --save_trainable_every steps an
 are written to <logdir>/<name>/checkpoints/trainable_step*.pt (tools/export_checkpoint.py turns one into the released
 .safetensors format). One run takes about 5 hours and 19 GB on one 24 GB GPU.
 
-    python train.py --base configs/justact.yaml --name justact --data_root $POOL --emb_root $EMB
+    python train.py --base configs/onlyact.yaml --name onlyact --data_root $POOL --emb_root $EMB
 
 Config values can be overridden with OmegaConf dot-list arguments, e.g. lightning.trainer.max_steps=50 for a smoke test.
 Adapted from AdaWorld's worldmodel/train.py (Apache-2.0).
@@ -97,8 +97,8 @@ def get_parser():
                    help="training clip list (relative frame paths)")
     p.add_argument("--data_root", required=True, help="root that the training clip list's frame paths start from")
     p.add_argument("--emb_root", default="", help="action embeddings, <emb_root>/<representation>/<dataset>/<task_id>.npy")
-    p.add_argument("--whitening_stats", default=os.path.join(REPO, "checkpoints", "worldmodel", "justact_whitening.safetensors"),
-                   help="per-provider whitening statistics (JustAct world model only)")
+    p.add_argument("--whitening_stats", default=os.path.join(REPO, "checkpoints", "worldmodel", "onlyact_whitening.safetensors"),
+                   help="per-provider whitening statistics (OnlyAct world model only)")
     p.add_argument("--lora_rank", type=int, default=128)
     p.add_argument("--lora_alpha", type=int, default=0, help="0 = rank")
     p.add_argument("--lora_targets", default=LORA_TARGETS, help="comma-separated module-name suffixes that receive LoRA")

@@ -11,8 +11,8 @@ Writes <out>/results.jsonl (per-case PSNR of every generated action against the 
 PSNR of the commanded action, nuScenes control margins) and <out>/preds/NNN.npy (uint8 frames, actions in vocabulary
 order; nuScenes: factual first). Scoring: downstream/score.py.
 
-  python -m downstream.generate --config downstream/configs/dmlab.json --arm justact --data_root DATA/dmlab \
-      [--finetuned runs/table3/dmlab/justact/step000800.safetensors] --out runs/table3/cells/dmlab/justact_step800
+  python -m downstream.generate --config downstream/configs/dmlab.json --arm onlyact --data_root DATA/dmlab \
+      [--finetuned runs/table3/dmlab/onlyact/step000800.safetensors] --out runs/table3/cells/dmlab/onlyact_step800
 """
 from __future__ import annotations
 
@@ -83,7 +83,7 @@ def main():
     ap.add_argument("--wm_config", help="default: worldmodel/configs/<world model>.yaml")
     ap.add_argument("--wm_ckpt", help="default: checkpoints/worldmodel/<world model>.safetensors")
     ap.add_argument("--base_ckpt", help="default: checkpoints/adaworld/adaworld.safetensors")
-    ap.add_argument("--whitening_stats", help="JustAct only; default: checkpoints/worldmodel/justact_whitening.safetensors")
+    ap.add_argument("--whitening_stats", help="OnlyAct only; default: checkpoints/worldmodel/onlyact_whitening.safetensors")
     ap.add_argument("--step0", help="step-0 interface (default: checkpoints/downstream/step0/<domain>_<arm>.safetensors)")
     ap.add_argument("--finetuned", help="fine-tuned checkpoint from train.py; omit for the 0-update cell")
     ap.add_argument("--out", required=True); ap.add_argument("--limit", type=int, default=0, help="first N cases only (smoke test)")

@@ -17,7 +17,7 @@ import argparse
 import json
 import os
 
-SEEN = {"libero", "droid", "spatialvid_nav"}  # datasets used to train JustAct (marked with a circle)
+SEEN = {"libero", "droid", "spatialvid_nav"}  # datasets used to train OnlyAct (marked with a circle)
 GROUPS = [("Robot manipulation", ["libero", "droid", "rlbench", "robocasa", "droid_iprl", "metaworld", "utaustin_mutex", "vp2_robosuite", "vp2_robodesk"]),
           ("Camera navigation", ["spatialvid_nav", "arkitscenes", "realestate10k"]), ("Game", ["procgen_plan"])]
 NAME = {"libero": "LIBERO", "droid": "DROID", "rlbench": "RLBench", "robocasa": "RoboCasa", "droid_iprl": "DROID-IPRL", "metaworld": "MetaWorld",
@@ -25,8 +25,8 @@ NAME = {"libero": "LIBERO", "droid": "DROID", "rlbench": "RLBench", "robocasa": 
         "arkitscenes": "ARKitScenes", "realestate10k": "RE10K", "procgen_plan": "Procgen"}
 METHODS = [("adaworld_lam_retrained", "AdaWorld$^\\dagger$~\\cite{gao2025adaworld}"),
            ("dreamdojo_lam_retrained", "DreamDojo$^\\dagger$~\\cite{gao2026dreamdojo}"),
-           ("vjepa2_frozen", "V-JEPA~2~\\cite{vjepa2}"), ("justact", "\\textbf{\\mname} (ours)")]
-OURS, REFERENCE = "justact", "vjepa2_frozen"  # REFERENCE: run whose held-out scenes every other row must share
+           ("vjepa2_frozen", "V-JEPA~2~\\cite{vjepa2}"), ("onlyact", "\\textbf{\\mname} (ours)")]
+OURS, REFERENCE = "onlyact", "vjepa2_frozen"  # REFERENCE: run whose held-out scenes every other row must share
 OTHERS = [m for m, _ in METHODS if m != OURS]
 DS = [c for _, cs in GROUPS for c in cs]
 SIGN = {"lpips": 1, "ssim": -1, "l1": 1}  # +1: higher = less scene leakage

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare training data of the JustAct encoder (SpatialVID part).
+"""Prepare training data of the OnlyAct encoder (SpatialVID part).
 
 Downloads the SpatialVID video shards videos/group_NNNN.tar.gz from Hugging
 Face (https://huggingface.co/datasets/SpatialVID/SpatialVID) and re-encodes

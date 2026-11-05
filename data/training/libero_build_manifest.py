@@ -1,4 +1,4 @@
-"""Prepare training data of the JustAct encoder: LIBERO training manifest.
+"""Prepare training data of the OnlyAct encoder: LIBERO training manifest.
 
 Reads <data_root>/<subdir>/demos_manifest.json (written by libero_process.py)
 and writes one task per demo with 41 target frames sampled uniformly over the
