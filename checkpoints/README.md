@@ -3,11 +3,10 @@
 Download the files below into this folder, keeping the sub-folders. `SHA256SUMS` lists their checksums
 (`cd checkpoints && sha256sum -c SHA256SUMS`).
 
-The files are on Hugging Face at https://huggingface.co/liguang0115/justact (the repository still carries the method's earlier
-name, JustAct). From the repository root:
+The files are on Hugging Face at https://huggingface.co/liguang0115/onlyact. From the repository root:
 
 ```bash
-bash checkpoints/download.sh   # 5.4 GB: hf download, renames the nine files named after JustAct to OnlyAct, checks SHA256SUMS
+bash checkpoints/download.sh   # 5.4 GB: hf download, then checks SHA256SUMS
 ```
 
 | file | size | content | used by |

@@ -9,7 +9,7 @@ Runjia Li · Minghao Chen · Junyu Xie · Philip Torr · Andrea Vedaldi · Tomas
 University of Oxford · **NeurIPS 2026**
 
 [![Project Page](https://img.shields.io/badge/Project-Page-3e6fd8?style=for-the-badge&logo=googlechrome&logoColor=white)](https://runjiali-rl.github.io/onlyact/)
-[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Weights-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/liguang0115/justact)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Weights-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/liguang0115/onlyact)
 [![NeurIPS 2026](https://img.shields.io/badge/NeurIPS-2026-6f42c1?style=for-the-badge)](https://runjiali-rl.github.io/onlyact/)
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?style=for-the-badge&logo=python&logoColor=white)](#%EF%B8%8F-installation)
 [![License](https://img.shields.io/badge/License-Apache%202.0-2ea44f?style=for-the-badge&logo=apache&logoColor=white)](LICENSE)
@@ -78,7 +78,7 @@ The versions are the ones that produced the paper's numbers.
 
 ## 📦 Checkpoints
 
-The weights are on Hugging Face at https://huggingface.co/liguang0115/justact; see
+The weights are on Hugging Face at https://huggingface.co/liguang0115/onlyact; see
 [`checkpoints/README.md`](checkpoints/README.md) for the download command. In short: the OnlyAct adapters and projection (37 MB), the two
 retrained latent action models (1.9 GB and 2.8 GB), the four world models (about 230 MB each) and the small Table 3
 classifiers and interfaces. V-JEPA 2 and the AdaWorld base model are downloaded from their authors.
