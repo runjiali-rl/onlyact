@@ -8,6 +8,7 @@ Runjia Li · Minghao Chen · Junyu Xie · Philip Torr · Andrea Vedaldi · Tomas
 
 University of Oxford · **NeurIPS 2026**
 
+[![arXiv](https://img.shields.io/badge/arXiv-2611.14420-b31b1b?style=for-the-badge&logo=arxiv&logoColor=white)](https://arxiv.org/abs/2611.14420)
 [![Project Page](https://img.shields.io/badge/Project-Page-3e6fd8?style=for-the-badge&logo=googlechrome&logoColor=white)](https://runjiali-rl.github.io/onlyact/)
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Weights-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)](https://huggingface.co/liguang0115/onlyact)
 [![NeurIPS 2026](https://img.shields.io/badge/NeurIPS-2026-6f42c1?style=for-the-badge)](https://runjiali-rl.github.io/onlyact/)
@@ -151,11 +152,11 @@ Each script skips outputs that already exist, so it can be stopped and restarted
 ## 📝 Citation
 
 ```bibtex
-@inproceedings{li2026onlyact,
-  title     = {OnlyAct: Extracting Action Representations from Foundation Models for World Models},
-  author    = {Li, Runjia and Chen, Minghao and Xie, Junyu and Torr, Philip and Vedaldi, Andrea and Jakab, Tomas},
-  booktitle = {Advances in Neural Information Processing Systems},
-  year      = {2026}
+@article{li2026onlyact,
+  title   = {OnlyAct: Extracting Action Representations from Foundation Models for World Models},
+  author  = {Li, Runjia and Chen, Minghao and Xie, Junyu and Torr, Philip and Vedaldi, Andrea and Jakab, Tomas},
+  journal = {arXiv preprint arXiv:2611.14420},
+  year    = {2026}
 }
 ```
 
